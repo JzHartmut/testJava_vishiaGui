@@ -1,0 +1,96 @@
+I-Logix-RPY-Archive version 8.1.4 Java 1002329
+{ ISubsystem 
+	- _id = GUID 65a12f54-032f-4d75-934b-34221da19f71;
+	- _myState = 8192;
+	- _name = "GeneratedFromJava";
+	- Declaratives = { IRPYRawContainer 
+		- size = 15;
+		- value = 
+		{ IStereotype 
+			- _id = GUID 682ca185-f023-4adf-b977-344e5b66fdae;
+			- _myState = 8192;
+			- _name = "CONST_initializer";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ ISubsystem 
+			- fileName = "pkgExtTypes";
+			- _id = GUID c1ad5d9a-bdac-4a03-bc29-75c9cb31f5e0;
+		}
+		{ ISubsystem 
+			- fileName = "accTarget";
+			- _id = GUID 89ffb5a1-b4dd-4245-b689-90b451f8a6cf;
+		}
+		{ ISubsystem 
+			- fileName = "area9";
+			- _id = GUID 26101b63-35e1-4dd8-922e-24f057a300f0;
+		}
+		{ ISubsystem 
+			- fileName = "base";
+			- _id = GUID 991c9330-0b2a-4d4b-868c-fc5ffda9e85d;
+		}
+		{ ISubsystem 
+			- fileName = "byteData";
+			- _id = GUID 94d0e0fa-77c2-4d02-9b98-71d4df6721e1;
+		}
+		{ ISubsystem 
+			- fileName = "cfg";
+			- _id = GUID 75692e13-ec3a-4ed5-bad9-cb2bd48515d8;
+		}
+		{ ISubsystem 
+			- fileName = "commander";
+			- _id = GUID b87e9c4d-2217-421b-aa08-dde81a2867b2;
+		}
+		{ ISubsystem 
+			- fileName = "guiInspc";
+			- _id = GUID a6fc4f9c-181f-4364-83dd-58ae80bfa9c1;
+		}
+		{ ISubsystem 
+			- fileName = "guiViewCfg";
+			- _id = GUID 174029a8-805d-4480-9519-cca85a0898d6;
+		}
+		{ ISubsystem 
+			- fileName = "ifc";
+			- _id = GUID 1c019c03-8126-45ac-a48d-9e915101c2d2;
+		}
+		{ ISubsystem 
+			- fileName = "mng";
+			- _id = GUID 640f5399-82d6-4cf9-9306-529973e0205f;
+		}
+		{ ISubsystem 
+			- fileName = "swt";
+			- _id = GUID c4cd452c-844c-4502-80ee-eee0296e2c1f;
+		}
+		{ ISubsystem 
+			- fileName = "util";
+			- _id = GUID 1aa8b020-fb67-4884-9354-84dc3bb8bf9b;
+		}
+		{ ISubsystem 
+			- fileName = "widget";
+			- _id = GUID 681575de-b78f-45f9-8a42-c96c6702da37;
+		}
+	}
+	- weakCGTime = 3.21.2015::23:15:25;
+	- strongCGTime = 3.21.2015::23:15:25;
+	- _defaultComposite = GUID b25c4487-3331-4fe2-9709-6d467263529a;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID b25c4487-3331-4fe2-9709-6d467263529a;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 3.21.2015::23:11:19;
+}
+

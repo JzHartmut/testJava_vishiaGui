@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/vishiaJavaR/srcJava_Zbnf/org/vishia/jztxtcmd/JZtxtcmd.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="ZBNFJAX_HOME" value="D:\vishia\ZBNF\zbnfjax"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.vishia.jztxtcmd.JZtxtcmd"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="D:\vishia\ZBNF\examples_JZtxtcmd\GUI\DragAndDropField\DragAndDropField.jz.cmd"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="vishiaJavaR"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-ea"/>
+</launchConfiguration>

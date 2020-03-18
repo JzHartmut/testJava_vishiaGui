@@ -1,0 +1,8 @@
+
+String sFile1 ="f1";
+
+
+sub exec(String file1, String file2){
+  <+out>file1o=<&sFile1><.+n>
+  <:>file1=<&sFile1><:n><.>
+}

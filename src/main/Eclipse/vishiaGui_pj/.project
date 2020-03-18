@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>vishiaJava</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>srcJava_vishiaBase</name>
+			<type>2</type>
+			<location>D:/vishia/Java_cmpn/cmpnJava_vishiaBase/src/main/java</location>
+		</link>
+		<link>
+			<name>srcJava_vishiaGui</name>
+			<type>2</type>
+			<location>D:/vishia/Java_cmpn/cmpnJava_vishiaGui/src/main/java</location>
+		</link>
+		<link>
+			<name>srcJava_vishiaRun</name>
+			<type>2</type>
+			<location>D:/vishia/Java_cmpn/cmpnJava_vishiaRun/src/main/java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

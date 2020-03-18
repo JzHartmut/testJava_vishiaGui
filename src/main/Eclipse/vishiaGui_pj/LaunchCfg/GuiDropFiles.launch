@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/vishiaJava/srcJava_vishiaGui/org/vishia/gral/cfg/appl/GuiDropFiles.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.vishia.gral.cfg.appl.GuiDropFiles"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--@src/test/cfg/org/vishia/gral/cfg/appl/GuiDropFiles/GuiDropFiles.args"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="vishiaJava"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-ea"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="D:/vishia/Java_cmpn/cmpnJava_vishiaGui"/>
+</launchConfiguration>

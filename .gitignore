@@ -1,0 +1,9 @@
+.gitRepository
+.gitcommit
+_*.sh
+_resyncRepository.jz.cmd
+src/main/java
+.gradle
+build
+gradle
+deploy

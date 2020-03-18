@@ -1,0 +1,103 @@
+08, 20, 2012 (21:30:31): Starting Pre-Save actions
+
+08, 20, 2012 (21:30:31): Starting Dialogs Check/Save
+08, 20, 2012 (21:30:31): Finished Dialogs Check/Save
+08, 20, 2012 (21:30:31): Starting Controlled Files Resolution
+08, 20, 2012 (21:30:31): Finished Controlled Files Resolution
+08, 20, 2012 (21:30:31): Finished Pre-Save actions
+
+08, 20, 2012 (21:30:31): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral.rpy
+08, 20, 2012 (21:30:31): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral.rpy on Monday, August 20, 2012 (21:30:31)
+
+08, 20, 2012 (21:30:31): Failed to open file D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\filesTable.dat for write
+
+08, 20, 2012 (21:30:36): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\filesTable.dat on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:36): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\GeneratedFromJava.sbs
+08, 20, 2012 (21:30:36): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\GeneratedFromJava.sbs on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:36): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\pkgExtTypes.sbs
+08, 20, 2012 (21:30:36): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\pkgExtTypes.sbs on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:36): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\pkgExtTypes.sbs on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:36): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\area9.sbs
+08, 20, 2012 (21:30:36): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\area9.sbs on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:36): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\area9.sbs on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:36): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\base.sbs
+08, 20, 2012 (21:30:36): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\base.sbs on Monday, August 20, 2012 (21:30:36)
+
+08, 20, 2012 (21:30:37): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\base.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\byteData.sbs
+08, 20, 2012 (21:30:37): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\byteData.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\byteData.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\cfg.sbs
+08, 20, 2012 (21:30:37): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\cfg.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\cfg.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\commander.sbs
+08, 20, 2012 (21:30:37): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\commander.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\commander.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\guiInspc.sbs
+08, 20, 2012 (21:30:37): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\guiInspc.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\guiInspc.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\ifc.sbs
+08, 20, 2012 (21:30:37): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\ifc.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\ifc.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:37): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\inspectorAccessor.sbs
+08, 20, 2012 (21:30:37): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\inspectorAccessor.sbs on Monday, August 20, 2012 (21:30:37)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\inspectorAccessor.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\swt.sbs
+08, 20, 2012 (21:30:38): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\swt.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\swt.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\util.sbs
+08, 20, 2012 (21:30:38): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\util.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\util.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\widget.sbs
+08, 20, 2012 (21:30:38): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\widget.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\widget.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\GeneratedFromJava.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Creating D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\Docu_Base.sbs
+08, 20, 2012 (21:30:38): 
+Started writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\Docu_Base.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral_rpy\Docu_Base.sbs on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): Finished writing D:\vishia\Java\srcJava_vishiaGUI\rpy\vishiaGral.rpy on Monday, August 20, 2012 (21:30:38)
+
+08, 20, 2012 (21:30:38): End Log

@@ -1,0 +1,136 @@
+apply plugin: 'java'
+                                                                
+version='2020-03-17'
+//archiveVersion='xxx'
+
+def version_vishiaBase='2020-03-17'
+
+
+
+//sourceSets {
+//  external {
+//    java {
+//      srcDir "$projectDir/."
+//      include "xxxsrc/mainxxx/java/org/vishia/checkDeps_C/CheckDeps.java"
+//    }
+//  }
+//  main {                                             
+//    java {
+//      compileClasspath += external.classes
+//    }                                                             
+//  }                                                  
+//}
+//
+
+sourceSets {
+  main {
+    java {  //note: include definitiv the main/resources and main/java, no more from main.
+            srcDirs = ['src/main/java', '../cmpnJava_vishiaRun/src/main/java']
+         }                                       
+    resources { //Note: The resources are part of the java source tree, not extra
+         //gradle seems to include all files except *.java as resource into the jar file 
+         //  in the same directory as class files, like necessary for resources.
+         srcDirs = ['src/main/java']                                                                   
+         //filter = '*.zbnf'    //faulty syntax, not necessary                                                                   
+    }                                                                 
+  }
+
+  test {
+    java {
+       srcDirs = ['src/test/java']
+    }
+  }                            
+}
+
+
+//processResources (type:Copy) {
+//   from('src/main/java') {
+//        include '**/*.zbnf'
+//        include '**/*.xml'
+//    }
+//    into 'build/resources/main'
+//}
+
+
+
+//dependencies {
+  //compile fileTree(dir: 'libs', include: ['*.jar'])
+                                                                                                                       
+//  implementation fileTree(dir: '../cmpnJava_vishiaBase/libs', include: ['vishiaBase-'+version_vishiaBase+'.jar'])
+//  implementation fileTree(dir: 'libs', include: ['org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar'])
+//}
+
+
+task jcc_main(type: Exec) {
+ workingDir 'src/main/java/_make'
+ 
+ environment('TMPJAVAC', '../../../../build/javac')
+ environment('CLASSPATH', '../../../../libs/org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar;../../../../../cmpnJava_vishiaBase/deploy/vishiaBase-'+version_vishiaBase+'.jar')
+ environment('VERSION', version)   //should have the form of a date, yyyy-mm-dd
+ environment('JARFILE', '../../../../deploy/vishiaGui-'+version+'.jar')
+ environment('MD5FILE', '../../../../deploy/vishiaGui-'+version+'.MD5.txt')
+ environment('SRCPATH', '..;../../../../../cmpnJava_vishiaRun/src/main/java')  
+ environment('MANIFEST', 'vishiaGui.manifest')  //located in the workingDir
+ environment('SRC_ALL', '..')                              //located in the workingDir
+ //Note: 2 source-sets
+ environment('SRC_ALL2', '../../../../../cmpnJava_vishiaRun/src/main/java')
+ //standardOutput = new FileOutputStream("build/javac.out.txt")
+ executable 'sh'
+ args '-c', './makejar.sh'
+}
+
+                                               
+
+task srcZip(type: Zip) {
+  dependsOn jcc_main
+    archiveFileName = 'vishiaGui-'+version+'-source.zip'
+    //destinationDirectory = file("$buildDir/libs")
+    destinationDirectory = file("deploy")
+
+    from "src/main/java"
+    from "../cmpnJava_vishiaRun/src/main/java"
+    include "_make/*"
+    include "org/**/*"
+
+}
+
+
+
+
+//test {                                                                                                 
+//  dependsOn srcZip
+
+//}
+
+
+
+
+// sourceSets {
+//  main {
+//    java {
+//      exclude 'org.vishia.*'
+//      'org.vishia.checkDeps_C.CheckDeps.java'             
+//    }                                                      
+//  }                                                                
+//}
+//
+
+//copies the sources to one jar file, named PROJECT-sources.jar
+//task sourcesJar(type: Jar, dependsOn: classes) {
+//    classifier = 'sources'
+//    from sourceSets.main.allSource
+//}
+
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+////    from javadoc.destinationDir
+//}
+
+//artifacts {
+//    archives sourcesJar
+//    archives javadocJar
+//}
+
+//defaultTask 'srcZip'
+
+

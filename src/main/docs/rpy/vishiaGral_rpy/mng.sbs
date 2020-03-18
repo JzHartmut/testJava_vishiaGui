@@ -1,0 +1,5526 @@
+I-Logix-RPY-Archive version 8.1.4 Java 1002329
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "GeneratedFromJava.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "GeneratedFromJava";
+		- _id = GUID 65a12f54-032f-4d75-934b-34221da19f71;
+	}
+	- _id = GUID 640f5399-82d6-4cf9-9306-529973e0205f;
+	- _myState = 8192;
+	- _name = "mng";
+	- weakCGTime = 4.6.2015::19:22:21;
+	- strongCGTime = 3.21.2015::23:15:25;
+	- _defaultComposite = GUID a51c0b54-5db1-41a4-87f0-f6cca918d0ae;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 6;
+		- value = 
+		{ IClass 
+			- _id = GUID a51c0b54-5db1-41a4-87f0-f6cca918d0ae;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 4.6.2015::19:22:21;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+			- _myState = 8192;
+			- _name = "InspcMng";
+			- Dependencies = { IRPYRawContainer 
+				- size = 24;
+				- value = 
+				{ IDependency 
+					- _id = GUID a7bb9924-5e8d-4d09-a1b5-7ccd3bc9e5d5;
+					- _myState = 2048;
+					- _name = "Address_InterProcessComm";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Address_InterProcessComm";
+						- _id = GUID c8c89f72-4480-4f4c-8fd9-1d40324d7a92;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 19ccada9-1a7f-49e6-8e13-2ada8ba016c7;
+					- _myState = 2048;
+					- _name = "EventObject";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "EventObject";
+						- _id = GUID ca85c457-673e-4f89-b064-106433aa36c1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f5f08075-77a9-4024-88d1-b896ae161e4f;
+					- _myState = 2048;
+					- _name = "EventTimerThread";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "EventTimerThread";
+						- _id = GUID 96608cf4-028d-4d31-be96-330b68f2660e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6b876698-b340-41dc-8e7b-02601edc9320;
+					- _myState = 2048;
+					- _name = "InspcAccessExecRxOrder_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcAccessExecRxOrder_ifc";
+						- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 75296101-310a-407e-a0a8-ee26771d5efd;
+					- _myState = 2048;
+					- _name = "InspcCommPort";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcCommPort";
+						- _id = GUID c74a4ba7-62b4-407c-9e7f-feffc2923bcd;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9d9d2807-bd51-43cc-8163-5ed57fa36469;
+					- _myState = 2048;
+					- _name = "InspcPlugUser_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID bd530c69-4596-40f7-97d4-68259fe05bdf;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a4a65bc2-8c8f-457f-8716-6c788b264731;
+					- _myState = 2048;
+					- _name = "InspcStruct";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a23d1671-c19f-4ae6-ae9b-92acf2daaca2;
+					- _name = "InspcStruct_FieldOfStruct";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 881e4475-3897-4880-a1a4-eaf630a72b42;
+					}
+				}
+				{ IDependency 
+					- _id = GUID bf4aab85-0ad6-4520-b15e-fc9b4bef63c1;
+					- _myState = 2048;
+					- _name = "InspcTargetAccessData";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessData";
+						- _id = GUID 79daf138-b30e-4f8e-8138-b66d6392fd69;
+					}
+				}
+				{ IDependency 
+					- _id = GUID dfee7b03-8050-4603-9030-3eefdf0a6b74;
+					- _myState = 2048;
+					- _name = "InspcTargetAccessor";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessor";
+						- _id = GUID 7b692a9f-5220-40b7-9828-a91f2a7dfaac;
+					}
+				}
+				{ IDependency 
+					- _id = GUID dfca9b6b-84b0-4f36-b6c8-e7aee137ba8e;
+					- _myState = 2048;
+					- _name = "InspcVariable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f0fb2aca-725c-4b97-8cd9-b417b903335a;
+					- _myState = 2048;
+					- _name = "LogMessage";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "LogMessage";
+						- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f8ca57f6-5a2b-4e4d-a757-c98e649654cd;
+					- _myState = 2048;
+					- _name = "ReplaceAlias_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "";
+						- _name = "ReplaceAlias_ifc";
+						- _id = GUID 066319f6-2212-492b-a5e4-aa6f7920bd50;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4078be97-da0c-4e57-81ba-b537fac1b3e8;
+					- _myState = 2048;
+					- _name = "Runnable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5e7f253f-0542-4bcf-a70b-17e2493eb5bf;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 97106923-d579-4f4b-bd25-ec3c24362e18;
+					- _myState = 2048;
+					- _name = "ThreadRun";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "";
+						- _name = "ThreadRun";
+						- _id = GUID 3e2f2629-d0c6-4c57-8ee1-d707ecd1bd34;
+					}
+				}
+				{ IDependency 
+					- _id = GUID be5f68c1-9b3c-4da6-870e-0faaf1a6feff;
+					- _name = "ThreadRun_Step";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "ThreadRun";
+						- _name = "Step";
+						- _id = GUID 1883eb20-3aa9-4a13-a3d9-6a40f8be72db;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e290fa58-5f18-438c-99ed-d38b352d79d1;
+					- _myState = 2048;
+					- _name = "VariableAccess_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "byteData.sbs";
+						- _subsystem = "GeneratedFromJava::byteData";
+						- _class = "";
+						- _name = "VariableAccess_ifc";
+						- _id = GUID 86f7ed38-8c41-4fdc-94d6-766d3590d53a;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ffc5b5db-5d82-49e8-b9f9-f971a8ce3a8e;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5019a634-9bce-485c-97ee-60933d2e92eb;
+					- _myState = 2048;
+					- _name = "char_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c6a849ea-ae39-4779-8142-e2e449cc59ab;
+					- _myState = 2048;
+					- _name = "double_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "double_";
+						- _id = GUID 01ce55ea-a2e0-4959-b907-baa73c2622f2;
+					}
+				}
+				{ IDependency 
+					- _id = GUID bd035158-bd94-42ca-a930-fb5a263ad7f9;
+					- _myState = 2048;
+					- _name = "float_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e8d4948f-fc3c-49bb-b096-e4ba1b37233b;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6515dcc0-66f1-4e01-baa7-c2609e816445;
+					- _myState = 2048;
+					- _name = "long_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 028dec7f-ad9b-4439-9d3a-7d6237bccce8;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 24;
+			- weakCGTime = 3.21.2015::23:54:7;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 32;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID caad7faa-3f37-42db-ba25-ce1ed033a181;
+					- _myState = 8192;
+					- _name = "completeConstruction";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0c2c9ddc-00fd-4395-9634-6386ce89f170;
+					- _myState = 8192;
+					- _name = "complete_ReplaceAlias_ifc";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 85c1a309-ab46-459d-8a4a-b5a0831b714f;
+							- _name = "replacerAliasArg";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "util.sbs";
+								- _subsystem = "GeneratedFromJava::util";
+								- _class = "";
+								- _name = "ReplaceAlias_ifc";
+								- _id = GUID 066319f6-2212-492b-a5e4-aa6f7920bd50;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b5a2421b-b5ed-44b4-b165-13c4f84c29a1;
+					- _myState = 8192;
+					- _name = "startupThreads";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID cd9b7995-9686-4be5-a99e-1ee2352e8a6d;
+					- _myState = 8192;
+					- _name = "setmodeRetryDisabledVariables";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 81181ed2-26f2-4f07-842f-581ab5e653f5;
+							- _name = "retry";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5b868c05-cf6d-41df-b01c-ba1cfa858900;
+					- _myState = 8192;
+					- _name = "setmodeGetValueByIndex";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c462283a-101a-44e8-a19c-5d17a246c6f5;
+							- _name = "byIndex";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d254279a-0bb0-4d79-a95e-35fedf80d569;
+					- _myState = 8192;
+					- _name = "setCallbackOnReceivedData";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 966481ed-cb44-4912-8872-5b0008106092;
+							- _name = "callback";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b45824e2-246c-4ec9-b765-b522745defa9;
+					- _myState = 8192;
+					- _name = "setCallbackShowingState";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID e8e5f0b9-5f6b-44b4-9a63-c1a847913b2e;
+							- _name = "callback";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID a0aca822-5aa3-437c-ac1d-4153a53d428d;
+					- _myState = 8192;
+					- _name = "setLogForTargetComm";
+					- _description = { IDescription 
+						- _text = "Enables or disables the logging of communication activity.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 5d07cbd5-b10c-497a-bf3e-8adde3e9524d;
+							- _name = "log";
+							- _description = { IDescription 
+								- _text = "null then log is off. Any log output.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "LogMessage";
+								- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 1357da0b-3e90-424a-ba63-8deacba73bde;
+							- _name = "ident";
+							- _description = { IDescription 
+								- _text = "base identification for the messages.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 8c5accce-0d5a-40aa-a42a-7fba7ff7ee7e;
+					- _myState = 8192;
+					- _name = "addUserOrder";
+					- _description = { IDescription 
+						- _text = "Adds any program snippet which is executed while preparing the telegram for data request from target.
+After execution the order will be removed.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 13afd51e-f237-479d-93bf-08116dd97eb2;
+							- _name = "order";
+							- _description = { IDescription 
+								- _text = "the program snippet.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 75d3e126-a7ae-450c-ac40-f2b757f8c2ed;
+					- _myState = 8192;
+					- _name = "getVariable";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 6a8d1368-6fae-420f-98a7-ac8deaa8d119;
+							- _name = "sDataPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "byteData.sbs";
+						- _subsystem = "GeneratedFromJava::byteData";
+						- _class = "";
+						- _name = "VariableAccess_ifc";
+						- _id = GUID 86f7ed38-8c41-4fdc-94d6-766d3590d53a;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 71c02e07-a722-4165-86db-5806181ff361;
+					- _myState = 8192;
+					- _name = "getVariable";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 6162cefa-cb39-466c-8e2d-bc1d3fff92f4;
+							- _name = "sDataPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID dc5bf165-1bbd-4cde-bfdd-74f1126cbc78;
+							- _name = "recurs";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 20ba3f5c-14ab-472a-8912-a8d1102ff44c;
+					- _myState = 8192;
+					- _name = "procComm";
+					- _description = { IDescription 
+						- _text = "This routine requests all values from its target devices,
+for the variables which were requested itself after last call of refresh.
+The answer of the target-request will invoke
+{@link InspcVariable.VariableRxAction#execInspcRxOrder(org.vishia.communication.InspcDataExchangeAccess.Inspcitem, long, LogMessage, int)}
+with the info block of the telegram for each variable.
+If all variables are received, the callback routine
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e08bc7e4-1e79-485c-a333-8a73791ca9c1;
+					- _myState = 8192;
+					- _name = "getTargetAccessFromPath";
+					- _description = { IDescription 
+						- _text = "Requests the value from the target.
+ Prepares the info block to register a variable on the target device.
+ Splits a given full data path with device:datapath maybe with alias:datapath in the device, path, name and returns a struct.
+It uses {@link #indexTargetAccessor} to get the target accessor instance.
+It uses {@link #idxAllStruct} to get the existing {@link InspcStruct} for the variable
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 2fd0e31a-61bd-4c04-879d-c3b8a9e822f7;
+							- _name = "sDataPath";
+							- _description = { IDescription 
+								- _text = "The user given data path maybe with alias, necessary with target.
+An alias is written in form \"alias:rest.of.path\". A device is written \"device:rest.of.path\".
+The distinction between alias and device is done with checking whether the charsequence before :
+is detected as alias.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID c71249d6-16b1-4716-9500-460c36c9fe4f;
+							- _name = "strict";
+							- _description = { IDescription 
+								- _text = "true then throws an error on faulty device, if false then returns null if faulty.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessData";
+						- _id = GUID 79daf138-b30e-4f8e-8138-b66d6392fd69;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ad34d19d-9672-4fb8-977b-e7113c1feffd;
+					- _myState = 8192;
+					- _name = "getStateOfTargetComm";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 55fd2e0d-d8de-4439-a06d-a19cd4e806a4;
+							- _name = "ixTarget";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c91394e4-bbc8-43b4-944a-10c473b455c8;
+					- _myState = 8192;
+					- _name = "getOrCreateParentVariable";
+					- _description = { IDescription 
+						- _text = "Gets or creates the parent for the given path. The parent is referenced in {@link #idxAllStruct}.
+ Gets or creates the parent for the given path. The parent is referenced in {@link #idxAllStruct}.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID bc3d46f0-197b-487d-96b8-3194d417582f;
+							- _name = "sPathChild";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 96a33e6e-aabe-410c-a1d3-b8fb98015f59;
+							- _name = "accessor";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcTargetAccessor";
+								- _id = GUID 7b692a9f-5220-40b7-9828-a91f2a7dfaac;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 45731e9a-b597-4f8b-a508-b6d4d03bd93a;
+					- _myState = 8192;
+					- _name = "cmdSetValueOfField";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID 67dfb857-3bb1-4ab2-8079-97e870b8654d;
+							- _name = "parent";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 2729daf2-0d7d-4137-8930-3f5edb53df2c;
+							- _name = "arg0";
+							- _defaultValue = "";
+							- myTypeOf = { IType 
+								- _id = GUID 688fee19-92cc-42c2-a3d1-18a4398523f5;
+								- _myState = 8192;
+								- _declaration = "field";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 6ed98246-df2d-40c2-bbd4-bf8a0fd2ab33;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID dd22c098-0032-4dc6-9b15-9444f0206665;
+					- _myState = 8192;
+					- _name = "translateDeviceToAddrIp";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID d57a8241-6fb1-4609-8de0-84c5131231b8;
+							- _name = "sDevice";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4f83d70b-6363-42e3-80b4-272e5eddfdea;
+					- _myState = 8192;
+					- _name = "errorDevice";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID f0de6b6c-79b5-43a4-969d-b09c5a1b0ec3;
+							- _name = "sDevice";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d8339354-c78c-4bac-b5f0-7f99135bf87c;
+					- _myState = 8192;
+					- _name = "variableIsReceived";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID bc1891c6-ec95-4be0-a1ee-222507065e13;
+							- _name = "var";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 58a8e3a4-a17c-4043-b643-58a630fc451a;
+					- _myState = 8192;
+					- _name = "callbackOnRxData";
+					- _description = { IDescription 
+						- _text = "This routine will be invoked if all data are received from the target.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8d785fdd-650a-42c9-a3ac-4302b003edec;
+							- _name = "ev";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "EventObject";
+								- _id = GUID ca85c457-673e-4f89-b064-106433aa36c1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 76e05b53-33d2-42cd-92c6-838fa4b9251a;
+					- _myState = 8192;
+					- _name = "openComm";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 9e70f13b-1a99-4826-a123-0fd974b1410c;
+					- _myState = 8192;
+					- _name = "close";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 706497a6-444e-4585-94d6-cc13e01963bf;
+					- _myState = 8192;
+					- _name = "stop";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 95a640cd-03e0-482e-823e-ca931d00becd;
+					- _myState = 8192;
+					- _name = "cmdGetFields";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 74d0e179-5e84-4230-8d67-9a350150e9ad;
+							- _name = "sPathInTarget";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 453effc9-3f40-484f-b1b8-cebc261c0a6f;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e7ce2dc5-b9b2-4042-b651-f32809a1f52f;
+					- _myState = 8192;
+					- _name = "cmdGetValueByIdent";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 55932a7c-b04c-48e2-bfd7-899f06e5e474;
+							- _name = "ident";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID adc94d43-959a-49aa-b901-c06129eaa0f2;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID f204af7b-4c25-46d8-b1f4-4d9a1cb66b24;
+					- _myState = 8192;
+					- _name = "cmdGetValueByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 247a253f-b1a5-49fb-aef8-413aa292f46e;
+							- _name = "sPathInTarget";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 842c6a12-3515-4210-ad04-2ff434ca9f47;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 3206198d-8de7-4d68-a611-b09cbd869f1d;
+					- _myState = 8192;
+					- _name = "cmdRegisterByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 7f22c2d3-3344-43be-9f5c-f2f104be9ed2;
+							- _name = "sPathInTarget";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 88359c56-54dc-4944-8724-369173d2cad1;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 34d5bc33-c764-4588-9fc7-f68c3a733103;
+					- _myState = 8192;
+					- _name = "cmdGetAddressByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID c223d2d7-0827-489c-b97b-41f157c15298;
+							- _name = "sDataPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 5110b217-2d85-4b3e-8d9e-27d8ee4626bc;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 73774e6d-d281-4630-bfd7-6e683d4a4f8e;
+					- _myState = 8192;
+					- _name = "cmdSetValueByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 4;
+						- value = 
+						{ IArgument 
+							- _id = GUID 0739e9e4-0845-431e-b8c5-31f0b3e58d0c;
+							- _name = "sDataPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 35eb3786-be82-4a3a-8486-79317a463a49;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID b63b1889-3129-4587-ba42-ef91f9a1ee04;
+							- _name = "typeofValue";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID f5672934-2088-468a-af6c-9adb23fa0e52;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 7cca87ae-70a7-4107-a49e-2f1294250463;
+					- _myState = 8192;
+					- _name = "cmdSetValueByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 5294487b-2ac0-4828-96eb-21df282f647e;
+							- _name = "sPathInTarget";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 9926a550-86a2-46e7-9fc7-bb1c0eff0f1b;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 62004da5-74bd-4adb-9c89-887c0b6d0cd1;
+					- _myState = 8192;
+					- _name = "cmdSetValueByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID b2db55bb-ab4f-4a83-a79f-cff76ff2205d;
+							- _name = "sDataPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 30bab313-0996-4877-88d6-5e60fae1fb16;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "float_";
+								- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID e9fd5e44-6c85-450d-a08c-1c27125d881d;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 67a425a8-b2a4-409e-b9ff-d12c5a1f4e95;
+					- _myState = 8192;
+					- _name = "cmdSetValueByPath";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID 261a90ec-8627-40ad-aad2-cc4d1b19acd4;
+							- _name = "sDataPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 985a7949-0ef1-4b6a-b980-1f5c64cb5fa5;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "double_";
+								- _id = GUID 01ce55ea-a2e0-4959-b907-baa73c2622f2;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID d5daf500-ea98-4b14-8b5e-d2e674d93cd9;
+							- _name = "actionOnRx";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "accTarget.sbs";
+								- _subsystem = "GeneratedFromJava::accTarget";
+								- _class = "";
+								- _name = "InspcAccessExecRxOrder_ifc";
+								- _id = GUID 90ca345a-1106-43e4-b6fc-94796d8406fa;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 8;
+				- value = 
+				{ IAttribute 
+					- _id = GUID d6e3dfcc-8cdd-43d6-b852-8a94fe7d4615;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version, history and license.
+<ul>
+<li>2015-03-20 Hartmut requestFields redesigned. now managed by the {@link InspcTargetAccessor}
+<li>2013-01-10 Hartmut bugfix: If a variable can't be requested in {@link #requestValueByPath(String, InspcAccessExecRxOrder_ifc)} because
+the telegram is full, the same variable should be requested repeatedly in the next telegram. It was forgotten.
+<li>2012-06-09 Hartmut new: Now it knows java-internal variable too, the path for the argument of {@link #getVariable(String)}
+should start with \"java:\" then the variable is searched internally. TODO now it isn't tested well, the start instance
+should be given by constructor, because it should be either the start instance of the whole application or a special
+data area.
+<li>2012-04-17 Hartmut new: {@link #bUseGetValueByHandle}: Access via getValuePerPath for downward compatibility with target device.
+<li>2012-04-08 Hartmut new: Support of GetValueByIdent, catch of some exception,
+<li>2012-04-05 Hartmut new: Use {@link LogMessage to test telegram trafic}
+<li>2012-04-02 Hartmut all functionality from org.vishia.guiInspc.InspcGuiComm now here,
+the org.vishia.guiInspc.InspcGuiComm is deleted now.
+<li>2012-03-31 Hartmut created. Most of code are gotten from org.vishia.guiInspc.InspcGuiComm,
+which has experience since about 1 year. But the concept is changed. This source uses
+the {@link VariableAccess_ifc} concept which has experience in the org.vishia.guiViewCfg package.
+Both concepts to access variable are merged yet. The GUI to show values from a target system
+now has only one interface concept to access values, independent of their communication concept.
+This class supports the communication via the inspector reflex access.
+<li>2012-03-31 next versions from older org.vishia.guiInspc.InspcGuiComm:
+<li>2011-06-30 Hartmut new: nolink: sendAndPrepareCmdSetValueByPath(String, long, int, InspcAccessExecRxOrder_ifc)
+2014-04 new #send
+It is the first method which organizes that info blocks can be created one after another
+without regarding the telegram length. It simplifies the usage.
+<li>2011-06-30 Hartmut improved: {@link WidgetCommAction#execInspcRxOrder(Info)} for formatted output
+<li>2011-05-17 execInspcRxOrder() int32AngleDegree etc. to present a angle in degrees
+<li>2011-05-01 Hartmut: Created
+</ul>
+<br><br>
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 6a4286ef-63ca-4b52-a5ba-407eee90dd27;
+					- _name = "identLogTelg";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID a77fd8e9-8813-475c-8eba-cb61bf976043;
+					- _name = "sOwnIpcAddr";
+					- _description = { IDescription 
+						- _text = "Instance for the inspector access to the target.  Own address string for the communication. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 1c6bde33-0aa1-4a7b-9b06-4ee984729cb4;
+					- _name = "indexTargetIpcAddr";
+					- _description = { IDescription 
+						- _text = "The target ipc-address for Interprocess-Communication with the target.
+It is a string, which determines the kind of communication.
+For example \"UDP:0.0.0.0:60099\" to create a socket port for UDP-communication.
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID f5bfcf13-291f-4679-8f78-6b30ea93548a;
+					- _name = "indexFaultDevice";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID a380421c-2d70-46e0-8085-6b6067bb1ed0;
+					- _name = "millisecTimeoutOrders";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID a150a3ab-a891-4ce4-b753-cfdcd5969ea2;
+					- _name = "timeLastRemoveOrders";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 8592667e-11ac-425d-a4c3-66d41c947b62;
+					- _name = "sIpTarget";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 20;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID b16009af-0d0e-4278-8e9a-1abe706532bb;
+					- _myState = 8192;
+					- _name = "threadReqFromTarget";
+					- _description = { IDescription 
+						- _text = "The request of values from the target is organized in a cyclic thread. The thread sends
+the request and await the answer.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "";
+						- _name = "ThreadRun";
+						- _id = GUID 3e2f2629-d0c6-4c57-8ee1-d707ecd1bd34;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "threadReqFromTarget";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 97984a08-f33c-480d-a98a-b454a6ddc5fb;
+					- _myState = 8192;
+					- _name = "threadEvent";
+					- _description = { IDescription 
+						- _text = "Thread which manages timers and creates time events.  Thread which manages the queue of all events of state machines. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "EventTimerThread";
+						- _id = GUID 96608cf4-028d-4d31-be96-330b68f2660e;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "threadEvent";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 8c5e8730-4254-4395-9b63-345b52acc4d0;
+					- _myState = 8192;
+					- _name = "user";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID bd530c69-4596-40f7-97d4-68259fe05bdf;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "user";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID f51e827f-9f5d-49eb-a514-64daaaf4c90e;
+					- _myState = 8192;
+					- _name = "replacerAlias";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "";
+						- _name = "ReplaceAlias_ifc";
+						- _id = GUID 066319f6-2212-492b-a5e4-aa6f7920bd50;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "replacerAlias";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 99585549-5a60-4352-90a9-2ded1a5b54cd;
+					- _myState = 8192;
+					- _name = "callbackOnRxData";
+					- _description = { IDescription 
+						- _text = "This method is called if variable are received.
+
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "callbackOnRxData";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID f202f0fc-80e5-465f-a671-6b45cd47c7a4;
+					- _myState = 8192;
+					- _name = "callbackShowingTargetCommState";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "callbackShowingTargetCommState";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 48bd7281-b751-45e3-92ee-38abcd2af8d6;
+					- _myState = 8192;
+					- _name = "logTelg";
+					- _description = { IDescription 
+						- _text = "If true then writes a log of all send and received telegrams. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "LogMessage";
+						- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "logTelg";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 0690d66e-095f-44f7-bd61-deb8988f724a;
+					- _myState = 8192;
+					- _name = "bWriteDebugSystemOut";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bWriteDebugSystemOut";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 90e3a944-a637-4c4f-96ac-2120d270936a;
+					- _myState = 8192;
+					- _name = "idxAllVars";
+					- _description = { IDescription 
+						- _text = "This container holds all variables which are created. 
+";
+					}
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "idxAllVars";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 4464a856-4e84-42e5-affd-7a7cb9d67a3d;
+					- _myState = 8192;
+					- _name = "idxAllStruct";
+					- _description = { IDescription 
+						- _text = "This container holds all structures which are created. 
+";
+					}
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "idxAllStruct";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID a29baa29-a489-4c1f-b4f3-4c913129742c;
+					- _myState = 8192;
+					- _name = "idxRequestedVarFromTarget";
+					- _description = { IDescription 
+						- _text = "This index should be empty if all requested variables are received.
+If a variable is requested, it is registered here. If the answer is received, it is deleted.
+If all variable values have its response, it is empty then.
+On timeout this index is deleted too.
+";
+					}
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "idxRequestedVarFromTarget";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 501bb6fa-2c3c-4558-9d5b-3321b4f3fc39;
+					- _myState = 8192;
+					- _name = "indexTargetAccessor";
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessor";
+						- _id = GUID 7b692a9f-5220-40b7-9828-a91f2a7dfaac;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "indexTargetAccessor";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 91d671ce-09d7-4fb3-b68c-b01f065d854a;
+					- _myState = 8192;
+					- _name = "listTargetAccessor";
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessor";
+						- _id = GUID 7b692a9f-5220-40b7-9828-a91f2a7dfaac;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "listTargetAccessor";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID f6c9d709-d4b2-4652-89cb-4fade4721def;
+					- _myState = 8192;
+					- _name = "retryDisabledVariable";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "retryDisabledVariable";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c5028a3e-b963-4214-a997-0f02eaac0eef;
+					- _myState = 8192;
+					- _name = "bUseGetValueByHandle";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bUseGetValueByHandle";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID bfd9bfc4-dc0d-4561-9b99-4971e9620529;
+					- _myState = 8192;
+					- _name = "bUserCalled";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bUserCalled";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID f25ba0be-4295-4e30-9596-15e4387ec800;
+					- _myState = 8192;
+					- _name = "userOrders";
+					- _description = { IDescription 
+						- _text = "Some orders from any application which should be run in the {@link #inspcThread}. 
+";
+					}
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "userOrders";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 1b01f4ca-e20d-4363-9797-2dc9ae4e722a;
+					- _myState = 8192;
+					- _name = "commPort";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcCommPort";
+						- _id = GUID c74a4ba7-62b4-407c-9e7f-feffc2923bcd;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "commPort";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c14898c8-0859-490c-b791-a489f385475b;
+					- _myState = 8192;
+					- _name = "bAllReceived";
+					- _description = { IDescription 
+						- _text = "Set from {@link #variableIsReceived(InspcVariable)} if all variables are received.
+Tested from {@link #inspcThread} whether all are received.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bAllReceived";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 1fc7e1d7-efee-49af-8f3d-ebdd242400a5;
+					- _myState = 8192;
+					- _name = "step";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "ThreadRun";
+						- _name = "Step";
+						- _id = GUID 1883eb20-3aa9-4a13-a3d9-6a40f8be72db;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "step";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID bd530c69-4596-40f7-97d4-68259fe05bdf;
+			- _myState = 8192;
+			- _name = "InspcPlugUser_ifc";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID 8269932e-f689-4b43-a3cc-3e8b089d9179;
+					- _myState = 2048;
+					- _name = "InspcMng";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ba4b937e-089e-42da-bedb-05b9f274061d;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 13daed05-4ffe-4067-81a5-0676328e0f3d;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 2;
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 3;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 3c0c7c66-9729-40c6-a50a-a28f303166fd;
+					- _myState = 8192;
+					- _name = "setInspcComm";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 05f594ce-0b3a-406b-a710-ee97b1e8b12f;
+							- _name = "inspcMng";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID dc55fa91-ff7e-42b7-a022-d7e3b67a348f;
+					- _myState = 8192;
+					- _name = "requData";
+					- _description = { IDescription 
+						- _text = "This method is called periodically on start of requesting data all widgets in visible windows.
+It is possible to get some special data here.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 3491cd2f-38f9-4e11-be26-630268e2b63b;
+							- _name = "ident";
+							- _description = { IDescription 
+								- _text = "Any identification depending of the caller. It should be understand by the user algorithm.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4f8904f5-49cd-4775-80b5-a07d836241a4;
+					- _myState = 8192;
+					- _name = "isSent";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8cb7e94b-b6eb-422d-9c97-49d4ac8f5d25;
+							- _name = "seqnr";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+			- _myState = 8192;
+			- _name = "InspcStruct";
+			- Dependencies = { IRPYRawContainer 
+				- size = 12;
+				- value = 
+				{ IDependency 
+					- _id = GUID 0f6b29ce-ef54-42fd-9d0f-f243259a9379;
+					- _myState = 2048;
+					- _name = "FieldOfStruct";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 881e4475-3897-4880-a1a4-eaf630a72b42;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 44568832-6460-4654-a576-fae0a0cc3664;
+					- _myState = 2048;
+					- _name = "InspcMng";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f73e350b-f284-4dd3-9eeb-1fa9d213029f;
+					- _myState = 2048;
+					- _name = "InspcStruct";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 493ed5c9-da21-4d0d-886a-84bce2da0ce8;
+					- _myState = 2048;
+					- _name = "InspcVariable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+				}
+				{ IDependency 
+					- _id = GUID fbcf66e1-031c-4870-98fd-bb8588e54f1e;
+					- _myState = 2048;
+					- _name = "LogMessage";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "LogMessage";
+						- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 545b1c19-c163-4e4d-98c0-376f3a3e080a;
+					- _myState = 2048;
+					- _name = "Runnable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID edeaefb6-9ed8-4cfa-a4fc-8c78242887dd;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4873ec73-ca19-4f7a-bbfc-a0640897a36e;
+					- _myState = 2048;
+					- _name = "VariableContainer_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "byteData.sbs";
+						- _subsystem = "GeneratedFromJava::byteData";
+						- _class = "";
+						- _name = "VariableContainer_ifc";
+						- _id = GUID 1778e96c-7fbd-431b-87ef-84ff50a9980b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID fc1478d6-2f8d-4e7d-a961-fed092f81119;
+					- _myState = 2048;
+					- _name = "VariableRxAction";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID f4b52925-8f47-4f17-a9f9-34a91d4636c1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c26cb84d-ca82-442c-a7ff-da48e80cda74;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ab0c2af6-ece4-4a5c-9046-79f8f78ec91c;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 06cb5930-0d67-4f44-a2cb-8adc234c2695;
+					- _myState = 2048;
+					- _name = "long_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 774a29a7-2dcd-4c93-be6e-59daf8a645b2;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 12;
+			- Declaratives = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IClass 
+					- _id = GUID 881e4475-3897-4880-a1a4-eaf630a72b42;
+					- _myState = 8192;
+					- _name = "FieldOfStruct";
+					- Dependencies = { IRPYRawContainer 
+						- size = 5;
+						- value = 
+						{ IDependency 
+							- _id = GUID d2876f29-b3d2-4287-9493-329db09bfa28;
+							- _myState = 2048;
+							- _name = "InspcStruct";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 53b3b84f-cdc6-4127-baa7-97661bc39b26;
+							- _myState = 2048;
+							- _name = "InspcVariable";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+							}
+						}
+						{ IDependency 
+							- _id = GUID f14c5104-b6f4-42ee-870e-34e580a64005;
+							- _myState = 2048;
+							- _name = "String";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 1d3302cb-fad6-4909-82a9-9ae187a560c5;
+							- _myState = 2048;
+							- _name = "VariableContainer_ifc";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "byteData.sbs";
+								- _subsystem = "GeneratedFromJava::byteData";
+								- _class = "";
+								- _name = "VariableContainer_ifc";
+								- _id = GUID 1778e96c-7fbd-431b-87ef-84ff50a9980b;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 08f1d098-9cc8-4fcb-a161-aba057d07014;
+							- _myState = 2048;
+							- _name = "boolean";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+						}
+					}
+					- _theMainDiagram = { IHandle 
+						- _m2Class = "IDiagram";
+						- _filename = "Docu_InspcAccess.sbs";
+						- _subsystem = "Docu_InspcAccess";
+						- _class = "";
+						- _name = "guiInspc_getValueFieldsOmd";
+						- _id = GUID 2cb3729d-772c-46bf-b586-74e6abc11cb1;
+					}
+					- Tags = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ITag 
+							- _id = GUID e9c84401-f871-4101-bab2-e594f37b2a0f;
+							- _name = "filename";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypes.sbs";
+								- _subsystem = "PredefinedTypes";
+								- _class = "";
+								- _name = "RhpString";
+								- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+							}
+							- _isOrdered = 0;
+						}
+					}
+					- _lastID = 5;
+					- weakCGTime = 4.6.2015::19:22:25;
+					- strongCGTime = 4.6.2015::19:20:40;
+					- Operations = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IPrimitiveOperation 
+							- _id = GUID 81b66e04-0264-4262-8eaa-a6970bb8475a;
+							- _myState = 8192;
+							- _name = "variable";
+							- _description = { IDescription 
+								- _text = "Returns the variable which is assigned to the given field. If the field has not a variable
+then the variable will be created with the path of the parent (struct) variable and the name of the field.
+The concept is: create variable only if they are necessary. It is possible to view a structure
+but don't have variable for all fields. This method creates the variable if it is necessary.
+
+";
+							}
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 2;
+								- value = 
+								{ IArgument 
+									- _id = GUID be8c3c9b-55e0-4731-8daa-508281e7dc1b;
+									- _name = "parent";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 63981be7-35a8-4788-845f-0281a3240e5b;
+									- _name = "container";
+									- _description = { IDescription 
+										- _text = "the container where all variables can be gotten with given path. It is the {
+";
+									}
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "byteData.sbs";
+										- _subsystem = "GeneratedFromJava::byteData";
+										- _class = "";
+										- _name = "VariableContainer_ifc";
+										- _id = GUID 1778e96c-7fbd-431b-87ef-84ff50a9980b;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IAttribute 
+							- _id = GUID d6746e40-10d3-4518-9767-2a7f81f52357;
+							- _name = "name";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _protection = iPublic;
+							- _static = 0;
+							- _isReference = 0;
+							- _isConstant = 0;
+						}
+						{ IAttribute 
+							- _id = GUID c7c0b64b-2dd3-4cce-b50c-b33c2b56ef3a;
+							- _name = "type";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _protection = iPublic;
+							- _static = 0;
+							- _isReference = 0;
+							- _isConstant = 0;
+						}
+					}
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- Associations = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IAssociationEnd 
+							- _id = GUID ecde62b4-3d79-4779-8cf9-66b781d588f6;
+							- _myState = 8192;
+							- _name = "hasSubstruct";
+							- _multiplicity = "1";
+							- _otherClass = { IClassifierHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _inverse = { IHandle 
+								- _m2Class = "";
+							}
+							- _linkName = "hasSubstruct";
+							- _linkType = Aggreg;
+							- _navigability = Navigable;
+						}
+						{ IAssociationEnd 
+							- _id = GUID 1f111df8-58a8-4c2f-978a-a5b9304dd8a1;
+							- _myState = 8192;
+							- _name = "var";
+							- _description = { IDescription 
+								- _text = "Maybe null if the field was not read until now. Not all fields creates variables. 
+";
+							}
+							- _multiplicity = "1";
+							- _otherClass = { IClassifierHandle 
+								- _m2Class = "IClass";
+								- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+							}
+							- _inverse = { IHandle 
+								- _m2Class = "";
+							}
+							- _linkName = "var";
+							- _linkType = Assoc;
+							- _navigability = Navigable;
+						}
+						{ IAssociationEnd 
+							- _id = GUID 22b765f1-e684-498f-90c9-642f0660edd6;
+							- _myState = 8192;
+							- _name = "struct";
+							- _multiplicity = "1";
+							- _otherClass = { IClassifierHandle 
+								- _m2Class = "IClass";
+								- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+							}
+							- _inverse = { IHandle 
+								- _m2Class = "";
+							}
+							- _linkName = "";
+							- _linkType = Composition;
+							- _navigability = Navigable;
+						}
+					}
+					- _classModifier = Unspecified;
+				}
+				{ IClass 
+					- _id = GUID f4b52925-8f47-4f17-a9f9-34a91d4636c1;
+					- _myState = 8192;
+					- _name = "VariableRxAction";
+					- Dependencies = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IDependency 
+							- _id = GUID 6e876dfd-516f-4bd2-b1aa-26dcecd69837;
+							- _myState = 2048;
+							- _name = "LogMessage";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "LogMessage";
+								- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 717feedd-9068-49f1-92c0-f3421e36808e;
+							- _myState = 2048;
+							- _name = "int_";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+						}
+						{ IDependency 
+							- _id = GUID de63c860-0f6e-496e-917d-b3c27b8bef11;
+							- _myState = 2048;
+							- _name = "long_";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+						}
+					}
+					- Tags = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ITag 
+							- _id = GUID d49a60a0-ee4e-401a-a17e-ed2becb7f662;
+							- _name = "filename";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypes.sbs";
+								- _subsystem = "PredefinedTypes";
+								- _class = "";
+								- _name = "RhpString";
+								- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+							}
+							- _isOrdered = 0;
+						}
+					}
+					- _lastID = 3;
+					- weakCGTime = 4.6.2015::19:22:25;
+					- strongCGTime = 3.21.2015::23:15:25;
+					- Operations = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IPrimitiveOperation 
+							- _id = GUID 400dc0df-5bfa-432e-928d-430821e0ba82;
+							- _myState = 8192;
+							- _name = "execInspcRxOrder";
+							- _description = { IDescription 
+								- _text = "This method is called for any info block in the received telegram from target,
+if this implementing instance is stored on the order.
+It prepares the value presentation.
+@see org.vishia.inspcPC.accTarget.InspcAccessExecRxOrder_ifc#execInspcRxOrder(org.vishia.communication.InspcDataExchangeAccess.Inspcitem)
+";
+							}
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 4;
+								- value = 
+								{ IArgument 
+									- _id = GUID 651bcde5-b0fd-46a2-9ffe-7d1bd85f5409;
+									- _name = "info";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "Inspcitem";
+										- _id = GUID 8d482568-6ec4-4f69-a7cd-5341e3dd8591;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 6204d3c8-366d-4268-af55-338d7652f1db;
+									- _name = "time";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "long_";
+										- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 2a9f07e9-9c19-4c95-8e41-4763f68b523a;
+									- _name = "log";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "LogMessage";
+										- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 31b87a8c-7acc-4d16-9835-de5047937482;
+									- _name = "identLog";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "int_";
+										- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesJava.sbs";
+								- _subsystem = "PredefinedTypesJava";
+								- _class = "";
+								- _name = "void";
+								- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+						{ IPrimitiveOperation 
+							- _id = GUID 36eabcc2-8508-4b36-a9c3-bb5faafb3b96;
+							- _myState = 8192;
+							- _name = "callbackOnAnswer";
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 0;
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+						{ IPrimitiveOperation 
+							- _id = GUID 77cf0604-9742-4df0-9b3a-ec1d3784de01;
+							- _myState = 8192;
+							- _name = "run";
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 0;
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesJava.sbs";
+								- _subsystem = "PredefinedTypesJava";
+								- _class = "";
+								- _name = "void";
+								- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+					}
+					- Inheritances = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- _classModifier = Unspecified;
+				}
+			}
+			- weakCGTime = 4.6.2015::19:22:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 9;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 6f234b20-36c4-4000-91a0-debb71d77539;
+					- _myState = 8192;
+					- _name = "path";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 77b50152-73c3-4a24-8d42-48ca937ddfec;
+					- _myState = 8192;
+					- _name = "varOfStruct";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8e1c5f59-7083-4bbd-a952-df005a4c6a11;
+							- _name = "mng";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0825967e-501c-4a64-a7e6-7be05cbe0208;
+					- _myState = 8192;
+					- _name = "requestFields";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 1a4dae50-d963-4f68-a431-6371d34604a6;
+							- _name = "callbackP";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 75831bb6-7774-4622-b640-c6c9341d71f5;
+					- _myState = 8192;
+					- _name = "requestFields";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d663d39f-032c-44ca-ae2d-81928f8af063;
+					- _myState = 8192;
+					- _name = "isRequestFields";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 679ee200-31f9-4893-98d1-9e87c7fc349d;
+					- _myState = 8192;
+					- _name = "isUpdated";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 38fadb9d-f29b-4c18-911e-4836829557b2;
+					- _myState = 8192;
+					- _name = "fieldIter";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Iterable";
+						- _id = GUID 122c3969-3ab8-4835-949c-149ebfed680b;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 6d2ed655-5f9e-401e-bacf-60585fbfb904;
+					- _myState = 8192;
+					- _name = "rxActionGetFields";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID afd85b43-85f1-4038-9f9a-44a0880aedfe;
+							- _name = "info";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Inspcitem";
+								- _id = GUID 8d482568-6ec4-4f69-a7cd-5341e3dd8591;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 7ae466ab-40d0-4174-a0c8-a3f1ad129abd;
+							- _name = "time";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c06c195f-407d-4647-80ad-68ec0f23097d;
+					- _myState = 8192;
+					- _name = "toString";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 3003052e-fb99-4857-bab1-c84c4adaf60a;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version, history and license.
+<ul>
+<li>2015-03-20 Hartmut {@link #varOfStruct}
+<li>2013-12-20 Hartmut created.
+</ul>
+<br><br>
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL is not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 11c6d96b-cbb7-439d-a323-ffd50a0c71e0;
+					- _name = "path";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 6;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID eb12c30a-a887-4b55-9723-15f9521bd615;
+					- _myState = 8192;
+					- _name = "varOfStruct";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "varOfStruct";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID e2bd09c4-91a2-43ea-abff-98becce671ae;
+					- _myState = 8192;
+					- _name = "rxActionGetFields";
+					- _description = { IDescription 
+						- _text = "Action on receiving getFields from target for each field for this structure variable.
+This instance invokes the {@link #rxActionGetFields(org.vishia.communication.InspcDataExchangeAccess.Inspcitem, long)}
+which fills the {@link #fields}.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID f4b52925-8f47-4f17-a9f9-34a91d4636c1;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "rxActionGetFields";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 73cfee28-3da7-48af-b4b9-af07de5f346e;
+					- _myState = 8192;
+					- _name = "fields";
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 881e4475-3897-4880-a1a4-eaf630a72b42;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "fields";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID d18bcb8c-1f0d-438a-b663-678ea9c5e4a9;
+					- _myState = 8192;
+					- _name = "bRequFields";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bRequFields";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 13d29686-7a92-49fb-a3eb-a1015cc3034f;
+					- _myState = 8192;
+					- _name = "bUpdated";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bUpdated";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 6a5ee0e1-418c-44e3-a4cd-58ae03bacbb6;
+					- _myState = 8192;
+					- _name = "callback";
+					- _description = { IDescription 
+						- _text = "All variables which are associated to the fields of this struct. Not all fields have a variable on startup,
+only on access a variable will be created. That variable is member of the {@link InspcMng#idxAllVars} too.  Callback for any request. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "callback";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+			- _myState = 8192;
+			- _name = "InspcVariable";
+			- Dependencies = { IRPYRawContainer 
+				- size = 17;
+				- value = 
+				{ IDependency 
+					- _id = GUID d026bc2d-eb6f-4f9c-9397-e5a72e98b10a;
+					- _myState = 2048;
+					- _name = "InspcMng";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 18328426-9461-4de9-8f83-7db61d0a50da;
+					- _myState = 2048;
+					- _name = "InspcStruct";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 620dd587-a4a4-4d93-ae34-a507c541d004;
+					- _myState = 2048;
+					- _name = "InspcTargetAccessData";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessData";
+						- _id = GUID 79daf138-b30e-4f8e-8138-b66d6392fd69;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 54e31dc4-8b17-4a3f-8878-a65556a8b814;
+					- _myState = 2048;
+					- _name = "InspcVariable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 8a1e25ac-2d38-468d-9e96-14f60e663325;
+					- _myState = 2048;
+					- _name = "LogMessage";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "LogMessage";
+						- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 565d033b-8998-4d59-bce7-03e0d3f16cc9;
+					- _myState = 2048;
+					- _name = "ModeHandleVariable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "ModeHandleVariable";
+						- _id = GUID dac02545-8a0c-4cfa-8fed-28f0c8818a3c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4d6bd31d-6aeb-4270-a650-05ffa9ee2b80;
+					- _myState = 2048;
+					- _name = "Runnable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d8b9d787-0ace-4c12-a734-170580706b3e;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6df314bb-21d6-4f57-89e0-2d9729ffd350;
+					- _myState = 2048;
+					- _name = "StringBuilder";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "StringBuilder";
+						- _id = GUID 703155a9-c40e-429c-9bd5-798ac66ba76a;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f0aad415-d596-4867-8c4b-24362acaad5e;
+					- _myState = 2048;
+					- _name = "StringPartScan";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "util.sbs";
+						- _subsystem = "GeneratedFromJava::util";
+						- _class = "";
+						- _name = "StringPartScan";
+						- _id = GUID 0aa7ecbd-e872-447e-b193-694c3ded21ee;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e4b5cb11-5c07-4890-91b8-d30ad196286a;
+					- _myState = 2048;
+					- _name = "VariableRxAction";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 45a277c7-6e58-41c2-bac6-b63f48e3b9af;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b46c86f2-1de0-4cd2-a962-fee1d58fee81;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 04131f67-6455-4e71-baa9-e6f6842119ca;
+					- _myState = 2048;
+					- _name = "char_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9a896c7d-48de-459e-854d-1c60965d05c0;
+					- _myState = 2048;
+					- _name = "double_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "double_";
+						- _id = GUID 01ce55ea-a2e0-4959-b907-baa73c2622f2;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 06835ed0-5cda-4f8c-b9e0-12bf1fa94894;
+					- _myState = 2048;
+					- _name = "float_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 0b898e1c-c8f7-4016-b9d9-c8054eb95e2c;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 812476e2-9479-474a-a040-f7b04bd244e6;
+					- _myState = 2048;
+					- _name = "long_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 68c76838-a0de-4d3a-83b3-f32ac21befbf;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 17;
+			- Declaratives = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IClass 
+					- _id = GUID 45a277c7-6e58-41c2-bac6-b63f48e3b9af;
+					- _myState = 8192;
+					- _name = "VariableRxAction";
+					- Dependencies = { IRPYRawContainer 
+						- size = 4;
+						- value = 
+						{ IDependency 
+							- _id = GUID 41a75f25-3ee4-4200-8785-48db951aa02f;
+							- _myState = 2048;
+							- _name = "LogMessage";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "LogMessage";
+								- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 81c440e1-16b1-4d37-afbc-ec83e5c640d2;
+							- _myState = 2048;
+							- _name = "Runnable";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 07dda90b-7705-4b68-a18d-b1851a4ad34a;
+							- _myState = 2048;
+							- _name = "int_";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+						}
+						{ IDependency 
+							- _id = GUID dafeeee0-0a18-4f91-bf1b-d45a7a412ae6;
+							- _myState = 2048;
+							- _name = "long_";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+						}
+					}
+					- Tags = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ITag 
+							- _id = GUID ca40ff16-a131-4f52-b8af-3cf77809d9d0;
+							- _name = "filename";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypes.sbs";
+								- _subsystem = "PredefinedTypes";
+								- _class = "";
+								- _name = "RhpString";
+								- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+							}
+							- _isOrdered = 0;
+						}
+					}
+					- _lastID = 4;
+					- weakCGTime = 3.21.2015::23:55:43;
+					- strongCGTime = 3.21.2015::23:48:59;
+					- Operations = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IPrimitiveOperation 
+							- _id = GUID dbbf9626-c585-4740-9686-a1fd1d419bc2;
+							- _myState = 8192;
+							- _name = "execInspcRxOrder";
+							- _description = { IDescription 
+								- _text = "This method is called for any info block in the received telegram from target,
+if this implementing instance is stored on the order.
+It prepares the value presentation.
+@see org.vishia.inspcPC.accTarget.InspcAccessExecRxOrder_ifc#execInspcRxOrder(org.vishia.communication.InspcDataExchangeAccess.Inspcitem)
+";
+							}
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 4;
+								- value = 
+								{ IArgument 
+									- _id = GUID d465e5d8-cd52-4712-99e4-6b2ed5bb9a63;
+									- _name = "info";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "Inspcitem";
+										- _id = GUID 8d482568-6ec4-4f69-a7cd-5341e3dd8591;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID b924cc79-60fb-4ad1-ad1d-98f0a99f4f1a;
+									- _name = "time";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "long_";
+										- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 5b4fb01b-1fbc-4fe1-b631-c1e08178efca;
+									- _name = "log";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "LogMessage";
+										- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 0f310307-ccf9-4ec9-b45d-009a88ff7020;
+									- _name = "identLog";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "int_";
+										- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesJava.sbs";
+								- _subsystem = "PredefinedTypesJava";
+								- _class = "";
+								- _name = "void";
+								- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+						{ IPrimitiveOperation 
+							- _id = GUID 4dd7517b-db3c-49c6-8215-aa2cf494b3cc;
+							- _myState = 8192;
+							- _name = "callbackOnAnswer";
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 0;
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+					}
+					- Inheritances = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- _classModifier = Unspecified;
+				}
+			}
+			- weakCGTime = 3.21.2015::23:55:43;
+			- strongCGTime = 3.21.2015::23:48:59;
+			- Operations = { IRPYRawContainer 
+				- size = 20;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID f33040bf-a352-450d-a80a-a4608b5007d8;
+					- _myState = 8192;
+					- _name = "requestValueFromTarget";
+					- _description = { IDescription 
+						- _text = "Notes the request for this variable in the request telegram to the target.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 4cc7d2ff-3cb5-4a89-addd-62bc94cbe6b4;
+							- _name = "timeCurrent";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID fd5c3f75-0842-40d8-a600-2d652bf7c739;
+							- _name = "retryDisabledVariable";
+							- _description = { IDescription 
+								- _text = "true then retry a disabled variable, see {
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b5046815-16e6-41a3-abf8-f1eca25d1b87;
+					- _myState = 8192;
+					- _name = "getDouble";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "double_";
+						- _id = GUID 01ce55ea-a2e0-4959-b907-baa73c2622f2;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID fa10963a-a46a-4d79-b916-b10a253157d0;
+					- _myState = 8192;
+					- _name = "getFloat";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c9f861f6-d467-4d64-a299-20ac3d500f39;
+					- _myState = 8192;
+					- _name = "getInt";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 39db68d8-9af7-4bf1-9c45-c04e9dbfb45a;
+					- _myState = 8192;
+					- _name = "getLong";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 486bb86b-8861-4452-ac56-a6c77ea45ab5;
+					- _myState = 8192;
+					- _name = "getString";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 708486f4-8fa2-4563-97f6-bbc7d6894d36;
+					- _myState = 8192;
+					- _name = "setDouble";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID b4ae7724-a28e-47a2-88fa-cb678dfc136b;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "double_";
+								- _id = GUID 01ce55ea-a2e0-4959-b907-baa73c2622f2;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "double_";
+						- _id = GUID 01ce55ea-a2e0-4959-b907-baa73c2622f2;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 9c563ba8-5a86-4909-b269-b351c989fc49;
+					- _myState = 8192;
+					- _name = "setFloat";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID feb78382-d65a-4225-802f-cf63dc70df50;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "float_";
+								- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 40490bdf-e4d6-4579-9dd1-5f10888e6cc3;
+					- _myState = 8192;
+					- _name = "setInt";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 1dd91ac2-bb7c-4086-9f7b-696c32667778;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 57cacf63-3537-4443-86ae-d8b7e7cbd8a1;
+					- _myState = 8192;
+					- _name = "setLong";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 4a912ac9-2303-47d6-b1fe-8b84b025d887;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 02250b2c-5f2b-43c0-90ca-722c903ef21c;
+					- _myState = 8192;
+					- _name = "setString";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 89ab8bdb-53f0-4a0e-af42-23413a264760;
+							- _name = "value";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 1e80999c-398c-47d9-82e0-0eb2c899253f;
+					- _myState = 8192;
+					- _name = "getType";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 31425dc5-f1be-4c94-98b7-ab6c1a0649cd;
+					- _myState = 8192;
+					- _name = "struct_";
+					- _description = { IDescription 
+						- _text = "Creates an {@link InspcStruct} if it is not created till now, returns it.
+This method should only be called for variable which are not leaf variables in the target device.
+If it is created for a leaf variable, the filling of the struct fails so that the structure has no fields.
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c2f1980f-1586-4a98-b47a-82c1e6a7431f;
+					- _myState = 8192;
+					- _name = "setRefreshed";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 264491d6-593f-408c-9677-dbe2601cc913;
+							- _name = "time";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4dba5516-e83b-4bba-b8d8-722909aa9682;
+					- _myState = 8192;
+					- _name = "getLastRefreshTime";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 857e832a-f1c4-4bda-bf9a-ca5f9bf6962e;
+					- _myState = 8192;
+					- _name = "requestValue";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 92b69c08-4e44-4447-a09e-407df7f194b3;
+							- _name = "time";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 81864138-12f6-45c6-b0fc-4b1786f1ed96;
+					- _myState = 8192;
+					- _name = "requestValue";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 61fa7744-c876-400a-b685-654edf2be13a;
+							- _name = "time";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "long_";
+								- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 03dcd48e-942a-4ed1-94dc-8d9e733055c0;
+							- _name = "run";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Runnable";
+								- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 411da74b-6644-44f4-98dc-177d06252f8b;
+					- _myState = 8192;
+					- _name = "isRequestedValue";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID a0dfae80-7839-4188-b3e1-2ca49ada25b1;
+							- _name = "retryFaultyVariables";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 1f095006-e709-4da2-852c-ab1d374eebf4;
+					- _myState = 8192;
+					- _name = "isRefreshed";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 6ae8311f-507f-481b-80a1-2d5829a7a699;
+					- _myState = 8192;
+					- _name = "toString";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 11;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 9e8d7d17-aa84-425a-9a44-d6c1b5a3f1a6;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version, history and license.
+<ul>
+<li>2013-12-07 Hartmut new: {@link #sValueToTarget} is set on {@link #setString(String)}. Then the new content
+is sent to target to change it there. It is done in the {@link #requestValueFromTarget(long, boolean)}
+because this routine is called if the field is shown. Only if it is shown the change can be done.
+<li>2013-12-07 Hartmut new: {@link #itsStruct}
+<li>2013-12-07 Hartmut chg: In {@link VariableRxAction}: Answer from target with info.cmd = {@link InspcDataExchangeAccess.Inspcitem#kFailedPath}
+disables this variable from data communication. TODO enable with user action if the target was changed (recompiled, restarted etc).
+<li>2013-12-07 Hartmut chg: In {@link VariableRxAction}: Answer from target with variable type designation = {@link InspcDataExchangeAccess#kInvalidIndex}
+The requester should remove that index. Then a new {@link InspcTargetAccessor#cmdRegisterByPath(String, InspcAccessExecRxOrder_ifc)}
+is forced to get a valid index.
+<li>2013-12-07 Hartmut chg: {@link #requestValueFromTarget(long)}: If the path starts with '#', it is not requested.
+<li>2013-01-10 Hartmut bugfix: If a variable can't be requested in {@link #requestValueFromTarget(long)} because
+the telegram is full, the same variable should be requested repeatedly in the next telegram. It was forgotten.
+<li>2012-09-24 Hartmut new {@link #getLong(int...)} and {@link #setLong(long, int...)} not implemented, only formal
+<li>2012-04-22 Hartmut adapt: {@link #requestValue(long)} etc. from {@link VariableAccess_ifc}.
+<li>2012-04-17 Hartmut new: Access via getValuePerPath for downward compatibility with target device.
+<li>2012-04-08 Hartmut new: Support of GetValueByIdent
+<li>2012-03-31 Hartmut created. See {@link InspcMng#version}.
+</ul>
+<br><br>
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL is not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID c74bfb01-e509-47e3-9bd0-b12e61dc602c;
+					- _name = "kIdTargetUndefined";
+					- _description = { IDescription 
+						- _text = "Special designations as value of {@link #idTarget}
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID bd3cf3f7-18c8-4b5b-a383-c3615db4c4db;
+					- _name = "kIdTargetDisabled";
+					- _description = { IDescription 
+						- _text = "Special designations as value of {@link #idTarget}
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID e69cc71a-e54c-4519-ac9d-561e1518dade;
+					- _name = "kIdTargetUsePerPath";
+					- _description = { IDescription 
+						- _text = "Special designations as value of {@link #idTarget}
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 1b1bfa81-126b-4a43-80ba-038f094a2e4d;
+					- _name = "handleTarget";
+					- _description = { IDescription 
+						- _text = "If >=0 then it is the identification of the variable in the target device.
+if <0 then see {@link #kIdTargetDisabled} etc.
+The the value can be gotten calling getValueByIdent().
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 9a2b9d9f-5e62-41fd-bac4-047f30c069d4;
+					- _name = "timeRequested";
+					- _description = { IDescription 
+						- _text = "Timestamp in milliseconds after 1970 when the variable was requested.
+A value may be gotten only if a new request is pending. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 93a112e4-5069-43c3-b306-34a3385f1697;
+					- _name = "timeRefreshed";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "long_";
+						- _id = GUID 799199ef-f965-4c98-8d08-d0673dbc22f5;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID e9977a3a-bccf-4a1e-978d-acbe612459cd;
+					- _name = "valueF";
+					- _description = { IDescription 
+						- _text = "The value from the target device. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 8a72f760-3ead-4f3f-b155-eeff974462f9;
+					- _name = "valueI";
+					- _description = { IDescription 
+						- _text = "The value from the target device. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID f7d82b24-c66a-4d40-a5e9-b567b69a73eb;
+					- _name = "valueS";
+					- _description = { IDescription 
+						- _text = "The value from the target device. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 8f0d9d13-c389-41e0-a069-36ecb2a016d2;
+					- _name = "sValueToTarget";
+					- _description = { IDescription 
+						- _text = "The value of the variable was set from {@link VariableAccess_ifc}. It means it should be sent to target.
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 8;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID e357bbe3-d16a-48b2-9551-ee69f2c0865c;
+					- _myState = 8192;
+					- _name = "varMng";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 87f98030-564d-44f6-9717-175a86d9dc92;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "varMng";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 998bb1c8-d9c9-4aa0-9547-5bd7a14b8494;
+					- _myState = 8192;
+					- _name = "parent";
+					- _description = { IDescription 
+						- _text = "The structure were this variable is member of. Not null if this is not the root variable in a device. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID a874e610-7e43-4086-a371-141241dc2293;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "parent";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID dd286ac8-ad60-45e3-9275-6610ef523171;
+					- _myState = 8192;
+					- _name = "rxAction";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 45a277c7-6e58-41c2-bac6-b63f48e3b9af;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "rxAction";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c25327a8-d07f-40f4-9e09-74d7a258144b;
+					- _myState = 8192;
+					- _name = "ds";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessData";
+						- _id = GUID 79daf138-b30e-4f8e-8138-b66d6392fd69;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "ds";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 4d57e10b-287b-473a-9828-b5e9a74bec7f;
+					- _myState = 8192;
+					- _name = "itsStruct";
+					- _description = { IDescription 
+						- _text = "It is is a structure, it maybe not null if it is requested.
+null for a leaf variable, null if the structure was not requested till now.
+See {@link #struct()}. It creates.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 31b97b65-7052-4ef1-87f7-1431f092e1eb;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "itsStruct";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 361ee01d-ff67-4958-a2a8-4c7eb88fd72a;
+					- _myState = 8192;
+					- _name = "modeTarget";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "ModeHandleVariable";
+						- _id = GUID dac02545-8a0c-4cfa-8fed-28f0c8818a3c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "modeTarget";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID d2bf0a7b-5e70-4c52-a2ba-4b52278acc41;
+					- _myState = 8192;
+					- _name = "cType";
+					- _description = { IDescription 
+						- _text = "The type depends from the type in the target device. It is set if any answer is gotten.
+'c' for character array. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "cType";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 44fdb658-1155-4c69-b32f-9c33204f5d5b;
+					- _myState = 8192;
+					- _name = "runOnRecv";
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Runnable";
+						- _id = GUID 93933223-0b52-4d6e-a7ac-de43ef2c53d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "runOnRecv";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 78010ff8-9a88-4f97-bb74-8e373e7335dc;
+			- _myState = 8192;
+			- _name = "UserInspcPlug_ifc";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID f75b54ee-d09f-4c57-a264-93b021bc3e00;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 65e2f826-f7b7-40c0-a354-1abaf4ed9a2f;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 0e0c1b71-3ead-4419-a1a4-618323be2497;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 2;
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID efce49da-1fef-4ce3-8857-5f692e208a93;
+					- _myState = 8192;
+					- _name = "getTargetFromPath";
+					- _description = { IDescription 
+						- _text = "Replaces the prefix of the path with a possible replacement.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID a52feda4-a16d-4fc6-9d37-9fa8d140efbb;
+							- _name = "sDataPath";
+							- _description = { IDescription 
+								- _text = "the path given in scripts. It may have the form PREFIX:PATH or TARGET:PATH
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "accTarget.sbs";
+						- _subsystem = "GeneratedFromJava::accTarget";
+						- _class = "";
+						- _name = "InspcTargetAccessData";
+						- _id = GUID 79daf138-b30e-4f8e-8138-b66d6392fd69;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAttribute 
+					- _id = GUID fc332300-cd59-4ddf-a7a4-5287384dd89b;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version, history and license
+<ul>
+<li>2012-04-07 Hartmut It is not possible to extend GralPlugUser2Gral_ifc because that is
+in an non-dependent component.
+<li>2012-04-01 Hartmut removed from the component srcJava_vishiaGUI to this component.
+<li>2011-08-00 Hartmut created to adapt some user classes without link on compile time.
+</ul>
+<br><br>
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

@@ -1,0 +1,6122 @@
+I-Logix-RPY-Archive version 8.1.4 Java 1002329
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "GeneratedFromJava.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "GeneratedFromJava";
+		- _id = GUID 65a12f54-032f-4d75-934b-34221da19f71;
+	}
+	- _id = GUID 26101b63-35e1-4dd8-922e-24f057a300f0;
+	- _myState = 8192;
+	- _name = "area9";
+	- weakCGTime = 3.21.2015::23:15:25;
+	- strongCGTime = 3.21.2015::23:15:25;
+	- _defaultComposite = GUID 96e1abf4-b7f9-4009-b4e8-dcb2a23e9601;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 6;
+		- value = 
+		{ IClass 
+			- _id = GUID 96e1abf4-b7f9-4009-b4e8-dcb2a23e9601;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID af733758-3912-48e1-a6a5-9721cc0bf6c3;
+			- _myState = 8192;
+			- _name = "GralArea9MainCmd";
+			- Dependencies = { IRPYRawContainer 
+				- size = 9;
+				- value = 
+				{ IDependency 
+					- _id = GUID 46f151ac-7208-4e06-bb1b-c8a22e9e5e79;
+					- _myState = 2048;
+					- _name = "GralArea9_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 13097edc-e540-4cd2-b2ce-c953fee7ae76;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 79f1bf42-bd77-4ea9-a3ea-a6584a951ed4;
+					- _myState = 2048;
+					- _name = "GralMng";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMng";
+						- _id = GUID 91d4633a-c37b-4a91-a35e-d7eacf4f72b6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 38675471-453e-435c-a27f-03a69c470803;
+					- _myState = 2048;
+					- _name = "GralWindow";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralWindow";
+						- _id = GUID 7af2cc8b-c5b6-48a5-a381-00a22b62f79e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 382d9be1-7684-4962-b85d-602b7bcf5288;
+					- _myState = 2048;
+					- _name = "GuiCallingArgs";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 12c4e20d-8f6b-4327-96ed-b786d03f642b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID cdc3e380-7e41-4b22-9a43-951d3986c9bb;
+					- _myState = 2048;
+					- _name = "LogMessage";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "LogMessage";
+						- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 3b9fefb2-3fa4-4126-8cd5-94697dc544f6;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1f64bc11-89ae-4c41-be38-a78752aa9b85;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 89b90998-9b83-447a-b8bb-fdb1e57cf961;
+					- _myState = 2048;
+					- _name = "char_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 90c876d9-314d-4ff5-989e-d444b74b704e;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID cd89b932-1ea9-4e25-b558-678585780c1a;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 9;
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 6;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 0f461c3f-05c3-4165-800e-233cd611c34b;
+					- _myState = 8192;
+					- _name = "parseArgumentsAndInitGraphic";
+					- _description = { IDescription 
+						- _text = "Builds the graphic and parses the command line parameters. Possible command line argument errors
+or help texts are outputted to the window in the output box.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID f32436f8-8d33-4f12-8c0a-4d9322a1a787;
+							- _name = "sTitle";
+							- _description = { IDescription 
+								- _text = "Title for window
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID f967b932-7671-4134-970d-69dfa914e11e;
+							- _name = "sOutputArea";
+							- _description = { IDescription 
+								- _text = "Use 1..3 for row and A..C for column in form for example \"3A3C\".
+In this example the output box occupies all 3 columns (A to C) from the 3. (= bottom) row
+of the 9 areas.  If null is used, the default selection is \"3A3C\".
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ab120904-5e46-422a-89d0-e216dc519072;
+					- _myState = 8192;
+					- _name = "parseArgumentsAndInitGraphic";
+					- _description = { IDescription 
+						- _text = "Builds the graphic and parses the command line parameters. Possible command line argument errors
+or help texts are outputted to the window in the output box.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 7;
+						- value = 
+						{ IArgument 
+							- _id = GUID 094b2922-e4d0-4417-b1ef-b86be14a5abf;
+							- _name = "sTitle";
+							- _description = { IDescription 
+								- _text = "Title for window as default if -title= is not given as arg
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID dd4a34e2-6ed3-4df9-afd4-0b7747baef54;
+							- _name = "sOutputArea";
+							- _description = { IDescription 
+								- _text = "Use 1..3 for row and A..C for column in form for example \"3A3C\".
+In this example the output box occupies all 3 columns (A to C) from the 3. (= bottom) row
+of the 9 areas.  If null is used, the default selection is \"3A3C\".
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 6e7755db-7081-4000-b2d9-76e27c8b4a15;
+							- _name = "sizeShow";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "char_";
+								- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 57d96776-6e06-47cc-a0b4-4ec89d92d7b9;
+							- _name = "left";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID af0f3888-5f13-4dbc-b776-3501bf078a2f;
+							- _name = "top";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 110a3486-a7ff-42c7-9fd0-e0c98f3fbed4;
+							- _name = "xSize";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID c3e0d8ee-f9ed-4ff7-818f-947017e30671;
+							- _name = "ySize";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 58d74f92-065f-402e-bf4a-8b32908f9529;
+					- _myState = 8192;
+					- _name = "testArgument";
+					- _description = { IDescription 
+						- _text = "Tests one argument. This method is invoked from parseArgument. It is abstract in the superclass MainCmd
+and must be overwritten from the user.
+:TODO: user, test and evaluate the content of the argument string
+or test the number of the argument and evaluate the content in dependence of the number.
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID f67dffed-ce9c-4808-9f4b-0cd083ce672c;
+							- _name = "arg";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 458e7257-6bca-408a-972f-8b9f53cb971a;
+							- _name = "nArg";
+							- _description = { IDescription 
+								- _text = "number of the argument in order of the command line, the first argument is number 1.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 9daf8004-bd47-43d4-b6b9-b398d7936a8e;
+					- _myState = 8192;
+					- _name = "callWithoutArguments";
+					- _description = { IDescription 
+						- _text = "Invoked from parseArguments if no argument is given. In the default implementation a help info is written
+and the application is terminated. The user should overwrite this method if the call without comand line arguments
+is meaningfull.
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 65fb1966-c79f-485d-b4ca-a2d998c7c790;
+					- _myState = 8192;
+					- _name = "checkArguments";
+					- _description = { IDescription 
+						- _text = "Checks the cmdline arguments relation together.
+If there is an inconsistents, a message should be written. It may be also a warning.
+:TODO: the user only should determine the specific checks, this is a sample.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 1a0161c3-1105-46e9-b245-c4bcdfcd294e;
+					- _myState = 8192;
+					- _name = "exit";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 6a06b933-360a-4b07-815f-cc8128f5924a;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version, history and license.
+<ul>
+<li>2013-11-22 Hartmut chg: title of main window as argument -title=
+<li>2013-01-26 Hartmut chg: The MsgDispatchSystemOutErr.create(file) was invoked in this constructor. Therefore
+all Applications redirect the System.out and System.err outputs to the message system. The outputs were completed
+with the timestamp and a number, the {@link org.vishia.msgDispatch.MsgDispatcher} was prepared to use.
+This capability is removed from here yet. It should be a part of the application. See {@link GuiCfg#main(String[])}.
+<li>2012-07-09 Hartmut new: The {@link Inspector} will be initialized only if the command line argument
+\"-inspectorPort=\" is given. That parameter in form \"UDP:ip:port\" is used.
+<li>2012-04-22 Hartmut new: {@link #parseArgumentsAndInitGraphic(String, String, int, int, int, int)}
+for determination of display coordinates in the users application.
+Getting size arguments from main-args.
+<li>2012-03-30 MsgPrintStream systemErrAdapter used here.
+Now System.err.println can be used to generate an dispatch-able message with numeric identifier.
+</ul>
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 4110415c-1ffb-4db8-be84-43b0fa6d73f8;
+					- _name = "sArgError";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID be480c9a-62a5-4679-a78c-34d49f76b6a9;
+					- _myState = 8192;
+					- _name = "gui";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 13097edc-e540-4cd2-b2ce-c953fee7ae76;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "gui";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID d7b27638-9c2d-41cc-967e-9f849246552f;
+					- _myState = 8192;
+					- _name = "log";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "LogMessage";
+						- _id = GUID e9433fff-af17-4923-a9ca-fb7b111fbdcb;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "log";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID bbab3feb-c377-42ad-8856-84f3634b116c;
+					- _myState = 8192;
+					- _name = "cargs";
+					- _description = { IDescription 
+						- _text = "Aggregation to given instance for the command-line-argument. The instance can be arranged anywhere else.
+It is given as ctor-parameter.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 12c4e20d-8f6b-4327-96ed-b786d03f642b;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "cargs";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 56a60223-12d6-4997-9b92-6b556709d805;
+					- _myState = 8192;
+					- _name = "gralMng";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMng";
+						- _id = GUID 91d4633a-c37b-4a91-a35e-d7eacf4f72b6;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "gralMng";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 8a469b8f-1372-4f37-8ef4-ab0e6d9212c6;
+			- _myState = 8192;
+			- _name = "GralArea9Window";
+			- Dependencies = { IRPYRawContainer 
+				- size = 20;
+				- value = 
+				{ IDependency 
+					- _id = GUID ea255bd0-ee3f-4a58-88bd-6861205e5c53;
+					- _myState = 2048;
+					- _name = "File";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 77eb8e0e-ec07-420e-b503-1eb9664b3254;
+					- _myState = 2048;
+					- _name = "GralFileDialog_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralFileDialog_ifc";
+						- _id = GUID fe4cb3eb-a3e5-4cda-bb7b-89d3471ef4a7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 96107ddb-cd6b-464c-92ca-61b1dc9aae56;
+					- _myState = 2048;
+					- _name = "GralGraphicTimeOrder";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralGraphicTimeOrder";
+						- _id = GUID a68ce969-857e-4ce3-8a1b-295aa23563a8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 84fb7b31-019e-4802-89a3-2c0cbcc5a7ab;
+					- _myState = 2048;
+					- _name = "GralInfoBox";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "widget.sbs";
+						- _subsystem = "GeneratedFromJava::widget";
+						- _class = "";
+						- _name = "GralInfoBox";
+						- _id = GUID fe5aeb0e-c418-43b3-8cbb-3ab522bdfd21;
+					}
+				}
+				{ IDependency 
+					- _id = GUID bea6b985-41ec-458f-862a-984e2cb094c7;
+					- _myState = 2048;
+					- _name = "GralPanelContent";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d965d007-11fb-41eb-981b-530ec292bf86;
+					- _myState = 2048;
+					- _name = "GralRectangle";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralRectangle";
+						- _id = GUID f4a3b68e-fda4-4f11-8941-eec2a3195bb1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9e70e62d-3a83-42e6-92ad-6a24a435fc36;
+					- _myState = 2048;
+					- _name = "GralTextBox";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralTextBox";
+						- _id = GUID 7a0fd7c2-b968-46cb-a71a-4360223ff10a;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 62c88f49-3417-4450-8d1f-2b4a8954ba6b;
+					- _myState = 2048;
+					- _name = "GralTextBox_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralTextBox_ifc";
+						- _id = GUID fe532df6-92ca-485a-bc66-466b6032d3ff;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 0b6e39b6-397a-46d8-9245-47a4ca1b967b;
+					- _myState = 2048;
+					- _name = "GralUserAction";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1b580838-06b3-4065-b697-984b8cc72660;
+					- _myState = 2048;
+					- _name = "GralWidget";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralWidget";
+						- _id = GUID 9907837d-d824-478a-b691-a8f51888e22d;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f0112146-1d3f-429b-bf91-33df3d459b20;
+					- _myState = 2048;
+					- _name = "GralWindow";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralWindow";
+						- _id = GUID 7af2cc8b-c5b6-48a5-a381-00a22b62f79e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID bdb6094a-fdd1-40ab-ab36-cd4b2a5513e1;
+					- _myState = 2048;
+					- _name = "MainCmd";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "MainCmd";
+						- _id = GUID afe85175-9c43-4026-93a9-f1818ccd7c28;
+					}
+				}
+				{ IDependency 
+					- _id = GUID defaf916-0278-4ed8-b2be-b29249a8548c;
+					- _myState = 2048;
+					- _name = "Object";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Object";
+						- _id = GUID 60c39dfa-d2c9-4ddd-9003-e029e6d717c1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 99691851-eb72-41b0-a3fb-1afd9a93e168;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 659078fb-c1bd-40bf-b011-324aa611df29;
+					- _myState = 2048;
+					- _name = "StringBuffer";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "StringBuffer";
+						- _id = GUID a80c62e5-31a7-4e6d-8e55-191d20f0daa0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f9d77b8f-09ef-46ec-a8da-c0b9fa08a3cc;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6ac0b2b9-c9a8-41c1-8a27-474fcb67c1f2;
+					- _myState = 2048;
+					- _name = "byte";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "byte";
+						- _id = GUID 84574f5d-6065-47bf-b80e-f2f5c8317ecb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 392cd0b8-8e32-4360-a744-2117f744550e;
+					- _myState = 2048;
+					- _name = "float_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ed997d89-5953-4f14-88d6-ee113a1e297a;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5b1d98a2-1779-4504-bbb2-798b9cab367a;
+					- _myState = 2048;
+					- _name = "short_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "short_";
+						- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID a60071e6-06b2-4569-b480-9c445209263c;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 20;
+			- Declaratives = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IClass 
+					- _id = GUID 7a2561f7-30ee-431e-9b17-142f2fe21c6c;
+					- _myState = 8192;
+					- _name = "GralActionFileOpen";
+					- Dependencies = { IRPYRawContainer 
+						- size = 4;
+						- value = 
+						{ IDependency 
+							- _id = GUID 0f1e59ab-4af4-4bc1-bf9c-a7d0bd510aa8;
+							- _myState = 2048;
+							- _name = "GralFileDialog_ifc";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralFileDialog_ifc";
+								- _id = GUID fe4cb3eb-a3e5-4cda-bb7b-89d3471ef4a7;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 8e5c7f26-18cf-45f9-a01c-9fca81e87af5;
+							- _myState = 2048;
+							- _name = "GralWidget";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "base.sbs";
+								- _subsystem = "GeneratedFromJava::base";
+								- _class = "";
+								- _name = "GralWidget";
+								- _id = GUID 9907837d-d824-478a-b691-a8f51888e22d;
+							}
+						}
+						{ IDependency 
+							- _id = GUID 5cbceac6-9d08-4175-86bc-1f71c26f8215;
+							- _myState = 2048;
+							- _name = "Object";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "Object";
+								- _id = GUID 60c39dfa-d2c9-4ddd-9003-e029e6d717c1;
+							}
+						}
+						{ IDependency 
+							- _id = GUID e264b162-55f9-4e24-9d8a-50b08108f28f;
+							- _myState = 2048;
+							- _name = "int_";
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+						}
+					}
+					- Tags = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ITag 
+							- _id = GUID feb1fc36-2d18-40fd-bc6c-7546d7a86624;
+							- _name = "filename";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypes.sbs";
+								- _subsystem = "PredefinedTypes";
+								- _class = "";
+								- _name = "RhpString";
+								- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+							}
+							- _isOrdered = 0;
+						}
+					}
+					- _lastID = 4;
+					- weakCGTime = 3.21.2015::23:15:25;
+					- strongCGTime = 3.21.2015::23:15:25;
+					- Operations = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IPrimitiveOperation 
+							- _id = GUID 010fccbb-3f22-48de-9015-b41b18f5beb3;
+							- _myState = 8192;
+							- _name = "userActionGui";
+							- _virtual = 1;
+							- Args = { IRPYRawContainer 
+								- size = 3;
+								- value = 
+								{ IArgument 
+									- _id = GUID bf27fba8-d270-4aa2-a90e-11546923b380;
+									- _name = "actionCode";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "int_";
+										- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID 969f9529-77af-4f65-9b16-5bad276c6cd1;
+									- _name = "widgd";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "base.sbs";
+										- _subsystem = "GeneratedFromJava::base";
+										- _class = "";
+										- _name = "GralWidget";
+										- _id = GUID 9907837d-d824-478a-b691-a8f51888e22d;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+								{ IArgument 
+									- _id = GUID a2433815-6cac-4104-aa30-90214876d872;
+									- _name = "params";
+									- _defaultValue = "";
+									- _typeOf = { IHandle 
+										- _m2Class = "IClass";
+										- _filename = "pkgExtTypes.sbs";
+										- _subsystem = "GeneratedFromJava::pkgExtTypes";
+										- _class = "";
+										- _name = "Object";
+										- _id = GUID 60c39dfa-d2c9-4ddd-9003-e029e6d717c1;
+									}
+									- _isOrdered = 0;
+									- _argumentDirection = InOut;
+								}
+							}
+							- _returnType = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _abstract = 0;
+							- _final = 0;
+							- _concurrency = Sequential;
+							- _protection = iPublic;
+							- _static = 0;
+							- _constant = 0;
+						}
+					}
+					- Inheritances = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IGeneralization 
+							- _id = GUID 3d172308-0824-4209-9611-fcbd4f3fc758;
+							- _dependsOn = { INObjectHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralUserAction";
+								- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+							}
+							- _inheritanceType = iPublic;
+							- _isVirtual = 0;
+						}
+					}
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- Associations = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IAssociationEnd 
+							- _id = GUID 6be3b719-2f93-416e-8a14-57272f51c514;
+							- _myState = 8192;
+							- _name = "fileDialog";
+							- _multiplicity = "1";
+							- _otherClass = { IClassifierHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralFileDialog_ifc";
+								- _id = GUID fe4cb3eb-a3e5-4cda-bb7b-89d3471ef4a7;
+							}
+							- _inverse = { IHandle 
+								- _m2Class = "";
+							}
+							- _linkName = "fileDialog";
+							- _linkType = Aggreg;
+							- _navigability = Navigable;
+						}
+					}
+					- _classModifier = Unspecified;
+				}
+			}
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 26;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID a8080620-81e7-4be9-92d2-fc29bd76c705;
+					- _myState = 8192;
+					- _name = "XXXsetOutputArea";
+					- _description = { IDescription 
+						- _text = "Sets the output window to a defined area. .
+Adds the edit-menu too.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID beb651dd-9be8-4db3-8205-842a14439ccd;
+							- _name = "area";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ae67f270-d1a6-40ff-be6f-9f74b1aef382;
+					- _myState = 8192;
+					- _name = "initGraphic";
+					- _description = { IDescription 
+						- _text = "Initializes the output area, can be called after construction immediately.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID ea76854e-8011-4ebf-8258-7c4cd2aa1d15;
+							- _name = "sOutputArea";
+							- _description = { IDescription 
+								- _text = "String for example \"A3C3\". The letter character is the column. The digit is the row.
+It is fromTo. The example means the whole bottom area.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 092ffab3-0efe-44c6-80d4-b024dd0a1744;
+					- _myState = 8192;
+					- _name = "getMainCmd";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "MainCmd_ifc";
+						- _id = GUID 12707c4b-ae3b-4338-900c-073edd05f6e6;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5a8ab7f6-02a0-4bf4-958e-1ffcdd43e3f5;
+					- _myState = 8192;
+					- _name = "mainWindow";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralWindow_ifc";
+						- _id = GUID fccafa86-1f86-49b6-9146-7eeb7fe780ff;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 157fcf39-5ed7-4dd6-9c82-5d445478a190;
+					- _myState = 8192;
+					- _name = "getOutputPanel";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b4453ad4-a2bf-467c-bd9d-69c35593c794;
+					- _myState = 8192;
+					- _name = "getOutputBox";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralTextBox";
+						- _id = GUID 7a0fd7c2-b968-46cb-a71a-4360223ff10a;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID f779ea02-66aa-4da8-b537-44d826e08d29;
+					- _myState = 8192;
+					- _name = "setFrameAreaBorders";
+					- _description = { IDescription 
+						- _text = "Sets the divisions of the frame. The frame is divide into 9 parts,
+where two horizontal and two vertical lines built them:
+<pre>
++=======+===============+===========+
+|       |               |           |
++-------+---------------+-----------+
+|       |               |           |
+|       |               |           |
++-------+---------------+-----------+
+|       |               |           |
+|       |               |           |
++=======+===============+===========+
+</pre>
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 4;
+						- value = 
+						{ IArgument 
+							- _id = GUID bacea61c-900b-4d78-8c6b-ee6a167952c8;
+							- _name = "x1p";
+							- _description = { IDescription 
+								- _text = "percent from left for first vertical divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID ac992f3f-2fbf-4b81-a4f5-61b66520899c;
+							- _name = "x2p";
+							- _description = { IDescription 
+								- _text = "percent from left for second vertical divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 89dcac56-8d87-448e-9b26-ddbe9e0ae2ea;
+							- _name = "y1p";
+							- _description = { IDescription 
+								- _text = "percent from left for first horizontal divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID b93ae269-3ed5-4893-8c11-8e3da348e375;
+							- _name = "y2p";
+							- _description = { IDescription 
+								- _text = "percent from left for first horizontal divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ee1166eb-a56e-41e6-b719-e64c2b4d1ca5;
+					- _myState = 8192;
+					- _name = "addFrameArea";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 38f584a0-6a20-409e-b6ce-5999ae66f9ba;
+							- _name = "sArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID d475db83-3180-4298-b0c4-2a3bccb2895e;
+							- _name = "component";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "base.sbs";
+								- _subsystem = "GeneratedFromJava::base";
+								- _class = "";
+								- _name = "GralPanelContent";
+								- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0cdefc61-af67-4fe7-8a9a-006253b737de;
+					- _myState = 8192;
+					- _name = "addFrameArea";
+					- _description = { IDescription 
+						- _text = "Sets a Component into a defined area. See {@link #setFrameAreaBorders(int, int, int, int)}.
+It should be called only in the GUI-Thread.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 5;
+						- value = 
+						{ IArgument 
+							- _id = GUID 425596f9-f796-47c3-a5a1-d59c08a1861e;
+							- _name = "xArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for left, middle, right
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 40072e15-038a-47a8-b1c1-37d7cc1673fa;
+							- _name = "yArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for top, middle, bottom
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 43a2ce65-52f9-4daa-b353-80e5016c588c;
+							- _name = "dxArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for 1 field to 3 fields to right.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 2489ccb1-11b6-4d68-a854-0b70fb6b15ac;
+							- _name = "dyArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for 1 field to 3 field to bottom
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 2a18e74d-5c3e-4ce8-b5cc-a08c786f7ee0;
+							- _name = "component";
+							- _description = { IDescription 
+								- _text = "The component.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "base.sbs";
+								- _subsystem = "GeneratedFromJava::base";
+								- _class = "";
+								- _name = "GralPanelContent";
+								- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b49bed7e-3545-46af-87cf-e36c81c420de;
+					- _myState = 8192;
+					- _name = "setMinMaxSizeArea";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 5;
+						- value = 
+						{ IArgument 
+							- _id = GUID 16507175-aaef-4831-83e8-6ba30df99dd9;
+							- _name = "sArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 4ceb7b3f-2c66-4058-9596-fa09284b75a5;
+							- _name = "yMinUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 0f614e17-ac84-419a-85fe-61978588781a;
+							- _name = "yMaxUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID f350f60c-d612-441f-83fb-35ac62de51b2;
+							- _name = "xMinUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 6f587044-9ded-4bf9-8b75-9482b46ae50f;
+							- _name = "xMaxUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b776dd32-b32c-4420-ae91-fe5fb947a7c3;
+					- _myState = 8192;
+					- _name = "validateFrameAreas";
+					- _description = { IDescription 
+						- _text = "Set the bounds of all areas.
+Calls {@link GralWindow#getPixelPositionSize()} to get the size of working area of the whole window
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 7ebc4d7b-cfef-49d1-9507-8ffbbae0d081;
+					- _myState = 8192;
+					- _name = "calcPixSize";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 7;
+						- value = 
+						{ IArgument 
+							- _id = GUID bb4e7b2f-e5ab-4667-84b5-d3bece016eb3;
+							- _name = "zPixArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 723df6bb-82b3-4d7f-8a83-ee281f8ce9d1;
+							- _name = "zpFrameArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "byte";
+								- _id = GUID 84574f5d-6065-47bf-b80e-f2f5c8317ecb;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 05968509-1096-4ac5-94a9-6e0ba6b296c3;
+							- _name = "zMinGralSize";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "short_";
+								- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID b724b15b-bae2-46cf-be48-23c1b472f0c4;
+							- _name = "zMaxGralSize";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "short_";
+								- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID e70045eb-0dd9-48ca-99c1-87f6e2c22bfa;
+							- _name = "zPixUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 21943f02-f80f-4858-9af6-4ba647fedfc2;
+							- _name = "zSize";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 2c56b142-c097-4afb-8ad7-99206bdc97a7;
+							- _name = "pixelPerZpercent";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "float_";
+								- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0fd9bc72-847b-479c-b91d-683cc5f6573b;
+					- _myState = 8192;
+					- _name = "setBoundsForFrameArea";
+					- _description = { IDescription 
+						- _text = "Sets the bounds for the component, which is localized at the given area.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 81c3b978-6b9c-407b-a923-4747d7db579e;
+							- _name = "idxArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID a3e34e65-cc03-4f93-8124-1a1f12281187;
+							- _name = "idyArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4737d22d-e929-4a7e-9afa-e359b293827c;
+					- _myState = 8192;
+					- _name = "convertArea";
+					- _description = { IDescription 
+						- _text = "Converts a string given are designation to indices.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8dc5cff7-6438-450f-bf04-365291df1dbc;
+							- _name = "area";
+							- _description = { IDescription 
+								- _text = "A, B , C for column, 1, 2, 3 for row.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralRectangle";
+						- _id = GUID f4a3b68e-fda4-4f11-8941-eec2a3195bb1;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 01919ccc-a02c-4c6b-97a4-9fdce045d312;
+					- _myState = 8192;
+					- _name = "setStandardMenus";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID f0e359a5-5e85-404d-8959-1a612831d723;
+							- _name = "openStandardDirectory";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "File";
+								- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 81c87bbf-448c-45c8-ba3a-155c3a078908;
+							- _name = "actionFile";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralUserAction";
+								- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 811b6352-83f7-4415-a14b-98e3d430db02;
+					- _myState = 8192;
+					- _name = "setStandardMenusGThread";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8bfac6ce-ddfb-483b-9ebc-97eca2e54a51;
+							- _name = "openStandardDirectory";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "File";
+								- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 5f418280-db15-4977-ac6b-d0f6a4590d7a;
+							- _name = "actionFile";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralUserAction";
+								- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 2a0562fe-29ad-4f74-9220-2362ac4bb3aa;
+					- _myState = 8192;
+					- _name = "addMenuBarArea9ItemGThread";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID 9dca26b4-8329-4892-825c-f85557bb3c81;
+							- _name = "name";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 12754666-2bf9-4e0a-a031-c8f46649c888;
+							- _name = "sMenuPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 202396b3-5ef0-42a7-be6e-56bab91af85b;
+							- _name = "action";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralUserAction";
+								- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 25426a3c-90d6-4ff4-b69f-929125f2ee4f;
+					- _myState = 8192;
+					- _name = "getMenuBar";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMenu";
+						- _id = GUID a58c5d06-3513-4263-b71b-9412fb733ef7;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0f09f079-398f-4bf8-85ad-c21b5ede702b;
+					- _myState = 8192;
+					- _name = "setFullScreen";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c88ae9a3-0ffc-4fdd-b1a7-2b377829519e;
+							- _name = "full";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4785597b-8463-4e67-b083-8d1d40097664;
+					- _myState = 8192;
+					- _name = "addOutputFrameArea";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c66c1cad-317b-4a48-a98e-0c04df5bcb09;
+							- _name = "area";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 9048f2af-e94c-4544-bb62-5fbb3559131f;
+					- _myState = 8192;
+					- _name = "writeDirectly";
+					- _description = { IDescription 
+						- _text = "Overloads MainCmd.writeDirectly. This method may be overloaded by the user
+if it has a better way to show infos.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID f38814dc-9288-4648-96c1-2296f9741f04;
+							- _name = "sInfo";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID eb0a1beb-dfc2-427e-bc67-a66a0e6bc860;
+							- _name = "kind";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "short_";
+								- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c4bf9ea0-7d3b-4af9-88f9-96ec30271e49;
+					- _myState = 8192;
+					- _name = "setHelpBase";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID d2ab6f51-5dfd-4538-9ea7-f3351b354c6c;
+							- _name = "path";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e50cd240-097a-48d7-914a-c9fab7b3f6a3;
+					- _myState = 8192;
+					- _name = "setHelpUrl";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID e4d901e0-c5fa-4509-94b5-0acfe18df4c6;
+							- _name = "url";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c6a64f3a-60bc-4ec0-aac4-055ff6038969;
+					- _myState = 8192;
+					- _name = "getGralMng";
+					- _description = { IDescription 
+						- _text = "Gets the graphical frame. 
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMng";
+						- _id = GUID 91d4633a-c37b-4a91-a35e-d7eacf4f72b6;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c3bccbf4-6d41-4167-a683-d1949736422c;
+					- _myState = 8192;
+					- _name = "getActionAbout";
+					- _description = { IDescription 
+						- _text = "Returns the standard behavior: opens the help window with its constant text.
+@see org.vishia.gral.area9.GralArea9_ifc#getActionAbout()
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID aaecf630-6bed-4eab-88e8-a0678f42b117;
+					- _myState = 8192;
+					- _name = "getActionHelp";
+					- _description = { IDescription 
+						- _text = "Returns the standard behavior: opens the about window with its constant text.
+@see org.vishia.gral.area9.GralArea9_ifc#getActionAbout()
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 15;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 00e33f89-7112-41de-b075-7f3f0c5a5852;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version and History
+<ul>
+<li>2014-02-24 Hartmut new {@link #setHelpBase(String)} used in {@link #setHelpUrl(String)}.
+<li>2012-05-17 Hartmut new: {@link #setMinMaxSizeArea(String, int, int, int, int)}: The size can be given
+with gral units, as min, max or absolute (min, max are equal). The size of a area border can be changed on runtime.
+<li>2012-04-22 Hartmut new: {@link #setFullScreen(boolean)}
+<li>2011-12-26 Hartmut chg: The help window is a html info box now. New method {@link #setHelpUrl(String)}
+supports context sensitive help.
+<li>2011-11-12 Hartmut new: The SubWindow for Help, About, InfoBox and InfoLog are created here (InfoLog: TODO).
+This windows can be opened in demand.
+<li>2011-11-12 Hartmut chg: All menu items should be prepared in the users application now. The items for help and about
+are supported with actions by {@link #getActionAbout()} and {@link #getActionAbout()}. This actions
+are the standard behavior and opens the sub-windows only. But the user can install a more complex functionality
+for example writing a context sensitive help.
+<li>2011-11-12 Harmut chg {@link #initGraphic} was the old initOutputArea, but it does more as only the output area.
+Now creation of all necessities of Graphic in this functionality.
+
+</ul>
+
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are indent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID cea288f6-3f06-4e70-99f0-f82e9e7b1b53;
+					- _name = "outputArea";
+					- _description = { IDescription 
+						- _text = "Area settings for output. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID f10d3004-12a9-46bf-9e5e-11e09f9a6f49;
+					- _name = "outputTexts";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 3974b35b-46af-4d52-8130-c9f8b37eb086;
+					- _name = "xpFrameArea";
+					- _description = { IDescription 
+						- _text = "A little control to capture the mouse position for movement of area borders.  Position of the FrameArea borders in percent.
+[0] is always 0, [1] and [2] are the given borders, [3] is always 100.
+It is because lower and higher bound should be accessed always without tests.
+Use area +1, because it is a Off-by-one problem 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "byte";
+						- _id = GUID 84574f5d-6065-47bf-b80e-f2f5c8317ecb;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 2acceac9-7d7e-44ef-84fd-553c12dafd23;
+					- _name = "ypFrameArea";
+					- _description = { IDescription 
+						- _text = "A little control to capture the mouse position for movement of area borders.  Position of the FrameArea borders in percent.
+[0] is always 0, [1] and [2] are the given borders, [3] is always 100.
+It is because lower and higher bound should be accessed always without tests.
+Use area +1, because it is a Off-by-one problem 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "byte";
+						- _id = GUID 84574f5d-6065-47bf-b80e-f2f5c8317ecb;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 401008cd-4358-461f-bd77-4eeab4b556e6;
+					- _name = "dxyFrameArea";
+					- _description = { IDescription 
+						- _text = "spread of each frame area in x direction.
+It it is -1, than the area is occupied by another area.
+If it is 0, the area is free.
+1..3 are the number of areas in horizontal direction.
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "byte";
+						- _id = GUID 84574f5d-6065-47bf-b80e-f2f5c8317ecb;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID cb3e2758-ce1f-4fe8-b094-6a7245e815ee;
+					- _name = "xMinGralSize";
+					- _description = { IDescription 
+						- _text = "requested minimal size of each window area in GralPos units. If the minimal value is 0,
+the size is calculated from percent always. If the minimal value of percent calculation is lesser
+than this value, this value is used. Note that a given minimal value of all areas cannot required
+if the window's size is lesser. Then the middle area will
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "short_";
+						- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 3a6de0bf-43a7-463d-bfaf-79b7101ee2fc;
+					- _name = "yMinGralSize";
+					- _description = { IDescription 
+						- _text = "requested minimal size of each window area in GralPos units. If the minimal value is 0,
+the size is calculated from percent always. If the minimal value of percent calculation is lesser
+than this value, this value is used. Note that a given minimal value of all areas cannot required
+if the window's size is lesser. Then the middle area will
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "short_";
+						- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID dbcbed84-f630-4b3b-9934-d8351d444c77;
+					- _name = "xMaxGralSize";
+					- _description = { IDescription 
+						- _text = "requested maximal size of each window area in GralPos units. If the maximal value is greater than
+the size calculated from percent always, the percent value is used.
+Note that a given maximal value of all areas cannot regarded
+if the window's size is greater. Then the middle area will be presented
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "short_";
+						- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 14b28691-c2da-4252-a241-26d9a8ff2d93;
+					- _name = "yMaxGralSize";
+					- _description = { IDescription 
+						- _text = "requested maximal size of each window area in GralPos units. If the maximal value is greater than
+the size calculated from percent always, the percent value is used.
+Note that a given maximal value of all areas cannot regarded
+if the window's size is greater. Then the middle area will be presented
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "short_";
+						- _id = GUID ceca3ee4-958b-4e83-82d1-7f5b305ddabd;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 30c6a3eb-9b13-4eb4-8ad6-653a8ae4b2d6;
+					- _name = "xPixArea";
+					- _description = { IDescription 
+						- _text = "Calculated borders of areas.
+[0] is always 0, [1] and [2] are the given borders, [3] is always 100.
+It is because lower and higher bound should be accessed always without tests.
+Use area +1, because it is a Off-by-one problem 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 6ee602f3-db7a-4dfb-ac3b-b0cd73825869;
+					- _name = "yPixArea";
+					- _description = { IDescription 
+						- _text = "Calculated borders of areas.
+[0] is always 0, [1] and [2] are the given borders, [3] is always 100.
+It is because lower and higher bound should be accessed always without tests.
+Use area +1, because it is a Off-by-one problem 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID baf77a54-7773-4fd1-b32a-0e6762ad0538;
+					- _name = "pixelPerXpercent";
+					- _description = { IDescription 
+						- _text = "Number of pixels per percent unit of size, set if {@link #validateFrameAreas()} was called. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 9b310dc4-be24-4093-b910-b20111b93bde;
+					- _name = "pixelPerYpercent";
+					- _description = { IDescription 
+						- _text = "Number of pixels per percent unit of size, set if {@link #validateFrameAreas()} was called. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "float_";
+						- _id = GUID a0898abd-237f-4a66-a6e7-d72696539b1e;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID e0dcb816-e0f5-4aa5-bbc1-f58e460c19e6;
+					- _name = "sHelpBase";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID 4041d47c-32e6-4c28-9a49-ffdda6f6ea23;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 13097edc-e540-4cd2-b2ce-c953fee7ae76;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 20;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 9a43ab6a-00ef-4794-96cf-0bb74abd09a3;
+					- _myState = 8192;
+					- _name = "mainCmd";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "MainCmd";
+						- _id = GUID afe85175-9c43-4026-93a9-f1818ccd7c28;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "mainCmd";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID e6939ec0-a4e9-4ed9-9a90-409e5948b7c9;
+					- _myState = 8192;
+					- _name = "window";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralWindow";
+						- _id = GUID 7af2cc8b-c5b6-48a5-a381-00a22b62f79e;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "window";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 13a07628-6351-4f60-ba21-5cca6d66f9ba;
+					- _myState = 8192;
+					- _name = "outputPanel";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "outputPanel";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c750d251-fe26-48b1-b5ec-027688b27615;
+					- _myState = 8192;
+					- _name = "outputBox";
+					- _description = { IDescription 
+						- _text = "A Text box which is used for common output. It may be edit-able.
+This output box is created initially. It can be used to show error messages while starting the application
+if other GUI-elements are not yet present. It can be used generally to show errors, infos and logs
+adequate to a console output.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralTextBox";
+						- _id = GUID 7a0fd7c2-b968-46cb-a71a-4360223ff10a;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "outputBox";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 7ea2669c-8c89-4714-b38a-59214e2fcf32;
+					- _myState = 8192;
+					- _name = "infoHelp";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "widget.sbs";
+						- _subsystem = "GeneratedFromJava::widget";
+						- _class = "";
+						- _name = "GralInfoBox";
+						- _id = GUID fe5aeb0e-c418-43b3-8cbb-3ab522bdfd21;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "infoHelp";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID b282aa69-229d-4ed9-ac7e-e0dcd3570281;
+					- _myState = 8192;
+					- _name = "infoAbout";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "widget.sbs";
+						- _subsystem = "GeneratedFromJava::widget";
+						- _class = "";
+						- _name = "GralInfoBox";
+						- _id = GUID fe5aeb0e-c418-43b3-8cbb-3ab522bdfd21;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "infoAbout";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 4b6adb7a-5dc2-409e-abef-da7b18c28cb9;
+					- _myState = 8192;
+					- _name = "infoBox";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "widget.sbs";
+						- _subsystem = "GeneratedFromJava::widget";
+						- _class = "";
+						- _name = "GralInfoBox";
+						- _id = GUID fe5aeb0e-c418-43b3-8cbb-3ab522bdfd21;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "infoBox";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID b03b79d5-882f-4831-91a8-2ff096e7a5ac;
+					- _myState = 8192;
+					- _name = "infoLog";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "widget.sbs";
+						- _subsystem = "GeneratedFromJava::widget";
+						- _class = "";
+						- _name = "GralInfoBox";
+						- _id = GUID fe5aeb0e-c418-43b3-8cbb-3ab522bdfd21;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "infoLog";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 700c7d0b-316c-4948-adca-6b7a31d94dbd;
+					- _myState = 8192;
+					- _name = "currentDirectory";
+					- _description = { IDescription 
+						- _text = "Current Directory for file choosing. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "currentDirectory";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 7b72c618-0970-468d-bdb4-eb60bc4a7736;
+					- _myState = 8192;
+					- _name = "actionFile";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "actionFile";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 80b9ba9e-0a16-4629-b3ff-44ea8c00a087;
+					- _myState = 8192;
+					- _name = "bSetStandardMenus";
+					- _description = { IDescription 
+						- _text = "Set on call of {@link #setStandardMenus(File)} to add in in the graphic thread. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "bSetStandardMenus";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 04e3183d-e1e8-485c-b4fc-89158aa1c07c;
+					- _myState = 8192;
+					- _name = "componentFrameArea";
+					- _description = { IDescription 
+						- _text = "All main components of the Display in each FrameArea. 
+";
+					}
+					- _multiplicity = "*";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "componentFrameArea";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID f85b596d-96ed-425b-9846-8319498f01ca;
+					- _myState = 8192;
+					- _name = "XXXsbWriteInfo";
+					- _description = { IDescription 
+						- _text = "The interface to the application.  The id of the thread, which created the display.
+It is to check whether gui-commands should be queued or not. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "StringBuffer";
+						- _id = GUID a80c62e5-31a7-4e6d-8e55-191d20f0daa0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "XXXsbWriteInfo";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 4b625891-c451-441a-be43-3af1a379ef4c;
+					- _myState = 8192;
+					- _name = "textAreaOutput";
+					- _description = { IDescription 
+						- _text = "If it is set, the writeInfo is redirected to this.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralTextBox_ifc";
+						- _id = GUID fe532df6-92ca-485a-bc66-466b6032d3ff;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "textAreaOutput";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID aec81f69-1084-4f57-a7f4-39d40e0feb14;
+					- _myState = 8192;
+					- _name = "initGraphic";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralGraphicTimeOrder";
+						- _id = GUID a68ce969-857e-4ce3-8a1b-295aa23563a8;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "initGraphic";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID a1a853ce-b926-45dd-846d-31bd335bf4b7;
+					- _myState = 8192;
+					- _name = "writeOutputTextDirectly";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralGraphicTimeOrder";
+						- _id = GUID a68ce969-857e-4ce3-8a1b-295aa23563a8;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "writeOutputTextDirectly";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID e1778da8-aa8b-4d78-aa15-9deff55871e3;
+					- _myState = 8192;
+					- _name = "mouseAction";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "mouseAction";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID b8c3cbfd-f3a3-4e9f-9a07-c375e7974361;
+					- _myState = 8192;
+					- _name = "resizeAction";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "resizeAction";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID e9104f1b-1d3b-470d-ac30-5ab84e97fe1d;
+					- _myState = 8192;
+					- _name = "actionHelp";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "actionHelp";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 0b507206-cf29-41b1-8584-13b0d1aafcc6;
+					- _myState = 8192;
+					- _name = "actionAbout";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "actionAbout";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 13097edc-e540-4cd2-b2ce-c953fee7ae76;
+			- _myState = 8192;
+			- _name = "GralArea9_ifc";
+			- Dependencies = { IRPYRawContainer 
+				- size = 6;
+				- value = 
+				{ IDependency 
+					- _id = GUID 3b8f56fc-e7d6-4a1a-9492-45b5cdaa3e57;
+					- _myState = 2048;
+					- _name = "File";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 54cbf5e0-5d09-4531-ad80-a7cbafedcba4;
+					- _myState = 2048;
+					- _name = "GralPanelContent";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 34038faf-1104-42ee-b185-91287e5fbea7;
+					- _myState = 2048;
+					- _name = "GralUserAction";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c521be9d-6feb-4590-b700-279639a00f62;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4c10c77a-b077-4eb2-acaf-7d1f2efd5ac3;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d8b0830f-5ea0-4fa8-a85f-132821767566;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID ef4ce2bb-fa7f-4db8-87ce-22b2a5f7c542;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 6;
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 17;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 57adfad3-c12a-4536-966c-120384316945;
+					- _myState = 8192;
+					- _name = "initGraphic";
+					- _description = { IDescription 
+						- _text = "Initializes the graphic of the Area9-Window. It sets the Output window to a defined area
+and creates Windows for Help, About and InfoBoxes.
+This method can be invoked after construction immediately in any thread.
+<br><br>
+In the implementation class {@link org.vishia.gral.area9.GralArea9Window}
+the working is done in the graphic thread. The caller thread waits for success in this method.
+The following actions are done:
+<ul>
+<li>Creation of all sub windows for InfoBox, InfoLog, Help and About.
+<li>Creation of the output Area.
+<li>
+<li>Adding the {@link org.vishia.gral.base.GralGraphicTimeOrder}
+{@link org.vishia.gral.area9.GralArea9Window#writeOutputTextDirectly} which transfers
+text lines stored in {@link org.vishia.gral.area9.GralArea9Window#outputTexts} to the output area.
+</ul>
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID af981eb5-1b66-4445-9d2d-7a8e0b624181;
+							- _name = "outputArea";
+							- _description = { IDescription 
+								- _text = "Two letter combination A1..C3 for horizontal and vertical area.
+A..C is left to right, 1..3 is top to bottom.
+The first combination is the top left area for output,
+the second combination is the bottom right area.
+The output area can use more as one basic areas.
+For example \"A3C3\" means that the output area uses the full bottom part of window.
+For example \"B2C3\" means an area consist of 4 basic areas right bottom.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 2f6a5ec4-13ef-4bc8-b3fb-2be204aa183f;
+					- _myState = 8192;
+					- _name = "addMenuBarArea9ItemGThread";
+					- _description = { IDescription 
+						- _text = "It is like {@link GralWindow_ifc#addMenuBarItemGThread(String, String, GralUserAction)}.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID 202726af-8579-45aa-a2eb-4cecb9cea5cc;
+							- _name = "nameWidg";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID c838ba2a-d1c2-413e-859f-bbec0630e869;
+							- _name = "sMenuPath";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 6a46b239-143c-4cb3-8bfd-9af0dfd2eb15;
+							- _name = "action";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralUserAction";
+								- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 28038cfb-a206-4fe0-9278-a8f7d2bcadb2;
+					- _myState = 8192;
+					- _name = "getMenuBar";
+					- _description = { IDescription 
+						- _text = "Gets the menu bar for the window, see {@link org.vishia.gral.base.GralWindow#getMenuBar()}.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMenu";
+						- _id = GUID a58c5d06-3513-4263-b71b-9412fb733ef7;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e3559f40-5b89-40e7-9b31-10222445ead3;
+					- _myState = 8192;
+					- _name = "setStandardMenusGThread";
+					- _description = { IDescription 
+						- _text = "Adds a Menu for file open and save only. All other menu items are not set because the order of menus.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 657b66f1-ec5e-4f38-a9e6-bf423d840b2e;
+							- _name = "openStandardDirectory";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "File";
+								- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID c27ea394-a02c-4b79-9ccc-e6c5e5565753;
+							- _name = "actionFile";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "ifc.sbs";
+								- _subsystem = "GeneratedFromJava::ifc";
+								- _class = "";
+								- _name = "GralUserAction";
+								- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 2a7bee63-2f25-45f9-a836-8a82f486a5f9;
+					- _myState = 8192;
+					- _name = "getOutputPanel";
+					- _description = { IDescription 
+						- _text = "Returns the outputArea, which was created by the graphic thread.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralPanelContent";
+						- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4ce45671-a53a-4a54-92ed-eab6be6dd785;
+					- _myState = 8192;
+					- _name = "setFrameAreaBorders";
+					- _description = { IDescription 
+						- _text = "Sets the divisions of the frame. The frame is divide into 9 parts,
+where two horizontal and two vertical lines built them:
+<pre>
++=======+===============+===========+
+|       |               |           |
++-------+---------------+-----------+
+|       |               |           |
+|       |               |           |
++-------+---------------+-----------+
+|       |               |           |
+|       |               |           |
++=======+===============+===========+
+</pre>
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 4;
+						- value = 
+						{ IArgument 
+							- _id = GUID 1de63a32-f2dc-490d-bfd3-b85da3aa1d7f;
+							- _name = "x1p";
+							- _description = { IDescription 
+								- _text = "percent from left for first vertical divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID c631b749-0536-4106-8ec3-dc670c3b9977;
+							- _name = "x2p";
+							- _description = { IDescription 
+								- _text = "percent from left for second vertical divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 5b06497c-de74-4e43-806f-aa3e416b65a3;
+							- _name = "y1p";
+							- _description = { IDescription 
+								- _text = "percent from left for first horizontal divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID d8dfe62f-8cf5-454e-8a86-92aee5e50c2a;
+							- _name = "y2p";
+							- _description = { IDescription 
+								- _text = "percent from left for first horizontal divide line.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 1ab18fc1-5765-4052-b82d-fdffed29adb1;
+					- _myState = 8192;
+					- _name = "addFrameArea";
+					- _description = { IDescription 
+						- _text = "Sets a Panel into a defined area. See {@link #setFrameAreaBorders(int, int, int, int)}.
+It should be called only in the GUI-Thread.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID b8ceecfe-1643-467a-b840-50edf8da45bf;
+							- _name = "sArea";
+							- _description = { IDescription 
+								- _text = "Area identifcation, e.g. \"B3C3\" where alpha-char A..C is column, numeric char 1..3 is row.
+If a range is given, the whole area of that areas is used.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 2245c4c0-beb6-4df7-9171-b17afed20fee;
+							- _name = "component";
+							- _description = { IDescription 
+								- _text = "The component.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "base.sbs";
+								- _subsystem = "GeneratedFromJava::base";
+								- _class = "";
+								- _name = "GralPanelContent";
+								- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID cd02ba69-0406-46a0-8d80-7b2e2656c7a7;
+					- _myState = 8192;
+					- _name = "setMinMaxSizeArea";
+					- _description = { IDescription 
+						- _text = "Sets the minimal and maximal size.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 5;
+						- value = 
+						{ IArgument 
+							- _id = GUID e6e39ccf-6b61-4a30-9fed-f643e0c2a160;
+							- _name = "sArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 46648355-9a1f-4bf7-9acf-b8abec484fac;
+							- _name = "yMinUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID f1d4e6ad-6675-4983-9d2d-f4de0e1bf44c;
+							- _name = "yMaxUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 197ccab6-c3ea-4260-8ee9-c86b9e673eee;
+							- _name = "xMinUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID b5744f98-71ce-441b-80d5-0fca6507795d;
+							- _name = "xMaxUnit";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4b248085-bb3b-490e-816d-12a8594b8b78;
+					- _myState = 8192;
+					- _name = "addFrameArea";
+					- _description = { IDescription 
+						- _text = "Sets a Panel into a defined area. See {@link #setFrameAreaBorders(int, int, int, int)}.
+It should be called only in the GUI-Thread.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 5;
+						- value = 
+						{ IArgument 
+							- _id = GUID 1176319a-b39e-497c-a335-13870cad36f9;
+							- _name = "xArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for left, middle, right
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 9b02b2fa-b34e-4755-9047-3580c786d518;
+							- _name = "yArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for top, middle, bottom
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 53548615-b179-4461-bbc7-64403f809553;
+							- _name = "dxArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for 1 field to 3 fields to right.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID a415c4b0-4335-4485-8076-3defa81943f5;
+							- _name = "dyArea";
+							- _description = { IDescription 
+								- _text = "1 to 3 for 1 field to 3 field to bottom
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "int_";
+								- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID 050f1b3f-3061-4a2e-8275-405533d0e3d5;
+							- _name = "component";
+							- _description = { IDescription 
+								- _text = "The component.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "base.sbs";
+								- _subsystem = "GeneratedFromJava::base";
+								- _class = "";
+								- _name = "GralPanelContent";
+								- _id = GUID 95c5a773-79f1-43de-a2b1-e08e1bd475d0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID bf4b9a45-b607-4db7-b495-b92f6b23830e;
+					- _myState = 8192;
+					- _name = "getOutputBox";
+					- _description = { IDescription 
+						- _text = "Returns the text box which is used as output box for common messages of the application.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralTextBox";
+						- _id = GUID 7a0fd7c2-b968-46cb-a71a-4360223ff10a;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 49ab9f75-5a7a-4e00-ad58-4a32ac01fd59;
+					- _myState = 8192;
+					- _name = "setFullScreen";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 5a58f238-475c-4978-b608-8aa38fc60620;
+							- _name = "full";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "boolean";
+								- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 65981c62-483f-4b2b-af0b-05293a8d28cf;
+					- _myState = 8192;
+					- _name = "getGralMng";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMng";
+						- _id = GUID 91d4633a-c37b-4a91-a35e-d7eacf4f72b6;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 6b96b4d6-e6a0-4bf6-bcf1-8cbee3d1112a;
+					- _myState = 8192;
+					- _name = "getActionHelp";
+					- _description = { IDescription 
+						- _text = "Returns the prepared action help which opens the help window.
+It should be used for the users call of {@link #addMenuBarArea9ItemGThread(String, String, GralUserAction) }
+to install the help menu.  
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID aeaf2895-b2c5-4b21-bd3b-4d0c0bb8ea77;
+					- _myState = 8192;
+					- _name = "getActionAbout";
+					- _description = { IDescription 
+						- _text = "Returns the prepared action about which opens the help window.
+It should be used for the users call of {@link #addMenuBarArea9ItemGThread(String, String, GralUserAction) }
+to install the help menu.  
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ef3383a8-04ec-4699-9c16-a16716f39763;
+					- _myState = 8192;
+					- _name = "mainWindow";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralWindow_ifc";
+						- _id = GUID fccafa86-1f86-49b6-9146-7eeb7fe780ff;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 837a85bd-5ac7-4004-a53d-eb5d35ee79ee;
+					- _myState = 8192;
+					- _name = "getMainCmd";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "MainCmd_ifc";
+						- _id = GUID 12707c4b-ae3b-4338-900c-073edd05f6e6;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 119b8733-1553-433b-adda-a896f6e7a381;
+					- _myState = 8192;
+					- _name = "setHelpBase";
+					- _description = { IDescription 
+						- _text = "Set a path which is used as help url base path, if an widget starts with \"+\" in its help url.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID f512748f-4c35-432f-975b-3297a9bef3ad;
+							- _name = "path";
+							- _description = { IDescription 
+								- _text = "An absolute drive, or html page in internet.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAttribute 
+					- _id = GUID ede11c68-c605-416b-beb7-1007c59a642a;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version history:
+<ul>
+<li>2012-05-17 Hartmut new: {@link #setMinMaxSizeArea(String, int, int, int, int)}: The size can be given
+with gral units, as min, max or absolute (min, max are equal). The size of a area border can be changed on runtime.
+<li>2012-03-25 Hartmut new/chg: {@link #addFrameArea(String, GralPanelContent)} now with String designation of area.
+It should be used instead designation with 4 integers in range 1..3.
+<li>2011-12-26 Hartmut new extends {@link GralMngApplAdapter_ifc}
+<li>2011-11-12 Hartmut chg: {@link #initGraphic(String)} instead initOutputArea().
+<li>2011-11-12 Hartmut new: {@link #getActionAbout()} and {@link #getActionAbout()} to support menu setting by user
+<li>2011-08-06 Hartmut chg: This interface is based on MainCmd_ifc. It is a non-side-effect change
+because the implementation classes {@link MainCmdSwt} and maybe the adequate Swing class base on {@link MainCmd}.
+Using this change only this interface is necessary for applications to use {@link MainCmdSwt} or adequate Swing
+<li>2011-05-03 Hartmut created: The idea is a common GUI interface independent of Swing or SWT graphics.
+The classes {@link org.vishia.mainGuiSwt.MainCmdSwt} and {@link MainCmdSwing} exists.
+The interface should combine the usage of both.
+Second approach is the documentation of the concept of the 9 areas in a non-implementing class.
+<li>All other changes from 2010 and in the past
+</ul>
+
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are indent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID a9aab028-7602-44cf-b626-6b81d52ab919;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralMngApplAdapter_ifc";
+						- _id = GUID f320e2ec-1e41-4cca-ab87-2c8c96cc65f6;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 12c4e20d-8f6b-4327-96ed-b786d03f642b;
+			- _myState = 8192;
+			- _name = "GuiCallingArgs";
+			- Dependencies = { IRPYRawContainer 
+				- size = 5;
+				- value = 
+				{ IDependency 
+					- _id = GUID 03b5d2b6-bf10-49ae-a26b-315d0b2e8dd1;
+					- _myState = 2048;
+					- _name = "File";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5c3ca874-8cb9-4d54-be62-37c0f8e3c9ec;
+					- _myState = 2048;
+					- _name = "GralFactory_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralFactory_ifc";
+						- _id = GUID cb97bef3-3e19-4975-b6a0-bc3dd22d4bb0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 1029cef4-7926-4ef5-a681-f49d158a58ab;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b3ce7899-8af8-4fa5-8499-f7bf14655c95;
+					- _myState = 2048;
+					- _name = "char_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 69260495-265d-47fd-947f-d814b2b07cc3;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 09bc0012-0e0c-4003-92c8-e312027e05ff;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 5;
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 043aeaef-d6f6-49ed-90b1-2518adf3c812;
+					- _myState = 8192;
+					- _name = "getDirCfg";
+					- _description = { IDescription 
+						- _text = "Returns that directory where the configuration file is found. That directory may contain some more files
+for the application. 
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 12;
+				- value = 
+				{ IAttribute 
+					- _id = GUID da3a0cd9-65dc-4815-9a7d-60c687633caf;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "Version, history and licence
+<ul>
+<li>2013-11-22 Hartmut new {@link #sTitle}
+<li>2012-04-22 Hartmut chg {@link #sizeShow} instead sSize, new {@link #xLeftPixelWindow} etc.
+<li>2011-06-00 Hartmut creation, commonly arguments for each GUI application.
+</ul>
+
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 25c1fb7a-bf29-4c16-abc8-c4aa1204921b;
+					- _name = "sTitle";
+					- _description = { IDescription 
+						- _text = "String for title bar. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 2272591f-9109-4c0b-a473-e645be703c66;
+					- _name = "sPathZbnf";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 3bc2e3fe-8661-45b2-8a90-96d1ea001e3a;
+					- _name = "sTimeZone";
+					- _description = { IDescription 
+						- _text = "The time zone to present all time informations. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 3690d30c-4b26-40ec-85da-9b2453b847a4;
+					- _name = "xLeftPixelWindow";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 255dd702-d780-4c8b-b472-96d97180c57e;
+					- _name = "yTopPixelWindow";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 1b546495-44d6-4941-af6e-7b2962be441e;
+					- _name = "dxPixelWindow";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 15c74219-1784-4b33-adf8-75e8b840d5ea;
+					- _name = "dyPixelWindow";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 5fc69448-ee3f-41fd-9597-627de37bffc8;
+					- _name = "sOwnIpcAddr";
+					- _description = { IDescription 
+						- _text = "The own ipc-address for Interprocess-Communication with the target.
+It is a string, which determines the kind of communication.
+For example \"UDP:0.0.0.0:60099\" to create a socket port for UDP-communication.
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 0fe20978-8a87-473f-93ae-17031008b776;
+					- _name = "cfgConditions";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 3ff92200-d843-429f-bf6b-be787b6cad43;
+					- _name = "sPluginClass";
+					- _description = { IDescription 
+						- _text = "A class which is used as plugin for user specifies. It is of interface {@link PlugUser_ifc}. 
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID c6a67e1b-e50b-466b-a3ff-06c038530b75;
+					- _name = "sInspectorOwnPort";
+					- _description = { IDescription 
+						- _text = "The own ipc-address for inspector-Communication with this application.
+It is a string, which determines the kind of communication.
+For example \"UDP:0.0.0.0:60099\" to create a socket port for UDP-communication.
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 3;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 2aa1a803-7727-4304-85b9-ae33665b3b64;
+					- _myState = 8192;
+					- _name = "graphicFactory";
+					- _description = { IDescription 
+						- _text = "The graphic base factory can be detected from command line arguments
+or set directly from the calling level. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralFactory_ifc";
+						- _id = GUID cb97bef3-3e19-4975-b6a0-bc3dd22d4bb0;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "graphicFactory";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID fa7288cb-20bd-44a5-b5ce-a206268ff05a;
+					- _myState = 8192;
+					- _name = "fileGuiCfg";
+					- _description = { IDescription 
+						- _text = "Name of the config-file for the Gui-appearance.  The configuration file. It is created while parsing arguments.
+The file is opened and closed while the configuration is used to build the GUI.
+The file is used to write on menu-save action.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "fileGuiCfg";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c47782b6-d92b-4fb7-88b5-04f4e124baab;
+					- _myState = 8192;
+					- _name = "sizeShow";
+					- _description = { IDescription 
+						- _text = "Size, either A,B or F for 800x600, 1024x768 or full screen. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "char_";
+						- _id = GUID 7232205a-dca1-4a8b-9b67-f9b05e7ebcfc;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "sizeShow";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 9a7b3617-b1ca-4599-aabb-40de6364a082;
+			- _myState = 8192;
+			- _name = "GuiCfg";
+			- Dependencies = { IRPYRawContainer 
+				- size = 29;
+				- value = 
+				{ IDependency 
+					- _id = GUID e0567481-1bbd-40cc-b60c-dc3f757f2668;
+					- _myState = 2048;
+					- _name = "Appendable";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Appendable";
+						- _id = GUID 98a05482-3a33-4cfd-b5eb-9cd826eff65c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 2b0e1522-64a6-4997-b567-37d981527c5f;
+					- _myState = 2048;
+					- _name = "Class";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Class";
+						- _id = GUID 22d9a04e-2f50-4451-ae65-8874cd0b7650;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9e7d65ab-91a6-44de-aa52-4c7b226a6465;
+					- _myState = 2048;
+					- _name = "File";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "File";
+						- _id = GUID f95430b9-3c0c-4a3a-ad0c-55ece4ebed55;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 673b103f-d85b-4f0e-8867-be6b8e53d17b;
+					- _myState = 2048;
+					- _name = "GralArea9MainCmd";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af733758-3912-48e1-a6a5-9721cc0bf6c3;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ee99ba62-c290-4c22-a94c-65c8c3ff3380;
+					- _myState = 2048;
+					- _name = "GralArea9Window";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 8a469b8f-1372-4f37-8ef4-ab0e6d9212c6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9fab3f43-1de5-4816-8cbd-65e29b2c5ba5;
+					- _myState = 2048;
+					- _name = "GralArea9_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 13097edc-e540-4cd2-b2ce-c953fee7ae76;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c9d16914-af85-46cb-a0a8-37f7602e1d1e;
+					- _myState = 2048;
+					- _name = "GralCfgData";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "cfg.sbs";
+						- _subsystem = "GeneratedFromJava::cfg";
+						- _class = "";
+						- _name = "GralCfgData";
+						- _id = GUID 38ee12ed-e6ba-4892-bd7e-272d63f78928;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d7c9316d-88a1-45e5-9e3e-d5aa4b4439f9;
+					- _myState = 2048;
+					- _name = "GralCfgZbnf";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "cfg.sbs";
+						- _subsystem = "GeneratedFromJava::cfg";
+						- _class = "";
+						- _name = "GralCfgZbnf";
+						- _id = GUID e0644403-bfdf-4550-b505-ef2b38eb18fb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID bf29a5c1-db1d-4181-9983-39001fc91c3d;
+					- _myState = 2048;
+					- _name = "GralGraphicTimeOrder";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralGraphicTimeOrder";
+						- _id = GUID a68ce969-857e-4ce3-8a1b-295aa23563a8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID eaa5cfb7-1176-4ac7-8f18-3071dd5df989;
+					- _myState = 2048;
+					- _name = "GralMng";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMng";
+						- _id = GUID 91d4633a-c37b-4a91-a35e-d7eacf4f72b6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 47a97d47-95da-44a3-9ce6-5fdbf471b90b;
+					- _myState = 2048;
+					- _name = "GralMngBuild_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralMngBuild_ifc";
+						- _id = GUID c4d89935-f3e3-442e-a68e-cf431e305494;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 21bd0ca4-74af-4aea-8e8d-423abe9b3d7f;
+					- _myState = 2048;
+					- _name = "GralMng_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralMng_ifc";
+						- _id = GUID 55a876ee-993e-4734-9835-8dbd6992a255;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 994b0062-bc6e-4a45-aa51-a0a05da9cb87;
+					- _myState = 2048;
+					- _name = "GralPlugUser2Gral_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralPlugUser2Gral_ifc";
+						- _id = GUID 6574b976-6c00-4017-a72c-e5632b9099e7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 575e0159-32a6-449e-aa00-1581cdf02274;
+					- _myState = 2048;
+					- _name = "GralPlugUser_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralPlugUser_ifc";
+						- _id = GUID 1f624b0d-c6c2-4cba-a735-fb6747812813;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 0cf85ae9-ed19-4c46-8d24-1c9456ed28d5;
+					- _myState = 2048;
+					- _name = "GralTabbedPanel";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "GralTabbedPanel";
+						- _id = GUID 8908e6a7-830f-4961-bf04-329b79b000fe;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 8b31a6fe-bd53-4bd5-be09-bec62d021cd1;
+					- _myState = 2048;
+					- _name = "GralUserAction";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f275b62c-9596-41e9-9cd0-9bfee14252df;
+					- _myState = 2048;
+					- _name = "GralWidget";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralWidget";
+						- _id = GUID 9907837d-d824-478a-b691-a8f51888e22d;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 84d9780b-8516-4aa8-9841-20e18106b489;
+					- _myState = 2048;
+					- _name = "GuiCallingArgs";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 12c4e20d-8f6b-4327-96ed-b786d03f642b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5b150a16-bc18-47cb-bda4-5d7b9d351dc8;
+					- _myState = 2048;
+					- _name = "GuiCfg";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 9a7b3617-b1ca-4599-aabb-40de6364a082;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ffba9802-2597-4d64-8319-740b795612fd;
+					- _myState = 2048;
+					- _name = "Inspector";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Inspector";
+						- _id = GUID 97866f57-617d-44b3-9689-cf947a3eea39;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 9aec7d60-8441-4889-b19c-b067eff13800;
+					- _myState = 2048;
+					- _name = "MainCmd_ifc";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "MainCmd_ifc";
+						- _id = GUID 12707c4b-ae3b-4338-900c-073edd05f6e6;
+					}
+				}
+				{ IDependency 
+					- _id = GUID a466517e-9fd6-44e4-bc63-224eabdc01e7;
+					- _myState = 2048;
+					- _name = "Object";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Object";
+						- _id = GUID 60c39dfa-d2c9-4ddd-9003-e029e6d717c1;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 3bd5014a-1acd-4eb1-825b-6bd63c10f3f4;
+					- _myState = 2048;
+					- _name = "ProcessBuilder";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "ProcessBuilder";
+						- _id = GUID 3806e90c-52e4-414b-85b0-bad2bf18d232;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 5ed4355e-f461-430a-b1c4-16af815ccffa;
+					- _myState = 2048;
+					- _name = "Report";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Report";
+						- _id = GUID d4ee33ff-ea1f-4c61-96a7-feed222ded00;
+					}
+				}
+				{ IDependency 
+					- _id = GUID d88f5d52-af30-430b-8b9f-42a8e429f47b;
+					- _myState = 2048;
+					- _name = "String";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "String";
+						- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 19ba9248-b7c3-4e13-a55e-8d70c454dffc;
+					- _myState = 2048;
+					- _name = "StringBuilder";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "StringBuilder";
+						- _id = GUID 703155a9-c40e-429c-9bd5-798ac66ba76a;
+					}
+				}
+				{ IDependency 
+					- _id = GUID b2cc7056-a727-43b3-b5e4-ab70abe1f4ea;
+					- _myState = 2048;
+					- _name = "Writer";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Writer";
+						- _id = GUID 08752f64-4488-43dd-9a60-d4d001d8115b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6e1f986a-8c9f-4ae0-8958-51c8e5449179;
+					- _myState = 2048;
+					- _name = "boolean";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "boolean";
+						- _id = GUID aa3b5f95-6e27-42a5-8c73-eead7c8b4578;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 2cc517b7-c30b-4244-bf1e-fc4bdaf3c7c9;
+					- _myState = 2048;
+					- _name = "int_";
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+				}
+			}
+			- Tags = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITag 
+					- _id = GUID 00601cbe-5094-4a22-8a95-8a13397a1c11;
+					- _name = "filename";
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypes.sbs";
+						- _subsystem = "PredefinedTypes";
+						- _class = "";
+						- _name = "RhpString";
+						- _id = GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _lastID = 29;
+			- weakCGTime = 3.21.2015::23:15:25;
+			- strongCGTime = 3.21.2015::23:15:25;
+			- Operations = { IRPYRawContainer 
+				- size = 10;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID fc2fae9d-d400-4952-8bf9-14d2f12d92bc;
+					- _myState = 8192;
+					- _name = "getPluggedUser";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralPlugUser_ifc";
+						- _id = GUID 1f624b0d-c6c2-4cba-a735-fb6747812813;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID daf09fe2-1fcf-427e-b179-d37102f0df36;
+					- _myState = 8192;
+					- _name = "userInit";
+					- _description = { IDescription 
+						- _text = "Will be overridden... TODO InspcGui
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 2c2dff12-6e03-4798-9314-658327a8ff30;
+					- _myState = 8192;
+					- _name = "initGuiAreas";
+					- _description = { IDescription 
+						- _text = "Initializes the areas for the panels and configure the panels.
+This routine can be overridden if other areas are need.
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 82944a78-c369-48d5-98c2-33bda2e3d09d;
+							- _name = "sMainArea";
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID f13c2005-e39a-4a98-b9d1-1163fd36ca56;
+					- _myState = 8192;
+					- _name = "initMenuGralDesigner";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 02143f84-3138-4eae-9b80-6cee4ef31b7e;
+					- _myState = 8192;
+					- _name = "initMain";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 624a45e0-0d40-47b8-910f-e0f2dde326d1;
+					- _myState = 8192;
+					- _name = "stepMain";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID a4bfe181-20b5-4446-aae2-2dd05eedf906;
+					- _myState = 8192;
+					- _name = "finishMain";
+					- _description = { IDescription 
+						- _text = "This routine is called on end of main-execution. This default implementation calls
+{@link GralPlugUser_ifc#close()}.
+
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 717e92ac-c2b5-4eff-9181-7a96a7b42e90;
+					- _myState = 8192;
+					- _name = "execute";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 24f795fb-85b0-47d1-9302-158bd3b38bbd;
+					- _myState = 8192;
+					- _name = "main";
+					- _description = { IDescription 
+						- _text = "The command-line-invocation (primary command-line-call).
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 9a7f31a7-8ab2-4b64-a899-9e87eee8b632;
+							- _name = "args";
+							- _description = { IDescription 
+								- _text = "Some calling arguments are taken. This is the GUI-configuration especially.
+";
+							}
+							- _defaultValue = "";
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "pkgExtTypes.sbs";
+								- _subsystem = "GeneratedFromJava::pkgExtTypes";
+								- _class = "";
+								- _name = "String";
+								- _id = GUID 91ed919b-52e4-41db-9ffb-e394852d9dd8;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 143e40f9-a067-490d-94f1-125b1005cf07;
+					- _myState = 8192;
+					- _name = "stop";
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 5d97e328-4743-4b7c-8f60-667f616f38c7;
+					- _name = "version";
+					- _description = { IDescription 
+						- _text = "The version.
+<ul>
+<li>2013-12-02 Hartmut new Parameter for {@link #GuiCfg(GuiCallingArgs, GralArea9MainCmd, GralPlugUser_ifc, GralPlugUser2Gral_ifc, List)}:
+cfgConditions.
+<li>2012-09-17 Hartmut new: {@link #showMethods}
+<li>2011-10-12 Hartmut chg: ctor needs a {@link GralPlugUser_ifc} which may be null: A plugin may be instantiated
+by reflection with String given class name. It may be possible to give it as parameter too.
+<li>2011-10-20 Hartmut chg: ctor needs a {@link GralPlugUser2Gral_ifc} which may be null.
+Idea: a derived class should support it. Other Idea: either both via reflection or both maybe direct.
+<li>2011-10-11 Hartmut new: Switches MainCmd-output to OutputBox.
+<li>2011-09-30 Hartmut new: menu 'Design/...' to edit fields and work with the {@link GralCfgDesigner}.
+<li>2011-09-18 Hartmut new: The main tab panel has the name 'mainTab' and it is registered in the {@link #_gralMng} now.
+Generally an application may have more as one tabbed panels.
+<li>2011-09-10 Hartmut del: Remove dialogZbnfConfigurator, it was not used. It is the old solution.
+<li>2011-09-08 Hartmut del: Remove the message panel. It was a special solution.
+<li>2011-08-08 Hartmut new: {@link #initMain()} as override-able method instead direct call of initializing.
+<li>2011-08-07 Hartmut chg: Now {@link GuiCallingArgs} as primary class, not an inner class here.
+<li>2011-08-07 Hartmut chg: Now {@link GralArea9MainCmd} as extra primary class.
+<li>2011-08-04 Hartmut chg: rename and move from org/vishia/guiCmdMenu/CmdMenu.java to org/vishia/gral/area9/GuiCfg.java.
+It is a universal GUI which is configurable in content. Also it is a base class for some configurable GUI applications.
+<li>2011-08-04 Hartmut chg: Use {@link GralPanelContent} instead the special InspcGuiPanelContent.
+<li>2011-08-04 Hartmut new: {@link #userInit()} as override-able method instead direct call of user.init().
+Advantage: User can do anything in the derived class.
+<li>2011-08-04 Hartmut new: Use first key of argument --size: to determine the size. TODO parseArgs
+<li>2011-07-31 Hartmut new: First usage as super class.
+<li>2010-01-01 Hartmut new: The base of this class was created with some applications.
+</ul>
+
+<b>Copyright/Copyleft</b>:
+For this source the LGPL Lesser General Public License,
+published by the Free Software Foundation is valid.
+It means:
+<ol>
+<li> You can use this source without any restriction for any desired purpose.
+<li> You can redistribute copies of this source to everybody.
+<li> Every user of this source, also the user of redistribute copies
+with or without payment, must accept this license for further using.
+<li> But the LPGL ist not appropriate for a whole software product,
+if this source is only a part of them. It means, the user
+must publish this part of source,
+but don't need to publish the whole source of the own product.
+<li> You can study and modify (improve) this source
+for own using or for redistribution, but you have to license the
+modified sources likewise under this LGPL Lesser General Public License.
+You mustn't delete this Copyright/Copyleft inscription in this source file.
+</ol>
+If you are intent to use this sources without publishing its usage, you can get
+a second license subscribing a special contract with the author.
+
+@author Hartmut Schorrig = hartmut.schorrig@vishia.de
+
+
+";
+					}
+					- _defaultValue = "";
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "int_";
+						- _id = GUID 32ce88e4-b4d0-497e-86eb-d342261964e1;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 17;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 1d80ac06-b27f-497a-86a0-5e8eaf5faa9a;
+					- _myState = 8192;
+					- _name = "inspector";
+					- _description = { IDescription 
+						- _text = "Composition of a Inspector-Target instance. This is only to visit this application for debugging.
+Not necessary for functionality. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Inspector";
+						- _id = GUID 97866f57-617d-44b3-9689-cf947a3eea39;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "inspector";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID fafeb3cc-eebe-4804-9c0d-cd090a624e9d;
+					- _myState = 8192;
+					- _name = "console";
+					- _description = { IDescription 
+						- _text = "To Output log informations. The ouput will be done in the output area of the graphic. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "Report";
+						- _id = GUID d4ee33ff-ea1f-4c61-96a7-feed222ded00;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "console";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c0094661-8b1e-4c5d-a50e-084ec1f03419;
+					- _myState = 8192;
+					- _name = "cargs";
+					- _description = { IDescription 
+						- _text = "The calling arguments of this class. It may be filled by command line invocation
+but maybe given in a direct way too while calling this class in a Java environment. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 12c4e20d-8f6b-4327-96ed-b786d03f642b;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "cargs";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c94eb0b2-ee6e-441c-89f8-4f66ab9601e5;
+					- _myState = 8192;
+					- _name = "guiCfgData";
+					- _description = { IDescription 
+						- _text = "The configuration data for graphical appearance. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "cfg.sbs";
+						- _subsystem = "GeneratedFromJava::cfg";
+						- _class = "";
+						- _name = "GralCfgData";
+						- _id = GUID 38ee12ed-e6ba-4892-bd7e-272d63f78928;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "guiCfgData";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID a4dc40b6-ae9b-452e-b1be-78ee7bb75ac2;
+					- _myState = 8192;
+					- _name = "user";
+					- _description = { IDescription 
+						- _text = "This instance helps to create the Dialog Widget as part of the whole window. It is used only in the constructor.
+Therewith it may be defined stack-locally. But it is better to show and explain if it is access-able at class level.  Some actions may be processed by a user implementation. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralPlugUser_ifc";
+						- _id = GUID 1f624b0d-c6c2-4cba-a735-fb6747812813;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "user";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 718978ed-2474-42de-89a6-8eb764c8e822;
+					- _myState = 8192;
+					- _name = "plugUser2Gui";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralPlugUser2Gral_ifc";
+						- _id = GUID 6574b976-6c00-4017-a72c-e5632b9099e7;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "plugUser2Gui";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c8044744-d144-41cf-bee7-156a6ddf0485;
+					- _myState = 8192;
+					- _name = "gui";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 13097edc-e540-4cd2-b2ce-c953fee7ae76;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "gui";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 411bb6df-f4c5-4635-9a0c-69c38462705e;
+					- _myState = 8192;
+					- _name = "guiW";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 8a469b8f-1372-4f37-8ef4-ab0e6d9212c6;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "guiW";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 719dbc84-07ed-4ce5-83f7-2a7c26d7e466;
+					- _myState = 8192;
+					- _name = "mainCmd";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "MainCmd_ifc";
+						- _id = GUID 12707c4b-ae3b-4338-900c-073edd05f6e6;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "mainCmd";
+					- _linkType = Aggreg;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID d1d30a93-4446-4a59-957c-d5b18a00f8de;
+					- _myState = 8192;
+					- _name = "gralMng_";
+					- _description = { IDescription 
+						- _text = "Especially for debug access to the singleton instance, start with _ to present on top of variables. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralMng";
+						- _id = GUID 91d4633a-c37b-4a91-a35e-d7eacf4f72b6;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "_gralMng";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 7152ecec-e5c4-45b0-8c09-2581d13fcf3c;
+					- _myState = 8192;
+					- _name = "panelBuildIfc";
+					- _description = { IDescription 
+						- _text = "Panel-Management-interface for the panels. 
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralMngBuild_ifc";
+						- _id = GUID c4d89935-f3e3-442e-a68e-cf431e305494;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "panelBuildIfc";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 1f7f0d62-2313-475b-b33d-86538652c835;
+					- _myState = 8192;
+					- _name = "guiAccess";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralMng_ifc";
+						- _id = GUID 55a876ee-993e-4734-9835-8dbd6992a255;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "guiAccess";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID ce3acc80-3f40-49e1-afd7-b2d49970d1e1;
+					- _myState = 8192;
+					- _name = "mainTabPanel";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "pkgExtTypes.sbs";
+						- _subsystem = "GeneratedFromJava::pkgExtTypes";
+						- _class = "";
+						- _name = "GralTabbedPanel";
+						- _id = GUID 8908e6a7-830f-4961-bf04-329b79b000fe;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "mainTabPanel";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c8236fcb-68ba-4502-aeac-99ec4653f7e1;
+					- _myState = 8192;
+					- _name = "initGraphic";
+					- _description = { IDescription 
+						- _text = "Code snippet for initializing the GUI area (panel). This snippet will be executed
+in the GUI-Thread if the GUI is created.
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralGraphicTimeOrder";
+						- _id = GUID a68ce969-857e-4ce3-8a1b-295aa23563a8;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "initGraphic";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 9966f874-ec11-4073-9a57-aae58c505230;
+					- _myState = 8192;
+					- _name = "configGuiWithZbnf";
+					- _description = { IDescription 
+						- _text = "Code snippet to run the ZBNF-configurator (text controlled GUI)
+
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "base.sbs";
+						- _subsystem = "GeneratedFromJava::base";
+						- _class = "";
+						- _name = "GralGraphicTimeOrder";
+						- _id = GUID a68ce969-857e-4ce3-8a1b-295aa23563a8;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "configGuiWithZbnf";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 2658c8fe-458c-4161-9134-aefe6d902aeb;
+					- _myState = 8192;
+					- _name = "cmdInvoke";
+					- _description = { IDescription 
+						- _text = "Registered as user action.
+
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "cmdInvoke";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 6370ecaa-091a-4021-a652-8249b2d2be93;
+					- _myState = 8192;
+					- _name = "actionFile";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "ifc.sbs";
+						- _subsystem = "GeneratedFromJava::ifc";
+						- _class = "";
+						- _name = "GralUserAction";
+						- _id = GUID 4230becf-e834-4f57-b796-196f13ce4a6f;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "actionFile";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+
