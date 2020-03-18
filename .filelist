@@ -1,0 +1,1346 @@
+2020-03-14 10:00:50  x     +clean.bat                               ::           . 55 -2113340307 
+2020-03-18 22:04:28  x     +gradleBuild.bat                         ::           .329  0336870241 
+2020-03-18 21:26:17  x     +mkLinkBuildGradle.bat                   ::           .963  0513062768 
+2020-03-18 22:28:00  x     build.gradle                             ::          4.250 -2075466097 
+
+============================== build/ =============================================================
+2020-03-18 22:30:37  x     err.txt                                  ::           .224  0878633315 
+2020-03-18 21:49:31  x     javac.out.txt                            ::           .  0  0000000000 
+2020-03-18 21:49:32  x     out.txt                                  ::           .421 -1267116979 
+
+============================== build/classes/ ======================================================
+
+============================== build/classes/java/ =================================================
+
+============================== build/classes/java/main/ ============================================
+
+============================== build/generated/ ====================================================
+
+============================== build/generated/sources/ ============================================
+
+============================== build/generated/sources/annotationProcessor/ ========================
+
+============================== build/generated/sources/annotationProcessor/java/ ===================
+
+============================== build/generated/sources/annotationProcessor/java/main/ ==============
+
+============================== build/javac/ ========================================================
+2020-03-18 22:31:12  x     jar.txt                                  ::         92.021  0886523339 
+2020-03-18 22:30:28  x     sources.txt                              ::         14.738  0252695684 
+
+============================== build/javac/binjar/ =================================================
+
+============================== build/javac/binjar/META-INF/ ========================================
+2020-03-17 00:00:00  x     MANIFEST.MF                              ::           . 61 -2005899189 
+
+============================== build/javac/binjar/org/ =============================================
+
+============================== build/javac/binjar/org/vishia/ ======================================
+
+============================== build/javac/binjar/org/vishia/commander/ ============================
+2020-03-17 00:00:00  x     Fcmd$1.class                             ::           .720 -1453764794 
+2020-03-17 00:00:00  x     Fcmd$10.class                            ::           .938  1253413727 
+2020-03-17 00:00:00  x     Fcmd$11.class                            ::          1.089  1649566899 
+2020-03-17 00:00:00  x     Fcmd$12.class                            ::          1.090  0810890520 
+2020-03-17 00:00:00  x     Fcmd$13.class                            ::           .561 -1277371270 
+2020-03-17 00:00:00  x     Fcmd$14.class                            ::           .561  1532727816 
+2020-03-17 00:00:00  x     Fcmd$15.class                            ::          1.039  1523565919 
+2020-03-17 00:00:00  x     Fcmd$16.class                            ::           .771 -0569704345 
+2020-03-17 00:00:00  x     Fcmd$17.class                            ::           .772  0420205956 
+2020-03-17 00:00:00  x     Fcmd$18.class                            ::          2.420 -1790051540 
+2020-03-17 00:00:00  x     Fcmd$19.class                            ::           .870  0232677781 
+2020-03-17 00:00:00  x     Fcmd$2.class                             ::           .639 -1792675318 
+2020-03-17 00:00:00  x     Fcmd$20.class                            ::          3.386 -0390947663 
+2020-03-17 00:00:00  x     Fcmd$21.class                            ::          1.082 -0122184317 
+2020-03-17 00:00:00  x     Fcmd$22.class                            ::          1.425 -0238627573 
+2020-03-17 00:00:00  x     Fcmd$3.class                             ::          1.114  1935856205 
+2020-03-17 00:00:00  x     Fcmd$4.class                             ::          1.256  0600676537 
+2020-03-17 00:00:00  x     Fcmd$5.class                             ::          1.255  0525110188 
+2020-03-17 00:00:00  x     Fcmd$6.class                             ::          1.257  2036348506 
+2020-03-17 00:00:00  x     Fcmd$7.class                             ::           .967 -0002962664 
+2020-03-17 00:00:00  x     Fcmd$8.class                             ::           .966 -0912307380 
+2020-03-17 00:00:00  x     Fcmd$9.class                             ::           .968 -0534999865 
+2020-03-17 00:00:00  x     Fcmd$CallingArgs.class                   ::           .449 -1030904827 
+2020-03-17 00:00:00  x     Fcmd$FcmdMainCmd.class                   ::          2.288  1882308773 
+2020-03-17 00:00:00  x     Fcmd.class                               ::         19.521  0110055269 
+2020-03-17 00:00:00  x     FcmdButtons$1.class                      ::           .663  0077387030 
+2020-03-17 00:00:00  x     FcmdButtons$2.class                      ::          1.127  0608319872 
+2020-03-17 00:00:00  x     FcmdButtons$ButtonAction.class           ::           .558 -1901615056 
+2020-03-17 00:00:00  x     FcmdButtons.class                        ::         16.702 -0125868355 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$1.class                  ::          1.104  0035171664 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$10.class                 ::           .947  1221100901 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$11.class                 ::          2.535 -0791482496 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$12.class                 ::          1.308  1695423245 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$13.class                 ::          2.495 -1335056639 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$14.class                 ::          2.438  0211908076 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$15.class                 ::          2.095 -0435188279 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$16.class                 ::          1.346 -1526116313 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$17.class                 ::          4.317 -0124782310 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$18.class                 ::          3.000 -0188059131 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$19.class                 ::          2.975 -1373088650 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$2.class                  ::          4.460 -0973827920 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$20.class                 ::          2.478  2044163300 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$3.class                  ::           .909 -1661362514 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$4.class                  ::          1.391  0282799862 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$5.class                  ::           .767  1491269660 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$6.class                  ::          1.383  1748435787 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$7.class                  ::          1.386 -0812061790 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$8.class                  ::          1.625 -0928578756 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$9.class                  ::          1.381 -1178993750 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$Actions$1.class          ::           .987 -0113260385 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$Actions.class            ::          1.370 -0506416689 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$Ecmd.class               ::          1.146 -0870191452 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel$Estate.class             ::          1.364  0262613392 
+2020-03-17 00:00:00  x     FcmdCopyCmprDel.class                    ::         24.051 -1802932127 
+2020-03-17 00:00:00  x     FcmdDelete$1.class                       ::           .469  0323862079 
+2020-03-17 00:00:00  x     FcmdDelete$2.class                       ::          1.076  1699624741 
+2020-03-17 00:00:00  x     FcmdDelete$3.class                       ::          3.034  1150433723 
+2020-03-17 00:00:00  x     FcmdDelete$4.class                       ::          1.991 -1969410938 
+2020-03-17 00:00:00  x     FcmdDelete.class                         ::          5.253  1843291302 
+2020-03-17 00:00:00  x     FcmdDocuSearch.class                     ::           .157  2048525307 
+2020-03-17 00:00:00  x     FcmdEdit$1.class                         ::           .890  1702649296 
+2020-03-17 00:00:00  x     FcmdEdit$2.class                         ::          2.370  0311058664 
+2020-03-17 00:00:00  x     FcmdEdit.class                           ::          5.621 -0666329083 
+2020-03-17 00:00:00  x     FcmdExecuter$1.class                     ::           .982 -0271204715 
+2020-03-17 00:00:00  x     FcmdExecuter$2.class                     ::          2.084 -1253619058 
+2020-03-17 00:00:00  x     FcmdExecuter$3.class                     ::          2.033  1790618361 
+2020-03-17 00:00:00  x     FcmdExecuter$4.class                     ::          1.075 -1315031349 
+2020-03-17 00:00:00  x     FcmdExecuter$5.class                     ::          1.012  0540905035 
+2020-03-17 00:00:00  x     FcmdExecuter$6.class                     ::           .741 -0377875512 
+2020-03-17 00:00:00  x     FcmdExecuter$7.class                     ::          2.286  0802294677 
+2020-03-17 00:00:00  x     FcmdExecuter$8.class                     ::          2.261  0682837846 
+2020-03-17 00:00:00  x     FcmdExecuter$9.class                     ::           .733  1574087351 
+2020-03-17 00:00:00  x     FcmdExecuter.class                       ::          8.319 -1432248399 
+2020-03-17 00:00:00  x     FcmdFavorCard$1.class                    ::          1.351 -1778149605 
+2020-03-17 00:00:00  x     FcmdFavorCard.class                      ::          6.851  0556591394 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$1.class            ::          1.548  0399377465 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$10.class           ::           .741  1424622402 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$11.class           ::           .741  0192579496 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$12.class           ::           .741 -1113785971 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$13.class           ::           .741  0050234844 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$14.class           ::           .741  1889396568 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$15.class           ::           .741 -1403626099 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$16.class           ::           .741  1296190905 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$17.class           ::           .741  1681934321 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$18.class           ::          1.906 -0022140685 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$19.class           ::          1.943  1851049543 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$2.class            ::          1.574 -0175104634 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$3.class            ::           .811 -1983052181 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$4.class            ::          2.121 -0796855222 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$5.class            ::          1.148  0081633410 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$6.class            ::          1.324  1150432877 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$7.class            ::          2.904 -0017437609 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$8.class            ::           .741 -0723419588 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$9.class            ::           .983 -1194100664 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$FavorFolder.class  ::           .862  0723235007 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$FavorPath.class    ::          1.051  0273124549 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector$WindowConfirmAddFavorite.class ::           .627  1415097559 
+2020-03-17 00:00:00  x     FcmdFavorPathSelector.class              ::         14.424  1649258197 
+2020-03-17 00:00:00  x     FcmdFileActionBase$1.class               ::           .852  1100736693 
+2020-03-17 00:00:00  x     FcmdFileActionBase.class                 ::           .950  1777162254 
+2020-03-17 00:00:00  x     FcmdFileCard$1.class                     ::          1.301 -1567091349 
+2020-03-17 00:00:00  x     FcmdFileCard$2.class                     ::          2.374 -1999378826 
+2020-03-17 00:00:00  x     FcmdFileCard$3.class                     ::           .744 -1163041637 
+2020-03-17 00:00:00  x     FcmdFileCard$4.class                     ::          2.141  0551893095 
+2020-03-17 00:00:00  x     FcmdFileCard.class                       ::         13.767  0594441613 
+2020-03-17 00:00:00  x     FcmdFileProps$1.class                    ::           .945  1155624629 
+2020-03-17 00:00:00  x     FcmdFileProps$2.class                    ::           .669  0409950562 
+2020-03-17 00:00:00  x     FcmdFileProps$3.class                    ::          5.186  0265842346 
+2020-03-17 00:00:00  x     FcmdFileProps$4.class                    ::           .643  1380392908 
+2020-03-17 00:00:00  x     FcmdFileProps$5.class                    ::          1.613  1658671643 
+2020-03-17 00:00:00  x     FcmdFileProps$6.class                    ::          1.505  0668846650 
+2020-03-17 00:00:00  x     FcmdFileProps$7.class                    ::          1.896 -0987001920 
+2020-03-17 00:00:00  x     FcmdFileProps$8.class                    ::           .816 -0819451961 
+2020-03-17 00:00:00  x     FcmdFileProps.class                      ::         10.223  0551758285 
+2020-03-17 00:00:00  x     FcmdFilesCp$1.class                      ::           .894 -1241377831 
+2020-03-17 00:00:00  x     FcmdFilesCp$2.class                      ::          1.313 -0261510096 
+2020-03-17 00:00:00  x     FcmdFilesCp.class                        ::          5.846  1594392908 
+2020-03-17 00:00:00  x     FcmdHistorie.class                       ::           .298 -0477000918 
+2020-03-17 00:00:00  x     FcmdIdents.class                         ::         15.654 -1154697374 
+2020-03-17 00:00:00  x     FcmdIdentsBase.class                     ::           .312  1677883586 
+2020-03-17 00:00:00  x     FcmdKeyActions.class                     ::           .781 -0027942301 
+2020-03-17 00:00:00  x     FcmdLeftMidRightPanel$FcmdFavorThemeCard$1.class ::          1.057  0304920268 
+2020-03-17 00:00:00  x     FcmdLeftMidRightPanel$FcmdFavorThemeCard.class ::          5.420 -0586682801 
+2020-03-17 00:00:00  x     FcmdLeftMidRightPanel.class              ::          6.911 -1523822138 
+2020-03-17 00:00:00  x     FcmdMkDirFile$1.class                    ::           .665  1522061043 
+2020-03-17 00:00:00  x     FcmdMkDirFile$2.class                    ::          2.273 -0599209068 
+2020-03-17 00:00:00  x     FcmdMkDirFile.class                      ::          3.410  1073284629 
+2020-03-17 00:00:00  x     FcmdSettings$1.class                     ::           .929 -1789251672 
+2020-03-17 00:00:00  x     FcmdSettings$2.class                     ::           .856 -1068135206 
+2020-03-17 00:00:00  x     FcmdSettings$3.class                     ::           .914 -0957142935 
+2020-03-17 00:00:00  x     FcmdSettings$4.class                     ::          1.188 -1402899649 
+2020-03-17 00:00:00  x     FcmdSettings$5.class                     ::          2.395 -0243109946 
+2020-03-17 00:00:00  x     FcmdSettings$6.class                     ::          1.227  0453749191 
+2020-03-17 00:00:00  x     FcmdSettings$7.class                     ::          1.053 -2073746802 
+2020-03-17 00:00:00  x     FcmdSettings.class                       ::          4.802 -1479233728 
+2020-03-17 00:00:00  x     FcmdStatus$1.class                       ::           .918 -1578194288 
+2020-03-17 00:00:00  x     FcmdStatus$2.class                       ::           .745 -0048021131 
+2020-03-17 00:00:00  x     FcmdStatus.class                         ::          2.370  0496922764 
+2020-03-17 00:00:00  x     FcmdStatusLine$1.class                   ::          1.110  0443453411 
+2020-03-17 00:00:00  x     FcmdStatusLine$2.class                   ::          1.110  1977857283 
+2020-03-17 00:00:00  x     FcmdStatusLine.class                     ::          5.749 -0288666917 
+2020-03-17 00:00:00  x     FcmdTargetProxy.class                    ::           .276 -1057336675 
+2020-03-17 00:00:00  x     FcmdView$1.class                         ::           .773  0095645522 
+2020-03-17 00:00:00  x     FcmdView$10.class                        ::           .739 -2086252574 
+2020-03-17 00:00:00  x     FcmdView$11.class                        ::           .739  1299725287 
+2020-03-17 00:00:00  x     FcmdView$12.class                        ::           .981 -0375873654 
+2020-03-17 00:00:00  x     FcmdView$13.class                        ::          1.264 -0177898488 
+2020-03-17 00:00:00  x     FcmdView$2.class                         ::          1.345  1715771964 
+2020-03-17 00:00:00  x     FcmdView$3.class                         ::          1.098 -1015448338 
+2020-03-17 00:00:00  x     FcmdView$4.class                         ::          1.144 -1541390185 
+2020-03-17 00:00:00  x     FcmdView$5.class                         ::          1.108  1522024495 
+2020-03-17 00:00:00  x     FcmdView$6.class                         ::          1.149  0723603440 
+2020-03-17 00:00:00  x     FcmdView$7.class                         ::           .916  1298551920 
+2020-03-17 00:00:00  x     FcmdView$8.class                         ::          1.960 -1548930003 
+2020-03-17 00:00:00  x     FcmdView$9.class                         ::           .738 -0976995259 
+2020-03-17 00:00:00  x     FcmdView.class                           ::         13.328  0188086643 
+2020-03-17 00:00:00  x     FcmdWidgetNames.class                    ::           .781  0295427926 
+2020-03-17 00:00:00  x     FcmdWindowMng$1.class                    ::          1.062  0316282530 
+2020-03-17 00:00:00  x     FcmdWindowMng.class                      ::           .563 -1689291162 
+
+============================== build/javac/binjar/org/vishia/commander/target/ =====================
+2020-03-17 00:00:00  x     FcmdtComm$1.class                        ::           .500  0586551565 
+2020-03-17 00:00:00  x     FcmdtComm$2.class                        ::           .547 -0247578250 
+2020-03-17 00:00:00  x     FcmdtComm.class                          ::           .980  0041787966 
+2020-03-17 00:00:00  x     FcmdtCopyCmd$1.class                     ::           .558 -2080998635 
+2020-03-17 00:00:00  x     FcmdtCopyCmd.class                       ::          2.555 -1496706729 
+2020-03-17 00:00:00  x     FcmdtTarget.class                        ::           .672  1961857066 
+2020-03-17 00:00:00  x     FcmdtTarget_ifc.class                    ::           .261  0966067937 
+
+============================== build/javac/binjar/org/vishia/communication/ ========================
+2020-03-17 00:00:00  x     Address_InterProcessComm.class           ::           .154 -0965421263 
+2020-03-17 00:00:00  x     Address_InterProcessComm_Socket.class    ::          2.627  0365489512 
+2020-03-17 00:00:00  x     InspcDataExchangeAccess$InspcAnswerValueByHandle.class ::          1.272 -1545994422 
+2020-03-17 00:00:00  x     InspcDataExchangeAccess$InspcDatagram.class ::          2.774 -1622687407 
+2020-03-17 00:00:00  x     InspcDataExchangeAccess$InspcSetValue.class ::          2.753 -0106639215 
+2020-03-17 00:00:00  x     InspcDataExchangeAccess$InspcSetValueData.class ::          2.122 -1175735251 
+2020-03-17 00:00:00  x     InspcDataExchangeAccess$Inspcitem.class  ::          3.349  1301415994 
+2020-03-17 00:00:00  x     InspcDataExchangeAccess.class            ::          2.445  1514425930 
+2020-03-17 00:00:00  x     InterProcessComm.class                   ::          1.368 -0487643721 
+2020-03-17 00:00:00  x     InterProcessCommFactory.class            ::          1.246  2119352411 
+2020-03-17 00:00:00  x     InterProcessCommFactoryAccessor.class    ::           .377  1096663510 
+2020-03-17 00:00:00  x     InterProcessCommFactorySocket.class      ::          2.786  0845891752 
+2020-03-17 00:00:00  x     InterProcessCommRxExec.class             ::           .780 -0831205722 
+2020-03-17 00:00:00  x     InterProcessCommRxThread$1.class         ::           .611  1803452052 
+2020-03-17 00:00:00  x     InterProcessCommRxThread.class           ::          5.124  1666534681 
+2020-03-17 00:00:00  x     InterProcessCommRx_ifc.class             ::           .769 -0044233044 
+2020-03-17 00:00:00  x     InterProcessComm_SocketImpl.class        ::          4.786 -0103076655 
+2020-03-17 00:00:00  x     SocketTester$CmdArgs.class               ::           .607 -1003442325 
+2020-03-17 00:00:00  x     SocketTester$CmdLine.class               ::          2.758 -1320468098 
+2020-03-17 00:00:00  x     SocketTester$UDPdebugReceiver.class      ::          1.868  0602106597 
+2020-03-17 00:00:00  x     SocketTester$UDPdebugTransmitter.class   ::          1.962  1621730673 
+2020-03-17 00:00:00  x     SocketTester.class                       ::          3.575  1184796878 
+2020-03-17 00:00:00  x     TCPexampleSimple$ServiceForClient.class  ::          1.512  0681202538 
+2020-03-17 00:00:00  x     TCPexampleSimple.class                   ::          1.568 -0282210150 
+
+============================== build/javac/binjar/org/vishia/curves/ ===============================
+2020-03-17 00:00:00  x     ReadCurves_ifc.class                     ::           .286 -1088416557 
+2020-03-17 00:00:00  x     WriteCurveBinary.class                   ::          1.169 -1932210081 
+2020-03-17 00:00:00  x     WriteCurveCsv.class                      ::          3.610  0825041065 
+2020-03-17 00:00:00  x     WriteCurve_ifc.class                     ::           .597 -0379755643 
+
+============================== build/javac/binjar/org/vishia/example/ ==============================
+
+============================== build/javac/binjar/org/vishia/example/fourier/ ======================
+2020-03-17 00:00:00  x     ForierSyntheseHarmony.class              ::          1.579 -1616689209 
+
+============================== build/javac/binjar/org/vishia/gitGui/ ===============================
+2020-03-17 00:00:00  x     GitGui$1.class                           ::          1.412  1373716600 
+2020-03-17 00:00:00  x     GitGui$10.class                          ::           .986 -1220685181 
+2020-03-17 00:00:00  x     GitGui$11.class                          ::          1.306  1133618313 
+2020-03-17 00:00:00  x     GitGui$12.class                          ::          1.244  1952485324 
+2020-03-17 00:00:00  x     GitGui$13.class                          ::          1.582 -0059462067 
+2020-03-17 00:00:00  x     GitGui$14.class                          ::          1.257 -0074447728 
+2020-03-17 00:00:00  x     GitGui$15.class                          ::          1.257  1401201012 
+2020-03-17 00:00:00  x     GitGui$16.class                          ::          1.254 -1444835390 
+2020-03-17 00:00:00  x     GitGui$17.class                          ::          1.087  1290833200 
+2020-03-17 00:00:00  x     GitGui$18.class                          ::          1.289 -1839922780 
+2020-03-17 00:00:00  x     GitGui$19.class                          ::          1.736  1440430277 
+2020-03-17 00:00:00  x     GitGui$2.class                           ::          1.469 -0743391958 
+2020-03-17 00:00:00  x     GitGui$20.class                          ::          1.736 -1663163818 
+2020-03-17 00:00:00  x     GitGui$21.class                          ::          1.733  1570766597 
+2020-03-17 00:00:00  x     GitGui$22.class                          ::          1.726 -0767127905 
+2020-03-17 00:00:00  x     GitGui$23.class                          ::          1.364 -0396413191 
+2020-03-17 00:00:00  x     GitGui$24.class                          ::          1.367 -0094150544 
+2020-03-17 00:00:00  x     GitGui$25.class                          ::          1.142 -0124696916 
+2020-03-17 00:00:00  x     GitGui$26.class                          ::           .566  1234299529 
+2020-03-17 00:00:00  x     GitGui$27.class                          ::          2.593 -1705373465 
+2020-03-17 00:00:00  x     GitGui$28.class                          ::          1.469 -0360760935 
+2020-03-17 00:00:00  x     GitGui$29.class                          ::           .717  0670427900 
+2020-03-17 00:00:00  x     GitGui$3.class                           ::          2.683  0701589638 
+2020-03-17 00:00:00  x     GitGui$30.class                          ::          1.150  1414451767 
+2020-03-17 00:00:00  x     GitGui$31.class                          ::           .998  0089995596 
+2020-03-17 00:00:00  x     GitGui$4.class                           ::           .707  0745957990 
+2020-03-17 00:00:00  x     GitGui$5.class                           ::           .856 -1533961406 
+2020-03-17 00:00:00  x     GitGui$6.class                           ::           .640 -0738445181 
+2020-03-17 00:00:00  x     GitGui$7.class                           ::           .645  2090966856 
+2020-03-17 00:00:00  x     GitGui$8.class                           ::          1.085 -1028548931 
+2020-03-17 00:00:00  x     GitGui$9.class                           ::          1.237 -1766713213 
+2020-03-17 00:00:00  x     GitGui$RevisionEntry.class               ::           .705 -2138219293 
+2020-03-17 00:00:00  x     GitGui.class                             ::         26.034 -0054777829 
+2020-03-17 00:00:00  x     GitGuiCmd$1.class                        ::           .931  1781517466 
+2020-03-17 00:00:00  x     GitGuiCmd$2.class                        ::           .843  1253577926 
+2020-03-17 00:00:00  x     GitGuiCmd$3.class                        ::           .753 -1169543464 
+2020-03-17 00:00:00  x     GitGuiCmd$4.class                        ::           .751 -1941379967 
+2020-03-17 00:00:00  x     GitGuiCmd$CmdArgs.class                  ::           .644  1024123528 
+2020-03-17 00:00:00  x     GitGuiCmd.class                          ::          2.013 -1885419327 
+2020-03-17 00:00:00  x     GitGuiPaths.class                        ::           .591  0353876141 
+
+============================== build/javac/binjar/org/vishia/gral/ =================================
+
+============================== build/javac/binjar/org/vishia/gral/area9/ ===========================
+2020-03-17 00:00:00  x     GralArea9MainCmd.class                   ::          4.114 -2054890994 
+2020-03-17 00:00:00  x     GralArea9Window$1.class                  ::          2.633  1612795685 
+2020-03-17 00:00:00  x     GralArea9Window$2.class                  ::           .855 -0506723423 
+2020-03-17 00:00:00  x     GralArea9Window$3.class                  ::          1.092  0284746437 
+2020-03-17 00:00:00  x     GralArea9Window$4.class                  ::           .667  0096870812 
+2020-03-17 00:00:00  x     GralArea9Window$5.class                  ::          1.491  1651264729 
+2020-03-17 00:00:00  x     GralArea9Window$GralActionFileOpen.class ::          1.265  1155003236 
+2020-03-17 00:00:00  x     GralArea9Window.class                    ::         10.844  2075825001 
+2020-03-17 00:00:00  x     GralArea9_ifc.class                      ::          1.438  2003749112 
+2020-03-17 00:00:00  x     GuiCallingArgs.class                     ::          2.580  0061506785 
+2020-03-17 00:00:00  x     GuiCfg$1.class                           ::           .802  2099071886 
+2020-03-17 00:00:00  x     GuiCfg$2.class                           ::          1.072  0451775595 
+2020-03-17 00:00:00  x     GuiCfg$3.class                           ::          1.683  0341722309 
+2020-03-17 00:00:00  x     GuiCfg$4.class                           ::          1.457 -1714663271 
+2020-03-17 00:00:00  x     GuiCfg.class                             ::          9.463 -1685381625 
+
+============================== build/javac/binjar/org/vishia/gral/awt/ =============================
+2020-03-17 00:00:00  x     AwtButton$AwtButtonImpl.class            ::          1.020 -0026562683 
+2020-03-17 00:00:00  x     AwtButton.class                          ::          5.236  1831005733 
+2020-03-17 00:00:00  x     AwtCanvasDrawer.class                    ::          1.124  1386652197 
+2020-03-17 00:00:00  x     AwtFactory.class                         ::           .815 -0930061702 
+2020-03-17 00:00:00  x     AwtGralKey$1.class                       ::           .853 -1148316113 
+2020-03-17 00:00:00  x     AwtGralKey$MouseAction.class             ::          1.162 -1533892875 
+2020-03-17 00:00:00  x     AwtGralKey.class                         ::          2.142  0784445480 
+2020-03-17 00:00:00  x     AwtGralMouseListener$MouseListenerGralAction$1.class ::          1.637 -0826797603 
+2020-03-17 00:00:00  x     AwtGralMouseListener$MouseListenerGralAction.class ::          4.620  1622661336 
+2020-03-17 00:00:00  x     AwtGralMouseListener$MouseListenerNoAction.class ::          3.332  0147715309 
+2020-03-17 00:00:00  x     AwtGralMouseListener.class               ::           .461  1937743933 
+2020-03-17 00:00:00  x     AwtGraphicThread.class                   ::          1.480 -2063174793 
+2020-03-17 00:00:00  x     AwtLabel.class                           ::          4.135 -0786397127 
+2020-03-17 00:00:00  x     AwtMenu.class                            ::          1.925  2014965019 
+2020-03-17 00:00:00  x     AwtPanel$1.class                         ::           .710  1182125446 
+2020-03-17 00:00:00  x     AwtPanel.class                           ::          1.576  1706504054 
+2020-03-17 00:00:00  x     AwtProperties.class                      ::          2.693 -0677092218 
+2020-03-17 00:00:00  x     AwtSubWindow$1.class                     ::          1.002 -0425095115 
+2020-03-17 00:00:00  x     AwtSubWindow$2.class                     ::           .853 -1310217870 
+2020-03-17 00:00:00  x     AwtSubWindow$3.class                     ::           .849  1484279282 
+2020-03-17 00:00:00  x     AwtSubWindow$4.class                     ::          1.101 -1265586269 
+2020-03-17 00:00:00  x     AwtSubWindow$5.class                     ::           .860 -0538593096 
+2020-03-17 00:00:00  x     AwtSubWindow$6.class                     ::          1.441  1698102408 
+2020-03-17 00:00:00  x     AwtSubWindow$GralAwtWindowAdapter.class  ::          1.796 -0020324449 
+2020-03-17 00:00:00  x     AwtSubWindow.class                       ::          3.706 -0294521993 
+2020-03-17 00:00:00  x     AwtTextBox$1.class                       ::           .965 -0664296598 
+2020-03-17 00:00:00  x     AwtTextBox$2.class                       ::           .966 -0739711959 
+2020-03-17 00:00:00  x     AwtTextBox$AwtTextAreaImpl.class         ::           .593 -0679150271 
+2020-03-17 00:00:00  x     AwtTextBox.class                         ::          2.260  1297154032 
+2020-03-17 00:00:00  x     AwtTextField$1.class                     ::           .858 -1795537944 
+2020-03-17 00:00:00  x     AwtTextField$2.class                     ::           .948 -1482074266 
+2020-03-17 00:00:00  x     AwtTextField$TextCanvas.class            ::           .822 -1052687267 
+2020-03-17 00:00:00  x     AwtTextField.class                       ::          5.933 -2071065298 
+2020-03-17 00:00:00  x     AwtWidget.class                          ::           .202  0623307911 
+2020-03-17 00:00:00  x     AwtWidgetHelper.class                    ::          3.172 -1463378561 
+2020-03-17 00:00:00  x     AwtWidgetMng$1.class                     ::           .674 -0395404612 
+2020-03-17 00:00:00  x     AwtWidgetMng$AwtMngFocusListener.class   ::          1.495 -1905633220 
+2020-03-17 00:00:00  x     AwtWidgetMng.class                       ::         10.608 -1239434145 
+
+============================== build/javac/binjar/org/vishia/gral/base/ ============================
+2020-03-17 00:00:00  x     GetGralWidget_ifc.class                  ::           .249  2067666419 
+2020-03-17 00:00:00  x     GralButton$GraphicImplAccess.class       ::          2.637  1956983853 
+2020-03-17 00:00:00  x     GralButton$MouseActionButton.class       ::          1.383  1644067960 
+2020-03-17 00:00:00  x     GralButton$State.class                   ::          1.062 -0073871183 
+2020-03-17 00:00:00  x     GralButton.class                         ::          6.675 -0280268572 
+2020-03-17 00:00:00  x     GralColorConv.class                      ::          7.420  0177164656 
+2020-03-17 00:00:00  x     GralCurveView$1.class                    ::          1.028  1347405006 
+2020-03-17 00:00:00  x     GralCurveView$2.class                    ::          1.022  1209093392 
+2020-03-17 00:00:00  x     GralCurveView$3.class                    ::           .755 -1494938896 
+2020-03-17 00:00:00  x     GralCurveView$4.class                    ::          1.234  0859710530 
+2020-03-17 00:00:00  x     GralCurveView$5.class                    ::          1.024  0889004043 
+2020-03-17 00:00:00  x     GralCurveView$6.class                    ::           .831  0447975495 
+2020-03-17 00:00:00  x     GralCurveView$CommonCurve.class          ::           .582  1808667961 
+2020-03-17 00:00:00  x     GralCurveView$DataOrganisation.class     ::           .497 -0408086022 
+2020-03-17 00:00:00  x     GralCurveView$GralCurveViewMouseAction.class ::          1.932  1727020074 
+2020-03-17 00:00:00  x     GralCurveView$GraphicImplAccess.class    ::         10.173  1728837277 
+2020-03-17 00:00:00  x     GralCurveView$PixelOrganisation.class    ::           .378  1578797732 
+2020-03-17 00:00:00  x     GralCurveView$SaveOrganisation.class     ::           .388 -1994577466 
+2020-03-17 00:00:00  x     GralCurveView$TimeOrganisation.class     ::          1.912 -1105182092 
+2020-03-17 00:00:00  x     GralCurveView$Track.class                ::          4.850 -1360841111 
+2020-03-17 00:00:00  x     GralCurveView$TrackScale.class           ::           .766  2076949198 
+2020-03-17 00:00:00  x     GralCurveView$ZbnfSetCurve.class         ::          1.436  1212817181 
+2020-03-17 00:00:00  x     GralCurveView$ZbnfSetTrack.class         ::           .790  1617104407 
+2020-03-17 00:00:00  x     GralCurveView.class                      ::         19.489  1322838529 
+2020-03-17 00:00:00  x     GralGraphicThread$ImplAccess.class       ::          1.556 -1064347967 
+2020-03-17 00:00:00  x     GralGraphicThread.class                  ::          5.626 -1032917759 
+2020-03-17 00:00:00  x     GralGraphicTimeOrder$1.class             ::           .250  1576615700 
+2020-03-17 00:00:00  x     GralGraphicTimeOrder$EnqueueInGraphicThread.class ::           .949  0561370540 
+2020-03-17 00:00:00  x     GralGraphicTimeOrder.class               ::          1.189 -1302862284 
+2020-03-17 00:00:00  x     GralGridProperties.class                 ::          4.237 -1926177329 
+2020-03-17 00:00:00  x     GralHtmlBox$ImplAccess.class             ::           .525 -1795995506 
+2020-03-17 00:00:00  x     GralHtmlBox.class                        ::           .695 -1326946738 
+2020-03-17 00:00:00  x     GralKeyListener.class                    ::          2.319  1107208951 
+2020-03-17 00:00:00  x     GralKeySpecial_ifc.class                 ::           .233 -0082959351 
+2020-03-17 00:00:00  x     GralLed$GraphicImplAccess.class          ::           .910 -2042488286 
+2020-03-17 00:00:00  x     GralLed.class                            ::          2.022  1501224177 
+2020-03-17 00:00:00  x     GralMenu$MenuEntry.class                 ::           .645 -1922870423 
+2020-03-17 00:00:00  x     GralMenu$_GraphicImpl.class              ::          1.710 -1719902927 
+2020-03-17 00:00:00  x     GralMenu.class                           ::          3.019  1295537987 
+2020-03-17 00:00:00  x     GralMng$1.class                          ::           .614 -1479208376 
+2020-03-17 00:00:00  x     GralMng$2.class                          ::          1.203 -0679350266 
+2020-03-17 00:00:00  x     GralMng$3.class                          ::          2.716 -1683578402 
+2020-03-17 00:00:00  x     GralMng$4.class                          ::          1.125  1052177050 
+2020-03-17 00:00:00  x     GralMng$5.class                          ::          1.261 -0558906492 
+2020-03-17 00:00:00  x     GralMng$6.class                          ::           .751  0734865356 
+2020-03-17 00:00:00  x     GralMng$7.class                          ::           .785 -0164688099 
+2020-03-17 00:00:00  x     GralMng$FileSelectInfo.class             ::          1.967  1180987950 
+2020-03-17 00:00:00  x     GralMng$GralMngFocusListener.class       ::          1.567 -0774294593 
+2020-03-17 00:00:00  x     GralMng$ImplAccess.class                 ::          4.354  0606323251 
+2020-03-17 00:00:00  x     GralMng$InternalPublic.class             ::           .555  0812988377 
+2020-03-17 00:00:00  x     GralMng$PosThreadSafe.class              ::           .994  0846454099 
+2020-03-17 00:00:00  x     GralMng.class                            ::         33.673  1798095927 
+2020-03-17 00:00:00  x     GralMouseWidgetAction_ifc.class          ::           .711  1129274416 
+2020-03-17 00:00:00  x     GralPanelActivated_ifc.class             ::           .324  2002036434 
+2020-03-17 00:00:00  x     GralPanelContent$ImplAccess.class        ::           .855 -1621240158 
+2020-03-17 00:00:00  x     GralPanelContent$MethodsCalledbackFromImplementation.class ::          1.041 -1264473468 
+2020-03-17 00:00:00  x     GralPanelContent.class                   ::          6.379 -1346387386 
+2020-03-17 00:00:00  x     GralPos$Coordinate.class                 ::          4.486  1062455684 
+2020-03-17 00:00:00  x     GralPos.class                            ::         10.948  0405335359 
+2020-03-17 00:00:00  x     GralShowMethods$1.class                  ::          2.236 -1490740259 
+2020-03-17 00:00:00  x     GralShowMethods$2.class                  ::          1.451  1983894956 
+2020-03-17 00:00:00  x     GralShowMethods$3.class                  ::          1.279  1580764949 
+2020-03-17 00:00:00  x     GralShowMethods$4.class                  ::          1.753 -1917115685 
+2020-03-17 00:00:00  x     GralShowMethods$5.class                  ::          1.588  0553916100 
+2020-03-17 00:00:00  x     GralShowMethods.class                    ::          1.513 -0190633542 
+2020-03-17 00:00:00  x     GralSlider$_GraphicImplAccess_.class     ::           .636 -0405900452 
+2020-03-17 00:00:00  x     GralSlider.class                         ::           .698 -1490329886 
+2020-03-17 00:00:00  x     GralTabbedPanel$ImplAccess.class         ::          1.223 -0725087801 
+2020-03-17 00:00:00  x     GralTabbedPanel.class                    ::          3.674 -1631019889 
+2020-03-17 00:00:00  x     GralTable$1.class                        ::           .974  1703011715 
+2020-03-17 00:00:00  x     GralTable$CellData.class                 ::           .516  1654529665 
+2020-03-17 00:00:00  x     GralTable$GraphicImplAccess.class        ::         10.708 -1930122346 
+2020-03-17 00:00:00  x     GralTable$LinePresentation.class         ::           .450 -0826528259 
+2020-03-17 00:00:00  x     GralTable$NodeTableLine.class            ::          3.443  1440417582 
+2020-03-17 00:00:00  x     GralTable$TableLineData.class            ::         10.852 -0811550750 
+2020-03-17 00:00:00  x     GralTable.class                          ::         21.299 -1839528313 
+2020-03-17 00:00:00  x     GralTextBox$GraphicImplAccess.class      ::          1.608 -0744040148 
+2020-03-17 00:00:00  x     GralTextBox.class                        ::          2.741 -1296002470 
+2020-03-17 00:00:00  x     GralTextField$1.class                    ::           .643  0312292393 
+2020-03-17 00:00:00  x     GralTextField$2.class                    ::           .748 -0393972163 
+2020-03-17 00:00:00  x     GralTextField$CalculatorAngle16.class    ::          1.156  1095082081 
+2020-03-17 00:00:00  x     GralTextField$CalculatorAngle32.class    ::          1.156  0161306175 
+2020-03-17 00:00:00  x     GralTextField$GraphicImplAccess.class    ::          2.595 -1138067740 
+2020-03-17 00:00:00  x     GralTextField$Type.class                 ::          1.039 -0473904490 
+2020-03-17 00:00:00  x     GralTextField.class                      ::         10.309  1000388530 
+2020-03-17 00:00:00  x     GralValueBar$ColorValues.class           ::           .358  1149647298 
+2020-03-17 00:00:00  x     GralValueBar$GraphicImplAccess.class     ::          1.902  2134708934 
+2020-03-17 00:00:00  x     GralValueBar.class                       ::          1.496  1299468113 
+2020-03-17 00:00:00  x     GralWidgImpl_ifc.class                   ::           .451  0409386316 
+2020-03-17 00:00:00  x     GralWidget$1.class                       ::          1.026  0252146158 
+2020-03-17 00:00:00  x     GralWidget$2.class                       ::          1.433 -1449636156 
+2020-03-17 00:00:00  x     GralWidget$ActionChangeSelect.class      ::           .788 -0981343838 
+2020-03-17 00:00:00  x     GralWidget$ConfigData.class              ::          1.617 -0422888177 
+2020-03-17 00:00:00  x     GralWidget$DynamicData.class             ::          1.711 -0301302841 
+2020-03-17 00:00:00  x     GralWidget$ImplAccess.class              ::          4.454  0919644443 
+2020-03-17 00:00:00  x     GralWidget.class                         ::         25.030 -2073059321 
+2020-03-17 00:00:00  x     GralWidgetHelper.class                   ::           .303  0416693122 
+2020-03-17 00:00:00  x     GralWindow$1.class                       ::           .766  1012078940 
+2020-03-17 00:00:00  x     GralWindow$ActionResizeOnePanel.class    ::          1.696 -0215653896 
+2020-03-17 00:00:00  x     GralWindow$GraphicImplAccess.class       ::          1.498  0175566719 
+2020-03-17 00:00:00  x     GralWindow.class                         ::          4.843  1453526791 
+2020-03-17 00:00:00  x     GralWindow_setifc.class                  ::           .273  1420444719 
+
+============================== build/javac/binjar/org/vishia/gral/cfg/ =============================
+2020-03-17 00:00:00  x     GralCfgBuilder.class                     ::         13.804 -0698702456 
+2020-03-17 00:00:00  x     GralCfgData$Conditional.class            ::           .612  2103505019 
+2020-03-17 00:00:00  x     GralCfgData$DataReplace.class            ::           .362 -1293758373 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgButton.class           ::           .603 -0787226001 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgColor.class            ::           .347  0623028762 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgCoord.class            ::           .338  0150340069 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgCurveLine.class        ::           .621  1531964082 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgCurveview.class        ::          1.398  1092521305 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgImage.class            ::           .642  0894288056 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgInputFile.class        ::           .478  0821411172 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgLed.class              ::           .583  1689328026 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgLine.class             ::          1.093 -2085176734 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgShowField.class        ::           .478  0245541963 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgTable.class            ::          1.119 -1932356405 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgText.class             ::           .626 -1551751507 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgType.class             ::           .472 -0558115283 
+2020-03-17 00:00:00  x     GralCfgData$GuiCfgWidget.class           ::          2.642 -0403826060 
+2020-03-17 00:00:00  x     GralCfgData.class                        ::          6.717  1510887728 
+2020-03-17 00:00:00  x     GralCfgDesigner$1.class                  ::          4.732 -0096012855 
+2020-03-17 00:00:00  x     GralCfgDesigner$2.class                  ::          1.205 -0439089570 
+2020-03-17 00:00:00  x     GralCfgDesigner$3.class                  ::           .980 -0246855778 
+2020-03-17 00:00:00  x     GralCfgDesigner.class                    ::          9.569 -0149417861 
+2020-03-17 00:00:00  x     GralCfgElement.class                     ::          6.262  1566004181 
+2020-03-17 00:00:00  x     GralCfgPanel.class                       ::           .838  0207934222 
+2020-03-17 00:00:00  x     GralCfgPosition.class                    ::          2.574  0575692205 
+2020-03-17 00:00:00  x     GralCfgWindow$1.class                    ::          1.672  0729325973 
+2020-03-17 00:00:00  x     GralCfgWindow.class                      ::          2.620 -1853372114 
+2020-03-17 00:00:00  x     GralCfgWriter.class                      ::          7.630  0142889238 
+2020-03-17 00:00:00  x     GralCfgZbnf.class                        ::          6.834  0942670317 
+
+============================== build/javac/binjar/org/vishia/gral/cfg/appl/ ========================
+2020-03-17 00:00:00  x     GuiDropFiles$1.class                     ::           .610  1126296727 
+2020-03-17 00:00:00  x     GuiDropFiles$2.class                     ::           .728  0810961155 
+2020-03-17 00:00:00  x     GuiDropFiles$3.class                     ::           .743 -0333545040 
+2020-03-17 00:00:00  x     GuiDropFiles$4.class                     ::           .689  2133233540 
+2020-03-17 00:00:00  x     GuiDropFiles$5.class                     ::           .780 -1957435344 
+2020-03-17 00:00:00  x     GuiDropFiles$6.class                     ::           .837  0910712057 
+2020-03-17 00:00:00  x     GuiDropFiles$Args.class                  ::           .864  2024126733 
+2020-03-17 00:00:00  x     GuiDropFiles.class                       ::          8.526  1726718375 
+
+============================== build/javac/binjar/org/vishia/gral/example/ =========================
+2020-03-17 00:00:00  x     ExampleContextMenu$Factory.class         ::           .937  1005496076 
+2020-03-17 00:00:00  x     ExampleContextMenu$InitGuiCodeContextMenu.class ::          1.089 -1550786790 
+2020-03-17 00:00:00  x     ExampleContextMenu.class                 ::           .803  1215681749 
+2020-03-17 00:00:00  x     ExampleSimpleButton$1.class              ::          1.671 -0715731654 
+2020-03-17 00:00:00  x     ExampleSimpleButton$Factory.class        ::           .830  0456036980 
+2020-03-17 00:00:00  x     ExampleSimpleButton$GuiElements.class    ::           .626  0004362974 
+2020-03-17 00:00:00  x     ExampleSimpleButton$InitGuiCodeSimpleButton.class ::          2.277 -1714796322 
+2020-03-17 00:00:00  x     ExampleSimpleButton.class                ::          2.801  0508455789 
+
+============================== build/javac/binjar/org/vishia/gral/ifc/ =============================
+2020-03-17 00:00:00  x     GralActionJztc$Action.class              ::          1.021  0290235514 
+2020-03-17 00:00:00  x     GralActionJztc$ActionRereadScript.class  ::           .986 -0618962074 
+2020-03-17 00:00:00  x     GralActionJztc.class                     ::          3.716 -0360012369 
+2020-03-17 00:00:00  x     GralButtonKeyMenu.class                  ::          1.347  0475396752 
+2020-03-17 00:00:00  x     GralCanvasStorage$PaintOrder.class       ::          1.277  0489047859 
+2020-03-17 00:00:00  x     GralCanvasStorage$PaintOrderImage.class  ::           .747  1279531818 
+2020-03-17 00:00:00  x     GralCanvasStorage$PolyLine.class         ::           .835  1777915062 
+2020-03-17 00:00:00  x     GralCanvasStorage$PolyLineFloatArray.class ::          1.728  0751921441 
+2020-03-17 00:00:00  x     GralCanvasStorage.class                  ::          2.228 -0535735589 
+2020-03-17 00:00:00  x     GralCanvas_ifc.class                     ::           .474 -0882678682 
+2020-03-17 00:00:00  x     GralColor$GralColorContainer.class       ::          6.546  0598658368 
+2020-03-17 00:00:00  x     GralColor.class                          ::          3.014 -2009641221 
+2020-03-17 00:00:00  x     GralCurveViewTrack_ifc.class             ::           .935 -1855928898 
+2020-03-17 00:00:00  x     GralCurveView_ifc$ModeWrite.class        ::          1.102  1412048933 
+2020-03-17 00:00:00  x     GralCurveView_ifc.class                  ::          1.107 -2146295876 
+2020-03-17 00:00:00  x     GralFactory.class                        ::          2.962 -1109902793 
+2020-03-17 00:00:00  x     GralFileDialog_ifc.class                 ::           .498 -1814501312 
+2020-03-17 00:00:00  x     GralFont.class                           ::          1.893  0522613009 
+2020-03-17 00:00:00  x     GralImageBase.class                      ::           .488  1316967233 
+2020-03-17 00:00:00  x     GralMngApplAdapter_ifc.class             ::           .241 -2022514988 
+2020-03-17 00:00:00  x     GralMngBuild_ifc.class                   ::          5.668  2074766189 
+2020-03-17 00:00:00  x     GralMng_ifc.class                        ::          2.518 -0369157853 
+2020-03-17 00:00:00  x     GralPlugUser2Gral_ifc.class              ::           .194  1772701304 
+2020-03-17 00:00:00  x     GralPlugUser_ifc.class                   ::           .850  0178898890 
+2020-03-17 00:00:00  x     GralPoint.class                          ::           .839  1819901065 
+2020-03-17 00:00:00  x     GralPrimaryWindow_ifc.class              ::           .394  1807895264 
+2020-03-17 00:00:00  x     GralRectangle.class                      ::           .728 -0170718891 
+2020-03-17 00:00:00  x     GralSetValue_ifc.class                   ::           .590 -1548640927 
+2020-03-17 00:00:00  x     GralSlider_ifc.class                     ::           .194  0295112004 
+2020-03-17 00:00:00  x     GralTableLine_ifc.class                  ::          1.838  1222220915 
+2020-03-17 00:00:00  x     GralTable_ifc.class                      ::          2.089  1084442113 
+2020-03-17 00:00:00  x     GralTextBox_ifc.class                    ::           .310 -1818663813 
+2020-03-17 00:00:00  x     GralTextFieldUser_ifc.class              ::           .240 -0970560685 
+2020-03-17 00:00:00  x     GralTextField_ifc.class                  ::           .505  0834478719 
+2020-03-17 00:00:00  x     GralUserAction.class                     ::          1.499 -2107451811 
+2020-03-17 00:00:00  x     GralVisibleWidgets_ifc.class             ::           .321  0138773128 
+2020-03-17 00:00:00  x     GralWidgetCfg_ifc.class                  ::           .186  0578508833 
+2020-03-17 00:00:00  x     GralWidget_ifc$ActionChange.class        ::           .987  1990963784 
+2020-03-17 00:00:00  x     GralWidget_ifc$ActionChangeWhen.class    ::          1.799 -1471730147 
+2020-03-17 00:00:00  x     GralWidget_ifc.class                     ::          2.044 -0200977900 
+2020-03-17 00:00:00  x     GralWindowMng_ifc.class                  ::           .376 -0593229839 
+2020-03-17 00:00:00  x     GralWindow_getifc.class                  ::           .290  1612639351 
+2020-03-17 00:00:00  x     GralWindow_ifc.class                     ::          1.069 -0628771907 
+2020-03-17 00:00:00  x     _GralChgColor.class                      ::           .764 -1635265683 
+
+============================== build/javac/binjar/org/vishia/gral/impl_ifc/ ========================
+2020-03-17 00:00:00  x     GralWidgetImpl_ifc.class                 ::           .208 -2042060531 
+
+============================== build/javac/binjar/org/vishia/gral/swt/ =============================
+2020-03-17 00:00:00  x     SwtButton$KeyListener.class              ::           .883 -0023299548 
+2020-03-17 00:00:00  x     SwtButton$SwtButtonImpl$1.class          ::           .835 -1674684287 
+2020-03-17 00:00:00  x     SwtButton$SwtButtonImpl.class            ::           .932 -1104023533 
+2020-03-17 00:00:00  x     SwtButton.class                          ::          8.840 -1836105240 
+2020-03-17 00:00:00  x     SwtCanvasDrawer.class                    ::          1.173  2063073258 
+2020-03-17 00:00:00  x     SwtCanvasStorePanel$SwtCanvas$1.class    ::           .966 -2063004597 
+2020-03-17 00:00:00  x     SwtCanvasStorePanel$SwtCanvas.class      ::          3.405  1101194141 
+2020-03-17 00:00:00  x     SwtCanvasStorePanel$SwtPolyLine.class    ::          2.007  1736442908 
+2020-03-17 00:00:00  x     SwtCanvasStorePanel.class                ::          2.450 -0664289776 
+2020-03-17 00:00:00  x     SwtCurveView$1.class                     ::           .224  1444718226 
+2020-03-17 00:00:00  x     SwtCurveView$CurveView$1.class           ::           .924 -1064007823 
+2020-03-17 00:00:00  x     SwtCurveView$CurveView$2.class           ::           .888 -0370275325 
+2020-03-17 00:00:00  x     SwtCurveView$CurveView.class             ::          2.669 -1198843627 
+2020-03-17 00:00:00  x     SwtCurveView$TestHelp.class              ::           .620  1590119960 
+2020-03-17 00:00:00  x     SwtCurveView.class                       ::         12.556  1600253033 
+2020-03-17 00:00:00  x     SwtDragListener.class                    ::          3.371 -1943105508 
+2020-03-17 00:00:00  x     SwtDropListener.class                    ::          3.576  0109601625 
+2020-03-17 00:00:00  x     SwtFactory.class                         ::           .629  1976062825 
+2020-03-17 00:00:00  x     SwtFileDialog.class                      ::          2.064 -0806700697 
+2020-03-17 00:00:00  x     SwtFocusAction.class                     ::          1.829 -0446964725 
+2020-03-17 00:00:00  x     SwtGralKey$1.class                       ::           .853 -1258218225 
+2020-03-17 00:00:00  x     SwtGralKey$MouseAction.class             ::          1.162 -1535039010 
+2020-03-17 00:00:00  x     SwtGralKey.class                         ::          2.144  1116848610 
+2020-03-17 00:00:00  x     SwtGralMouseListener$MouseListenerGralAction$1.class ::          1.923  1026222976 
+2020-03-17 00:00:00  x     SwtGralMouseListener$MouseListenerGralAction.class ::          7.424  0700578289 
+2020-03-17 00:00:00  x     SwtGralMouseListener$MouseListenerNoAction$1.class ::           .772  2091300608 
+2020-03-17 00:00:00  x     SwtGralMouseListener$MouseListenerNoAction.class ::          3.068  0615357789 
+2020-03-17 00:00:00  x     SwtGralMouseListener.class               ::           .653  1542112703 
+2020-03-17 00:00:00  x     SwtGraphicThread$1.class                 ::           .660  1107946898 
+2020-03-17 00:00:00  x     SwtGraphicThread$2.class                 ::           .789  0993246034 
+2020-03-17 00:00:00  x     SwtGraphicThread$3.class                 ::           .854  1997073143 
+2020-03-17 00:00:00  x     SwtGraphicThread$4.class                 ::           .874  0305737431 
+2020-03-17 00:00:00  x     SwtGraphicThread$WindowsCloseListener.class ::           .887  1741000192 
+2020-03-17 00:00:00  x     SwtGraphicThread.class                   ::          3.745  1839144721 
+2020-03-17 00:00:00  x     SwtGridPanel$SwtCanvasGridPanel.class    ::          1.685  1157359031 
+2020-03-17 00:00:00  x     SwtGridPanel.class                       ::          2.415  0236705507 
+2020-03-17 00:00:00  x     SwtHorizontalSelector$1.class            ::           .961  0460892318 
+2020-03-17 00:00:00  x     SwtHorizontalSelector$2.class            ::           .758  2101518419 
+2020-03-17 00:00:00  x     SwtHorizontalSelector.class              ::          6.644  0431460306 
+2020-03-17 00:00:00  x     SwtHtmlBox.class                         ::          2.960 -0841454296 
+2020-03-17 00:00:00  x     SwtImage.class                           ::           .729  0999534166 
+2020-03-17 00:00:00  x     SwtKeyListener.class                     ::          1.763  0499478382 
+2020-03-17 00:00:00  x     SwtLabel.class                           ::          4.429  0563868790 
+2020-03-17 00:00:00  x     SwtLed$SwtLedImpl$1.class                ::          1.232 -0871139590 
+2020-03-17 00:00:00  x     SwtLed$SwtLedImpl.class                  ::          1.686  2080136153 
+2020-03-17 00:00:00  x     SwtLed.class                             ::          4.390 -0843826429 
+2020-03-17 00:00:00  x     SwtMenu$ActionUserMenuItem.class         ::          1.539 -0705511607 
+2020-03-17 00:00:00  x     SwtMenu.class                            ::          3.258 -1635721644 
+2020-03-17 00:00:00  x     SwtMng$1.class                           ::          1.127  1700403992 
+2020-03-17 00:00:00  x     SwtMng$NotExistException.class           ::           .726 -0231025283 
+2020-03-17 00:00:00  x     SwtMng$SelectionListenerForSlider.class  ::          1.231  1112349669 
+2020-03-17 00:00:00  x     SwtMng$SwtMngFocusListener.class         ::          1.516 -0714303524 
+2020-03-17 00:00:00  x     SwtMng$SwtMngMouseMenuListener.class     ::           .565 -0181163580 
+2020-03-17 00:00:00  x     SwtMng$TestHelp.class                    ::           .656  1234675366 
+2020-03-17 00:00:00  x     SwtMng$XXXButtonUserAction.class         ::          1.410  1607398349 
+2020-03-17 00:00:00  x     SwtMng$XXXUserAction.class               ::           .206 -1734847712 
+2020-03-17 00:00:00  x     SwtMng.class                             ::         20.940  0472546177 
+2020-03-17 00:00:00  x     SwtPanel$1.class                         ::          1.342  0894831703 
+2020-03-17 00:00:00  x     SwtPanel.class                           ::          2.449 -1622009213 
+2020-03-17 00:00:00  x     SwtPlotArea$1.class                      ::           .669 -1646974960 
+2020-03-17 00:00:00  x     SwtPlotArea.class                        ::          4.746  0394283936 
+2020-03-17 00:00:00  x     SwtProperties.class                      ::          3.900  1523390856 
+2020-03-17 00:00:00  x     SwtSetValue_ifc.class                    ::           .203  1634850138 
+2020-03-17 00:00:00  x     SwtSlider.class                          ::          1.233 -1808849999 
+2020-03-17 00:00:00  x     SwtSubWindow$1.class                     ::          1.026 -0715357721 
+2020-03-17 00:00:00  x     SwtSubWindow$2.class                     ::          2.279 -1922056150 
+2020-03-17 00:00:00  x     SwtSubWindow$3.class                     ::           .571  1629316518 
+2020-03-17 00:00:00  x     SwtSubWindow$4.class                     ::           .634 -1993154428 
+2020-03-17 00:00:00  x     SwtSubWindow$5.class                     ::          1.461 -0731706460 
+2020-03-17 00:00:00  x     SwtSubWindow$ActionUserMenuItem.class    ::          1.289 -1433208722 
+2020-03-17 00:00:00  x     SwtSubWindow.class                       ::          6.986  0388061727 
+2020-03-17 00:00:00  x     SwtTabbedPanel$1.class                   ::          2.594  1863896410 
+2020-03-17 00:00:00  x     SwtTabbedPanel$2.class                   ::           .674  1300771772 
+2020-03-17 00:00:00  x     SwtTabbedPanel$3.class                   ::           .674  1362478026 
+2020-03-17 00:00:00  x     SwtTabbedPanel$4.class                   ::           .653  0808054550 
+2020-03-17 00:00:00  x     SwtTabbedPanel.class                     ::          7.015 -1460696823 
+2020-03-17 00:00:00  x     SwtTable$1.class                         ::          1.206 -0401410546 
+2020-03-17 00:00:00  x     SwtTable$2.class                         ::           .965 -1469908386 
+2020-03-17 00:00:00  x     SwtTable$3.class                         ::          1.133  1268385804 
+2020-03-17 00:00:00  x     SwtTable$ActionUserMenuItem.class        ::          1.174 -1062847149 
+2020-03-17 00:00:00  x     SwtTable$FocusListenerTable.class        ::           .896 -0217180235 
+2020-03-17 00:00:00  x     SwtTable$MousePressedListenerTable.class ::           .753 -0079112278 
+2020-03-17 00:00:00  x     SwtTable$MouseWheelListenerTable.class   ::           .822  0334258396 
+2020-03-17 00:00:00  x     SwtTable$Table.class                     ::           .517 -0011194827 
+2020-03-17 00:00:00  x     SwtTable$TableKeyListerner.class         ::           .744 -1959885661 
+2020-03-17 00:00:00  x     SwtTable$Vscrollbar$1.class              ::           .924 -1503806935 
+2020-03-17 00:00:00  x     SwtTable$Vscrollbar.class                ::          1.048  0025155613 
+2020-03-17 00:00:00  x     SwtTable$XXXFocusListenerCell.class      ::          1.655  1787820091 
+2020-03-17 00:00:00  x     SwtTable.class                           ::         19.052 -0337188347 
+2020-03-17 00:00:00  x     SwtTextBox$1.class                       ::           .810  1691848229 
+2020-03-17 00:00:00  x     SwtTextBox$TextBoxKeyListener.class      ::          1.679  1653734319 
+2020-03-17 00:00:00  x     SwtTextBox$TextBoxModifyListener.class   ::          1.943  1329723399 
+2020-03-17 00:00:00  x     SwtTextBox.class                         ::          9.123  0347150888 
+2020-03-17 00:00:00  x     SwtTextFieldWrapper$1.class              ::           .959 -0399326638 
+2020-03-17 00:00:00  x     SwtTextFieldWrapper$TextFieldFocusListener.class ::          1.147  2077027006 
+2020-03-17 00:00:00  x     SwtTextFieldWrapper$TextFieldKeyListener.class ::          1.906 -1476682872 
+2020-03-17 00:00:00  x     SwtTextFieldWrapper$TextFieldModifyListener.class ::          2.224 -1026262595 
+2020-03-17 00:00:00  x     SwtTextFieldWrapper.class                ::         12.260 -1599177814 
+2020-03-17 00:00:00  x     SwtTransparentLabel$1.class              ::          1.000 -1940475970 
+2020-03-17 00:00:00  x     SwtTransparentLabel.class                ::          1.141  0236885221 
+2020-03-17 00:00:00  x     SwtTraverseListener.class                ::          1.094 -2112708587 
+2020-03-17 00:00:00  x     SwtValueBar$BarWidget$1.class            ::           .836 -1831491885 
+2020-03-17 00:00:00  x     SwtValueBar$BarWidget$2.class            ::           .619  1649991726 
+2020-03-17 00:00:00  x     SwtValueBar$BarWidget.class              ::          1.258 -0996219869 
+2020-03-17 00:00:00  x     SwtValueBar.class                        ::          5.213 -0973989024 
+2020-03-17 00:00:00  x     SwtWidgetHelper.class                    ::          5.097 -1243349487 
+2020-03-17 00:00:00  x     SwtWidgetSimpleWrapper.class             ::          2.296 -1000030955 
+
+============================== build/javac/binjar/org/vishia/gral/test/ ============================
+2020-03-17 00:00:00  x     FqAnalyzer.class                         ::          4.682 -0774348465 
+2020-03-17 00:00:00  x     GralColorShow$1.class                    ::          5.277  0674726799 
+2020-03-17 00:00:00  x     GralColorShow$10.class                   ::          1.118 -0270972143 
+2020-03-17 00:00:00  x     GralColorShow$2.class                    ::          4.392  1178532439 
+2020-03-17 00:00:00  x     GralColorShow$3.class                    ::          1.487 -1211588957 
+2020-03-17 00:00:00  x     GralColorShow$4.class                    ::          1.271 -0473747312 
+2020-03-17 00:00:00  x     GralColorShow$5.class                    ::          6.484  0725655136 
+2020-03-17 00:00:00  x     GralColorShow$6.class                    ::          1.735  1769882951 
+2020-03-17 00:00:00  x     GralColorShow$7.class                    ::          1.877 -1589105726 
+2020-03-17 00:00:00  x     GralColorShow$8.class                    ::          1.176  0244638694 
+2020-03-17 00:00:00  x     GralColorShow$9.class                    ::          1.409 -2145629476 
+2020-03-17 00:00:00  x     GralColorShow$ActionEnterHLS.class       ::          1.749 -0129414238 
+2020-03-17 00:00:00  x     GralColorShow$ActionEnterHSB.class       ::          1.767 -0152309164 
+2020-03-17 00:00:00  x     GralColorShow$ColHue.class               ::           .544 -2105409686 
+2020-03-17 00:00:00  x     GralColorShow$ColorWithField.class       ::          2.041 -1043798032 
+2020-03-17 00:00:00  x     GralColorShow$Index.class                ::           .457  0891148993 
+2020-03-17 00:00:00  x     GralColorShow$LightSat.class             ::           .758  0795012127 
+2020-03-17 00:00:00  x     GralColorShow$XXXColorValue.class        ::           .751  1997315932 
+2020-03-17 00:00:00  x     GralColorShow.class                      ::         33.693  0590002837 
+2020-03-17 00:00:00  x     GralPlotWindow$1.class                   ::           .562 -0350737799 
+2020-03-17 00:00:00  x     GralPlotWindow.class                     ::          2.213 -1780782312 
+2020-03-17 00:00:00  x     HelloWorld$1.class                       ::           .883 -1098143731 
+2020-03-17 00:00:00  x     HelloWorld.class                         ::          2.334  1372973272 
+2020-03-17 00:00:00  x     HelloWorldScript.class                   ::          1.589  0415503929 
+
+============================== build/javac/binjar/org/vishia/gral/widget/ ==========================
+2020-03-17 00:00:00  x     GralColorSelector$1.class                ::          1.339 -1192909649 
+2020-03-17 00:00:00  x     GralColorSelector$SetColorFor.class      ::          1.177 -0160670560 
+2020-03-17 00:00:00  x     GralColorSelector$SetColorIfc.class      ::           .431  1828674277 
+2020-03-17 00:00:00  x     GralColorSelector.class                  ::          4.234 -1919702520 
+2020-03-17 00:00:00  x     GralCommandSelector$1.class              ::          1.973 -0634159014 
+2020-03-17 00:00:00  x     GralCommandSelector$2.class              ::           .979  1862592402 
+2020-03-17 00:00:00  x     GralCommandSelector$3.class              ::           .696 -0480505986 
+2020-03-17 00:00:00  x     GralCommandSelector.class                ::          3.506  0754050098 
+2020-03-17 00:00:00  x     GralFileSelectWindow$1.class             ::          1.623  1066184450 
+2020-03-17 00:00:00  x     GralFileSelectWindow$2.class             ::          1.079 -0567563340 
+2020-03-17 00:00:00  x     GralFileSelectWindow.class               ::          3.962 -0685408131 
+2020-03-17 00:00:00  x     GralFileSelector$1.class                 ::          2.338 -0347642041 
+2020-03-17 00:00:00  x     GralFileSelector$10.class                ::           .673 -1744120992 
+2020-03-17 00:00:00  x     GralFileSelector$11.class                ::           .661  1258912548 
+2020-03-17 00:00:00  x     GralFileSelector$12.class                ::           .661 -2111945990 
+2020-03-17 00:00:00  x     GralFileSelector$13.class                ::           .661 -1705222909 
+2020-03-17 00:00:00  x     GralFileSelector$14.class                ::           .673 -0180899886 
+2020-03-17 00:00:00  x     GralFileSelector$15.class                ::           .673 -1323718080 
+2020-03-17 00:00:00  x     GralFileSelector$16$1.class              ::           .955 -1546517163 
+2020-03-17 00:00:00  x     GralFileSelector$16.class                ::           .957 -1369625297 
+2020-03-17 00:00:00  x     GralFileSelector$17.class                ::           .753  0246563278 
+2020-03-17 00:00:00  x     GralFileSelector$18.class                ::           .796 -1418119498 
+2020-03-17 00:00:00  x     GralFileSelector$19.class                ::           .796  0590753817 
+2020-03-17 00:00:00  x     GralFileSelector$2.class                 ::          1.101  0922309223 
+2020-03-17 00:00:00  x     GralFileSelector$20.class                ::           .592  0901316320 
+2020-03-17 00:00:00  x     GralFileSelector$21.class                ::          1.179 -1808717820 
+2020-03-17 00:00:00  x     GralFileSelector$3.class                 ::          2.355  2141366306 
+2020-03-17 00:00:00  x     GralFileSelector$4.class                 ::          2.378 -2032228326 
+2020-03-17 00:00:00  x     GralFileSelector$5.class                 ::           .672 -0594602146 
+2020-03-17 00:00:00  x     GralFileSelector$6.class                 ::           .672  1576629119 
+2020-03-17 00:00:00  x     GralFileSelector$7.class                 ::           .672  1476463486 
+2020-03-17 00:00:00  x     GralFileSelector$8.class                 ::           .672 -1242008608 
+2020-03-17 00:00:00  x     GralFileSelector$9.class                 ::           .672 -1449770966 
+2020-03-17 00:00:00  x     GralFileSelector$ERefresh.class          ::          1.166 -0642845483 
+2020-03-17 00:00:00  x     GralFileSelector$FileSelectList.class    ::          3.503 -2059961886 
+2020-03-17 00:00:00  x     GralFileSelector$MenuTexts.class         ::          1.407 -0595144706 
+2020-03-17 00:00:00  x     GralFileSelector$WindowConfirmSearch$1.class ::          2.784 -0011707682 
+2020-03-17 00:00:00  x     GralFileSelector$WindowConfirmSearch.class ::          1.478 -1966519402 
+2020-03-17 00:00:00  x     GralFileSelector.class                   ::         25.668  1098869552 
+2020-03-17 00:00:00  x     GralHorizontalSelector$1.class           ::           .802  0938287815 
+2020-03-17 00:00:00  x     GralHorizontalSelector$GraphicImplAccess.class ::          3.280  1073561247 
+2020-03-17 00:00:00  x     GralHorizontalSelector$Item.class        ::           .548  0598100838 
+2020-03-17 00:00:00  x     GralHorizontalSelector.class             ::          4.157  0554982054 
+2020-03-17 00:00:00  x     GralHtmlWindow.class                     ::           .522  0455917472 
+2020-03-17 00:00:00  x     GralInfoBox$1.class                      ::          1.080  0502023533 
+2020-03-17 00:00:00  x     GralInfoBox$2.class                      ::           .840  0430547255 
+2020-03-17 00:00:00  x     GralInfoBox.class                        ::         10.898 -1951894711 
+2020-03-17 00:00:00  x     GralLabel$GraphicImplAccess.class        ::           .771 -0592920484 
+2020-03-17 00:00:00  x     GralLabel.class                          ::           .763  1350678438 
+2020-03-17 00:00:00  x     GralMsgOutputList.class                  ::          3.283 -0515987288 
+2020-03-17 00:00:00  x     GralPlotArea$UserUnits.class             ::           .952  2016453638 
+2020-03-17 00:00:00  x     GralPlotArea$_GraphicImplAccess_.class   ::          1.217 -0573260311 
+2020-03-17 00:00:00  x     GralPlotArea.class                       ::          1.228  1158592928 
+2020-03-17 00:00:00  x     GralSelectList$1.class                   ::          1.336 -1900614596 
+2020-03-17 00:00:00  x     GralSelectList.class                     ::          2.903 -1783979588 
+2020-03-17 00:00:00  x     GralSwitchExclusiveButtonMng$1.class     ::          1.287  1815490464 
+2020-03-17 00:00:00  x     GralSwitchExclusiveButtonMng.class       ::          2.979 -0402787970 
+
+============================== build/javac/binjar/org/vishia/guiInspc/ =============================
+2020-03-17 00:00:00  x     ButtonInspcCmd.class                     ::           .635  0890368009 
+2020-03-17 00:00:00  x     InspcCurveView$1.class                   ::          1.336  0471318251 
+2020-03-17 00:00:00  x     InspcCurveView$10.class                  ::          1.227  0994600755 
+2020-03-17 00:00:00  x     InspcCurveView$11.class                  ::          5.050 -0856015064 
+2020-03-17 00:00:00  x     InspcCurveView$12.class                  ::           .878  0081068313 
+2020-03-17 00:00:00  x     InspcCurveView$13.class                  ::          3.451  0062148483 
+2020-03-17 00:00:00  x     InspcCurveView$14.class                  ::          2.863  0896877226 
+2020-03-17 00:00:00  x     InspcCurveView$15.class                  ::          2.969  1246891293 
+2020-03-17 00:00:00  x     InspcCurveView$16.class                  ::           .969 -1741913268 
+2020-03-17 00:00:00  x     InspcCurveView$17.class                  ::          2.730  1814897821 
+2020-03-17 00:00:00  x     InspcCurveView$18.class                  ::          1.033 -1574916704 
+2020-03-17 00:00:00  x     InspcCurveView$19.class                  ::          1.362 -1802535665 
+2020-03-17 00:00:00  x     InspcCurveView$2.class                   ::           .715  1327192914 
+2020-03-17 00:00:00  x     InspcCurveView$20.class                  ::          1.861  1184364803 
+2020-03-17 00:00:00  x     InspcCurveView$21.class                  ::          1.336  0605563759 
+2020-03-17 00:00:00  x     InspcCurveView$22.class                  ::          1.014  0244234083 
+2020-03-17 00:00:00  x     InspcCurveView$3.class                   ::           .717  0381997577 
+2020-03-17 00:00:00  x     InspcCurveView$4.class                   ::          1.448  0838141960 
+2020-03-17 00:00:00  x     InspcCurveView$5.class                   ::           .715 -1717278639 
+2020-03-17 00:00:00  x     InspcCurveView$6.class                   ::          2.214 -0662068640 
+2020-03-17 00:00:00  x     InspcCurveView$7.class                   ::          1.256 -1008787490 
+2020-03-17 00:00:00  x     InspcCurveView$8.class                   ::          1.256  0273128668 
+2020-03-17 00:00:00  x     InspcCurveView$9.class                   ::          1.275  1165279537 
+2020-03-17 00:00:00  x     InspcCurveView.class                     ::         22.596 -0871955458 
+2020-03-17 00:00:00  x     InspcCurveViewApp$1.class                ::           .895 -1833339944 
+2020-03-17 00:00:00  x     InspcCurveViewApp.class                  ::          2.786 -0836609829 
+2020-03-17 00:00:00  x     InspcFieldTable$1.class                  ::           .784  2014590777 
+2020-03-17 00:00:00  x     InspcFieldTable$2.class                  ::          1.765  0828722013 
+2020-03-17 00:00:00  x     InspcFieldTable$3.class                  ::           .973 -1263434360 
+2020-03-17 00:00:00  x     InspcFieldTable$4.class                  ::           .766 -1088184140 
+2020-03-17 00:00:00  x     InspcFieldTable$5.class                  ::           .763  1657661652 
+2020-03-17 00:00:00  x     InspcFieldTable$6.class                  ::           .763 -1087675213 
+2020-03-17 00:00:00  x     InspcFieldTable$7.class                  ::           .771 -1984927743 
+2020-03-17 00:00:00  x     InspcFieldTable$8.class                  ::           .555  0615323991 
+2020-03-17 00:00:00  x     InspcFieldTable$RunOnReceive.class       ::           .956  0555452497 
+2020-03-17 00:00:00  x     InspcFieldTable$TxOrderSetValue.class    ::           .975 -0838247071 
+2020-03-17 00:00:00  x     InspcFieldTable.class                    ::         13.858  0970620400 
+2020-03-17 00:00:00  x     InspcGui$1.class                         ::           .923 -0808907175 
+2020-03-17 00:00:00  x     InspcGui$2.class                         ::           .916  1305638191 
+2020-03-17 00:00:00  x     InspcGui$3.class                         ::           .577 -0314646406 
+2020-03-17 00:00:00  x     InspcGui$4.class                         ::           .507  1245650731 
+2020-03-17 00:00:00  x     InspcGui$5.class                         ::          1.629  0161951728 
+2020-03-17 00:00:00  x     InspcGui$CallingArguments.class          ::           .788 -0938439365 
+2020-03-17 00:00:00  x     InspcGui$CmdLineAndGui.class             ::          2.713 -1508732175 
+2020-03-17 00:00:00  x     InspcGui$InspcGuiCfg.class               ::          4.929  0919378458 
+2020-03-17 00:00:00  x     InspcGui$InspcPlugUser.class             ::          1.451  2108648750 
+2020-03-17 00:00:00  x     InspcGui$UserInspcPlug.class             ::           .831 -1542254486 
+2020-03-17 00:00:00  x     InspcGui.class                           ::          9.717  1386852210 
+2020-03-17 00:00:00  x     InspcGuiFieldsFromFile$BitSignal.class   ::           .426 -1490343320 
+2020-03-17 00:00:00  x     InspcGuiFieldsFromFile$Channel.class     ::           .629  0441067428 
+2020-03-17 00:00:00  x     InspcGuiFieldsFromFile$MappingItem.class ::           .657  2052027724 
+2020-03-17 00:00:00  x     InspcGuiFieldsFromFile$ZbnfResultFile.class ::           .609 -0269419016 
+2020-03-17 00:00:00  x     InspcGuiFieldsFromFile.class             ::          2.664 -0122958098 
+2020-03-17 00:00:00  x     InspcViewTargetComm$1.class              ::           .805  2029614203 
+2020-03-17 00:00:00  x     InspcViewTargetComm$2.class              ::          2.147  0446481348 
+2020-03-17 00:00:00  x     InspcViewTargetComm$3.class              ::          1.445  1848242979 
+2020-03-17 00:00:00  x     InspcViewTargetComm$4.class              ::          1.424 -0601900695 
+2020-03-17 00:00:00  x     InspcViewTargetComm$5.class              ::          1.734 -1728207062 
+2020-03-17 00:00:00  x     InspcViewTargetComm$6.class              ::           .945  0798673133 
+2020-03-17 00:00:00  x     InspcViewTargetComm.class                ::          9.588  0167400207 
+
+============================== build/javac/binjar/org/vishia/guiViewCfg/ ===========================
+2020-03-17 00:00:00  x     OamOutFileReader.class                   ::          2.836 -1748026738 
+2020-03-17 00:00:00  x     OamRcvValue.class                        ::          4.137  0238669092 
+2020-03-17 00:00:00  x     OamShowValues$1.class                    ::           .744  0521154668 
+2020-03-17 00:00:00  x     OamShowValues$2.class                    ::          1.435  1804424186 
+2020-03-17 00:00:00  x     OamShowValues$ColoredWidget.class        ::          1.014  1662302345 
+2020-03-17 00:00:00  x     OamShowValues$ValueColorAssignment$Element.class ::           .474 -1367663326 
+2020-03-17 00:00:00  x     OamShowValues$ValueColorAssignment.class ::          1.467  1821272798 
+2020-03-17 00:00:00  x     OamShowValues.class                      ::         11.764  1196310512 
+2020-03-17 00:00:00  x     ViewCfg$1.class                          ::           .880  0798057021 
+2020-03-17 00:00:00  x     ViewCfg$CallingArguments.class           ::           .486 -2017853562 
+2020-03-17 00:00:00  x     ViewCfg$CmdLineAndGui.class              ::          1.309  1781037508 
+2020-03-17 00:00:00  x     ViewCfg.class                            ::          2.999 -0854372612 
+
+============================== build/javac/binjar/org/vishia/inspcPC/ ==============================
+2020-03-17 00:00:00  x     InspCmd$Args.class                       ::           .454 -0747761922 
+2020-03-17 00:00:00  x     InspCmd$CmdLine$1.class                  ::           .825  2102589498 
+2020-03-17 00:00:00  x     InspCmd$CmdLine$2.class                  ::           .826 -0931768286 
+2020-03-17 00:00:00  x     InspCmd$CmdLine.class                    ::          1.711  0943086148 
+2020-03-17 00:00:00  x     InspCmd.class                            ::          5.731  0229784011 
+2020-03-17 00:00:00  x     InspcAccessExecRxOrder_ifc.class         ::           .495  0341440991 
+2020-03-17 00:00:00  x     InspcAccess_ifc.class                    ::          2.245  1017311265 
+2020-03-17 00:00:00  x     InspcPlugUser_ifc$TargetState.class      ::          1.258 -0079779682 
+2020-03-17 00:00:00  x     InspcPlugUser_ifc.class                  ::           .560 -1485339906 
+2020-03-17 00:00:00  x     InspcReplAlias.class                     ::          2.237 -0806502401 
+2020-03-17 00:00:00  x     InspcRxOk.class                          ::          2.049 -0313231463 
+2020-03-17 00:00:00  x     InspcTargetAccessData.class              ::           .734 -1173877519 
+2020-03-17 00:00:00  x     UserInspcPlug_ifc.class                  ::           .278  1955090628 
+
+============================== build/javac/binjar/org/vishia/inspcPC/accTarget/ ====================
+2020-03-17 00:00:00  x     InspcAccessCheckerRxTelg.class           ::          2.377 -0700882356 
+2020-03-17 00:00:00  x     InspcAccessExecAnswerTelg_ifc.class      ::           .470  0471814378 
+2020-03-17 00:00:00  x     InspcAccessGenerateOrder.class           ::           .522 -1418408332 
+2020-03-17 00:00:00  x     InspcCommPort$1.class                    ::           .579 -1330409105 
+2020-03-17 00:00:00  x     InspcCommPort.class                      ::          4.289 -1842786594 
+2020-03-17 00:00:00  x     InspcTargetAccessor$1.class              ::           .983 -0165953253 
+2020-03-17 00:00:00  x     InspcTargetAccessor$2.class              ::           .659 -1976370101 
+2020-03-17 00:00:00  x     InspcTargetAccessor$3.class              ::          1.310 -0666237934 
+2020-03-17 00:00:00  x     InspcTargetAccessor$Cmd.class            ::          1.181 -0551442818 
+2020-03-17 00:00:00  x     InspcTargetAccessor$DebugTxRx.class      ::          1.642 -0869289479 
+2020-03-17 00:00:00  x     InspcTargetAccessor$Ev.class             ::           .820 -1424111315 
+2020-03-17 00:00:00  x     InspcTargetAccessor$GetFieldsData.class  ::          1.204  0914108925 
+2020-03-17 00:00:00  x     InspcTargetAccessor$OrderWithTime.class  ::           .573  1445650363 
+2020-03-17 00:00:00  x     InspcTargetAccessor$States$StateFilling.class ::          1.445  0625099654 
+2020-03-17 00:00:00  x     InspcTargetAccessor$States$StateIdle.class ::          1.781  0825379411 
+2020-03-17 00:00:00  x     InspcTargetAccessor$States$StateInactive.class ::          1.496 -1295945675 
+2020-03-17 00:00:00  x     InspcTargetAccessor$States$StateReceive.class ::          1.013 -0714472060 
+2020-03-17 00:00:00  x     InspcTargetAccessor$States$StateWaitReceive.class ::          1.611 -1807748385 
+2020-03-17 00:00:00  x     InspcTargetAccessor$States.class         ::          1.102  0651873388 
+2020-03-17 00:00:00  x     InspcTargetAccessor$TelgData.class       ::          2.582 -0022695543 
+2020-03-17 00:00:00  x     InspcTargetAccessor$TxBuffer.class       ::           .575  1756071817 
+2020-03-17 00:00:00  x     InspcTargetAccessor.class                ::         30.606  1550893613 
+2020-03-17 00:00:00  x     TestAccessor$1.class                     ::          1.710 -1238094980 
+2020-03-17 00:00:00  x     TestAccessor.class                       ::          2.762 -0092039606 
+
+============================== build/javac/binjar/org/vishia/inspcPC/mng/ ==========================
+2020-03-17 00:00:00  x     InspcCmdStore.class                      ::          3.837 -0352944539 
+2020-03-17 00:00:00  x     InspcFieldOfStruct.class                 ::          2.813  0197606014 
+2020-03-17 00:00:00  x     InspcMng$1.class                         ::           .786 -1579995771 
+2020-03-17 00:00:00  x     InspcMng.class                           ::         14.854  0743487635 
+2020-03-17 00:00:00  x     InspcStruct$VariableRxAction.class       ::          1.154 -1672145676 
+2020-03-17 00:00:00  x     InspcStruct.class                        ::          4.236  0814036861 
+2020-03-17 00:00:00  x     InspcVariable$ActionRxByHandle.class     ::          1.026  1325517762 
+2020-03-17 00:00:00  x     InspcVariable$ModeHandleVariable.class   ::          1.373 -1591521877 
+2020-03-17 00:00:00  x     InspcVariable$VariableRxAction.class     ::          4.403 -1183874692 
+2020-03-17 00:00:00  x     InspcVariable.class                      ::         10.045  0059524914 
+
+============================== build/javac/binjar/org/vishia/inspector/ ============================
+
+============================== build/javac/binjar/org/vishia/inspector/helper/ =====================
+2020-03-17 00:00:00  x     GenReflectProAgentExplorerXml$1.class    ::           .742 -1977136364 
+2020-03-17 00:00:00  x     GenReflectProAgentExplorerXml.class      ::          2.679 -2031843407 
+
+============================== build/javac/binjar/org/vishia/inspectorTarget/ ======================
+2020-03-17 00:00:00  x     AnswerComm_ifc.class                     ::           .163  0988322093 
+2020-03-17 00:00:00  x     ClassContent.class                       ::         19.322 -0435488536 
+2020-03-17 00:00:00  x     CmdConsumer_ifc.class                    ::           .730 -0650811248 
+2020-03-17 00:00:00  x     CmdExecuter.class                        ::          4.437 -1137327516 
+2020-03-17 00:00:00  x     Comm.class                               ::          4.292  0639755900 
+2020-03-17 00:00:00  x     InspcDataInfo.class                      ::           .968 -2103311368 
+2020-03-17 00:00:00  x     InspcTelgInfoSet.class                   ::          2.586  0827491001 
+2020-03-17 00:00:00  x     Inspector.class                          ::          1.615  0430930072 
+2020-03-17 00:00:00  x     SearchElement$SearchTrc.class            ::           .633  0227730092 
+2020-03-17 00:00:00  x     SearchElement.class                      ::          2.934  0590576708 
+
+============================== build/javac/binjar/org/vishia/inspectorTarget/example/ ==============
+2020-03-17 00:00:00  x     ExampleInspector$Data.class              ::           .820 -1168941638 
+2020-03-17 00:00:00  x     ExampleInspector.class                   ::          2.432  1865306437 
+2020-03-17 00:00:00  x     WorkingThread$1.class                    ::           .995  1622110390 
+2020-03-17 00:00:00  x     WorkingThread$Data.class                 ::           .482 -1925169726 
+2020-03-17 00:00:00  x     WorkingThread$ThreadMng.class            ::          1.132  1696498467 
+2020-03-17 00:00:00  x     WorkingThread.class                      ::          1.883  1144658563 
+
+============================== build/javac/binjar/org/vishia/msgDispatch/ ==========================
+2020-03-17 00:00:00  x     InspcMsgDataExchg.class                  ::           .875  0425638965 
+2020-03-17 00:00:00  x     MsgConfigZbnf$ZbnfMsgConfigItem.class    ::          1.410  0968694912 
+2020-03-17 00:00:00  x     MsgConfigZbnf.class                      ::          2.137  0038166275 
+2020-03-17 00:00:00  x     MsgItems_h$MsgItem.class                 ::          1.723  0428568173 
+2020-03-17 00:00:00  x     MsgItems_h$MsgItems.class                ::          1.726  0647385810 
+2020-03-17 00:00:00  x     MsgItems_h.class                         ::           .423 -1997044171 
+2020-03-17 00:00:00  x     MsgReceiver$MsgItem.class                ::           .512  2128446297 
+2020-03-17 00:00:00  x     MsgReceiver.class                        ::          4.430 -0618674824 
+2020-03-17 00:00:00  x     MsgRecvCommFile.class                    ::          2.660 -0990445590 
+
+============================== build/javac/binjar/org/vishia/reflect/ ==============================
+2020-03-17 00:00:00  x     ClassJc.class                            ::          4.978 -2062770440 
+2020-03-17 00:00:00  x     FieldJc$1.class                          ::          1.035 -0481772007 
+2020-03-17 00:00:00  x     FieldJc$2.class                          ::          1.021 -1951672800 
+2020-03-17 00:00:00  x     FieldJc$3.class                          ::          1.027 -0913365607 
+2020-03-17 00:00:00  x     FieldJc$4.class                          ::          1.027  0355865138 
+2020-03-17 00:00:00  x     FieldJc$5.class                          ::          1.033 -1464065598 
+2020-03-17 00:00:00  x     FieldJc$6.class                          ::          1.046 -1780658488 
+2020-03-17 00:00:00  x     FieldJc$GetArray.class                   ::          1.277 -1103210182 
+2020-03-17 00:00:00  x     FieldJc$GetSetContainerElement$GetArray.class ::          1.434  0194390379 
+2020-03-17 00:00:00  x     FieldJc$GetSetContainerElement.class     ::          1.843 -1364117651 
+2020-03-17 00:00:00  x     FieldJc.class                            ::         14.552 -1934647773 
+2020-03-17 00:00:00  x     FieldJcVariableAccess.class              ::          5.083 -1164332784 
+2020-03-17 00:00:00  x     FieldVariableAccess.class                ::           .304  1572328483 
+2020-03-17 00:00:00  x     MemAccessArrayDebugJc$MemAccessDebugJc.class ::           .417 -0359623155 
+2020-03-17 00:00:00  x     MemAccessArrayDebugJc.class              ::           .710  1462474068 
+2020-03-17 00:00:00  x     ModifierJc.class                         ::          1.139 -1226365943 
+
+============================== build/javac/binjar/org/vishia/simSelector/ ==========================
+2020-03-17 00:00:00  x     SimSelector$1.class                      ::           .752 -0883076059 
+2020-03-17 00:00:00  x     SimSelector$2.class                      ::           .752  0375578188 
+2020-03-17 00:00:00  x     SimSelector$3.class                      ::           .754 -1398518553 
+2020-03-17 00:00:00  x     SimSelector$4.class                      ::           .878 -0782976031 
+2020-03-17 00:00:00  x     SimSelector$5.class                      ::          2.438 -2038067034 
+2020-03-17 00:00:00  x     SimSelector.class                        ::          7.350 -1083780417 
+
+============================== build/javac/binjar/org/vishia/testApplet/ ===========================
+2020-03-17 00:00:00  x     TestHallo.class                          ::           .391  1003621964 
+
+============================== build/javac/binjar/org/vishia/windows/ ==============================
+2020-03-17 00:00:00  x     WindowMng$WindowPropertied.class         ::           .387 -1848625559 
+2020-03-17 00:00:00  x     WindowMng.class                          ::          2.038 -0129265582 
+
+============================== build/tmp/ ==========================================================
+
+============================== build/tmp/compileJava/ ==============================================
+
+============================== deploy/ ============================================================
+2020-03-17 22:53:45  x     README.txt                               ::           .129 -0845006924 
+2020-03-18 23:01:30  x     vishiaGui-2020-03-17-source.zip          ::        850.048  1405730947 
+2020-03-18 22:31:12  x     vishiaGui-2020-03-17.MD5.txt             ::           . 78 -2081401079 
+2020-03-18 22:31:12  x     vishiaGui-2020-03-17.jar                 ::       1108.254 -1350029469 
+2020-03-18 22:09:37  x     vishiaGui-2020-03-17.jar.zip             ::       1060.981 -0582308224 
+
+============================== gradle/ ============================================================
+
+============================== libs/ ==============================================================
+2020-03-17 22:55:41  x     README.txt                               ::           .242 -1724299765 
+2019-03-14 14:46:26  x     org.eclipse.swt.win32.win32.x86_64.source_3.110.0.v20190305-0602.zip ::       2146.523 -0748801062 
+2019-03-14 14:46:26  x     org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar ::       2445.585  1917581821 
+2020-02-17 22:48:27  x     vishiaGui.jar                            ::       1278.899 -0373555197 
+
+============================== src/ ===============================================================
+
+============================== src/appl/ ===========================================================
+
+============================== src/appl/Fcmd/ ======================================================
+2019-10-30 11:42:15  x     fcmd-32bit.bat                           ::          1.248  0129489357 
+2020-03-05 17:24:52  x     fcmd-64bit.bat                           ::          1.473 -2014549949 
+
+============================== src/main/ ===========================================================
+
+============================== src/main/Eclipse/ ===================================================
+
+============================== src/main/Eclipse/vishiaGui_pj/ ======================================
+2020-03-05 21:43:21  x     +cleanRamdisk.bat                        ::           .211  0266579065 
+
+============================== src/main/Eclipse/vishiaGui_pj/LaunchCfg/ ============================
+2020-03-14 10:22:42  x     Execode.launch                           ::           .704  0478793588 
+2020-03-14 10:22:42  x     Fcmd.launch                              ::           .827 -0688668463 
+2020-03-14 10:22:42  x     GitGui.launch                            ::           .842 -0874228987 
+2020-03-14 10:22:42  x     GralTest-Colors.launch                   ::           .634 -0301290601 
+2020-03-14 10:22:42  x     GralTestHelloWorld.launch                ::           .721 -0102281015 
+2020-03-14 10:27:15  x     GuiDropFiles.launch                      ::          1.073  1097014352 
+2020-03-14 10:22:42  x     Gui_PositionControl.launch               ::           .945  0098981567 
+2020-03-14 10:22:42  x     Inspc.launch                             ::           .997 -0919531287 
+2020-03-14 10:22:42  x     InspcCurveViewApp.launch                 ::           .848 -1327788627 
+2020-03-14 10:22:42  x     InspcGui.launch                          ::           .952  0005366802 
+2020-03-14 10:22:42  x     Inspector.launch                         ::           .852 -1265735846 
+2020-03-14 10:22:42  x     JZtxtcmd-Gral.launch                     ::           .998 -0891490220 
+
+============================== src/main/Eclipse/vishiaGui_pj/bin/ ==================================
+
+============================== src/main/_make/ =====================================================
+2012-02-17 22:17:26  x     Fcmd.manifest                            ::           . 39  1890256972 
+2012-08-12 22:29:26  x     genDownload.sh                           ::           . 79 -0543343792 
+2017-07-29 11:10:01  x     genXMI_vishiaGui.bat                     ::          1.257  1831944928 
+2019-03-10 15:18:45  x     genjavadoc.bat                           ::           .812 -0539117091 
+2012-11-05 22:08:10  x     genjavadoc.sh                            ::           .755  0495063694 
+2019-03-10 15:18:54  x     javadoc.help                             ::          9.297 -0429460067 
+2019-12-30 10:57:42  x     makejar_vishiaGui.bat                    ::          2.600  0615111869 
+2012-11-11 10:41:30  x     makejar_vishiaGui.sh                     ::          1.845 -1036369333 
+2011-06-19 10:51:56  x     stylesheet_javadoc.css                   ::          1.879 -1539298620 
+2011-05-18 20:27:14  x     vishiaGUI.manifest                       ::           . 43  1071819173 
+2011-07-10 09:13:00  x     xxxjavacjar.sh                           ::          2.388 -0652346373 
+
+============================== src/main/docs/ ======================================================
+2012-06-09 22:09:50  x     revisions_srcJava_vishiaGUI.txt          ::         97.084 -0350105957 
+
+============================== src/main/docs/cfg/ ==================================================
+2014-02-24 22:07:25  x     dialog.zbnf                              ::          5.303 -2045310597 
+
+============================== src/main/docs/img/ ==================================================
+2012-01-21 23:46:00  x     Designer_gral.png                        ::         12.889 -0668358889 
+2012-01-21 23:46:00  x     Fcmd_overview.png                        ::         17.689 -0974887602 
+2012-01-21 23:46:00  x     GralWidgetGthreadSet_ifc_gral.png        ::         24.018  0951171492 
+2015-03-15 21:14:59  x     InspcFieldTable_recv.png                 ::         20.056 -0897304593 
+2011-10-14 22:26:14  x     JCmd_gralWidget_SwtTable.png             ::         14.718  0307032974 
+2012-03-30 13:58:00  x     Overview_gral.png                        ::         37.189 -1444473942 
+2012-01-21 23:46:00  x     Widget2_gral.png                         ::         19.463  0882937299 
+2012-05-20 12:38:56  x     WidgetVariable_gral.png                  ::         11.782  0230241836 
+2012-05-20 12:38:56  x     Widget_gral.png                          ::         19.152 -0419457757 
+2015-03-22 01:01:41  x     guiInspc_getFieldsTableOmd.png           ::         41.789 -0562313016 
+2015-03-22 01:02:09  x     guiInspc_getFieldsTableSeq.png           ::         35.227  0988344343 
+2015-03-22 00:59:54  x     guiInspc_getValueTableOmd.png            ::         32.715  2108677736 
+
+============================== src/main/docs/rpy/ ==================================================
+2012-07-14 22:15:50  x     gral.xmi                                 ::       3828.120  0724775462 
+2016-06-27 08:57:12  x     load.log                                 ::         18.281  1143528116 
+2016-06-27 08:57:12  x     silentMode.log                           ::        760.568 -0901807315 
+2016-06-27 21:00:41  x     store.log                                ::          8.476  1577959719 
+2015-06-23 09:16:49  x     types-xmi.xml                            ::         74.124  0621767686 
+2016-06-27 21:00:41  x     vishiaGral.ehl                           ::           . 68 -1536552258 
+2016-06-27 21:00:41  x     vishiaGral.rpw                           ::          9.541 -0633395113 
+2016-06-27 21:00:41  x     vishiaGral.rpy                           ::          2.200 -1961552605 
+2015-03-21 00:11:35  x     vishiaGral_XMI.ehl                       ::           . 68 -1536552258 
+2015-03-22 00:13:13  x     vishiaGral_XMI.rpw                       ::           .507  1826059874 
+2015-03-22 00:13:13  x     vishiaGral_XMI.rpy                       ::          4.632 -2141328797 
+2015-06-23 09:16:59  x     vishiaGui.xmi                            ::       2696.782  1998918584 
+
+============================== src/main/docs/rpy/vishiaGral_rpy/ ===================================
+2012-04-12 19:06:56  x     Docu.sbs                                 ::       1520.115 -1829323974 
+2016-06-27 21:00:41  x     Docu_Base.sbs                            ::        115.604  1534341153 
+2016-06-27 21:00:41  x     Docu_Fcmd.sbs                            ::        217.928  0728127916 
+2016-06-27 21:00:41  x     Docu_Gral.sbs                            ::       1399.339  1333391542 
+2016-06-27 21:00:41  x     Docu_InspcAccess.sbs                     ::        315.338 -1773223834 
+2016-06-27 21:00:41  x     GeneratedFromJava.sbs                    ::          2.522 -2063792924 
+2016-06-27 21:00:39  x     accTarget.sbs                            ::        250.361  0875041784 
+2016-06-27 21:00:39  x     area9.sbs                                ::        196.205 -1144002120 
+2016-06-27 21:00:40  x     base.sbs                                 ::       1620.170  1563755130 
+2016-06-27 21:00:40  x     byteData.sbs                             ::        940.273  1129693107 
+2016-06-27 21:00:40  x     cfg.sbs                                  ::        287.768 -1193390822 
+2016-06-27 21:00:40  x     commander.sbs                            ::        774.094  1634009118 
+2016-06-27 21:00:39  x     filesTable.dat                           ::          1.348 -2021651717 
+2016-06-27 21:00:40  x     guiInspc.sbs                             ::        225.757  1205871057 
+2016-06-27 21:00:40  x     guiViewCfg.sbs                           ::        110.752  1447350126 
+2016-06-27 21:00:41  x     ifc.sbs                                  ::        611.894  0710721210 
+2015-03-21 23:54:46  x     inspectorAccessor.sbs                    ::        424.672  1112611215 
+2016-06-27 21:00:41  x     mng.sbs                                  ::        175.149  0956360974 
+2016-06-27 21:00:39  x     pkgExtTypes.sbs                          ::         91.135 -0756087276 
+2012-08-20 21:27:20  x     silentMode.log                           ::         17.847  1909574671 
+2012-08-20 21:30:40  x     store.log                                ::          6.552  2065950429 
+2016-06-27 21:00:41  x     swt.sbs                                  ::        954.339 -1072625150 
+2016-06-27 21:00:41  x     util.sbs                                 ::       1930.108 -1898710748 
+2016-06-27 21:00:41  x     widget.sbs                               ::        428.211 -1982815553 
+
+============================== src/main/java/ ======================================================
+
+============================== src/main/java/_make/ ================================================
+2020-03-18 22:30:21  x     makejar.sh                               ::          1.686  1373913079 
+2020-03-18 21:11:16  x     makejar_vishiaGui.sh                     ::           .952 -1204048495 
+2020-03-18 20:51:28  x     vishiaGui.manifest                       ::           . 61 -2005899189 
+
+============================== src/main/java/org/ ==================================================
+
+============================== src/main/java/org/vishia/ ===========================================
+
+============================== src/main/java/org/vishia/commander/ =================================
+2020-02-01 23:06:13  x     Fcmd.java                                ::         39.716 -1761365544 
+2016-12-23 19:04:01  x     FcmdButtons.java                         ::         18.586  0441197879 
+2016-12-07 10:33:24  x     FcmdCopyCmprDel.java                     ::         67.589 -1347265053 
+2017-01-01 20:35:24  x     FcmdDelete.java                          ::          8.094 -0108191033 
+2013-09-08 21:23:40  x     FcmdDocuSearch.java                      ::          1.167 -1869277279 
+2016-09-24 20:18:20  x     FcmdEdit.java                            ::          8.173  1073481531 
+2018-10-28 10:28:19  x     FcmdExecuter.java                        ::         16.028 -1118709735 
+2016-07-06 22:53:50  x     FcmdFavorCard.java                       ::         10.127 -0486442221 
+2017-09-15 08:11:30  x     FcmdFavorPathSelector.java               ::         29.911  1003788647 
+2018-10-28 10:22:41  x     FcmdFileCard.java                        ::         27.040 -1745796390 
+2016-07-06 22:48:31  x     FcmdFileProps.java                       ::         20.390  0748270324 
+2016-07-06 22:53:59  x     FcmdFilesCp.java                         ::          7.561 -1408180871 
+2018-04-07 09:12:17  x     FcmdHistorie.java                        ::           .983  0816669975 
+2020-02-01 21:08:09  x     FcmdIdents.java                          ::         13.878  0438192233 
+2013-05-25 22:28:00  x     FcmdKeyActions.java                      ::          2.409 -0498014726 
+2018-10-28 10:18:58  x     FcmdLeftMidRightPanel.java               ::         16.382  1820898765 
+2016-07-06 22:53:22  x     FcmdMkDirFile.java                       ::          4.283 -1067123226 
+2017-09-11 20:44:41  x     FcmdSettings.java                        ::          9.781 -0008917584 
+2016-07-06 22:53:24  x     FcmdStatus.java                          ::          4.049 -0047873112 
+2017-09-15 13:16:54  x     FcmdStatusLine.java                      ::          6.518 -0867946492 
+2012-01-21 13:55:44  x     FcmdTargetProxy.java                     ::           .109  1376363690 
+2016-09-17 21:18:36  x     FcmdView.java                            ::         20.387 -1685188635 
+2012-01-27 08:48:04  x     FcmdWidgetNames.java                     ::          1.801  1038690272 
+2013-03-26 20:36:30  x     FcmdWindowMng.java                       ::           .857  0501835567 
+2012-03-28 07:42:16  x     package-info.java                        ::           .253 -2063976015 
+
+============================== src/main/java/org/vishia/commander/target/ ==========================
+2011-11-21 20:03:58  x     FcmdtComm.java                           ::           .708  0269127882 
+2012-08-05 22:41:28  x     FcmdtCopyCmd.java                        ::          2.588 -0400901790 
+2011-11-21 20:03:58  x     FcmdtTarget.java                         ::           .831 -0164008310 
+2011-11-21 20:03:58  x     FcmdtTarget_ifc.java                     ::           .307 -0199616121 
+
+============================== src/main/java/org/vishia/gitGui/ ====================================
+2020-02-17 22:47:49  x     GitGui.java                              ::         61.110 -0811701158 
+2020-02-13 21:50:49  x     GitGuiCmd.java                           ::          2.268 -1959642447 
+2020-02-12 13:00:40  x     GitGuiPaths.java                         ::           .561  0316972038 
+
+============================== src/main/java/org/vishia/gral/ ======================================
+2015-10-17 09:47:16  x     colordef.txt                             ::           . 30  0877520795 
+2011-02-21 17:22:28  x     disk.png                                 ::          1.269  2053274348 
+2015-07-15 08:50:13  x     package-info.java                        ::          4.430  1112019594 
+
+============================== src/main/java/org/vishia/gral/area9/ ================================
+2020-03-13 19:32:26  x     GralArea9MainCmd.java                    ::         14.978 -0414888480 
+2020-02-01 22:58:02  x     GralArea9Window.java                     ::         34.100 -0692302633 
+2020-02-01 20:56:05  x     GralArea9_ifc.java                       ::         11.130 -0551807630 
+2020-03-13 19:30:54  x     GuiCallingArgs.java                      ::          7.916 -0756502580 
+2018-01-04 18:10:24  x     GuiCfg.java                              ::         18.264  1046734546 
+2012-03-28 07:42:16  x     package-info.java                        ::           .928 -0357739378 
+
+============================== src/main/java/org/vishia/gral/awt/ ==================================
+2016-11-06 09:59:40  x     AwtButton.java                           ::          7.212  1915699943 
+2012-04-23 22:41:40  x     AwtCanvasDrawer.java                     ::          1.263  1733362635 
+2016-07-10 15:58:29  x     AwtFactory.java                          ::           .598 -2087767817 
+2015-10-30 19:08:17  x     AwtGralKey.java                          ::          6.683  0306023190 
+2016-11-06 09:42:50  x     AwtGralMouseListener.java                ::         11.413  1365054220 
+2016-07-16 22:11:48  x     AwtGraphicThread.java                    ::          2.966 -0860664861 
+2016-06-30 23:51:19  x     AwtLabel.java                            ::          5.658  0384990173 
+2016-09-30 23:32:47  x     AwtMenu.java                             ::          1.632  2082085909 
+2016-07-02 09:38:09  x     AwtPanel.java                            ::          4.404 -2130039132 
+2015-05-02 11:27:18  x     AwtProperties.java                       ::          4.234 -1153336286 
+2016-07-16 12:14:40  x     AwtSubWindow.java                        ::          7.917 -2007977570 
+2019-04-04 15:40:52  x     AwtTextBox.java                          ::          3.271  0314711856 
+2016-07-02 09:26:18  x     AwtTextField.java                        ::          9.900 -1433945314 
+2011-10-31 22:37:12  x     AwtWidget.java                           ::           .140 -0227567318 
+2016-06-30 23:21:57  x     AwtWidgetHelper.java                     ::          3.566  0947988732 
+2016-09-30 23:11:17  x     AwtWidgetMng.java                        ::         25.235 -0454919357 
+2012-03-28 07:42:16  x     package-info.java                        ::           . 74  1260445010 
+
+============================== src/main/java/org/vishia/gral/base/ =================================
+2012-05-20 12:38:56  x     GetGralWidget_ifc.java                   ::          2.072 -2006934492 
+2016-11-04 22:26:30  x     GralButton.java                          ::         21.081  0869433118 
+2015-10-26 20:56:46  x     GralColorConv.java                       ::         14.603  1298753472 
+2018-09-21 19:28:17  x     GralCurveView.java                       ::         85.777  1587475995 
+2020-02-01 23:12:09  x     GralGraphicThread.java                   ::         22.472  0096311717 
+2015-02-07 13:01:18  x     GralGraphicTimeOrder.java                ::          4.735  2088496927 
+2016-07-09 23:41:23  x     GralGridProperties.java                  ::         13.122  1699234895 
+2015-01-23 16:42:05  x     GralHtmlBox.java                         ::          1.979  0774122006 
+2016-07-03 18:36:47  x     GralKeyListener.java                     ::          6.588 -0792100674 
+2014-01-05 19:57:21  x     GralKeySpecial_ifc.java                  ::           .662 -0643510547 
+2016-11-04 23:03:09  x     GralLed.java                             ::          5.702  1457283519 
+2016-11-04 23:05:37  x     GralMenu.java                            ::         12.586 -0766242011 
+2020-03-14 11:51:20  x     GralMng.java                             ::         80.865  1220734028 
+2017-11-02 22:18:42  x     GralMouseWidgetAction_ifc.java           ::          6.566  0389590111 
+2015-01-23 16:30:02  x     GralPanelActivated_ifc.java              ::          2.100 -0687531395 
+2018-09-17 21:20:14  x     GralPanelContent.java                    ::         15.247 -0989342105 
+2018-10-27 23:34:02  x     GralPos.java                             ::         53.291  1417140837 
+2016-09-14 11:45:00  x     GralShowMethods.java                     ::         11.693 -0933957427 
+2015-10-04 16:58:52  x     GralSlider.java                          ::          1.123  0479092505 
+2016-07-02 01:23:46  x     GralTabbedPanel.java                     ::         11.005 -1811196051 
+2019-04-24 00:19:41  x     GralTable.java                           ::        112.688 -1727228290 
+2019-04-04 15:39:15  x     GralTextBox.java                         ::          6.717  1620647995 
+2017-10-08 23:59:59  x     GralTextField.java                       ::         31.807 -0024576567 
+2015-01-23 16:42:08  x     GralValueBar.java                        ::          6.321  1137566914 
+2016-07-02 00:27:44  x     GralWidgImpl_ifc.java                    ::          3.572  0443933197 
+2019-08-09 15:20:40  x     GralWidget.java                          ::         93.612 -0403974796 
+2012-07-14 22:23:42  x     GralWidgetHelper.java                    ::          1.980 -1293053732 
+2016-09-30 23:39:54  x     GralWindow.java                          ::         14.902 -1797264455 
+2016-07-02 09:37:22  x     GralWindow_setifc.java                   ::          1.980  0685613695 
+2013-07-15 11:52:00  x     package-info.java                        ::           .413  0984628564 
+
+============================== src/main/java/org/vishia/gral/cfg/ ==================================
+2018-09-21 19:15:31  x     GralCfgBuilder.java                      ::         19.526  1813342732 
+2016-11-06 09:36:05  x     GralCfgData.java                         ::         18.237 -1724989233 
+2016-09-22 08:59:01  x     GralCfgDesigner.java                     ::         15.867  1456736768 
+2018-09-21 23:09:17  x     GralCfgElement.java                      ::         10.550 -1083026422 
+2016-07-02 19:14:58  x     GralCfgPanel.java                        ::          2.204  1690942796 
+2016-07-02 20:02:48  x     GralCfgPosition.java                     ::          4.695 -0790833468 
+2020-03-13 14:26:59  x     GralCfgWindow.java                       ::          6.554 -1206982341 
+2016-11-06 09:35:09  x     GralCfgWriter.java                       ::         10.759 -0270078923 
+2018-09-17 21:12:02  x     GralCfgZbnf.java                         ::         12.084  1131237496 
+2018-09-21 23:10:03  x     Syntax.zbnf                              ::          5.345 -1068052364 
+2012-03-28 07:42:16  x     package-info.java                        ::           .907  0254677754 
+
+============================== src/main/java/org/vishia/gral/cfg/appl/ =============================
+2020-03-14 22:19:18  x     GuiDropFiles.java                        ::          9.623  0123043199 
+
+============================== src/main/java/org/vishia/gral/example/ ==============================
+2015-01-24 10:50:09  x     ExampleContextMenu.java                  ::          2.731 -1655578738 
+2015-05-01 17:07:14  x     ExampleSimpleButton.java                 ::          9.934  1351286475 
+2012-03-28 07:42:16  x     package-info.java                        ::           . 67  0703720841 
+
+============================== src/main/java/org/vishia/gral/ifc/ ==================================
+2018-09-22 22:23:09  x     GralActionJztc.java                      ::          5.569  1922633724 
+2015-01-07 11:54:38  x     GralButtonKeyMenu.java                   ::          3.351  1738099002 
+2015-10-04 16:38:09  x     GralCanvasStorage.java                   ::          8.404 -0388032664 
+2012-03-03 22:57:02  x     GralCanvas_ifc.java                      ::          2.554 -2144388538 
+2015-10-17 00:15:41  x     GralColor.java                           ::         18.443  0689480018 
+2018-09-20 19:49:40  x     GralCurveViewTrack_ifc.java              ::          4.695 -1144203777 
+2018-09-21 19:09:56  x     GralCurveView_ifc.java                   ::          6.048 -0536882720 
+2017-01-15 22:20:41  x     GralFactory.java                         ::          5.909 -1440149182 
+2013-03-28 08:32:36  x     GralFileDialog_ifc.java                  ::          2.674  2114388579 
+2013-12-23 20:22:34  x     GralFont.java                            ::          3.272 -0533398868 
+2012-03-03 22:57:02  x     GralImageBase.java                       ::          1.708  0663012681 
+2015-05-15 14:27:37  x     GralMngApplAdapter_ifc.java              ::          2.286  0504421472 
+2016-09-01 22:08:13  x     GralMngBuild_ifc.java                    ::         35.403 -1148673761 
+2016-06-27 21:24:16  x     GralMng_ifc.java                         ::         13.066 -0534309548 
+2012-03-03 22:57:02  x     GralPlugUser2Gral_ifc.java               ::          1.599  0625021935 
+2018-01-04 23:59:59  x     GralPlugUser_ifc.java                    ::          3.569 -1418292576 
+2012-05-20 12:38:56  x     GralPoint.java                           ::          2.280  0190499967 
+2013-10-07 22:18:22  x     GralPrimaryWindow_ifc.java               ::          2.808  0072680348 
+2012-04-23 22:41:40  x     GralRectangle.java                       ::          2.009 -0494633159 
+2015-04-24 15:52:15  x     GralSetValue_ifc.java                    ::          3.577  0882759316 
+2012-12-17 11:45:56  x     GralSlider_ifc.java                      ::           .613 -1125979330 
+2016-11-13 10:45:25  x     GralTableLine_ifc.java                   ::          5.372 -1381402137 
+2016-09-03 12:05:43  x     GralTable_ifc.java                       ::          9.533 -1902936678 
+2012-03-03 22:57:02  x     GralTextBox_ifc.java                     ::          1.702 -1517010727 
+2013-10-05 22:24:09  x     GralTextFieldUser_ifc.java               ::          1.984 -1959108607 
+2013-02-22 08:08:02  x     GralTextField_ifc.java                   ::          3.683  1172285042 
+2015-08-05 22:14:11  x     GralUserAction.java                      ::          8.643 -1558911793 
+2015-01-23 16:28:33  x     GralVisibleWidgets_ifc.java              ::          2.043 -1973459872 
+2012-05-20 12:38:56  x     GralWidgetCfg_ifc.java                   ::          1.729  0126566803 
+2016-09-17 10:09:06  x     GralWidget_ifc.java                      ::         21.474 -0502238041 
+2015-01-18 10:56:52  x     GralWindowMng_ifc.java                   ::          5.013  1480994121 
+2012-03-11 07:58:32  x     GralWindow_getifc.java                   ::          1.715 -1500220700 
+2020-02-01 22:36:48  x     GralWindow_ifc.java                      ::          6.744  0721598414 
+2015-10-24 00:40:07  x     _GralChgColor.java                       ::           .863  0353112785 
+2012-03-28 07:42:16  x     package-info.java                        ::           .154  0553364330 
+
+============================== src/main/java/org/vishia/gral/impl_ifc/ =============================
+2016-09-30 11:46:08  x     GralWidgetImpl_ifc.java                  ::           .315  0695352262 
+
+============================== src/main/java/org/vishia/gral/swt/ ==================================
+2016-09-30 22:49:50  x     SwtButton.java                           ::         11.952 -0483488224 
+2012-03-28 07:42:16  x     SwtCanvasDrawer.java                     ::          1.207 -2023641965 
+2015-01-21 22:56:29  x     SwtCanvasStorePanel.java                 ::          6.255 -0769858363 
+2016-07-02 14:40:09  x     SwtCurveView.java                        ::         26.440 -0998662153 
+2014-03-28 20:49:10  x     SwtDragListener.java                     ::          4.329  2066993373 
+2018-09-17 23:02:03  x     SwtDropListener.java                     ::          4.519  1679032237 
+2016-07-10 15:59:19  x     SwtFactory.java                          ::           .556 -1202744391 
+2013-03-28 08:33:36  x     SwtFileDialog.java                       ::          2.700  1622412477 
+2012-05-20 12:38:56  x     SwtFocusAction.java                      ::          2.006 -1231686787 
+2015-09-20 22:53:28  x     SwtGralKey.java                          ::          6.654  0788496368 
+2016-09-17 10:09:06  x     SwtGralMouseListener.java                ::         18.034  1630743372 
+2020-02-01 19:30:46  x     SwtGraphicThread.java                    ::         10.323  1353268570 
+2016-09-02 23:34:29  x     SwtGridPanel.java                        ::          4.876 -1578230357 
+2016-09-30 22:49:42  x     SwtHorizontalSelector.java               ::          8.400 -1541858092 
+2016-06-30 23:53:34  x     SwtHtmlBox.java                          ::          4.095  0587090892 
+2011-11-10 08:09:14  x     SwtImage.java                            ::           .541 -0270959854 
+2015-08-25 22:29:53  x     SwtKeyListener.java                      ::          3.288 -0011404889 
+2016-09-30 22:49:36  x     SwtLabel.java                            ::          5.512 -1535891759 
+2016-09-30 22:48:48  x     SwtLed.java                              ::          6.535  0607121214 
+2016-11-04 21:30:17  x     SwtMenu.java                             ::          6.231 -1213299725 
+2016-09-30 23:29:38  x     SwtMng.java                              ::         42.067 -0520842114 
+2016-07-01 23:22:14  x     SwtPanel.java                            ::          4.530 -0494660980 
+2016-06-30 23:54:17  x     SwtPlotArea.java                         ::          5.098 -1059382659 
+2015-10-14 07:38:51  x     SwtProperties.java                       ::          5.829  0861044556 
+2013-10-05 22:28:54  x     SwtSetValue_ifc.java                     ::           .374  1688335866 
+2016-06-30 23:54:27  x     SwtSlider.java                           ::          1.434 -2079601575 
+2020-02-01 20:39:50  x     SwtSubWindow.java                        ::         16.240 -2128153966 
+2016-09-02 22:08:10  x     SwtTabbedPanel.java                      ::          9.791 -0234075818 
+2018-01-08 22:38:17  x     SwtTable.java                            ::         41.646 -1427036322 
+2019-04-04 15:31:21  x     SwtTextBox.java                          ::         13.975 -0979614520 
+2016-09-30 22:49:20  x     SwtTextFieldWrapper.java                 ::         17.821 -1538419841 
+2011-12-26 07:36:52  x     SwtTransparentLabel.java                 ::          1.856  0516273621 
+2015-05-31 15:21:08  x     SwtTraverseListener.java                 ::          1.426 -0961362711 
+2016-09-30 22:49:30  x     SwtValueBar.java                         ::          6.239  0751429749 
+2016-09-30 22:44:59  x     SwtWidgetHelper.java                     ::          6.922 -0511978714 
+2016-06-30 23:45:02  x     SwtWidgetSimpleWrapper.java              ::          2.512  0351776232 
+2012-03-28 07:42:16  x     package-info.java                        ::           . 64  2134856555 
+
+============================== src/main/java/org/vishia/gral/test/ =================================
+2017-05-06 09:27:19  x     FqAnalyzer.java                          ::          4.507  0650199554 
+2016-11-27 21:20:42  x     GralColorShow.java                       ::         66.779 -0399927223 
+2016-12-27 20:12:24  x     GralPlotWindow.java                      ::          3.194  2129281718 
+2017-03-12 11:38:53  x     HelloWorld.java                          ::          2.595 -2090910486 
+2018-09-17 13:34:40  x     HelloWorldScript.java                    ::           .974  0896076645 
+2015-10-11 00:28:03  x     testColors.txt                           ::         14.207  0222624421 
+2015-10-11 00:27:09  x     testColorsNew.txt                        ::         14.186  1157723444 
+
+============================== src/main/java/org/vishia/gral/widget/ ===============================
+2016-07-06 22:51:32  x     GralColorSelector.java                   ::          7.535 -0493836427 
+2018-10-28 10:18:44  x     GralCommandSelector.java                 ::          8.507 -1870745650 
+2018-10-27 18:48:45  x     GralFileSelectWindow.java                ::          8.251  0842102366 
+2018-10-28 11:36:35  x     GralFileSelector.java                    ::         67.142 -0442504845 
+2017-04-12 21:50:58  x     GralHorizontalSelector.java              ::         10.770 -1804275348 
+2012-03-28 07:42:16  x     GralHtmlWindow.java                      ::           .721  1491408445 
+2017-01-10 10:55:06  x     GralInfoBox.java                         ::         14.864  0747955144 
+2016-07-15 15:44:30  x     GralLabel.java                           ::           .945  1178203059 
+2013-11-19 15:39:00  x     GralMsgOutputList.java                   ::          5.228 -1844316586 
+2016-12-26 19:21:21  x     GralPlotArea.java                        ::          4.504 -0190273124 
+2018-10-28 11:43:41  x     GralSelectList.java                      ::          8.089 -2116045878 
+2016-09-17 10:10:00  x     GralSwitchExclusiveButtonMng.java        ::          2.866  2027539694 
+2012-03-28 07:42:16  x     package-info.java                        ::           .397 -0227206292 
+
+============================== src/main/java/org/vishia/guiInspc/ ==================================
+2016-09-14 11:37:00  x     ButtonInspcCmd.java                      ::           .542  2100872833 
+2018-10-27 18:48:59  x     InspcCurveView.java                      ::         57.793 -0174844871 
+2018-09-21 22:43:19  x     InspcCurveViewApp.java                   ::          2.124  1949362241 
+2018-09-08 10:06:39  x     InspcFieldTable.java                     ::         26.092  1787012500 
+2020-02-01 23:07:40  x     InspcGui.java                            ::         23.250 -0997662784 
+2014-04-30 14:05:05  x     InspcGuiFieldsFromFile.java              ::          4.768 -1365812909 
+2018-10-20 12:04:33  x     InspcViewTargetComm.java                 ::         15.152  1533628151 
+
+============================== src/main/java/org/vishia/guiViewCfg/ ================================
+2014-11-13 20:38:44  x     OamOutFileReader.java                    ::          3.504  0576179557 
+2016-12-30 22:09:00  x     OamRcvValue.java                         ::          4.251  0410547973 
+2016-05-04 17:17:44  x     OamShowValues.java                       ::         19.852 -1106551501 
+2013-12-04 13:51:36  x     ViewCfg.java                             ::          8.628 -1199069239 
+
+============================== src/main/java/org/vishia/simSelector/ ===============================
+2017-04-03 21:49:00  x     SimSelector.java                         ::         10.516 -0987898068 
+
+============================== src/main/java/org/vishia/testApplet/ ================================
+2013-11-25 19:20:26  x     TestHallo.java                           ::           .236 -0012385631 
+
+============================== src/main/java/org/vishia/windows/ ===================================
+2015-01-27 09:58:58  x     WindowMng.java                           ::          2.377  1312387789 
+
+============================== src/test/ ===========================================================
+
+============================== src/test/cfg/ =======================================================
+
+============================== src/test/cfg/org/ ===================================================
+
+============================== src/test/cfg/org/vishia/ ============================================
+
+============================== src/test/cfg/org/vishia/gral/ =======================================
+
+============================== src/test/cfg/org/vishia/gral/cfg/ ===================================
+
+============================== src/test/cfg/org/vishia/gral/cfg/appl/ ==============================
+
+============================== src/test/cfg/org/vishia/gral/cfg/appl/GuiDropFiles/ =================
+2020-03-13 19:38:36  x     GuiDropFiles.args                        ::           .317 -0207238596 
+2020-03-13 19:41:20  x     GuiDropFiles.gui                         ::           .299  1972198144 
+2020-03-13 20:34:55  x     GuiDropFiles.jzTc                        ::           .121 -2055483404 

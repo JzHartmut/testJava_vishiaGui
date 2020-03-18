@@ -1,9 +1,16 @@
 .gitRepository
 .gitcommit
 _*.sh
+*.zip
+*.jar
 _resyncRepository.jz.cmd
 src/main/java
 .gradle
 build
 gradle
 deploy
+*.rpw
+*.xmi
+types-xmi.xml
+*.log
+*.ehl
