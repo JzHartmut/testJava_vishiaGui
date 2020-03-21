@@ -1,4 +1,4 @@
-@echo off
+@echo on
 rmdir .gradle
 rmdir gradle
 rmdir build

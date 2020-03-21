@@ -1,0 +1,114 @@
+= Archive of Java jar and sources
+:toc:
+:sectnums:
+:sectlinks:
+:cpp: C++
+
+== versionArchive
+
+The version archive at link:https://www.vishia.org/Java/Download/versionArchive[https://www.vishia.org/Java/Download/versionArchive]
+contains per version the jar-Files as runable libraries and their sources. 
+Additionally an MD5.txt-file is given. For example:
+
+ vishiaBase-2020-03-17-source.zip
+ vishiaBase-2020-03-17.jar
+ vishiaBase-2020-03-17.jar.MD5.txt
+ vishiaGui-2020-03-17-source.zip
+ vishiaGui-2020-03-17.jar
+ vishiaGui-2020-03-17.jar.MD5.txt
+ org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar  
+ 
+This file set, for example with time stamp `2020-03-17` are the complete
+run and source set for vishia Gui applications. 
+For the JZtxtcmd usage the `vishiaBase...` is sufficient.
+
+To run, of course only the `*.jar` are necessary.
+
+== Download jar-archives on demand
+
+Applications should load dedicated content from internet. 
+It is not proper to load automatically complex depending sources 
+in temporary folder on the PC, which are not obviously. 
+To simply load a jar archive the 
+
+ vishiaMinisys-2020-03-17.jar
+ 
+respectively `vishiaMinisys.jar` may be part of the distribution,
+it is only less kByte. With them 
+
+ java -cp vishiaMinisys.jar org.vishia.minisys.GetWebfile 
+   https://www.vishia.org/Java/Download/versionArchive/vishiaGui-2020-03-17.jar 
+   dstdir/vishiaGui.jar -md5:20bb021cc8ccd05fb5630b5fce4f803d -strict
+   
+(written as one command line) can be called to get this jar file. 
+The MD5 code is part of the getter. It checks the downloaded file
+and removes it after check if the MD5 safety check code is not matching 
+(`-strict`)-option. 
+Because of this command line to load is part of a software version 
+the MD5 check code is version controlled. It is not possible to slip any bad content.
+     
+== Source integrity, regenerate jar-files
+
+It is possible to re-generate the jar file with the exact same content,
+hence the same MD5 check code, using the `...source.zip` archive. 
+For the `vishiaBase-version.jar` it is very easy 
+because this jar does not have dependencies:
+
+One should unpack the `...source.zip`. It contains a `_make` folder, 
+and their a `makejar_vishiaBase.sh`. It is a Unix/Linux shell script 
+which can execute for example with a standard *git* environment. 
+*git* contains a MinGW Linux environment, because git runs originally under Linux.
+The same can be done with any gcc (GNU compiler) collections. 
+In other words, a shell execution environment should be available to everybody
+who is trying to compile something. 
+
+The second necessary one is a JDK, Java Developer Kit, of course. 
+It is not necessary to have it installed, it is sufficient that it is present 
+on the PC platform. You can have several versions of JDK at the same time, 
+from Oracle, or OpenJDK. 
+
+Therefore the environment variable `JAVAC_HOME`  should be set to that directory,
+which contains a `bin/javac`. That is a may be necessary adaption. 
+One can recognize which JDK was used in the origin development environment.
+
+ #this file is the user-adapt-able frame for makejar_vishiaBase.sh
+ #edit some settings if there are different form default.
+
+ export TMPJAVAC=$TMP/javac_vishiaBase/build/javac
+ export JAVAC_HOME=c:/Programs/Java/jdk1.8.0_211
+ 
+ #Output files
+ export JARFILE=../vishiaBase-$VERSION.jar
+ export MD5FILE=../vishiaBase-$VERSION.jar.MD5.txt
+
+It doesn't matter which directory is used for temporary storage.
+The `TMP` variable should be known. 
+With this setting the output files are written beside the sources, it may be ok,
+elsewhere change it.
+
+The rest of settings are correct for the version. 
+
+ export CLASSPATH=xx
+ export VERSION=2020-03-17
+ # located from this workingdir as currdir for shell execution:
+ export SRCPATH=..
+ export MANIFEST=vishiaBase.manifest
+ # FILE1SRC=../org/vishia/jztxtcmd/JZtxtcmd.java
+ export SRC_ALL=..
+
+ #now run the common script:
+ ./makejar.sh
+
+The `makejar.sh`-script cotains the compiler and jar execution with that
+script variables. The binary comparability of the generated jar file is achieved by
+using `touch` for the file time stamps and by definition of an dedicated manifest file
+instead auto-creation inside the jar tool. It is the option `M` versus `m`. See inside there.
+
+To compile Java files which have dependencies, this dependencies are resolved by jar-Files
+which are named in the `CLASSPATH`:
+
+
+
+
+ 
+

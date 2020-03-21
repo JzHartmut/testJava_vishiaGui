@@ -1,10 +1,27 @@
 apply plugin: 'java'
+apply plugin: 'org.asciidoctor.convert'
+
                                                                 
-version='2020-03-17'
+version='2020-03-20'
 //archiveVersion='xxx'
 
-def version_vishiaBase='2020-03-17'
+def version_vishiaBase='2020-03-20'
 
+def pathSep = ';'  //adapt for linux to ':' TODO detect OS, is there a gradle-feature?
+
+buildscript {
+    repositories {
+       jcenter()
+    }
+
+    dependencies {
+        //dedicated files, missing some:
+        //classpath files ('C:/programs/gradle/jars/asciidoctorj-1.5.6.jar', 'C:/programs/gradle/jars/asciidoctor-gradle-plugin-1.5.6.jar')
+        //loaded and stored in C:/User/.../.gradle/caches
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.6'
+        //does not work: classpath 'org.asciidoctor:AsciiDoctorj-pdf:1.5.0'
+    }
+}
 
 
 //sourceSets {
@@ -53,30 +70,28 @@ sourceSets {
 
 
 
-//dependencies {
-  //compile fileTree(dir: 'libs', include: ['*.jar'])
-                                                                                                                       
-//  implementation fileTree(dir: '../cmpnJava_vishiaBase/libs', include: ['vishiaBase-'+version_vishiaBase+'.jar'])
-//  implementation fileTree(dir: 'libs', include: ['org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar'])
-//}
-
 
 task jcc_main(type: Exec) {
- workingDir 'src/main/java/_make'
- 
- environment('TMPJAVAC', '../../../../build/javac')
- environment('CLASSPATH', '../../../../libs/org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar;../../../../../cmpnJava_vishiaBase/deploy/vishiaBase-'+version_vishiaBase+'.jar')
- environment('VERSION', version)   //should have the form of a date, yyyy-mm-dd
- environment('JARFILE', '../../../../deploy/vishiaGui-'+version+'.jar')
- environment('MD5FILE', '../../../../deploy/vishiaGui-'+version+'.MD5.txt')
- environment('SRCPATH', '..;../../../../../cmpnJava_vishiaRun/src/main/java')  
- environment('MANIFEST', 'vishiaGui.manifest')  //located in the workingDir
- environment('SRC_ALL', '..')                              //located in the workingDir
- //Note: 2 source-sets
- environment('SRC_ALL2', '../../../../../cmpnJava_vishiaRun/src/main/java')
- //standardOutput = new FileOutputStream("build/javac.out.txt")
- executable 'sh'
- args '-c', './makejar.sh'
+  workingDir 'src/main/java/_make'
+  
+  environment('TMPJAVAC', '../../../../build/javac')
+  def JAR_vishiaBase = '../../../../../cmpnJava_vishiaBase/deploy/vishiaBase-' + 
+                       version_vishiaBase + '.jar'
+  environment('JAR_vishiaBase', JAR_vishiaBase)
+  environment('VERSION', version) 
+  environment('DEPLOY', '../../../../deploy/vishiaGui-')
+  environment('CLASSPATH', 
+    '../../../../libs/org.eclipse.swt.win32.win32.x86_64_3.110.0.v20190305-0602.jar'
+    + pathSep + JAR_vishiaBase)
+  environment('RESOURCEFILES', '..:**/*.zbnf ..:**/*.xml')  
+  environment('SRCPATH', '..;../../../../../cmpnJava_vishiaRun/src/main/java')  
+  environment('MANIFEST', 'vishiaGui.manifest')  //located in the workingDir
+  environment('SRC_ALL', '..')                              //located in the workingDir
+  //Note: 2 source-sets
+  environment('SRC_ALL2', '../../../../../cmpnJava_vishiaRun/src/main/java')
+  //standardOutput = new FileOutputStream("build/javac.out.txt")
+  executable 'sh'
+  args '-c', './makejar.sh'
 }
 
                                                
@@ -95,42 +110,27 @@ task srcZip(type: Zip) {
 }
 
 
+asciidoctor {
+  dependsOn srcZip
+  sourceDir = file('src/docs/asciidoc')
+  outputDir = file('.')  //create a dir html5
+  //backends = ['html', 'pdf']
+}
 
 
-//test {                                                                                                 
-//  dependsOn srcZip
 
-//}
+test {                                                                                                 
+  dependsOn asciidoctor
+
+}
 
 
-
-
-// sourceSets {
-//  main {
-//    java {
-//      exclude 'org.vishia.*'
-//      'org.vishia.checkDeps_C.CheckDeps.java'             
-//    }                                                      
-//  }                                                                
-//}
-//
-
-//copies the sources to one jar file, named PROJECT-sources.jar
-//task sourcesJar(type: Jar, dependsOn: classes) {
-//    classifier = 'sources'
-//    from sourceSets.main.allSource
-//}
-
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier = 'javadoc'
-////    from javadoc.destinationDir
-//}
 
 //artifacts {
 //    archives sourcesJar
 //    archives javadocJar
 //}
 
-//defaultTask 'srcZip'
+//defaultTask 'asciidoctor'
 
 

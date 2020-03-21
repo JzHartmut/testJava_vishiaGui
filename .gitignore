@@ -9,8 +9,10 @@ src/main/java
 build
 gradle
 deploy
+html5
 *.rpw
 *.xmi
 types-xmi.xml
 *.log
 *.ehl
+
