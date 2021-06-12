@@ -1,0 +1,31 @@
+==JZtxtcmd==
+
+List values @name =  
+[ { name="v1", descr="test-var 1", value1="123.45", value2="536.5" }
+, { name="v2", descr="test-var 2", value1="345.67", value2="5" }
+, { name="v3", descr="test-var 3", value1="987.65", value2="1000" }
+];
+
+List texts @name =
+[ { name="t1", descr="text1", text="text" }
+, { name="t2", descr="text2", text="other text" }
+];
+
+List var_A @name =
+[ { name="A1", descr="A-variant 1" }
+, { name="A2", descr="A-variant 2" }
+, { name="A3", descr="A-variant 3" }
+];
+
+List var_B @name =
+[ { name="B1", descr="B-variant 1" }
+, { name="B2", descr="B-variant 2" }
+, { name="B3", descr="B-variant 3" }
+];
+
+List var_C @name =
+[ { name="C1", descr="C-variant 1" }
+, { name="C2", descr="C-variant 2" }
+, { name="C3", descr="C-variant 3" }
+];
+

@@ -1,0 +1,13 @@
+==JZtxtcmd==
+
+##
+##Template for the whole testfile_xml.
+##arguments values and texts comes from the selected lines of the Test stimuli
+##
+subtext testfile_xml(String title, Map values, Map texts) 
+<::>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Test:root xmlns:Test="https://myUrl/TestDefs" Test:title="<&title>">
+  <Test:Values Test:value1="<&values.value1>" Test:value2="<&texts.text>" />
+</Test:root>
+<.>

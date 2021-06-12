@@ -30,5 +30,15 @@
 			<type>2</type>
 			<location>D:/vishia/Java_cmpn/cmpnJava_vishiaRun/src/main/java</location>
 		</link>
+		<link>
+			<name>testA_Java_vishiaBase</name>
+			<type>2</type>
+			<location>D:/vishia/Java_cmpn/cmpnJava_vishiaBase/src/test/java</location>
+		</link>
+		<link>
+			<name>testJava_vishiaBase</name>
+			<type>2</type>
+			<locationURI>PARENT-5-PARENT_LOC/cmpnJava_vishiaBase/src/test/java</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

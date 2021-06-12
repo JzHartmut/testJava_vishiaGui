@@ -1,0 +1,8 @@
+= SWT jar from Eclipse
+
+
+
+
+== SWT sources, build, contribute
+
+link:https://www.eclipse.org/swt/fixbugs.php[]

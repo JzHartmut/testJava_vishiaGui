@@ -1,0 +1,15 @@
+==JZtxtcmd==
+
+##
+##Template for the whole testfile_text.
+##arguments values and texts comes from the selected lines of the Test stimuli
+##
+subtext testfile_text(String title, Map values, Map texts) 
+<::>
+#Simple test script with parameter
+title = "<&title>"
+value1 = <&values.value1>
+value2 = "<&texts.text>"
+<.>
+
+
