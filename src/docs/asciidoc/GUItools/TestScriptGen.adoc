@@ -5,7 +5,7 @@
 :cpp: C++
 :Cp: C/++
 
-Dr. Hartmut Schorrig, www.vishia.org, 2020-11-13
+Dr. Hartmut Schorrig, www.vishia.org, 2021-06-11
 
 == Motivation
 
@@ -67,7 +67,7 @@ value2 = "<&texts.text>"
 <.>  ## 
 ----
 
-The area between `<::>` and the closing `<.>` is the whole original text with the placeholder. The text is organized in JZtxtcmd as 'subtext' syntax, with calling arguments, see link:JZtxtcmd.html#Topic.JZtxtcmd.script.sub.[]. The template script can also contain comments written as `pass:[##line end comment]` which are not part of the generated result. A simple `#` is not a comment because often the `#` is need to generate comment lines. Of courses that requirement or feature is regarded in JZtxtcmd.
+The area between `<::>` and the closing `<.>` is the whole original text with the placeholder. The text is organized in JZtxtcmd as 'subtext' syntax, with calling arguments, see link:JZtxtcmd.html#Topic.JZtxtcmd.script.sub.[]. The template script can also contain comments written as `pass:[##line end comment]` which are not part of the generated result. A simple `pass:[#]` is not a comment because often the `#` is need to generate comment lines. Of courses that requirement or feature is regarded in JZtxtcmd.
 
 It is also possible in XML (file `testfile_xml.jzTc`):
 ----
@@ -109,35 +109,77 @@ List texts @name =
 ];
 ----
 
-One line of this tables is a `java.util.Map` container. The key is that variable which is designated after the `@` in the list's head. It is organized as JZtxtcmd script. The line should contain a variable named `descr` for the GUI tool, and can contain any desired variable furthermore, but each line the same ones.
+The `List` is type of link:../../Java/docuSrcJava_vishiaBase/org/vishia/cmd/JZtxtcmdExecuter.ListMap.html[]. It can be also accessed as Map with a key. The variable which's content builds the key is designated after the `@` in the list's head. 
+Any line of this tables is also a `java.util.Map` container. The line should contain a variable named `descr` for the GUI tool. Furthermore any variables are admissible, selected by its name as key in the line Map container.  But each line should contain the same named variables.
 
 The tables build groups of selectable test cases, which can be used for manual selection, and also for test generation. 
 
+
+
+
+== Example as zip file
+
+This documentation refers an example given as link:../download/example.zip[] able to get as link from here. The example contains
+
+----
+TestStimulator
+ +-libs
+ |  +-bomVishiaJava.txt
+ |  +-vishiaMinisys.jar
+ |  +-+load.bat
+ |
+ +-stimuli.jzT.cmd
+ +-stimuliTables.jzTc
+ +-testfile_text.jzTc
+ +-testfile_xml.jzTc
+ +-nextStimuli.bat
+----
+
+The `libs` directory should contain the necessary jar files. This is:
+
+----
+2021-01-04  09:35         2.445.585 org.eclipse.swt.win32.win32.x86_64.jar
+2021-06-11  13:14           216.064 socketcmd_vishia.exe
+2021-06-08  13:47         1.278.945 vishiaBase.jar
+2021-02-09  18:57         1.116.425 vishiaGui.jar
+2020-12-26  23:29            79.436 vishiaMinisys.jar
+----
+
+But this jar files and the executable are not contained in the zip file itself, instead they are gotten from its repository in internet link:../../Java/Download/versionArchive[]. The file `bomVishiaJava.txt` contains all information about the repository path, file name and a MD5 check sum. The `vishiaMinisys.jar` contains the program to load (it is less, runs also in Linux) and `+load.bat` invokes the loading or checks the files with MD5 if they are loaded. You can also use a newer version if necessary, only the `bomVishiaJava.txt` should be renewed. That is possible also manually. You can open the repository by yourself and look to newer versions, or have a info about. 
+
+The sources of the jar files are also contained in the repository beside the jar, including a compilation file. The compilation is designed as 'reproducible build' link:../../Java/html/source+build/reproducibleJar.html[]
+
+The amount of Megabyte is less. The tool can be integrated in any other Java environment. Yet Java-8 is used, but compilation to a newer version should not a problem with the given sources. 
+
+The other files are explained in the following test. The example in a matter of principle, not a useable example. But it should be a proper template for own usage.
+ 
+
 == The GUI for test case selection
 
-This GUI is a Java program using Eclips-swt as graphic driver. It is invoked with (file `stimuli.jzT.cmd`):
+This GUI is a Java program using Eclips-SWT as graphic driver. It is invoked with (file `stimuli.jzT.cmd`):
 
 ----
 REM starts as windows command (batch) file:
 
-set LIBSPATH="../../../.."
-set CP="%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar;%LIBSPATH%/libs/org.eclipse.swt.win32.win32.x86_64.jar"                                                    
+set LIBSPATH="../"
+set CP=%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar
+set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32.win32.x86_64.jar                                                    
 set JAVAW=java
-::cd ..\..\..\..
 echo dir=%CD%
-REM call the GUI. This file %0 is used as argument for SimSelector. It contains all control after the JZtxtcmd label
+REM call the GUI. This file %0 is used as argument for SimSelector. 
+REM It contains all control after the JZtxtcmd label
 echo on 
-%JAVAW% -cp %CP% org.vishia.simSelector.SimSelector %0 -size:C       
+%JAVAW% -cp %CP% org.vishia.stimuliSelector.StimuliSelector %0 -size:C       
 echo off
 pause
 exit /b
 ----
 
-The class creating the GUI is the `org.vishia.simSelector.SimSelector`. The argument is this file itself (`%0` as full path here), used as JZtxtcmd script for organization of the GUI.
+The class creating the GUI is the `org.vishia.stimuliSelector.StimuiSelector`. The argument is this file itself (`%0` as full path here), used as JZtxtcmd script for organization of the GUI.
 
 The GUI with this given tables looks like:
 
-image:../img/TestStimulator/TestStimulator_1.png[]
+image:../img/TestStimulator/TestStimulator_5Tables.png[]
 
 The same example file `stimuli.jzT.cmd` contains also the generation sub routine, the routine for the [gen selection] button and the association to the tables:
 
@@ -151,7 +193,7 @@ include testfile_text.jzTc;
 include testfile_xml.jzTc;
 ----
 
-Above it is the start of the JZtxtcmd script. With the designation `==JZtxtcmd==` on start of a line it is marked as JZtxtcmd script inside this `*.cmd` file. The `exit /b` as last statement above ends the usage as cmd. The other files are included here. 
+The designation `==JZtxtcmd==` on start of a line marks the content as JZtxtcmd script inside this given `*.cmd` file. The `exit /b` as last statement above ends the usage as cmd. The other files are included here. 
 
 ----
 sub btnGenSelection ( Map line1, Map line2, Map line3, Map line4, Map line5, Map line6) {
@@ -161,30 +203,47 @@ sub btnGenSelection ( Map line1, Map line2, Map line3, Map line4, Map line5, Map
 }
 ----
 
-This is the JZtxtcmd sub routine which is searched and used by the GUI. The arguments are the selected lines in the possible 6 tables. The sub routine calls the generation routine, only the arguments of the common defined button routine are associated to the application specific names of the generation routine.
+This is the JZtxtcmd sub routine which is searched and used by the GUI for the [gen selection] button. The arguments are the selected lines in the possible 6 tables. The sub routine calls the generation routine, the commonly defined arguments are associated to the application specific names of the generation routine. This routine is in the same form for all usages
 
+The next sub routine should be adapted to the necessary files for the test. This is the example which generates the above shown files `testfile_text.txt` and `testfile_xml.xml`:
 
 ----
+##
+##This is the generation routine for one test case, 
+##either for manual [gen selection] or used for [gen test cases]
+##
 sub genTestfiles(Map values, Map texts) {
 
   String title = <:><&texts.name>_<&values.name><.>;     ## build the title
   mkdir genScripts;
-  Openfile fText = "genScripts/testfile_text.txt";
+  String sfText = "genScripts/testfile_text.txt";
+  Openfile fText = sfText;
   <+fText><:call:testfile_text : title=title, values=values, texts=texts><.+>
   fText.close();
-  Openfile fXml = "genScripts/testfile_xml.xml";
+  <+out>gen: <&sfText><.+n>
+  String sfXml = "genScripts/testfile_xml.xml";
+  Openfile fXml = sfXml;
   <+fXml><:call:testfile_xml : title=title, values=values, texts=texts><.+>
   fXml.close();
+  <+out>gen: <&sfXml><.+n>
 }
 ----
 
-This is the generation routine. The two expected files (example) are generated via calling the subtext which contains the template text with place holder. That's all for this example.
+First a title for the test is built with the short given names in the lines, which are also the keys for selection. This title is used as argument for the templates.
+
+The two expected files (example) are generated. `Openfile` opens the named file and offers the `java.io.Writer`. `<+fText>...` writes to the file. `<:call:...>` invokes execution of the subtext which contains the template text with place holder. That's all for this example.
 
 ----
+##
+##This class defines which tables should be used in the StimuliSelector GUI
+##
 class ToGui 
 {
   List tdata1 = values;
   List tdata2 = texts;
+  List tdata3 = var_A;
+  List tdata4 = var_B;
+  List tdata5 = var_C;
 }
 ----
 
@@ -200,51 +259,100 @@ With 6 combinations of for example 10 entries per table a lot of combinations ar
 
 It means, before establish automatic test cases reasonable combinations should be found. Manual tests with expertise of the results can help to find the combinations. 
 
-To explain this on a common example, the test cases are extended. 
 
-image:../img/TestStimulator/TestStimulator_5Tables.png[]
-
-You see, five of six tables are filled, with few modifications only. 
 
 === Test case selection
 
-The idea is: Assembling some test cases on demand and study manually the behavior. It is possible to write a pattern to select some test cases. They can be executed automatically one after another. This is the preparation of the next chapter: Execute nightly tests with the stimuli
+The idea is: Assembling some test cases on demand and study manually the behavior. Then gather the test cases in a expression: 
+
+image:../img/TestStimulator/TestStimulator_Sel1.png[]
+
+The first test idea is contained in the text box right of *[gen test cases]*. Double click on the lines helps to fill this box. It copies the table number and the key, should not be written manually. 
+
+You can fill this test case expression step by step by checking the tests manually. 
+
+----
+1=v2, v3 ; 2=t1; 3=A1; 4=B1; 5=C1;
+----
+
+This expression means, two cases from table 1 are combined with the other selection in the table. It describes two test cases. 
+
+----
+1=v2, v3 ; 2=t1; 3=A1; 4=B1, B3 |; 5=C1
+----
+
+Check other combinations manually, set the cursor after ,,4=B1,,, write a comma and double click the field with ,,B3,,. Then as shown the test case expression is enhanced. Now we have four test cases: ,,v2,, with ,,B1,, and ,,B3,, and also ,,v3,, with both, with the other selection. 
 
 If you know your system, know which test cases are proper for test all features, not all combinations should be test, but specific significant combinations, not too much for a fast or a nightly test.
 
-Now you can select combinations. The image above shows a text box with a selection of test cases. This uses the key values (in the left column of each table) to select the cases in combination. The syntax for it is:
+The test case select expression allows skillful combinations, some selections with some others. See the next expression:
 
 ----
-select::= { <selAnd> ? : }.    <.>
-selAnd::= { <selAdd> ? & }.    <.>
-selAdd::=  { <selLines> ? + }. <.>
-selLines::= { <#table> = {<$?selItem> ? , } [;] }. <.>
+1=v2, v3; 4=B1, B3; + 1=v1; 4=B2  
+& 2=t1,t2; 3=A1; + 2=t2; 3=A3; 
+& 5=C1
 ----
 
-The syntax is written as link:../../docuZBNF/sfZbnfMain_en.html[ZBNF] expression.
+The first line dedicates 4 cases in combination v2, v3, B1, B3 and a combination v1, B2. The ,,+,, means a 'add' of a case. 
+
+The ,,&,, means 'and with', a selection in other tables to build a combination. Here the 5 combination above with table 1 and 4 are combined with the second line, they are two combinations
+with t1 and t2 and A1 and a third one with t2 and A3, In the manual or considered tests this combinations may be proper. 
+
+Last not least this is combined ,,&,, 'and with' the C1 of the 5~th~ table. 
+
+The expression can be written in one line or more, white space is the principle
+
+In result the following tests are combined:
+
+----
+test case: v2_t1_A1_B1_C1
+test case: v3_t1_A1_B1_C1
+test case: v2_t1_A1_B3_C1
+test case: v3_t1_A1_B3_C1
+test case: v1_t1_A1_B2_C1
+test case: v2_t2_A1_B1_C1
+test case: v3_t2_A1_B1_C1
+test case: v2_t2_A1_B3_C1
+test case: v3_t2_A1_B3_C1
+test case: v1_t2_A1_B2_C1
+test case: v2_t2_A3_B1_C1
+test case: v1_t2_A3_B1_C1
+test case: v2_t2_A3_B3_C1
+test case: v3_t2_A3_B3_C1
+test case: v1_t2_A3_B2_C1
+----
+
+This expres& 2=t1,t2; 3=A1; + 2=t2; 3=A3; yntax. There are three opeators: ,,+ & :,, in this priority. ,,+,, is prior for the expressio
+The syntax for it is:
+
+----
+select::= { <selAnd> ? : }.    <1>
+selAnd::= { <selAdd> ? & }.    <2>
+selAdd::=  { <selLines> ? + }. <3>
+selLines::= { <#table> = {<$?selItem> ? , } [;] }. <4>
+----
+
+he syntget and editis written as link:../../docuZBNF/sfZbnfMain_en.html[ZBNF] expression.
 
 * 4) Should come to know from inner to outer. You see this expression in the image:
 
- 1=v1,v2; 2=t1, t2;
+ 1=v2, v3; 4=B1, B3; 
  
-* It means that the table line with key `v1` and `v2` from table 1 are selected to test, in combination with `t1` and `t2` from the table 2. 
+* It means that the table line with key `v1` and `v3` from table 1 are selected to test, in combination with `B1` and `B3` from the table 4. 
 
-* 3) It is possible to have more independent combinations, separated with ,,+,, - means add selection combination. In the image you see a second combination which should use to test:
+* 3) It is possible to have more independent combinations, separated with `+` - means add selection combination. In the image you see a second combination which should use to test:
 
- + 1=v2, v3; 2=t1, t2; 
+ + 1=v1; 4=B2
  
-* 2) The ,,&,, means '__and with__'. It is a selection with other tables which are combined with the given combinations. Of course you may have here also more combinations separated with ,,+,,. The example 
+* 2) The `&` means '__and with__'. It is a selection with other tables which are combined with the given combinations. Of course you may have here also more combinations separated with `+`. The example 
 
- & 3=A1, A2; 4=B1, B2; 5=C1, C2
+ & 2=t1,t2; 3=A1; + 2=t2; 3=A3; 
  
-* does only show one combination of the other table. 
-
-* 1) Not demonstrate in the image and for the [exmpl] button: You can have more independent combinations with the tables. All are added. 
+* 1) Not demonstrate here: You can have more independent combinations with the tables. All are added. 
 
 With the shown select expression the following combinations are tested:
 
-
-How to get this select expression?
+How to get and edit this select expression?
 
 * You can write it manually in knowledge of the keys in the lines of tables.
 

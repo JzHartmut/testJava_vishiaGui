@@ -1,11 +1,12 @@
 REM starts as windows command (batch) file:
 
-set LIBSPATH="../../../.."
-set CP="%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar;%LIBSPATH%/libs/org.eclipse.swt.win32.win32.x86_64.jar"                                                    
+set LIBSPATH="../"
+set CP=%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar
+set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32.win32.x86_64.jar                                                    
 set JAVAW=java
-::cd ..\..\..\..
 echo dir=%CD%
-REM call the GUI. This file %0 is used as argument for SimSelector. It contains all control after the JZtxtcmd label
+REM call the GUI. This file %0 is used as argument for SimSelector. 
+REM It contains all control after the JZtxtcmd label
 echo on 
 %JAVAW% -cp %CP% org.vishia.stimuliSelector.StimuliSelector %0 -size:C       
 echo off
@@ -21,10 +22,14 @@ include stimuliTables.jzTc;
 include testfile_text.jzTc;
 include testfile_xml.jzTc;
 
-                                                                                  
 
+                                                                                  
+##
+##The button routine for [Gen Selection]
+##The arguments are the currently selected lines.
+##
 sub btnGenSelection ( Map line1, Map line2, Map line3, Map line4, Map line5, Map line6) {
-  <+out><&scriptdir>/<&scriptfile>: btnGenSelection ( 
+  <+out><&scriptdir>/<&scriptfile>: btnGenSelection (<: > 
      <&line1.name>, <&line2.name>) ..... <.+n>; 
   call genTestfiles(values=line1, texts=line2);
 }
@@ -32,58 +37,92 @@ sub btnGenSelection ( Map line1, Map line2, Map line3, Map line4, Map line5, Map
 
 
 
-
+##
+##This is the generation routine for one test case, 
+##either for manual [gen selection] or used for [gen test cases]
+##
 sub genTestfiles(Map values, Map texts) {
 
   String title = <:><&texts.name>_<&values.name><.>;     ## build the title
   mkdir genScripts;
-  Openfile fText = "genScripts/testfile_text.txt";
+  String sfText = "genScripts/testfile_text.txt";
+  Openfile fText = sfText;
   <+fText><:call:testfile_text : title=title, values=values, texts=texts><.+>
   fText.close();
-  Openfile fXml = "genScripts/testfile_xml.xml";
+  <+out>gen: <&sfText><.+n>
+  String sfXml = "genScripts/testfile_xml.xml";
+  Openfile fXml = sfXml;
   <+fXml><:call:testfile_xml : title=title, values=values, texts=texts><.+>
   fXml.close();
+  <+out>gen: <&sfXml><.+n>
 }
 
 
-Obj soRx;
+
+##expected command from SocketCmd_vishia to execute the next step for gen test cases.
+##
 String cmpNext = <:>"step"<.>;
 
-sub genTestcases(String select) {
-  <+out>soRx=<&jztc.scriptVariables().soRx><.+n>
-  if(jztc.scriptVariables().soRx) {    ##hint: use definitely the script variable, not the local copy.
+
+
+
+##
+##This routine is the button routine for the [gen testcases] button.
+##Here it starts another thread which generates in loop step by step 
+##  after receiving a "next" command from UDP communication (using socketCmd_vishia.exe)
+##If this routine is invoked secondly (press button secondly) and the thread is active
+##  then the UDP socket connection is closed to abort the generation thread.
+##
+sub btnGenTestcases(String select) {
+ 
+  <+out>soRx=<&jztc.envar.soRx><.+n>
+  if(jztc.envar.soRx) {    ##hint: use definitely the script variable, not the local copy.
     <+out>...abort genTestCases: <.+n> 
-    jztc.scriptVariables().soRx.close();
-    jztc.scriptVariables().soRx = null;
+    jztc.envar.soRx.close();
+    jztc.envar.soRx = null;
   } 
   else {
     <+out>generate test cases: .... <.+n> 
-    Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases(select, 5); 
-    Thread execThread = {
-      debug;
-      jztc.scriptVariables().soRx = java new org.vishia.communication.GetRx_InterProcessComm("UDP:127.0.0.1:45040");
-      <+out>Thread .... <&jztc.scriptVariables().soRx><.+n> 
-      for(testcase: testcases) {
-        String name = <:><:for:var:testcase><&var.sel><:hasNext>_<.hasNext><.for><.>; 
-        <+out>test case: <&name><.+n> 
-        String next = jztc.scriptVariables().soRx.waitRx();
-        <+out>msg from socket::<&next>::<.+n>
-        if(NOT (next == cmpNext)) { break; }
-      }  
-      jztc.scriptVariables().soRx.close();
-      jztc.scriptVariables().soRx = null;
-      <+out>Thread finished<.+n>
-    }
-    ##execThread.join();
+    Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases(select, 5);
+    call genTestCaseThread(testcases = testcases);
   }
 }
 
 
 
+##
+##The genTestCases thread.
+##Hint: The sub routine is the wrapper arround the thread.
+##      The sub routine itself is finished immediately, necessary because it is calling in the GUI thread.
+##
+sub genTestCaseThread(Obj testcases) {
+  Thread execThread = {                        ## This thread generates one test case in each for loop
+    jztc.envar.soRx = java new org.vishia.communication.GetRx_InterProcessComm("UDP:127.0.0.1:45040");
+    <+out>Thread .... <&jztc.envar.soRx><.+n> 
+    Bool contFor = true;                       ## possibility to abort the generation
+    for(testcase: testcases && contFor ) {
+      String name = <:><:for:var:testcase><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+      <+out>test case: <&name><.+n> 
+      Obj lineValues = values.get(testcase[0].sel);
+      Obj lineTexts = texts.get(testcase[1].sel);          ## generates the files for this case:
+      call genTestfiles(values = lineValues, texts = lineTexts);
+      ##
+      String next = jztc.envar.soRx.waitRx();  ## waits for a cmd received via socket:
+      <+out>msg from socket::<&next>::<.+n>
+      contFor = bool(next >= cmpNext);         ## repeats, generate next if "step" is received
+    }  
+    jztc.envar.soRx.close();
+    jztc.envar.soRx = null;
+    <+out>Thread finished<.+n>
+  }
+  ##do not use execThread.join(0); because the wrapper routine should be immediately finished, called in the GUI thread!
+}
 
 
 
-
+##
+##This class defines which tables should be used in the StimuliSelector GUI
+##
 class ToGui 
 {
   List tdata1 = values;
@@ -93,4 +132,3 @@ class ToGui
   List tdata5 = var_C;
 }
 
-                
