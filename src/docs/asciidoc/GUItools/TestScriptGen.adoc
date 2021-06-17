@@ -281,7 +281,7 @@ This expression means, two cases from table 1 are combined with the other select
 1=v2, v3 ; 2=t1; 3=A1; 4=B1, B3 |; 5=C1
 ----
 
-Check other combinations manually, set the cursor after ,,4=B1,,, write a comma and double click the field with ,,B3,,. Then as shown the test case expression is enhanced. Now we have four test cases: ,,v2,, with ,,B1,, and ,,B3,, and also ,,v3,, with both, with the other selection. 
+Check other combinations manually, set the cursor after `4=B1`, write a comma and double click the field with `B3`. Then as shown the test case expression is enhanced. Now we have four test cases: `v2` with `B1` and `B3` and also `v3` with both, with the other selection. 
 
 If you know your system, know which test cases are proper for test all features, not all combinations should be test, but specific significant combinations, not too much for a fast or a nightly test.
 
@@ -293,12 +293,12 @@ The test case select expression allows skillful combinations, some selections wi
 & 5=C1
 ----
 
-The first line dedicates 4 cases in combination v2, v3, B1, B3 and a combination v1, B2. The ,,+,, means a 'add' of a case. 
+The first line dedicates 4 cases in combination v2, v3, B1, B3 and a combination v1, B2. The `+` means a 'add' of a case. 
 
-The ,,&,, means 'and with', a selection in other tables to build a combination. Here the 5 combination above with table 1 and 4 are combined with the second line, they are two combinations
+The `&` means 'and with', a selection in other tables to build a combination. Here the 5 combination above with table 1 and 4 are combined with the second line, they are two combinations
 with t1 and t2 and A1 and a third one with t2 and A3, In the manual or considered tests this combinations may be proper. 
 
-Last not least this is combined ,,&,, 'and with' the C1 of the 5~th~ table. 
+Last not least this is combined `&` 'and with' the C1 of the 5~th~ table. 
 
 The expression can be written in one line or more, white space is the principle
 
@@ -322,7 +322,7 @@ test case: v3_t2_A3_B3_C1
 test case: v1_t2_A3_B2_C1
 ----
 
-This expres& 2=t1,t2; 3=A1; + 2=t2; 3=A3; yntax. There are three opeators: ,,+ & :,, in this priority. ,,+,, is prior for the expressio
+This expres& 2=t1,t2; 3=A1; + 2=t2; 3=A3; yntax. There are three opeators: `+ & :` in this priority. `+` is prior for the expressio
 The syntax for it is:
 
 ----
@@ -363,6 +363,124 @@ How to get and edit this select expression?
 * If you press [exmpl] then you get an example using the given table content, which shows you the syntax. Based on this example you can modify it. 
 
 
-=== Test case generation
+== Test case generation
 
-The button [gen test cases] calls the sub routine 
+The button *[gen test cases]* calls the sub routine 
+
+----
+##
+##This routine is the button routine for the [gen testcases] button.
+##Here it starts another thread which generates in loop step by step 
+##  after receiving a "next" command from UDP communication (using socketCmd_vishia.exe)
+##If this routine is invoked secondly (press button secondly) and the thread is active
+##  then the UDP socket connection is closed to abort the generation thread.
+##
+sub btnGenTestcases(String select) {
+  ##....
+}
+----
+
+The content of this routine depends on the requests of the test system. They are different possibilities:
+
+* a) With the `select` String some files are generated which are used from the tests afterwards.
+* b) It is possible to generate all test files.
+* c) It is possible too to generate only one file for control the test, the test files with data can be generated out of the StimuliSelector via calling the given generation scripts via JZtxtcmd invocation. This is used for Simulink, see link:../../smlk/html/SmlkTimeSignals/SmlkTimeSignals.html[], there link:../../smlk/html/SmlkTimeSignals/SmlkTimeSignals.html#truegenerating-manual-planned-test-cases[chapter Generating manual planned test cases]
+
+* d) The following shown approach works with interaction between a test system and the Stimuli Selector GUI. The test system should have the capability of calling a cmd for the opeation system per test. This feature is often available. This cmd is used to send a message to the Stimuli Selector GUI to generate the next set of files. Both need not to be run on the same computer. For example the test bed can be any embedded platform with network capabity, where as the Stimuli Selector GUI runs on a PC in that network.
+
+=== select String preparation and choice of lines in the tables with the values
+
+In all cases the core functionality is:
+
+----
+Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases(select, 5);
+
+for(testcase: testcases && contFor ) {
+  String name = <:><:for:var:testcase><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+  <+out>test case: <&name><.+n> 
+  Obj lineValues = values.get(testcase[0].sel);
+  Obj lineTexts = texts.get(testcase[1].sel);          
+  call genTestfiles(values = lineValues, texts = lineTexts);
+----
+
+The preparation of the testcase string is done with
+
+link:link:../../Java/docuSrcJava_vishiaBase/org/vishia/testutil/TestConditionCombi.html
+
+This java class analyzes the string and outputs a simple List container which contains per item the table number and the select String for all tables of each test case.  
+
+With this information shown in the next lines in the script above the proper lines can be selected. The next called `genTestfiles(...)` is the same routine as in the `btnGenSelection(...)` routine. But alternatively a control file with the data information of the test can be generated, as in c).
+
+
+
+=== Possibility to interact via socket
+
+This is the proposal d) and implemented in the example. 
+
+The whole `btnGenTestCases(...)` routine looks like:
+
+----
+##
+##This routine is the button routine for the [gen testcases] button.
+##Here it starts another thread which generates in loop step by step 
+##  after receiving a "next" command from UDP communication (using socketCmd_vishia.exe)
+##If this routine is invoked secondly (press button secondly) and the thread is active
+##  then the UDP socket connection is closed to abort the generation thread.
+##
+sub btnGenTestcases(String select) {
+  if(jztc.envar.soRx) {    ##hint: use definitely the script variable, not the local copy.
+    <+out>...abort genTestCases: <.+n> 
+    jztc.envar.soRx.close();
+    jztc.envar.soRx = null;
+  } 
+  else {
+    <+out>generate test cases: .... <.+n> 
+    call genTestCaseThread(select=select);
+  }
+}
+----
+
+The button routine quests an internal variable ,,soRx,,. It is null if no communication is pending, then ,,genTestCaseThread(...),, is called. If it is pressed again during test cases are generating respectively the thread is waiting for interaction, the socket communication is closed. Following the waiting routine for communication is aborted and the thread is finsihed. This is important, because for interaction it is not clarified what the partner does. Anytime the control over the whole process should be given. 
+
+The ,,genTestCaseThread(...),, creates a thread in JZtxtcmd: link:file:///D:/vishia/JZtxtcmd/html/JZtxtcmd.html#Topic:.JZtxtcmd.thread.[]:
+
+----
+##
+##The genTestCases thread.
+##Hint: The sub routine is the wrapper arround the thread.
+##      The sub routine itself is finished immediately, necessary because it is calling in the GUI thread.
+##
+sub genTestCaseThread(String select) {
+  Thread execThread = {                        ## This thread generates one test case in each for loop
+    String sIp="UDP:127.0.0.1:45040";
+    jztc.envar.soRx = java new org.vishia.communication.GetRx_InterProcessComm(sIp);
+----
+
+In this first part the communication via socket is set up with the shown receive class. The address string may be better defined on start of the script, to better change it when necessary. The port number is manually determined in coordination with the interaction partner. Here a local communication ("127.0.0.1" is the 'loop back' address) is used, instead any network card with known IP-V4 can be addressed too.
+
+In expecting of a proper communication the generation of test files is started via calling ,,prepareTestCases(...),,, see chapter above. The files for the first test cases are generated:
+
+----
+    Bool contFor = true;                       ## possibility to abort the generation
+    Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases(select, 5);
+    for(testcase: testcases && contFor ) {
+      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(colorGenTestcaseActive, 0);
+      jztc.envar.stimuliSelector.btnGenTestcases.setText("abort generate");
+      String name = <:><:for:var:testcase><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+      <+out>test case: <&name><.+n> 
+      Obj lineValues = values.get(testcase[0].sel);
+      Obj lineTexts = texts.get(testcase[1].sel);          ## generates the files for this case:
+      call genTestfiles(values = lineValues, texts = lineTexts);
+      ##
+      Obj cmd1 = execThread.awaitcmd(1000);
+      ##
+----
+
+But to see what is done the button is set to a green color and the text of the button is changed. If the button *[gen test cases]* will be pressed in that time, the communication is aborted as described above. 
+
+The line with ,,awaitcmd(1000),, should only delay the duration (of file generation) because elsewhere the green button is not visible, file generation is too fast. 
+
+After generation the first files, the test should be run. The test engine may detect a new 
+
+If the communication is faulty, an error message is shown and the thread is finished. That is especially possible on faulty addresses.
+
