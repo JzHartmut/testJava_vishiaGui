@@ -1,0 +1,826 @@
+= A test script generator StimuliSelector
+:toc:
+:sectnums:
+:sectlinks:
+:cpp: C++
+:Cp: C/++
+
+Some videos, also linked in the text:
+
+* link:../videos/ExampleSelUsage.mp4[]
+* link:../videos/StimSelUsingforFPGA.mp4[]
+* link:../videos/TestSeriesFPGA.mp4[]
+
+An example to download and test:
+
+* link:../download/StimuliSelect_Example.zip[]
+
+Dr. Hartmut Schorrig, www.vishia.org, 2021-06-18
+
+This is a pre-version. Please visit later again. 
+
+== Motivation
+
+Often tests are controlled by scripts, or the test environment (test bench) is any source containing the test conditions. For different tests more as one scripts are necessary which should be select to use.
+
+But the scripts are equal in wide range, only specific parts are adapted to different test cases. Hence it is better to generate the yet necessary test script from a template with place holder and replace the place holder with the correct values.
+
+The link:../../JZtxtcmd/html/JZtxtcmd.html[] is used to generate the scripts. A GUI environment build with the vishia Gral concept is used for selection of parameter of generation.
+
+This concept is flexible to use for all approaches where scripts should be generated to control tests or also parameter etc. The adaption is based on script files.
+
+== Principle: Text template with placeholder
+
+Supposed, a script is necessary to control the test. This script may be:
+
+* A main program or function in a source which is a test bench for a module in {Cp} language.
+* A header file which contains some compiler switch definitions.
+* For Simulink: A math script or text file with parameter
+* FPGA-simulation: A VHDL file which is the test bench
+* A XML file or yaml file which contains parameter of test 
+* A flow written in Phyton which controls a test
+* ... somewhat else, a textual script
+
+For a simple explanation a simple test file with parameters and a XML file is presented here:
+
+----
+#Simple test script with parameter
+title = "t1_v1"
+value1 = 123.45
+value2 = "text"
+----
+
+Adequates in XML:
+----
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Test:root xmlns:Test="https://myUrl/TestDefs" Test:title="t1_v1">
+  <Test:Values Test:value1="123.45" Test:value2="text" />
+</Test:root>
+----
+
+The content of this files are an example, it is user specific. 
+
+You need a file which contains exactly this texts but with place holder for the values. 
+The place holder are written in the form: `<&path.variable>`. But additionally a frame for the text is necessary. So the template for the text file for this example is  (file `testfile_text.jzTc`):  
+
+----
+==JZtxtcmd==
+
+##
+##Template for the whole testfile_text.
+##arguments values and texts comes from the selected lines of the Test stimuli
+##
+subtext testfile_text(String title, Map values, Map texts) 
+<::>
+#Simple test script with parameter
+title = "<&title>"
+value1 = <&values.value1>
+value2 = "<&texts.text>"
+<.>  ## 
+----
+
+The area between `<::>` and the closing `<.>` is the whole original text with the placeholder. The text is organized in JZtxtcmd as 'subtext' syntax, with calling arguments, see link:../../JZtxtcmd/html/JZtxtcmd.html#Topic.JZtxtcmd.script.sub.[]. The template script can also contain comments written as `pass:[##line end comment]` which are not part of the generated result. A simple `pass:[#]` is not a comment because often the `#` is need to generate comment lines. Of courses that requirement or feature is regarded in JZtxtcmd.
+
+It is also possible in XML (file `testfile_xml.jzTc`):
+----
+==JZtxtcmd==
+
+##
+##Template for the whole testfile_xml.
+##arguments values and texts comes from the selected lines of the Test stimuli
+##
+subtext testfile_xml(String title, Map values, Map texts) 
+<::>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Test:root xmlns:Test="https://myUrl/TestDefs" Test:title="<&title>">
+  <Test:Values Test:value1="<&values.value1>" Test:value2="<&texts.text>" />
+</Test:root>
+<.> ##
+----
+
+JZtxtcmd is proper also and especially for generation of results which uses elaborately writing with `< ... >` for example XML, but also some other script languages e.g. the Mathworks-specific "tlc" scripts ("__target language compiler__" control script). The distinction to XML style is: The placeholder start with `<&` which is never used in XML as necessary direct text. Some control constructs start with `<:` also not used in XML. So that sequences can be used immediately in the template. But nevertheless this character sequences can be written as `<:<&>` etc. to produce it as output, see link:../../JZtxtcmd/html/JZtxtcmd.html#Topic:.JZtxtcmd.text.transcript.[].
+
+== Tables with the values for placeholder, test variants
+
+From where come the values?
+
+You should define tables, (see file `stimuliTables.jzTc` in the appended example):
+
+----
+==JZtxtcmd==
+
+List values @name =  
+[ { name="v1", descr="test-var 1", value1="123.45", value2="536.5" }
+, { name="v2", descr="test-var 2", value1="345.67", value2="5" }
+, { name="v3", descr="test-var 3", value1="987.65", value2="1000" }
+];
+
+List texts @name =
+[ { name="t1", descr="text1", text="text" }
+, { name="t2", descr="text2", text="other text" }
+];
+----
+
+The `List` is type of link:../../Java/docuSrcJava_vishiaBase/org/vishia/cmd/JZtxtcmdExecuter.ListMap.html[]. It can also be accessed as Map with a key. The variable which's content builds the key is designated after the `@` in the list's head. 
+
+Any line of this tables is a `java.util.Map` container with the name of the variables as key. The line should contain a variable named `descr` for the GUI tool. Furthermore any variables are admissible holding values. But each line of a table should contain the same named variables.
+
+The tables build groups of selectable test cases, which can be used for manual selection, and also for test generation. 
+
+
+
+
+== Example as zip file
+
+This documentation refers an example given as link:../download/StimuliSelect_Example.zip[] able to get as link from here. The example contains
+
+----
+TestStimulator
+ +-libs
+ |  +-bomVishiaJava.txt
+ |  +-vishiaMinisys.jar
+ |  +-+load.bat
+ |
+ +-stimuli.jzT.cmd
+ +-stimuliTables.jzTc
+ +-testfile_text.jzTc
+ +-testfile_xml.jzTc
+ +-nextStimuli.bat
+----
+
+The `libs` directory should contain the necessary jar files. This is:
+
+----
+2021-06-17  22:47               822 bomVishiaJava.txt
+2021-01-04  09:35         2.445.585 org.eclipse.swt.win32.win32.x86_64.jar
+2021-06-13  23:21           218.624 socketcmd.exe
+2021-06-17  22:41         1.279.231 vishiaBase.jar
+2021-06-18  09:41         1.121.551 vishiaGui.jar
+2020-12-26  23:29            79.436 vishiaMinisys.jar
+----
+
+But this jar files and the executable are not contained in the zip file itself, instead they are gotten from its repository in internet link:../../Java/Download/versionArchive[]. The file `bomVishiaJava.txt` contains all information about the repository path, file name and a MD5 check sum. The `vishiaMinisys.jar` contains the program to load (it is less, runs also in Linux) and `+load.bat` invokes the loading or checks the files with MD5 if they are loaded. You can also use a newer version if necessary, only the `bomVishiaJava.txt` should be renewed. That is possible also manually. You can open the repository by yourself and look to newer versions, or have a info about. 
+
+The sources of the jar files are also contained in the repository beside the jar, including a compilation file. The compilation is designed as 'reproducible build' link:../../Java/html/source+build/reproducibleJar.html[]
+
+The amount of Megabyte is less. The tool can be integrated in any other Java environment. Yet Java-8 is used, but compilation to a newer version should not a problem with the given sources. 
+
+The other files are explained in the following test. The example in a matter of principle, not an useable example. But it should be a proper template for own usage.
+ 
+
+== The GUI for test case selection
+
+This GUI is a Java program using Eclips-SWT as graphic driver. It is invoked with (file `stimuli.jzT.cmd`):
+
+----
+REM starts as windows command (batch) file:
+
+set LIBSPATH=./
+set CP=%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar
+set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32.win32.x86_64.jar                                                    
+set JAVAW=java
+echo dir=%CD%
+REM call the GUI. This file %0 is used as argument for SimSelector. 
+REM It contains all control after the JZtxtcmd label
+echo on 
+%JAVAW% -cp %CP% org.vishia.stimuliSelector.StimuliSelector %0 -size:C       
+echo off
+pause
+exit /b
+----
+
+The class creating the GUI is the link:../../Java/docuSrcJava_vishiaGui/org/vishia/stimuliSelector/StimuiSelector.html`. The argument is this file itself (`%0` as full path here), used as JZtxtcmd script for organization of the GUI.
+
+The GUI with this given tables looks like:
+
+image:../img/TestStimulator/TestStimulator_5Tables.png[]
+
+The same example file `stimuli.jzT.cmd` contains also the generation sub routine, the routine for the [gen selection] button and the association to the tables:
+
+----
+==JZtxtcmd==
+
+currdir=<:><&scriptdir><.>;
+
+include stimuliTables.jzTc;
+include testfile_text.jzTc;
+include testfile_xml.jzTc;
+----
+
+The designation `==JZtxtcmd==` on start of a line marks the content as JZtxtcmd script inside this given `*.cmd` file. The `exit /b` as last statement above ends the usage as cmd. The other files are included here. 
+
+----
+sub btnGenSelection ( Map line1, Map line2, Map line3, Map line4, Map line5, Map line6) {
+  <+out><&scriptdir>/<&scriptfile>: btnGenSelection ( 
+     <&line1.name>, <&line2.name>) ..... <.+n>; 
+  call genTestfiles(values=line1, texts=line2);
+}
+----
+
+This is the JZtxtcmd sub routine which is searched and used by the GUI for the [gen selection] button. The arguments are the selected lines in the possible 6 tables. The sub routine calls the generation routine, the commonly defined arguments are associated to the application specific names of the generation routine. This routine is in the same form for all usages
+
+The next sub routine should be adapted to the necessary files for the test. This is the example which generates the above shown files `testfile_text.txt` and `testfile_xml.xml`:
+
+----
+##
+##This is the generation routine for one test case, 
+##either for manual [gen selection] or used for [gen test cases]
+##
+sub genTestfiles(Map values, Map texts) {
+
+  String title = <:><&texts.name>_<&values.name><.>;     ## build the title
+  mkdir genScripts;
+  String sfText = "genScripts/testfile_text.txt";
+  Openfile fText = sfText;
+  <+fText><:call:testfile_text : title=title, values=values, texts=texts><.+>
+  fText.close();
+  <+out>gen: <&sfText><.+n>
+  String sfXml = "genScripts/testfile_xml.xml";
+  Openfile fXml = sfXml;
+  <+fXml><:call:testfile_xml : title=title, values=values, texts=texts><.+>
+  fXml.close();
+  <+out>gen: <&sfXml><.+n>
+}
+----
+
+First a title for the test is built with the short given names in the lines, which are also the keys for selection. This title is used as argument for the templates.
+
+The two expected files (example) are generated. `Openfile` opens the named file and offers the `java.io.Writer`. `<+fText>...` writes to the file. `<:call:...>` invokes execution of the subtext which contains the template text with place holder. That's all for this example.
+
+----
+##
+##This class defines which tables should be used in the StimuliSelector GUI
+##
+class ToGui 
+{
+  List tdata1 = values;
+  List tdata2 = texts;
+  List tdata3 = var_A;
+  List tdata4 = var_B;
+  List tdata5 = var_C;
+}
+----
+
+Last not least the GUI should know which tables should be used to show and select. A so named `class` in JZtxtcmd is used to associate the tables. The GUI java program searches this class and the `tdata..` variables. Here only 2 tables are used. 
+
+With 6 tables test cases with 6 coordinates to modify tests (builds combinations) are possible. The GUI can be enhanced for example to use 12 coordinates or combination variants, using 4 x 3 tables, obviously on a normal monitor, or more. But in practical usage 6 coordinates seems to be enough. 
+
+== Manual selected and automatic tests
+
+Firstly this GUI and the tables support manual selected test cases in several combinations. This example is held simple, but some combinations should be imaginable also for this example.
+
+With 6 combinations of for example 10 entries per table a lot of combinations are possible (10^6 = 1000000, only for example).
+
+It means, before establish automatic test cases, reasonable combinations should be found. Manual tests with expertise of the results can help to find the combinations. 
+
+
+
+=== Test case selection
+
+The idea is: Assembling some test cases on demand and study manually the behavior. Then gather the test cases in a expression: 
+
+image:../img/TestStimulator/TestStimulator_Sel1.png[]
+
+If you have a test selected in the tables and you click *[add sel]* button then you get a select expression in the text box right of *[gen test cases]*:
+
+----
+1=v2; 2=t1; 3=A1; 4=B1; 5=C1;
+----
+
+This expression contains table numbers and associated keys of the lines of test cases. 
+
+In the example secondly the shown case `v3` was selected in the table, and then pressed *[add sel]* again. Then this case is also added. If you select other lines in the other tables and click [add sel] this lines are added too. You can check some test results manually pressing **[gen selection]**, then *[add sel]*. But:
+
+----
+1=v2, v3 ; 2=t1, t2; 3=A1, A2, A3; 4=B1, B3; 5=C1, C2, C3;
+----
+
+This expression means, this two cases from table 1 are combined with the two cases from table 2 and the other selections in the tables. It describes  2*2*3*2*3 = 72 test cases, the combination of all. If the tables are longer, it is sometimes too much. Hence there are more possibilities:
+
+----
+1=v2, v3 ; 2=t1, t2; 3=A1; 4=B1; 5=C1;
+: 1=v1 ; 2=t1, t2; 3=A1, A2; 4=B1; 5=C3;
+----
+
+That are two independent combinations, separated with the `:` colon. It is 2*2 + 2*2 = only 8 test cases. You may have the expectation that you want to test the `v1` combination only with the given ones, for example only with `C3` and the other cases from table 1 especially with `C1` only. - to reduce the amount of combination for a fast overview test.
+
+You can entry this expression manually, but also write the colon, `:`, set the cursor after it, select in table and press **[add sel]**. The expression builder detects that you are in a separated part of the expression. Because it is empty, it takes all lines of the table. 
+
+The test case select expression allows skillful combinations, some selections with some others. See the next expression:
+
+----
+1=v2, v3; 4=B1, B3; + 1=v1; 4=B2  
+& 2=t1,t2; 3=A1; + 2=t2; 3=A3; 
+& 5=C1
+----
+
+The first line dedicates 4 cases in combination v2, v3, B1, B3 and a combination v1, B2. The `+` means a 'add' of a case. 
+
+The `&` means 'and with', a selection in other tables to build a combination. Here the 5 combination above with table 1 and 4 are combined with the second line, they are two combinations
+with t1 and t2 and A1 and a third one with t2 and A3, In the manual or considered tests this combinations may be proper. 
+
+Last not least this is combined `&` 'and with' the C1 of the 5~th~ table. 
+
+The expression can be written in one line or more, white space is the principle
+
+In result the following tests are combined:
+
+----
+test case: v2_t1_A1_B1_C1
+test case: v3_t1_A1_B1_C1
+test case: v2_t1_A1_B3_C1
+test case: v3_t1_A1_B3_C1
+test case: v1_t1_A1_B2_C1
+test case: v2_t2_A1_B1_C1
+test case: v3_t2_A1_B1_C1
+test case: v2_t2_A1_B3_C1
+test case: v3_t2_A1_B3_C1
+test case: v1_t2_A1_B2_C1
+test case: v2_t2_A3_B1_C1
+test case: v1_t2_A3_B1_C1
+test case: v2_t2_A3_B3_C1
+test case: v3_t2_A3_B3_C1
+test case: v1_t2_A3_B2_C1
+----
+
+To fill such more complex expression you have the following possibilities:
+
+* Write manually, you see or know the key names, it is not complicated.
+* Set the cursor in a proper part of the select expression and double click a line in a table, this line will be added on the correct position.
+* Set the cursor to the desired parth, select a case in tables and press **[add sel]**. Then only the lines will be added of that tables which are already part of the expression part. This helps to select in groups 'and with ...' after the ampersand `&`.
+* Mark lines in tables and press *[add sel]]*. To mark lines you must hold 'shift' and press 'arrow down'. Mark with mouse is yet not possible (2021-06), may be possible later depending of the capability of the "GRAL" __Graphic Adaption Layer__. Then all marked lines are written in the part. Tables without marking are not considerate. You can also mark only one line to add only this line. But this is the same as double click a line. 
+
+=== Syntax of the test case expression
+
+The syntax for the select expression is:
+
+----
+select::= { <selAnd> ? : }.    <1>
+selAnd::= { <selAdd> ? & }.    <2>
+selAdd::=  { <selLines> ? + }. <3>
+selLines::= { <#table> = {<$?selItem> ? , } [;] }. <4>
+----
+
+It is written as link:../../docuZBNF/sfZbnfMain_en.html[ZBNF] expression. It is similar BNF or EBNF. `{...? .. }` means a repetion with separator after the `?`. `<#?table>` is a number with the meaning (semantic) "__table__". `<$?selItem>` is an identifier (letters, digits and underlyer) with the given semantic meaning. `[...]` is optional, hence the semicolon is optional. But it should be written. The ZBNF syntax has the advantage that semantic information are given in the formal syntax string ("__Zemantic BNF__").  
+
+Look on the example:
+
+----
+1=v2, v3; 4=B1, B3; + 1=v1; 4=B2  
+& 2=t1,t2; 3=A1; + 2=t2; 3=A3; 
+& 5=C1
+----
+
+
+* 4) Should come to know from inner to outer. You see this expression in the image:
+
+ 1=v2, v3; 4=B1, B3; 
+ 
+* It means that the table line with key `v1` and `v3` from table 1 are selected to test, in combination with `B1` and `B3` from the table 4. 
+
+* 3) It is possible to have more independent combinations, separated with `+` - means add selection combination. In the image you see a second combination which should use to test:
+
+ + 1=v1; 4=B2
+ 
+* 2) The `&` means '__and with__'. It is a selection with other tables which are combined with the given combinations. Of course you may have here also more combinations separated with `+`. The example 
+
+ & 2=t1,t2; 3=A1; + 2=t2; 3=A3; 
+ 
+uses the `+` also here. It means 3 cases: `t1_A1`, `T2_A1` and `T2_A3`.  
+ 
+* 1) The colon separates independent combinations.  
+
+
+
+== Test case generation
+
+The button *[gen test cases]* calls the sub routine 
+
+----
+##
+##This routine is the button routine for the [gen testcases] button.
+##
+sub btnGenTestcases(String select) {
+  ##....
+}
+----
+
+The content of this routine depends on the requests of the test system. They are different possibilities, see chapter link#interact[Interaction of this Stimuli Selector with a test system]. But the anyway used functionality is: evaluation of the select expression.
+
+=== select String evaluation and choice of lines in the tables with the values
+
+In all cases the core functionality is:
+
+----
+Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases(select, 5);
+Bool contFor = true;
+for(testcase: testcases && contFor ) {
+  String name = <:><:for:var:testcase><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+  <+out>test case: <&name><.+n> 
+  Obj lineValues = values.get(testcase[0].sel);
+  Obj lineTexts = texts.get(testcase[1].sel); 
+  ## ... maybe controlling actions with the test system ....
+  call genTestfiles(values = lineValues, texts = lineTexts);
+----
+
+The preparation of the testcase string is done with
+
+link:../../Java/docuSrcJava_vishiaBase/org/vishia/testutil/TestConditionCombi.html[]
+
+This java class analyzes the string and outputs a simple List container which contains per item the table number and the select String for all tables of each test case.  
+
+With this information shown in the next lines in the script above the proper lines can be selected. The next called `genTestfiles(...)` is the same routine as in the `btnGenSelection(...)` routine. But alternatively a control file with the data information of the test can be generated, as in a2).
+
+
+
+[#interact]
+== Interaction of this Stimuli Selector with a test system
+
+
+If the test system is also programmed in Java, i.e. during test execution a continuing Java program controls the tests, then it should be possible to integrate this Stimuli Selector directly into this test system.
+
+For that the test solution does only need this here used two jar files, it can call the adequate Java classes in a proper specific way.
+
+But often a test system is programmed using any other script language, or the effort to integrate this Stimuli Selection tool into the test system seems to be too high. Another approach is: The Stimuli Selector should possibly run in an extra process, as a separate window, or even on another computer in the network. This is especially the case if the test system runs on an embedded platform (with network capability).
+
+Therefore, the question of interaction between the two should be clarified in more detail. There are some approaches: 
+
+
+* a) With the `select` String some files are generated which are used from the tests afterwards.
+
+----
+
+ select expression [gen test cases]
+ ----------------------+-----------
+                       |
+                       +-> generates files
+                           ------------+--
+                                       |
+                                       +-...-> execute the test independent
+----
+
+* a1) It is possible to generate all test files.
+* a2) It is possible too to generate only one file for control the test. The test files with data can be generated out of the StimuliSelector via calling the given generation scripts via JZtxtcmd invocation. The invocation of JZtxtcmd execution is an invocation of Java usual via command line. Often test tools can call command line statements, then it is possible. The time for execution (initialization of Java, translation of classes, etc.) is not so high, it is usually much less than 1 second, less compared to the test times. 
+
+This approach is used for Simulink, see link:../../smlk/html/SmlkTimeSignals/SmlkTimeSignals.html[], there link:../../smlk/html/SmlkTimeSignals/SmlkTimeSignals.html#truegenerating-manual-planned-test-cases[chapter Generating manual planned test cases]
+
+----
+
+ select expression [gen test cases]
+ ------------------+---------------
+                   |
+                   +-> generates the test control files
+                       ------+-------------------------
+                             |
+    while test execution:   uses this control file
+    Using JZtxtcmd           |       
+    but independent of StimuliSel: -> generates the test files
+                                      ----+-------------------
+                                          |
+                                          +-...-> execute the test
+----
+
+* b) The following shown approach works with **interaction** between a test system and the Stimuli Selector GUI. The test system should have the capability 
+
+** either of calling a cmd for the operation system in its execution loop. 
+** or it should able to check the existence of files, and a file transfer and also copy or rename should be possible.
+** or the test system should able to exchange messages preferred via socket (Ethernet) communication or maybe also serial.
+
+One or more of this features are often available. 
+
+The Stimuli Selector GUI can deal with files in the network, can communicate via ethernet but not yet via serial (UART). But this is possible to enhance. 
+
+The `StimuliSelect_Example` shows two approaches, handle with files and socket. Wherby the test system does not handle with sockets by itself but uses the `SocketCmd.exe` to do so.
+
+USE:
+
+This cmd is used to send a message to the Stimuli Selector GUI to generate the next set of files. Both need not to be run on the same computer. For example the test bed can be any embedded platform with network capabity, where as the Stimuli Selector GUI runs on a PC in that network.
+
+
+[#interactSocket]
+=== Possibility to interact via socket - or serial
+
+Socket communication is an elegant approach to data exchange. A simple string message can be sent and received with a UDP telegram. The queue to store messages is already given with the 'Telegram Stack' on driver level. 
+
+However, if the queue is to work properly, the socket communication should be initialized once at startup (open socket) and remain open. Otherwise, the partner can send a message and only after that the communication will be opened. Then the message is lost. This is the case when the test system does not have the socket communication approach natively, but should execute it with a command line call. Then the socket cannot be opened for the whole time, only opened for receiving, then receive and close again. This is not really proper to use.
+
+But for transmission this is possible: The socket will be opened, transmit and close in one command line executable invocation. On the side of the receiver the message is queued if the receiver (the Stimuli Selector) remains the socket opened. 
+
+The StimuliSelect_Example use this approach. The test system is emulated by a simple command loop in a batch file without natively socket communication. The socket communication is used only for the direction from the test system to the StimuliSelector GUI.
+
+The class link:../../Java/docuSrcJava_vishiaRun//org/vishia/communication/SocketCmd_InterProcessComm.html[] offers the socket communication opportunities:
+
+* constructor called with IPv4 address and port for own and partner opens the socket
+* get the status and error status, important if the address parameters are faulty
+* tx(String) sends a String content in an UDP telegram
+* String waitRx() waits for a String content received on the own port (independent from where).
+
+On the opposite side a command line `socketCmd.exe` can be used, see example. This enables:
+
+* Transmit a message (a cmd) via UDP to the destination
+* Wait for receiving a message, test some simple messages and return the detection via error number. This is a simple approach to use it in command line scripts. 
+
+But the receiving is not proper in some cases, because the message can be sent already before the receiver is started. It depens on execution times. Hence this approach is not favored.
+
+A serial communication is similar. But a serial driver is not yet contained in the Stimuli Selector GUI. A simple way to do this is: Program in {Cp}, run it all the time, and exchange data via sockets with this special program and the Stimuli Selector GUI.  
+
+
+[#filesemaph]
+=== Possibility to interact via files
+
+In a test system it is often possible to query the existence of files and to remain in a loop if they are not present. This seems to be the best approach for the test files itself. But there is a pitfall. When the test file is started to be written, it already exists. But it is not ready for use. The test system should wait until the file is really ready. But this may not be queried in a unique way. Hence: Using the test files itself is a lesser good decision. 
+
+Files can be used as semaphore. If there are existing, it is a unique state. They can be deleted, then they are not existing, even correct.
+
+Files can be addressed in a network. It is possible to realize a network communication with these semaphore files.
+
+Another important idea is: Files should not be stupidly created or deleted. They should be renamed. The advantage is: Renaming only changes the directory entry in the file system. There is no necessity to allocate new space on the media.
+
+But there is also a pitfall: Sometimes, if a process was aborted, the files are messed up. To prevent exactly this, the following operation is written in the vishiaJava_Base.jar component:
+
+link:../../Java/docuSrcJava_vishiaBase/org/vishia/util/FileFunctions.html#renameCreate-java.io.File-java.lang.String-java.lang.String-boolean-[FileFunctions.renameCreate(File dir, String src, String dst, boolean bException)]
+
+With this functionality the principle of file-semaphores are used in the Stimuli Selection GUI (JZtxtcmd) in the following way:
+
+ FileSystem.renameCreate(File: "genScripts", "*.msg", "idle.msg", 1);
+    
+It cleans a situation from pre-usage. The existence of any semaphore file may be possible. Expected is: `genScripts/idle.msg` exists from pre-usage or by first usage it is not existing. After execution, this is present and no other `genScripts/*.msg` file exists. Note: You can use also the '`*`' as part of line, for example `msg*_FromXtoY.txt`. All files with the wildcard will be cleaned up.
+
+ FileSystem.renameCreate(File: "genScripts", "*.msg", "test.msg", 1);
+
+A similar line. Because the situation is cleaned, the `idle.msg` is renamed to `test.msg` It is better to use this invocation instead a simple rename command, because - the situation may be unknwon again. Any other tool or person can touch on the file system.
+
+The other side, the test system: Have a look on a `test.do` script used on a VHDL test system (link:https://www.aldec.com/en/products/fpga_simulation/active-hdl[]):
+
+----
+@label start
+echo wait for Stimuli Selector GUI to execute a test 
+@label waitmsg
+@if [exist -file "..\src\test\Lattice_pj\Test_All_SpeA\genScripts\abort.msg"]
+  @goto finish
+endif
+@if not [exist -file "..\src\test\Lattice_pj\Test_All_SpeA\genScripts\test.msg"]
+  @goto waitmsg
+endif
+##test.msg detected, now rename because it was seen.
+!ren "..\src\test\Lattice_pj\Test_All_SpeA\genScripts\test.msg" idle.msg
+----
+
+This script part waits for the file `test.msg` but also for `finish.msg`. It runs in a "goto"-loop elsewhere, it is a "__spinning__". It `test.msg` is detected, it can be usual rename without failure in the currently running situation. Writing `!ren` is necessary here for this script language, `!` to start a system command. 
+
+But in continuing this script the back message works with an event via socket:
+
+----
+acom -O3 -e 100 -work work -2002  .../Main_Test_SpeA_tb.vhd
+asim Main_Test_SpeA_tb behavioral
+run 38000 ns
+endsim
+##And now send a message to the StimuliSelector to produce the next file
+!..\libs\socketcmd.exe -own:127.0.0.1:0xaff1 -dst:127.0.0.1:0xaff0 -cmd step
+goto start
+----
+
+In this loop in the script also an evaluation of test results can be done. 
+
+
+[#interactExmpl]
+=== Behavior in the example
+
+The example shows adequate as the FPGA simulation in the chapter above both approaches, file semaphores and a Socket message. This may be a typical situation:
+
+* The Stimuli Selector GUI can remain opening a socket, and hence it does not loss a message.
+* A test system might not have directly socket access, only possible via a command line executable, hence it should only sent, not receive. This is true for the example.
+
+
+The whole `btnGenTestCases(...)` routine looks like:
+
+----
+##
+##This routine is the button routine for the [gen testcases] button.
+##Here it starts another thread which generates in loop step by step 
+##  after receiving a "next" command from UDP communication (using socketCmd_vishia.exe)
+##If this routine is invoked secondly (press button secondly) and the thread is active
+##  then the UDP socket connection is closed to abort the generation thread.
+##
+sub btnGenTestcases ( String select) {
+  if(jztc.envar.soRx) {    ##hint: special variable inside Java wrapper.
+    <+out>...abort genTestCases: <.+n> 
+    jztc.envar.soRx.tx("abort");
+    FileSystem.renameCreate(File: "genScripts", "*.msg", "abort.msg", 1);
+    jztc.envar.soRx.close();
+    jztc.envar.soRx = null;
+  } 
+  else {
+    <+out>generate test cases: .... <.+n> 
+    call genTestCaseThread(select=select);
+  }
+}
+----
+
+The button routine quests an internal variable `soRx`. It is `null` if no communication is pending, then `genTestCaseThread(...)` is called. 
+
+If it is pressed again during test cases are generating respectively the thread is running and waiting for interaction, the socket communication is closed. Following the receive routine for communication is aborted and the thread is finished. This is important, because for interaction it is not clarified what the partner does. Anytime the control over the whole process should be given. 
+
+The `genTestCaseThread(...)` creates a thread in JZtxtcmd: link:../../JZtxtcmd/html/JZtxtcmd.html#Topic:.JZtxtcmd.thread.[]:
+
+----
+##
+##The genTestCases thread.
+##Hint: The sub routine is the wrapper arround the thread.
+##      The sub routine itself is finished immediately, necessary because it is calling 
+##      in the GUI thread.
+##
+sub genTestCaseThread(String select) {
+  Thread execThread = {             ## This thread generates one test case in each for loop
+    String sIpOwn="UDP:127.0.0.1:45040";
+    String sIpDst="UDP:127.0.0.1:45041";
+    jztc.envar.soRx = java new org.vishia.communication.SocketCmd_InterProcessComm
+                                                        (sIpOwn, sIpDst);
+----
+
+In this first part the communication via socket is set up with the shown receive class. The address string can be better defined at the start of the script to be able to change it if needed. The port number is manually determined in coordination with the interaction partner. Here a local communication ("127.0.0.1" is the 'loop back' address) is used, instead any network card with known IP-V4 can be addressed too.
+
+In expecting of a proper communication the generation of test files is started via calling `prepareTestCases(...)`, see chapter above. The files for the first test cases are generated:
+
+----
+    FileSystem.renameCreate(File: "genScripts", "*.msg", "idle.msg", 1);
+    Bool contFor = true;                       ## possibility to abort the generation
+    Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases
+                                                                (select, 5);
+    Bool rxHasError = false;
+    for(testcase: testcases && contFor ) {
+      String name = <:><:for:var:testcase><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+      <+out>test case: <&name><.+n> 
+----
+
+Then, before starting generation, the button is set to a green color with a changed text. Then the first set of files are generated.
+
+----
+      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(colorGenTestcaseActive, 0);
+      jztc.envar.stimuliSelector.btnGenTestcases.setText("abort generate");
+      Obj lineValues = values.get(testcase[0].sel);
+      Obj lineTexts = texts.get(testcase[1].sel); ## generates the files for this case:
+      call genTestfiles(values = lineValues, texts = lineTexts);
+
+      ##
+      Obj cmd1 = execThread.awaitcmd(1000);
+      jztc.envar.soRx.tx("test");
+      FileSystem.renameCreate(File: "genScripts", "*.msg", "test.msg", 1);
+      ##
+----
+
+The `awaitcmd(1000)` with timeout 1 second is only for this example, elsewhere you will not see the green button, the generation is too fast. But the partner, the test system, may need also a delay.
+
+The message `test` is sent to the partner, only useable if the partner have currently a queue for socket receiving. Using `SocketCmd.exe` to quest receiving over socket on partner side is only possible if the time is coordinated, the partner waits really in the moment.
+
+Hence the second variant, using the file semaphore approach, is used too. The existing `idle.msg` is renamed to `test.msg`, exactly this file is quest on partner side (see chapter link:#filesemaph[Possibility to interact via files] above)
+
+Now one test might be running on the partner. The partner, the test environment is emulated in this example with th e following routine as Windows batch file `nextStimuli.bat`:
+
+----
+echo first wait for presence of the semaphore file from Stimuli Selection
+echo ... expected: genScripts\test.msg, ...\abort.msg or ...\finish.msg
+::not proven: libs\socketcmd.exe -own:127.0.0.1:0xaff1 -dst:127.0.0.1:0xaff0 -rx test abort finish
+:waitstart
+if exist genScripts\test.msg goto :test
+if exist genScripts\abort.msg goto :abort
+if exist genScripts\finish.msg goto :finish
+goto :waitstart
+:test
+REM rename the existing test.msg to idle.msg, hint: Use rename approach to save effort on file system.
+ren genScripts\test.msg idle.msg
+----
+
+As you see it is the file-semaphore approach as presented also for the VHDL-Simulation (chapter link:#filesemaph[Possibility to interact via files] above), also with `goto` (a batch file).
+
+pass:[...] After the test case execution:
+
+But then the Stimuli Selector GUI should wait, the test may need some time:
+
+----
+      rxHasError = jztc.envar.soRx.hasError();   ## first time may be open error, 
+      if(rxHasError) {                           ## faulty socket etc.
+        <+out>ERROR socket receive on <&sIpOwn>: <&jztc.envar.soRx.getState()><.+n>
+        contFor = false;
+      } else {                                   ## waits for a cmd received via socket:
+        jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(colorGenTestcaseWaitRx, 0);
+        jztc.envar.stimuliSelector.btnGenTestcases.setText("abort wait rx");
+        <+out>Thread waits for <&sIpOwn>: <&jztc.envar.soRx><.+n> 
+        String next = jztc.envar.soRx.waitRx();  ## <-- here waits for a cmd
+----
+
+The quest `soRx.hasError()` is also for the first invocation to detect an open error for the communication. Then the thread is aborted with a message, cannot work. This is common when perhaps an incorrect network has been selected, the port is in use, etc. The last one is especially given if the tool is started twice!
+
+If no error is given, the color and text of the button is changed again (yellow). Then via calling `soRx.waitRx()` it waits for an answer of the test system. 
+
+The test system is emulated in the example with:
+
+----
+echo test finished, sends "step" via socket:
+libs\socketcmd.exe -own:127.0.0.1:0xaff1 -dst:127.0.0.1:0xaff0 -cmd step
+REM then waits for file semaphore to run the next test.
+goto :loop
+----
+
+If you see the information from the test system back to the Stimuli Selection GUI uses the socket communication. But because the test system has no directly socket access it calls this `socketCmd.exe` routine. It is delivered in the `libs` downloaded from its repositiory. The `socketCmd.exe` is programmed in {cp} and contained in the link:../../emc/index.html[emC] sources.
+
+pass:[...] Now the end of the for-loop in `genTestCaseThread(...)`
+
+----
+        <+out>msg from socket::<&next>::<.+n>
+        contFor = bool(next >= "step");          ## repeats, generate next if "step" is received
+      }
+    }  
+----
+
+It's very simple. The received message is checked whether `step` is received. It is the same as check an event in event communication. Then the loop is continued. Else it is brocken because the boolean `contFor`.
+
+pass:[...] and the rest of the routine: 
+
+----
+    rxHasError = jztc.envar.soRx.hasError();
+    if(rxHasError) {
+      <+out>Thread aborted<.+n>
+      jztc.envar.soRx.tx("error");
+      FileSystem.renameCreate(File: "genScripts", "*.msg", "abort.msg", 1);
+      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(colorGenTestcaseError, 0);
+    } else {
+      <+out>Thread finished<.+n>
+      jztc.envar.soRx.tx("finish");
+      FileSystem.renameCreate(File: "genScripts", "*.msg", "finish.msg", 1);
+      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(colorGenTestcaseInactive, 0);
+    }
+    jztc.envar.stimuliSelector.btnGenTestcases.setText("gen test cases");
+    jztc.envar.soRx.close();
+    jztc.envar.soRx = null;
+  }
+  ##do not use execThread.join(0); because the wrapper routine should be immediately finished, 
+  ##called in the GUI thread!
+}
+----
+
+It is after the for-loop for the test cases. If all is ok, the file semaphore is set to `finish.msg` which can be used on the test system to finish the test series, starts data evaluation etc. Last but not least the button is set to the correct start text and color. This is how the status can be seen in the GUI.
+
+=== Evaluation of test data
+
+This can be included either in the test system or in the GUI. How to evaluate test results - it depends deeply on the test system. Often results are stored in files, the content of the files should be evaluated, and over all results an average or overview should be built, and a report of faulties. This can be done of course immediately in the test system, but also integrated in the Stimuli Selector GUI. The benefit of the Stimuli Selector GUI is: It is programmed in Java (from JZtxtcmd Java routines can be called simple). And - some things can be done - Adaptions - immediately in JZtxtcmd without necessity of Java compiling. 
+
+The example does not have such capabilities, look at concrete applications.
+
+
+== Automatic execution of tests
+
+This is the last and important capability.
+
+The Stimuli Selector GUI has firstly the approach to find out test cases manually and generate the test files.
+
+The second is, check some combinations, as shown in the chapters above, find out proper combinations for nightly tests.
+
+But the nightly test itself should be started and executed without manual handling. It should be started via a command line invocation, from a timing service, in a superior execution loop etc. 
+
+It is very simple. Look in the example. Here in `AutomaticTestExecution.jzt.cmd`:
+
+----
+set LIBSPATH=./
+echo on 
+java -cp %LIBSPATH%/libs/vishiaBase.jar org.vishia.jztxtcmd.JZtxtcmd %0
+echo off
+pause
+exit /b
+
+                            
+==JZtxtcmd==
+
+include StimuliSelector.jzT.cmd;
+
+currdir=<:><&scriptdir><.>;
+
+
+main() {
+
+  Obj jztc.envar.soRx = null;
+
+  call genTestCaseThread(select = "1=v1; 2=t1; 3=A1, A2, A3, A4; 4=B1; 5=C1; " );
+
+----
+
+This is a simple invocation of JZtxtcmd via java, can be included also in another Java programming. This file is used also as JZtxtcmd script, contains a `main()` and invokes ,,call genTestCaseThread(select = "....");,, with any select String. The select String  can be copied from the select text box of the Stimuli Selector GUI after successfully tests. If the select String contains more lines, it is able to write in a good visual form:
+
+----
+  call genTestCaseThread(select = <:>1=v2, v3; 2=t1, t2; 3=A1; 4=B1; 5=C1;
+                                     : 1=v1; 2=t1, t2; 3=A1, A2; 4=B1; 5=C3;<.> );                                   
+
+  call genTestCaseThread(select = <:>1=v2, v3; 4=B1, B3; + 1=v1; 4=B2
+                                     & 2=t1,t2; 3=A1; + 2=t2; 3=A3;
+                                     & 5=C1<.> );
+}
+----
+
+That are three test combination executed one after another.
+
+The `vishiaGui.jar` and the `swt...jar` is not necessary because graphic capabilities are not used. Because the variable soRx is provided in the GUI, it is supplemented here by a definition in the script. (The variable need to provide in the GUI for GUI appoaches because there content should be preserved though a new script version is loaded). 
+
+Threre can be more as one such files, organized to the user's approach. The execution can depent on test results (execute finer tests if results are proper) etc etc. But that is a feature of test organization outside of the Stimuli Selector GUI.
+
+
+*****

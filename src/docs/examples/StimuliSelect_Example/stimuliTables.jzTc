@@ -15,6 +15,7 @@ List var_A @name =
 [ { name="A1", descr="A-variant 1" }
 , { name="A2", descr="A-variant 2" }
 , { name="A3", descr="A-variant 3" }
+, { name="A4", descr="A-variant 4" }
 ];
 
 List var_B @name =
