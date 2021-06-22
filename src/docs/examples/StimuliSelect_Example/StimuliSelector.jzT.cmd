@@ -64,7 +64,7 @@ sub genTestfiles(String name = "testfile", Map values, Map texts) {
 ##This routine is the button routine for the [gen testcases] button.
 ##
 sub btnGenTestcases ( String select) {
-  call btnGenTestcases_M(select=select);
+  call btnGenTestcases_F(select=select);
   ##call btnGenTestcases_A(select=select);   ##generate all files with different names
   ##call btnGenTestcases_M(select=select);   ##use socket messages
   ##call btnGenTestcases_F(select=select);   ##use file semaphores
@@ -92,7 +92,7 @@ sub btnGenTestcases_A ( String select) {
 ##
 ##This routine is the button routine for the [gen testcases] button.
 ##Here it starts another thread which generates in loop step by step 
-##  after receiving a "next" command from UDP communication (using socketCmd_vishia.exe)
+##  after receiving a "next" command from UDP communication (using socketCmd.exe)
 ##If this routine is invoked secondly (press button secondly) and the thread is active
 ##  then the UDP socket connection is closed to abort the generation thread.
 ##
@@ -120,16 +120,13 @@ sub btnGenTestcases_M ( String select) {
 ##
 ##This routine is the button routine for the [gen testcases] button.
 ##Here it starts another thread which generates in loop step by step 
-##  after receiving a "next" command from UDP communication (using socketCmd_vishia.exe)
 ##If this routine is invoked secondly (press button secondly) and the thread is active
-##  then the UDP socket connection is closed to abort the generation thread.
+##  then the spRx variable is set to null to abort the generation thread.
 ##
 sub btnGenTestcases_F ( String select) {
   if(jztc.envar.soRx) {    ##hint: special variable inside Java wrapper.
     <+out>...abort genTestCases: <.+n> 
-    jztc.envar.soRx.tx("abort");
     FileSystem.renameCreate(File: "genScripts", "*.msg", "abort.msg", 1);
-    jztc.envar.soRx.close();
     jztc.envar.soRx = null;
   } 
   else {
@@ -137,9 +134,6 @@ sub btnGenTestcases_F ( String select) {
     Thread execThread = {         ## This thread generates one test case in each for loop
       call genTestCaseThread_F(select=select);
     }
-    ##do not use: execThread.join(0); 
-    ##because the wrapper routine should be immediately finished, 
-    ##it is called in the GUI thread!
   }
 }
 
@@ -149,10 +143,7 @@ sub btnGenTestcases_F ( String select) {
 
 
 ##
-##The genTestCases thread.
-##Hint: The sub routine is the wrapper arround the thread.
-##      The sub routine itself is finished immediately, necessary because it is calling 
-##      in the GUI thread.
+## genTestCases either in the thread or in automatically call
 ##
 sub genTestCaseThread_M(String select) {
   String sIpOwn="UDP:127.0.0.1:45040";
@@ -184,12 +175,9 @@ sub genTestCaseThread_M(String select) {
         Obj lineValues = values.get(testcase[0].sel);
         Obj lineTexts = texts.get(testcase[1].sel); ## generates the files for this case:
         call genTestfiles(name = "testfile", values = lineValues, texts = lineTexts);
-    
         ##
-        ##Obj cmd1 = execThread.awaitcmd(1000);
         java java.lang.Thread.sleep(1000);
         jztc.envar.soRx.tx("test");            ## starts the test with msg to Test System
-        ##FileSystem.renameCreate(File: "genScripts", "*.msg", "test.msg", 1);
         ##
         if(jztc.envar.stimuliSelector) {
           jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(jztc.envar.colorGenTestcaseWaitRx, 0);
@@ -230,10 +218,7 @@ sub genTestCaseThread_M(String select) {
 ##      in the GUI thread.
 ##
 sub genTestCaseThread_F(String select) {
-  String sIpOwn="UDP:127.0.0.1:45040";
-  String sIpDst="UDP:127.0.0.1:45041";
-  jztc.envar.soRx = java new org.vishia.communication.SocketCmd_InterProcessComm
-                                                      (sIpOwn, sIpDst);
+  jztc.envar.soRx = java new java.lang.Boolean(1);
   FileSystem.renameCreate(File: "genScripts", "*.msg", "idle.msg", 1);
   Bool contFor = true;                       ## possibility to abort the generation
   Obj testcases = java org.vishia.testutil.TestConditionCombi.prepareTestCases
@@ -251,46 +236,28 @@ sub genTestCaseThread_F(String select) {
     call genTestfiles(name = "testfile", values = lineValues, texts = lineTexts);
 
     ##
-    ##Obj cmd1 = execThread.awaitcmd(1000);
     java java.lang.Thread.sleep(1000);
-    jztc.envar.soRx.tx("test");
     FileSystem.renameCreate(File: "genScripts", "*.msg", "test.msg", 1);
     ##
-    rxHasError = jztc.envar.soRx.hasError();   ## first time may be open error, 
-    if(rxHasError) {                           ## faulty socket etc.
-      <+out>ERROR socket receive on <&sIpOwn>: <&jztc.envar.soRx.getState()><.+n>
-      contFor = false;
-    } else {                                   ## waits for a cmd received via socket:
-      if(jztc.envar.stimuliSelector) {
-        jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(jztc.envar.colorGenTestcaseWaitRx, 0);
-        jztc.envar.stimuliSelector.btnGenTestcases.setText("abort wait rx");
-      }
-      <+out>Thread waits for <&sIpOwn>: <&jztc.envar.soRx><.+n> 
-      String next = jztc.envar.soRx.waitRx();  ## <-- here waits for a cmd
-      <+out>msg from socket::<&next>::<.+n>
-      contFor = bool(next >= "step");          ## repeats, generate next if "step" is received
+    if(jztc.envar.stimuliSelector) {
+      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(jztc.envar.colorGenTestcaseWaitRx, 0);
+      jztc.envar.stimuliSelector.btnGenTestcases.setText("abort wait rx");
     }
+    <+out>Thread waits for file step.msg:<.+n> 
+    while( NOT File:"genScripts/step.msg".exists() && jztc.envar.soRx) {
+      java java.lang.Thread.sleep(1000);     ## wait for renaming to step.msg or abort
+    }
+    <+out>file-semaphore detected: step.msg::<.+n>
+    contFor = jztc.envar.soRx;              ## repeats, generate next if "step" is detected
   }  
-  rxHasError = jztc.envar.soRx.hasError();
-  if(rxHasError) {
-    <+out>Thread aborted<.+n>
-    jztc.envar.soRx.tx("error");
-    FileSystem.renameCreate(File: "genScripts", "*.msg", "abort.msg", 1);
-    if(jztc.envar.stimuliSelector) {
-      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(jztc.envar.colorGenTestcaseError, 0);
-    }
-  } else {
-    <+out>Thread finished<.+n>
-    jztc.envar.soRx.tx("finish");
-    FileSystem.renameCreate(File: "genScripts", "*.msg", "finish.msg", 1);
-    if(jztc.envar.stimuliSelector) {
-      jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(jztc.envar.colorGenTestcaseInactive, 0);
-    } 
-  }
+  <+out>Thread finished<.+n>
+  FileSystem.renameCreate(File: "genScripts", "*.msg", "finish.msg", 1);
+  if(jztc.envar.stimuliSelector) {
+    jztc.envar.stimuliSelector.btnGenTestcases.setBackColor(jztc.envar.colorGenTestcaseInactive, 0);
+  } 
   if(jztc.envar.stimuliSelector) {
     jztc.envar.stimuliSelector.btnGenTestcases.setText("gen test cases");
   }
-  jztc.envar.soRx.close();
   jztc.envar.soRx = null;
 }
 

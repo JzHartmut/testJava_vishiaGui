@@ -28,9 +28,8 @@ goto :ask
 echo ....test is running 3 seconds
 type genScripts\testfile_text.txt
 libs\socketcmd.exe -to:3000
-REM if test is finished, send step to StimuliSelector.
+REM if test is finished, send step to StimuliSelector for the next loop.
 REM it is possible because the StimuliSelector has a message queue
-REM and it may be faster as a file as semaphore.
 echo test finished, sends "step" via socket:
 goto :loop
 :abort
