@@ -1,0 +1,30 @@
+==JZtxtcmd==
+
+##
+##Template for a testfile_text which executes all tests.
+##listAllTestCases is the output of TestConditionCombi.prepareTestCases() java call
+##This template creates only a textual overview. 
+##You can use this as template to create for example a flow control in any programming language.
+##Hint: Indentation chararters == or :: till column of <::> are not part of text.
+##      They help to distinguish, what is produced text and which are control statements.
+##
+sub testall_text(String title, Obj listAllTestCases) { 
+  <::>                                    
+==#Simple test script with parameter      ## Hint: use 
+==All test cases overview: "<&title>"
+  <.>                                     ## Hint: end the text template, use statements of JZtxtcmd
+  for(tc: listAllTestCases) {             ## Hint: use a short name of the tc variable, it is local.
+    String name = <:><:for:var:tc><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+    <+out>test case: <&name><.+n>
+    Obj lineValues = values.get(tc[0].sel); ##gets the lines containing the values.
+    Obj lineTexts = texts.get(tc[1].sel);
+    <::>                                  ## Note: First :::: are only indent till column of <::>, use other than == as part of text
+::::== TestCase: <&name>: =======================================================     
+====  value = <&lineValues.value1>, text="<&lineTexts.text>"
+====<.>
+  }
+  <:>
+==This is the test description of all selected ones. 
+==<.>
+}
+

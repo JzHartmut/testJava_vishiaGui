@@ -1,0 +1,9 @@
+-SWT 
+cfg:./Fcmd.cfg/ 
+-size=D
+-pos=20+70,20+150
+---msgcfg:.\Fcmd.cfg\msg.cfg 
+-help:.\help\ 
+---inspectorPort=UDP:127.0.0.1:60093
+---rlevel:333 
+---report:%TMP%\Fcmd.log/Fcmd.rpt

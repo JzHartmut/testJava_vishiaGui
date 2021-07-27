@@ -1,11 +1,13 @@
 REM starts as windows command (batch) file:
-
+if not exist genScripts mkdir genScripts
 set LIBSPATH=./
 set CP=%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar
-set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32.win32.x86_64.jar                                                    
+REM comment out swt.win32_x86_32.jar or swt.win32_x86_64.jar
+::set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32_x86_32.jar                                                    
+set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32_x86_64.jar                                                    
 REM hint: use java if something is wrong, to see outputs, 
 REM       use javaw for normal usage without back cmd window
-set JAVAW=javaw
+set JAVAW=java
 echo dir=%CD%
 REM call the GUI. This file %0 is used as argument for SimSelector. 
 REM It contains all control after the JZtxtcmd label
@@ -23,6 +25,8 @@ currdir=<:><&scriptdir><.>;
 include stimuliTables.jzTc;
 include testfile_text.jzTc;
 include testfile_xml.jzTc;
+include testall_text.jzTc;
+include testall_xml.jzTc;
 
 
                                                                                   
@@ -49,12 +53,13 @@ sub genTestfiles(String name = "testfile", Map values, Map texts) {
   mkdir genScripts;
   String sfText = <:>genScripts/<&name>_text.txt<.>;
   Openfile fText = sfText;
-  <+fText><:call:testfile_text : title=title, values=values, texts=texts><.+>
+    <+fText><:call:testfile_text : title=title, values=values, texts=texts><.+>
   fText.close();
+  
   <+out>gen: <&sfText><.+n>
   String sfXml = <:>genScripts/<&name>_xml.xml<.>;
   Openfile fXml = sfXml;
-  <+fXml><:call:testfile_xml : title=title, values=values, texts=texts><.+>
+    <+fXml><:call:testfile_xml : title=title, values=values, texts=texts><.+>
   fXml.close();
   <+out>gen: <&sfXml><.+n>
 }
@@ -64,8 +69,9 @@ sub genTestfiles(String name = "testfile", Map values, Map texts) {
 ##This routine is the button routine for the [gen testcases] button.
 ##
 sub btnGenTestcases ( String select) {
-  call btnGenTestcases_F(select=select);
+  call btnGenTestcases_B(select=select);
   ##call btnGenTestcases_A(select=select);   ##generate all files with different names
+  ##call btnGenTestcases_B(select=select);   ##generate one file with all test cases
   ##call btnGenTestcases_M(select=select);   ##use socket messages
   ##call btnGenTestcases_F(select=select);   ##use file semaphores
 }  
@@ -85,6 +91,29 @@ sub btnGenTestcases_A ( String select) {
     Obj lineTexts = texts.get(testcase[1].sel); ## generates the files for this case:
     call genTestfiles(name = name, values = lineValues, texts = lineTexts);
   }
+}
+
+
+
+##
+##This routine is the button routine for the [gen testcases] button
+##for generation all files.
+##
+sub btnGenTestcases_B ( String select) {
+  Obj testcs = java org.vishia.testutil.TestConditionCombi.prepareTestCases( select, 5);
+  String title = <:>testAll<.>;     ## build the title
+  mkdir genScripts;
+  String sfText = <:>genScripts/all_text.txt<.>;
+  Openfile fText = sfText;
+    <+fText><:call:testall_text : title=title, listAllTestCases=testcs><.+>
+  fText.close();
+  
+  <+out>gen: <&sfText><.+n>
+  String sfXml = <:>genScripts/all_xml.xml<.>;
+  Openfile fXml = sfXml;
+    <+fXml><:call:testall_xml : title=title, listAllTestCases=testcs><.+>
+  fXml.close();
+  <+out>gen: <&sfXml><.+n>
 }
 
 

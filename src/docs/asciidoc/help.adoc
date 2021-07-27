@@ -1,0 +1,15 @@
+= Doc title
+:toc:
+:sectnums:
+:sectlinks:
+:cpp: C++
+:Cp: C/++
+
+== chapter
+
+text pass:[*bold*] *bold*
+
+----
+code block
+----
+

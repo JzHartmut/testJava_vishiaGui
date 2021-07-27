@@ -1,0 +1,25 @@
+==JZtxtcmd==
+
+##
+##Template for the whole testfile_xml.
+##arguments values and texts comes from the selected lines of the Test stimuli
+##
+sub testall_xml ( String title, Obj listAllTestCases ) { 
+<::>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Test:root xmlns:Test="https://myUrl/TestDefs" Test:title="<&title>">
+<.>                                         ##continue with script statements, not with output text
+  for(tc: listAllTestCases) {               ## Hint: use a short name of the tc variable, it is local.
+    String name = <:><:for:var:tc><&var.sel><:hasNext>_<.hasNext><.for><.>; 
+    <+out>test case: <&name><.+n>
+    Obj lineValues = values.get(tc[0].sel); ##gets the lines containing the values.
+    Obj lineTexts = texts.get(tc[1].sel);
+    <:>  <Test:case name="<&name>">         ## Now the output text for XML, ==== is indentation, better viewable
+====    <Test:Values Test:value1="<&lineValues.value1>" Test:value2="<&lineTexts.text>" />
+====  </Test:case>
+    <.>
+  } ##for
+<::>
+</Test:root>
+<.>
+}

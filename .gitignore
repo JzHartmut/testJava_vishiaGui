@@ -1,5 +1,8 @@
 .gitRepository
 .gitcommit
+src/docs/asciidoc/img/
+libs
+libs_orig
 _*.sh
 *.zip
 *.jar
@@ -10,6 +13,7 @@ build
 gradle
 deploy
 html5
+*.html
 *.rpw
 *.xmi
 types-xmi.xml
