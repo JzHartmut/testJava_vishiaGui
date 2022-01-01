@@ -18,7 +18,7 @@ REM Therefore 'start' cannot be used here.
 REM write out the command line to help explore the starting conditions on faulty situation:
 REM to evaluate error conditions, change javaw to java!
 @echo on  
-javaw -cp ../../../libs/vishiaBase.jar;../../../libs/vishiaGui.jar;../../../libs/%SWTJAR% org.vishia.commander.Fcmd --@%ARGS%
+javaw -cp ../../../tools/vishiaBase.jar;../../../tools/vishiaGui.jar;../../../tools/%SWTJAR% org.vishia.commander.Fcmd --@%ARGS%
 @echo off
 ::type %LOGDIR%\err1.txt
 if errorlevel 1 pause
