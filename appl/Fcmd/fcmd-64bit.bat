@@ -7,7 +7,8 @@ echo %ARGS%
 set LOGDIR=%TMP%\Fcmd
 if not exist %LOGDIR% mkdir %LOGDIR%
 if exist %LOGDIR%\err1.txt del %LOGDIR%\err1.txt
-
+::set PATH=c:\Program Files\git\mingw64\bin;%PATH%
+PATH
 REM Decision whether a 32.bit or 64.bit SWT library should be used depends on the java version 32 or 64, not on the Operation System.
 set SWTJAR=org.eclipse.swt.win32.win32.x86_64.jar
 
@@ -20,8 +21,6 @@ REM to evaluate error conditions, change javaw to java!
 @echo on  
 javaw -cp ../../../tools/vishiaBase.jar;../../../tools/vishiaGui.jar;../../../tools/%SWTJAR% org.vishia.commander.Fcmd --@%ARGS%
 @echo off
-::type %LOGDIR%\err1.txt
 if errorlevel 1 pause
 REM exit /b means, the console window remain open though this called batch will be finished. exit pure closes the console.
 exit /b
-

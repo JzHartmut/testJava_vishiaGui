@@ -1,0 +1,6 @@
+-gui=guiCfg/gui.cfg
+-size=B
+-timeZone=GMT
+--report:T:\tmp\GUI.log
+--rlevel:334
+
