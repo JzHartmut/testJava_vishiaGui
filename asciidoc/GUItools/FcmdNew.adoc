@@ -1,0 +1,41 @@
+= vishia the.File.commander
+:toc:
+:sectnums:
+:sectlinks:
+
+== Approach
+
+This is similar the old known "Norton Commander" but in Java with some special features.
+
+I want to refer also to link:https://www.ghisler.com/[] Total Commander.
+It is also used and licensed by me. The Total Commander has other important features.
+
+== TODO file panels etc.
+
+== Command execution
+
+[#cmdOutput]
+===Command execution in the output window
+
+The output window below the file panels is able to enhance: 
+Press [ctrl]-[F1] or "*W*indow - view *B*uttons" to switch off the button panel.
+Then you can press "*W*indow - *O*utput" to enlarge or decrease the output window
+if necessary.
+
+The output Window shows some outputs. It is writable and selectable.
+
+You can write in the last line
+
+----
+>cmd.exe /C dir
+----
+
+set the cursor on end, end press [ctrl] [Enter]. Then this text after `>`
+till the current cursor is executed as command. It is sent to the Java-internal 
+Process Builder to execute it in an own __process__ in the Operation System. 
+This __process__ has no Window. 
+The Outputs are redirected to exact this window, so this window acts as command window. 
+But the execution is in a separated process, a separated memory area.
+
+
+

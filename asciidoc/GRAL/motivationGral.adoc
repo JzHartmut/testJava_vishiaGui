@@ -1,0 +1,81 @@
+= GRAL Graphic Adaption Layer - Motivation and Basics
+:toc:
+:toclevels: 4
+:sectnums:
+:sectlinks:
+:max-width: 52em
+:prewrap!:
+:cpp: C++
+:cp: C/++
+
+[#motiv]
+== Motivation
+
+The packages `org.vishia.gral` are used currently to wrap SWT 
+(link:https://www.eclipse.org/swt/[]). It is the Graphic environment used and offered
+by the Eclipse Project. 
+
+Originally, I have used firstly Java-Swing for GUI - of course. 
+Then I have realized some disadvantages of Swing, search a little bit, 
+and found SWT. Both concepts are different. In that time (about 2008) 
+it was not obviously for me whether SWT is the best choice. 
+Also Java-FX becomes familiar. 
+So I didn't want to write my applications directly for SWT, but leave myself open.  
+Maybe go back to Swing, or use FX later, whatever will happen.
+
+The best idea to decouple an application from a framework is: Using a layer between both.
+So the application can be focused to the (well defined) middle layer,
+and the middle layer can be adapted to the used platform. That was the idea. 
+
+Later I have seen that somewhat in SWT is not so good as need. 
+For example a list view was strongly oriented to the features of the underlying
+Windows platform - it does no more as MS-Windows offers. 
+The other important thing: Some till all operations can only be executed in the graphical thread itself. 
+With my GRaphic Adaption Layer GRAL this was possible to enhance. See next chapter.
+
+
+[#threading]
+== One Graphic Thread for all / or operations in other threads
+
+In Swing it is sometimes possible to access values from a Widget in another thread. 
+In SWT this is consequently: All access or set operations can only be executed
+in the graphic thread. Elsewhere an Exception is thrown: `org.eclipse.swt.SWT.ERROR_THREAD_INVALID_ACCESS` 
+With that decision some possible non obvious thread problems are prevented.
+
+What is the usual approach for GUI operations:
+
+* The so named event listener, in SWT based on `org.eclipse.swt.internal.SWTEventListener`
+are called by the execution thread of the graphic. 
+(__In SWT that is an internal operation system thread.__).
+
+* The implementation operations of the different event listener are programmed by the application. 
+This operations are executed in the graphic thread.
+
+* Of course the access to all Widgets is possible in this thread. 
+It means the application can do all necessary things in this graphic thread.
+It can be interact with other threads with known Java thread mechanism outside of the graphic,
+for example using the `java.util.ConcurrentLinkedQueue` for information interchanging.
+That seems to be a good decision. 
+
+* But: If the tasks to do in the event handling is too complex, 
+** It may be need a too long calculation time. Maybe some people knows the rotating hourglass
+from Windows 3.11 which is later replaced by a rotating circle, because the users
+hate the hourglass. The application is blocked in that time.
+** It may be possible to have some Exceptions. If the exception handling is a little bit bad,
+then the whole graphic application may be crashed, or no more user handling is possible. 
+** In that time of waiting for execution of one listener operation, another operation is not possible.
+For example a long algorithm works, it is realized by the user that it is wrong,
+but the user cannot act. Should wait for finishing, instead abort the wrong stuff.
+
+Hence for all that reasons, Using an specific or more as one execution threads is a good idea. 
+Of course than, the application should regard multi threading effects. 
+But this approach should be known. 
+
+The GRAL supports access to all graphical data also in other threads. 
+One of the feature of GRAL in enhancement of SWT is this thread decoupling 
+
+
+== The GRAL Graphic Thread
+
+This is not the internal Graphic thread of the widgets. 
+

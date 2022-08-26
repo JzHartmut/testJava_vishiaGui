@@ -1,0 +1,348 @@
+= Git install and call of cmd line from script and Java
+:toc:
+:toclevels: 5
+:sectnums:
+:sectlinks:
+:max-width: 52em
+:prewrap!:
+:cpp: C++
+:cp: C/++
+
+
+link:Gitcmd-2016.html[]: Old meanwhile invalid document from 2016
+
+link:gitUsage_de.html[] 
+
+
+[#gitcmdSuite]
+== Basics: Execution of git via command line
+
+The vishiaGitGui is of course not a full git suite, 
+it is only a graphical wrapper around the command line git tooling. 
+
+[#gitCmdSuiteInstall]
+=== Installation of git suite (command line)
+
+The installation of git command line should be done via the internet page:
+
+link:https://git-scm.com/download/win[]
+
+for MS-Windows, or adequate for Linux. But the GitGui is yet tested and used only in MS-Windows. 
+
+For Windows the installation should be stored in the original Windows programs location
+(`C:\Program Files\git`). Installation on another location does not run
+because of some complicated usages of this path inside the files.
+
+Follow that documentation.
+The version `Git-2.25.0-64-bit.exe` which is used here as install file 
+contains respectively creates a directory `c:\Program Files\git\mingw64`. 
+This is as link:https://en.wikipedia.org/wiki/MinGW[]. Only the 
+
+ set PATH=c:\Program Files\git\mingw64;%PATH%
+ 
+should be enhanced using the git suite. 
+It may be done in the installation automatically. 
+But follow the next chapter.
+
+
+[#gitconsole]
+=== Execution of git commands from a console
+
+The following test are done with the version `Git-2.25.0-64-bit.exe` as install file.
+The installation may enhance the system's PATH with `c:\Program Files\git\mingw64`.
+
+==== Bascic: What should be written in the System's PATH / Calling specific tools using a simple batch file in windows
+
+The following is not mainstream thinking, but think by yourself.
+
+If you have different tools on your PC, and any tool enhances your system path,
+the system path will get very long. 
+If you have the same command.exe in different tool,
+unexpectedly the faulty may be called, and you are searching the bug.  
+Especially, if you have different versions from the same tool sometimes in use,
+or you have different tools from the same tool group but from different vendors,
+then also this situation can be occur.
+This is especially using mingw64 for git, using another minGW suite for example gcc compiling
+and alternatively using Cygwin. All this tools have similar executables with the same name. 
+It is conflicting. 
+
+That's why the better approach is:
+
+* Prevent enhancement of the system's PATH by several tools (uncheck a box while installation) 
+or cleanup the system's PATH after installation, delete all what is only for special tools.
+(Test your system after that, and save the originally PATH!).
+
+* Create a special directory where some 'system' batch files are stored,
+and add this in the PATH as first (!) entry (manually). For my system I have `C:\programs\batch` for such.
+All batches in this directory are found firstly. You can decide by yourself
+what this is (the names).
+
+* Call specific batches to call a complex tools. See example for git in the next sub chapter.
+This batches can firstly enhance the PATH variable locally for the necessary stuff.
+Secondly you can call the tool with the proper absolute path, so that the tool 
+should not be necessarily in the PATH.  
+
+You should familiar with the concept of the PATH, using environment variables
+and with command line calling. 
+This is a knowledge which is stable since more as 50 years (comes from UNIX)
+used on all recent operation systems, also was known in DOS. 
+But this knowledge is often 'hidden' for normal users. 
+So in newer versions of MS-Windows-10 the access to the system's path is only possible
+searching 'enhanced system settings', not as before with the normal system settings.
+
+The important information is: Environment variables, changed in a script (batch, shell)
+even the `PATH` are valid for the script only and for all called sub scripts and programs
+(In Linux `export` should be use to define or change environment variables. 
+On windows it is so anyway). The changing of the environment does not impact
+the system. 
+
+
+==== Changing the PATH in installation of Git
+
+Also similar accordingly to the above presented thinking,
+the Git installation asks whether
+
+* Should the `PATH` be enhanced to mingw ?
+* Should the `PATH` be enhanced to git cmd ?
+* Should the `PATH` not be enhanced ?
+
+You can decide. But also after installation you can change the PATH 
+in the Window's "__Enhanced System Control__ - __Environment".
+
+Due to the chapter above, you should not enhance the `PATH`. See also following: 
+
+
+
+==== Command environment for git
+
+The first goal to use git is often calling console commands. 
+That is supported by the git command installation with two tools. But here
+consequently the calling batch is shown:
+
+----
+REM git-wincmd.bat 
+ "C:\Program Files\git\git-cmd.exe"
+----
+
+The batch does no more as call this `git-cmd.exe` with the absolute path. 
+`git-cmd.exe` creates an own process, and opens a MS-Windows command shell. 
+The `PATH` is automatically enhanced to 
+`C:\Program Files\git\cmd` which contains some git adaptions to MS-Windows,
+for example also `git-gui.exe` which is a Tcl-Tk based GUI as part of the git suite.
+
+
+----
+REM git-window_A.bat 
+"C:\Program Files\git\git-bash.exe"
+----
+
+This is the counterpart, Linux (Unix) oriented. 
+Opens a command shell for git commands in linux style which understand all Linux cmds
+defined in minge64.
+
+This program enhances and converts the PATH, so the PATH variable is set with:
+
+----
+>echo $PATH
+/d/users/myname/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Programs/Batch:/c/Program Files (x86)/C...
+----
+
+Hence, it is **not** necessary to set the `PATH` before call also to `C:\Program Files\git\mingw65\bin`.
+It is automatically done by this tool.
+
+It is interesting, that all environment variables are presented in upper case,
+though they may be written in lower case or camel case in the MS-Windows system environment.
+MS-Windows does not distinguish the case also in commands and also in environment variable names.
+So in MS-Windows it is not necessary to care to the case. Other than in the Linux emulation and also in the original Linux.
+Hence one writing style is determined, it is the upper case one.   
+
+On the given installation using `Git-2.25.0-64-bit.exe` this command execution seems to be
+a little bit faulty. Firstly the `PATH` enhancement contains twice the `/bin:/mingw64/bin`.
+Secondly a Windows-Command Window opens (also known as "__DOS-Box__", additional to the mingw shell window.
+See next, it seems to be better. 
+
+----
+REM git-window.bat 
+set HOMEPATH="path/to/special/home"
+set HOMEDRIVE=D:
+"C:\Program Files\git\bin\sh.exe"
+----
+
+This is the better version of a compatible version of a Linux oriented shell, similar as above.
+But it is observed that this call does not create a non necessary additional Windows- command window,
+seems to be consequently. It seems to be the consequently Linux shell without overhead.
+
+This `sh.exe` invocation prepares the given Windows PATH to:
+
+ /mingw64/bin:/usr/bin:/c/Users/hartmut/bin:/c/Program Files.....
+ 
+The `/mingw64/bin:/usr/bin:/c/Users/hartmut/bin` is added automatically,
+all other parts of the PATH are converted to the UNIX style, backslash to slash
+and the drives are letters `/C/` instead `C:\` etc. 
+
+The `/c/Users/hartmut/bin` is appropriate to the found `HOMEPATH` and `HOMEDRIVE`
+environment variable in Windows. It is supposed that the user may also have binaries, 
+but it is not used here. But you may change this both variables, 
+because they are also available in the UNIX environment:
+
+ echo $HOME
+ 
+presents it. You can have another location for the home drive as in windows, your decision. 
+
+In this shell you can execute some git commands. 
+
+To have a proper environment on all locations on your harddisk, 
+you can use exactly this batch file:
+
+* Go to any location on your hard disk, maybe with Windows-Explorer, but better
+using the link:https://www.ghisler.com/[] Total Commander.
+* execute on this position `git-window.bat`, maybe with a batch there.
+
+You can also have the vice-versa approach:
+
+* open the `git-window.bat` from the desktop, maybe with your preferred location
+determined in the desctop icon.
+* Use `cd ../dst` afterwards.  
+
+
+
+
+[#gitcmd]
+=== Execution of exact one git command in a batch file
+
+To execute one git command or any other UNIX-like command you can use:
+
+ "C:\Program Files\git\bin\sh.exe" -c "command with arguments"
+ 
+The command itself is the 3^th^ argument and should be written in `""` as a whole.
+If you need quoted argument you should use the 'arg` quotation, for example:
+
+ "C:\Program Files\git\bin\sh.exe" -c "command with `second arguments'"
+ 
+The additional option `-x` can be used as "echo" of the command. 
+
+Now you can call git commands or other available Linux commands in mingw64
+in a batch file. Or also start a shell script, which is also a Linux command.
+
+For Double Click on a shell script in Windows it is a little bit more complex,
+see next chapter 
+
+
+[#sh_script]
+=== Execution of a UNIX shell script
+
+It is a proper idea to write scripts also in MS-Windows as shell scripts.
+Because:
+
+* You may have the same scripting also on a Linux machine, maintain only one script for both
+
+* May be you suppose that the script language of a UNIX shell is better than Microsoft's batch files
+also regarding some power shell approaches. That's the view of some experts.
+
+* May be you need experience in Linux shell scripts by the way, and you want to focus on it.
+
+All in all, it may be a good idea to use shell scripts also in Windows.
+
+To execute it, you can use also the Git Command suite, as well as a full MinGW installation
+or also Cygwin. Both can offer for example gcc compilation also. 
+
+To run a shell script you should only call as above described:
+
+  "C:\Program Files\git\bin\sh.exe" -c path/to/myscript.sh
+  
+To execute exact that via double click from Windows, the "`path/to/myscript.sh`"
+is given with backslash and `C:\` drive. That is false. 
+To correct it you can have the following script (as template to copy):
+
+----
+REM git_script.bat found on the path:
+@echo off
+
+REM sh.exe may need an special home directory:
+set HOMEPATH=\my\HOME
+set HOMEDRIVE=D:
+
+REM possible other working dir
+if not "" == "%2" cd "%2" 
+
+REM -x to output the command as they are executed.
+REM %1 contains the whole path, with backslash, sh.exe needs slash
+REM Preparation of the scriptpath, change backslash to slash,
+set SCRIPTPATHB=%1
+set "SCRIPTPATH=%SCRIPTPATHB:\=/%"
+echo on
+sh.exe -c %SCRIPTPATH%
+
+REM to view problems let it open till key pressed.
+pause
+----
+
+Now you can join this script with "Open with" and "always" on the extension `.sh`
+with the absolute path of this script. 
+Hence a double click on a `*.sh` file executes the shell script. Simple, ready.
+
+
+[#JavaCmd]
+=== Execution of a git command or a shell script from Java
+
+This is the first base to wrap git commands in a GUI, as also in the **__vishiaGitGui__**
+
+Generally the execution of a command line is wrapped in a Java process invocation.
+It means the git command is executed in a isolated process on Windows.
+The outputs are redirected to String Buffers and then evaluated.
+This command line execution generally independent of the git/Linux question 
+is executed using the `java.lang.Process` approach wrapped with
+
+link:https://www.vishia.org/Java/docuSrcJava_vishiaBase/org/vishia/cmd/CmdExecuter.html[]
+
+In the __vishiaGitGui__ is is executed in an extra Thread:
+
+link:https://www.vishia.org/Java/docuSrcJava_vishiaGui/org/vishia/gitGui/GitGui.html#cmdThread[]
+
+It means, the commands can be run a longer time (maybe a few seconds). 
+If the git command is finished, it is evaluated and changes the content of the GUI. 
+
+You see the reaction time by a gray field for the executed command, see chapter <<#exec>>.
+
+But there are a little bit pitfalls. The first is:
+
+* Lower and upper case writing for environment variables:
+
+It is possible to change the environment variables for the `java.lang.Process`.
+But basically this is a container, a specific `Map<String, String>` with key and value,
+and of course the keys are stored as given. If you change the `PATH` value
+and write it back, then you may have to `PATH` and `Path`values if it is written
+on OS-Level in MS-Windoes as `Path`. 
+Then, the called `C:/Program Files/git/sh.exe` takes the first found one,
+and nothing does work. 
+
+Because of this effect the link:https://www.vishia.org/Java/docuSrcJava_vishiaBase/org/vishia/cmd/CmdExecuter.html[]
+has gotten a specific function `getEnvIgnoreCase(key, value)` and also 
+`prefixEnvIgnoreCase(key, value)`. This opeartions searches the first occurence
+of the environment variable ignoring the case, remove it 
+and replace the given environment variable with the given writing style. 
+So a double is prevented. It should be used especially and only for Java on MS-Windoews.
+Not that changing of the environment is only effective for the callel level
+not for the Operation System. 
+
+* The second, not pitfall but maybe necessity is, that the invocation of the here described
+`"C:/Program Files/git/sh.exe" -c` may be varied. The Java application should not be reprogrammed
+if the git environment may be changed. 
+
+Hence this command is given either as command line argument for the GUI or as setting of a variable.
+
+The __vishiaGitGui__ should be called with 
+
+
+
+
+ 
+
+
+For that the __vishiaGitGui__ has one command line argument:
+
+ -gitsh "C:/Program Files/git/sh.exe -x -c"
+ 
+This is the pattern to execute git commands.
+
+

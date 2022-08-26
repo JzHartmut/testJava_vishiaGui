@@ -1,0 +1,68 @@
+h1{font-family:Arial,sans-serif; font-style:normal; color:#000080; margin-top:6pt; margin-bottom:6pt;font-size:28pt;color:#000080;}
+h2{font-family:Arial,sans-serif; font-style:normal; margin-top:6pt; margin-bottom:6pt;font-size:20pt;}
+h3{font-family:Arial,sans-serif; font-style:normal; margin-top:6pt; margin-bottom:6pt;font-size:18pt;}
+h4{font-family:Arial,sans-serif; font-style:normal; margin-top:6pt; margin-bottom:6pt;font-size:16pt;}
+h5{font-family:Arial,sans-serif; font-style:normal; margin-top:6pt; margin-bottom:6pt;font-size:14pt;}
+h6{font-family:Arial,sans-serif; font-style:normal; margin-top:6pt; margin-bottom:6pt;font-size:12pt;}
+/**p.caption_p is a normal paragraph, but it should present a caption of some paragraphs outside of the structuring of the document in chapters.*/
+p{font-family:Arial,sans-serif; font-style:normal; margin-top:3pt; margin-bottom:6pt;font-size:11pt;}
+p.caption_p{margin-bottom:6pt;font-size:12pt;font-weight:900;font-style:italic}
+p.errormsg{color:#ff0000;margin-bottom:6pt;font-size:11pt;}
+p.para-right{align:right;}
+p.debug{color:#808080;margin-bottom:0pt;font-size:8pt;}
+p.class_title{background-color:#c0c0c0;font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:6pt;font-size:14pt;}
+p.class_brief{background-color:#c0c0c0;font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:6pt;font-size:11pt;}
+p.class_text{background-color:#e0e0e0;font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:6pt;font-size:11pt;}
+p.class_text_ul_p{background-color:#e0e0f0;font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:0pt;font-size:11pt;}
+p.standard{font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:6pt;font-size:11pt;}
+p.notReady{background-color:#f0f0f0;font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:6pt;font-size:10pt;}
+p.experience{background-color:#f0ffff;font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:6pt;font-size:10pt;}
+p.standard_li_pxx{font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:3pt;font-size:11pt;}
+p.standard_tdli{font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:3pt;font-size:10pt;}
+p.standard_td{font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:3pt;font-size:10pt;}
+p.standard_th{font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:3pt;font-size:10pt;}
+p.closelyDistance{font-family:Arial,sans-serif; font-style:normal; margin-top:0pt; margin-bottom:0pt;}
+*.list-closely{font-family:Arial;margin-top:0pt; margin-bottom:2pt;}
+p.list-closely_p{font-family:Arial;margin-top:0pt; margin-bottom:0pt;font-size:11pt;}
+p.list-wide_p{font-family:Arial;margin-top:6pt; margin-bottom:6pt;font-size:11pt;}
+em1{font-style:oblique; font-weight:600}
+em{font-style:italic; font-weight:600}
+div.HintsOfUsing{background-color:#808080;}
+div.div-standard{background-color:#eeeeff;font-family:Arial,sans-serif; font-style:normal; }
+dt.c_method{background-color:#c0c0ff;font-family:monospace;font-size:80%;}<!-- dl für Erläuterung von Methoden in Programmiersprachen -->
+
+p.umlTitle{margin-bottom:6pt;font-size:12pt;font-weight:700;}
+dt.umlElement{background-color:#c0c0ff;margin-top:13pt; }<!-- dl für Erläuterung von Methoden in Programmiersprachen -->
+dd.umlDescription{margin-left:0pt}
+p.umlDescription{background-color:#f0f0f0}
+dt.class_attribute{background-color:#c0c0ff;font-family:monospace;font-size:80%;}<!-- dl für Erläuterung von Methoden in Programmiersprachen -->
+dt.code{background-color:#e0e0ff;font-family:monospace;font-size:80%;}<!-- dl für Erläuterung von Methoden in Programmiersprachen -->
+dd.standard{background-color:#e0e0e0;}
+dd.umlDescription{background-color:#f0f0f0; margin-left:0pt}
+dt{background-color:#e0f0ff;}
+pre.errordump{background-color:#ffe0e0;}
+pre.example{background-color:#d0ffd0;}
+pre.ccode{background-color:#e0e0ff;}
+pre.bytes{background-color:#e0f0f0; margin-top:0pt; margin-bottom:0pt;}
+pre.javacode{background-color:#d0ffd0;}
+pre.input{background-color:#e0e0ff;}
+pre.output{background-color:#d0ffd0;}
+pre{background-color:#f0f0f0;}
+
+table.stdTable{width:100%;border:2px; border-collapse:collapse; background-color:#ffffd0;border-style:solid}
+tr.stdTable{border:2px; border-collapse:collapse; background-color:#ffffff;border-style:solid}
+th.stdTable_th{border: 2px solid; background-color:#efefef}
+td.stdTable_td{border: 2px solid; background-color:#ffffff}
+
+table.tabStandard{width:100%;border:2px; border-collapse:collapse; background-color:#ffffd0;border-style:solid}
+tr.tabStandard{border:2px; border-collapse:collapse; background-color:#ffffff;border-style:solid}
+th.tabStandard{border: 2px solid; background-color:#8fffff}
+td.tabStandard{border: 2px solid; background-color:#ff8fff}
+td.tableCellStandard{border: 2px solid; background-color:#ffffff}
+td.tableHeadStanard{border: 2px solid; background-color:#ffffc0}
+
+xtd{border: 2px solid blue; border-collapse:collapse; background-color:#ffff80}
+
+p.tabMedium_p{font-size:10pt}
+code{background-color:#f0f0f0;}
+.removedHref{text-decoration:underline;}

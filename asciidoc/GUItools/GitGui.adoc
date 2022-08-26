@@ -1,0 +1,67 @@
+= vishia Git GUI
+:toc:
+:toclevels: 5
+:sectnums:
+:sectlinks:
+:max-width: 52em
+:prewrap!:
+:cpp: C++
+:cp: C/++
+
+
+link:GitCmd.html[]: Basics Git installation and execution of command lines
+
+link:gitUsage_de.html[] 
+
+
+== Approach
+
+The vishia Git GUI uses the vishiaBase.jar and vishiaGui.jar Java libraries.
+It is given with the Test suite for srcJava_vishiaGui.
+
+It uses also a proper installation of the git command line suite, see chapter <<#gitCmdSuiteInstall>>.
+
+This __vishiaGitGui__ contains some practical approaches for dayly working with git.
+It can be supplemented with some shell scripts for example for push, tag,
+and also with other familiar git GUIs for example Tortoise Git or the intrinsic given
+Git GUI in the command line suite.
+
+One of the important approach is storing and restoring the time stamp of files. 
+
+
+
+
+
+== Help vishiaGitGui
+
+[#exec]
+=== exec cmd line and exec button
+
+This cmd line outputs the executed command of other buttons to show what's happen.
+It can be also edited in some case, to fine correct a git command,
+for example for move and add. See help there.
+
+This command line can be used to executed any command in the context of the __vishiaGitGui__.
+This is sometimes helpful on trouble shooting, for example on faulty PATH entries
+if git does not run. 
+
+The command field can contain one command line either for the given operation system
+(for example windows) or to execute with git sh.exe.
+
+* `!!` on start of the command line is ignored. It is used as flag for the move and add command.
+
+* If the command line starts with '`git`' or it starts with '`+`' then it is executed: 
++
+`C:\Program Files\git\bin\sh.exe -x -c COMMAND`
++ 
+where `COMMAND` starts with the `git` or the content after `+` also after spaces.
++
+The entry `C:\Program Files\git\bin\sh.exe -x -c` is determined 
+by the central command line argument `-gitsh` respectively the `gitsh_exe` variable of arguments
+as used for all git commands, see chapter <<#gitcmd>>
+
+* Elsewhere, exact the given command is executed from the Java command line executer
+which is associated to the operation system. 
+
+
+
