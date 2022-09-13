@@ -1,4 +1,6 @@
--gui=guiCfg/gui.cfg
+-gui=guiCfg/gui_1.cfg
+---gui=guiCfg/gui.cfg
+---gui=guiCfg/gui_tab1.cfg
 -size=B
 -timeZone=GMT
 --report:T:\tmp\GUI.log

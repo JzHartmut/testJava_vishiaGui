@@ -1,10 +1,15 @@
 REM starts as windows command (batch) file:
 if not exist genScripts mkdir genScripts
-set LIBSPATH=./
-set CP=%LIBSPATH%/libs/vishiaGui.jar;%LIBSPATH%/libs/vishiaBase.jar
+
+REM for standalone usage, the libs are beside:
+set LIBSPATH=./libs
+REM for usage inside the cmpJava_vishia source tree:
+if exist ..\..\..\..\tools set LIBSPATH=../../../../tools
+
+set CP=%LIBSPATH%/vishiaGui.jar;%LIBSPATH%/vishiaBase.jar
 REM comment out swt.win32_x86_32.jar or swt.win32_x86_64.jar
-::set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32_x86_32.jar                                                    
-set CP=%CP%;%LIBSPATH%/libs/org.eclipse.swt.win32_x86_64.jar                                                    
+::set CP=%CP%;%LIBSPATH%/org.eclipse.swt.win32_x86_32.jar                                                    
+set CP=%CP%;%LIBSPATH%/org.eclipse.swt.win32_x86_64.jar
 REM hint: use java if something is wrong, to see outputs, 
 REM       use javaw for normal usage without back cmd window
 set JAVAW=java

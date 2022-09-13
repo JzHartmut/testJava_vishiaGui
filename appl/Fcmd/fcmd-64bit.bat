@@ -19,7 +19,7 @@ REM Therefore 'start' cannot be used here.
 REM write out the command line to help explore the starting conditions on faulty situation:
 REM to evaluate error conditions, change javaw to java!
 @echo on  
-javaw -cp ../../../tools/vishiaBase.jar;../../../tools/vishiaGui.jar;../../../tools/%SWTJAR% org.vishia.commander.Fcmd --@%ARGS%
+javaw -cp ../../../../tools/vishiaBase.jar;../../../../tools/vishiaGui.jar;../../../../tools/%SWTJAR% org.vishia.commander.Fcmd --@%ARGS%
 @echo off
 if errorlevel 1 pause
 REM exit /b means, the console window remain open though this called batch will be finished. exit pure closes the console.
