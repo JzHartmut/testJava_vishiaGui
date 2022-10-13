@@ -1,9 +1,9 @@
--gui=src/test/cfg/org//vishia/gral/cfg/appl/GuiDropFiles/GuiDropFiles.cfg
--jzTc=src/test/cfg/org//vishia/gral/cfg/appl/GuiDropFiles/GuiDropFiles.jzTc
+-gui=GuiDropFiles.gui
+-jzTc=GuiDropFiles.jzTc
 ---inspectorPort=UDP:127.0.0.1:60095
 -size=C
 ---msgcfg=
 -ownIpc=UDP:0.0.0.0:60102
 ---targetIpc=Fcmd@UDP:127.0.0.1:60093
---report:D:/tmp\GuiDropFiles.log 
+--report:T:/tmp\GuiDropFiles.log 
 --rlevel:333

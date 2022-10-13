@@ -1,8 +1,12 @@
--gui=guiCfg/gui_1.cfg
----gui=guiCfg/gui.cfg
+---gui=guiCfg/guitest1.cfg
+---gui=guiCfg/guiTabtest1.cfg
+-gui=guiCfg/gui.cfg
 ---gui=guiCfg/gui_tab1.cfg
--size=B
+-oamCfg:guiCfg/oamVar.cfg
+---ip:UDP:0.0.0.0:0xeab3
+-size=A
 -timeZone=GMT
+-logcfg:T:\tmp\GuiViewCfg.logconfig.txt
 --report:T:\tmp\GUI.log
 --rlevel:334
 

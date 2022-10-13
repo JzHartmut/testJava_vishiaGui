@@ -34,7 +34,7 @@ public class SwtTestTabFolder {
     shell.setText("Snippet 76");                           // Title of the window
     final TabFolder tabFolder = new TabFolder (shell, SWT.BORDER);
     Rectangle areaInWindow = shell.getClientArea ();         // The area in pixel without Title and borders inside the window
-    System.out.printf("pos x, y: size x * y in Window= %d, %d: %d * %d\n", areaInWindow.x, areaInWindow.y, areaInWindow.width, areaInWindow.height );
+    System.out.printf("Tabfolder= %d, %d + (%d * %d)\n", areaInWindow.x, areaInWindow.y, areaInWindow.width, areaInWindow.height );
     //    tabFolder.setLocation (clientArea.x, clientArea.y);
 //    tabFolder.setSize(clientArea.width,clientArea.height);
     tabFolder.setBounds(areaInWindow);                     // The tab folder should fill the whole area. Without the setBounds the TabFolder is not visible.
@@ -44,6 +44,7 @@ public class SwtTestTabFolder {
     Rectangle areaTabFolder1 = tabFolder.getClientArea ();  // position inside the areaWindow, size inclusively the tabs itself
     int yTab =-1;
     for (int i=0; i<3; i++) {
+      Composite tabComp = new Composite(tabFolder,0);
       Rectangle areaTabFolder = tabFolder.getClientArea ();  // position inside the areaWindow, size inclusively the tabs itself
       System.out.printf("pos x, y: size x * y Tabfolder= %d, %d: %d * %d\n", areaTabFolder.x, areaTabFolder.y, areaTabFolder.width, areaTabFolder.height );
       TabItem tabItem = new TabItem (tabFolder, SWT.NONE);
@@ -51,7 +52,6 @@ public class SwtTestTabFolder {
       //item.setLocation (clientAreaTab.x, clientAreaTab.y);
       tabItem.setText ("tab " + i);
       //
-      Composite tabComp = new Composite(tabFolder,0);
       tabItem.setControl(tabComp);
       //tabComp.setBounds(areaTabFolder);
       Rectangle areaTab;
