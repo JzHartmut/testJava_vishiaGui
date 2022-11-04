@@ -36,6 +36,8 @@ public class Show_Movie_SpeTelg {
   
   final GralButton btnStep = new GralButton(this.pos, "@-4+3,-15..-2=step", "step", null);
   
+  final GralButton btnStepBack = new GralButton(this.pos, "@-4+3,-30..-17=back", "back", null);
+  
   final GralCanvasStorage canvas = this.plotArea.getCanvasStore(0);
   
   GralColor colorLine = GralColor.getColor("bk");
@@ -44,6 +46,21 @@ public class Show_Movie_SpeTelg {
   GralColor colorWhite = GralColor.getColor("wh");
 
 
+  /**Dataset of the border of the data words in memory:
+   * <pre>
+   * +--+
+   * |  |
+   * +--+ </pre>
+   * It is used for all Mem presentation (Master and Slave).
+   */
+  final GralCanvasStorage.FigureDataSet figData_Word = new GralCanvasStorage.FigureDataSet(); { 
+    GralColor color = GralColor.getColor("bk");
+    this.figData_Word.addPolyline(color, 1).point(0, 0).point(0,2)
+                      .point(1, 2).point(1,0).point(0,0);  // |
+  }
+  
+  
+  
   /**Dataset of the border of the data words in memory:
    * <pre>
    * +--+--+
@@ -70,52 +87,70 @@ public class Show_Movie_SpeTelg {
    * ^
    * | </pre>
    */
-  final GralCanvasStorage.FigureDataSet figData_RefTop = new GralCanvasStorage.FigureDataSet(); { 
-    GralColor color = GralColor.getColor("drd");
-    this.figData_RefTop.addPolyline(color, 1).point(0, 0).point(0, -1.8f);  //                |
-    this.figData_RefTop.addPolyline(color, 1).point(-0.4f, -1).point(0, -2).point(0.4f, -1);  // ^
-  }
+  final GralCanvasStorage.FigureDataSet figData_RefTop = new GralCanvasStorage.FigureDataSet() {
+    @Override public void init() {
+      GralColor color = GralColor.getColor("drd");
+      setSpread(0,0,1,2);
+      addPolyline(color, 1).point(0.5f, 1.9f).point(0.5f, 0.1f);  //                |
+      addPolyline(color, 1).point(0.1f, 1).point(0.5f, 0).point(0.9f, 1);  // ^
+      
+    }
+  };
+  
+//  { 
+//    GralColor color = GralColor.getColor("drd");
+//    this.figData_RefTop.setSpread(0,0,1,2);
+//    this.figData_RefTop.addPolyline(color, 1).point(0.5f, 1.9f).point(0.5f, 0.1f);  //                |
+//    this.figData_RefTop.addPolyline(color, 1).point(0.1f, 1).point(0.5f, 0).point(0.9f, 1);  // ^
+//  }
   
   
   
-  final GralCanvasStorage.FigureDataSet figData_serialRight = new GralCanvasStorage.FigureDataSet(); { 
-    GralColor color = GralColor.getColor("bk");
-    this.figData_serialRight.addPolyline(color, 1).point( 0, 0.3f).point(24, 0.3f);    // ==========
-    this.figData_serialRight.addPolyline(color, 1).point( 0, -0.3f).point(24, -0.3f);  // 
-    this.figData_serialRight.addPolyline(color, 1).point(23.0f, 0.5f).point(24.3f, 0.0f).point(23.0f, -0.5f);  // ==>
-  }
+  final GralCanvasStorage.FigureDataSet figData_serialRight = new GralCanvasStorage.FigureDataSet() { 
+    @Override public void init() {
+      GralColor color = GralColor.getColor("bk");
+      addPolyline(color, 1).point( 0, 0.3f).point(23.2f, 0.3f);    // ==========
+      addPolyline(color, 1).point( 0, -0.3f).point(23.2f, -0.3f);  // 
+      addPolyline(color, 1).point(22.7f, 0.5f).point(24.0f, 0.0f).point(22.7f, -0.5f);  // ==>
+      }
+  };
   
-  final GralCanvasStorage.FigureDataSet figData_serialRightSw = new GralCanvasStorage.FigureDataSet(); { 
-    GralColor color = GralColor.getColor("bk");
-    this.figData_serialRightSw.addPolyline(color, 1).point( 0, 0.3f).point(20, 0.3f);    // ==========
-    this.figData_serialRightSw.addPolyline(color, 1).point( 0, -0.3f).point(20, -0.3f);  // 
-    this.figData_serialRightSw.addArcline(color, 20f, 0, 0.3f, 0.3f, 0, 360);  // 
-    this.figData_serialRightSw.addArcline(color, 22, 0, 0.3f, 0.3f, 0, 360);  // 
-    this.figData_serialRightSw.addArcline(color, 21, -1.5f, 0.3f, 0.3f, 0, 360);  // 
-    //this.figData_serialRightSw.addPolyline(color).point(21.0f, 0.5f).point(24.3f, 0.0f).point(23.0f, -0.5f);  // ==>
-  }
+  final GralCanvasStorage.FigureDataSet figData_serialRightSwitch = new GralCanvasStorage.FigureDataSet() {
+    @Override public void init() {
+      GralColor color = GralColor.getColor("bk");
+      addPolyline(color, 1).point( 0, 0.3f).point(24, 0.3f);    // ==========
+      addPolyline(color, 1).point( 0, -0.3f).point(24, -0.3f);  // 
+      addPolyline(color, 1).point( 26.3f, 0.3f).point(27, 0.3f);    //        =
+      addPolyline(color, 1).point( 26.3f, -0.3f).point(27, -0.3f); // ==========
+      addPolyline(color, 1).point(26.7f, 0.5f).point(28.0f, 0.0f).point(26.7f, -0.5f);  // ==>
+      // circle for the switch
+      addArcline(color, 24f, 0, 0.3f, 0.3f, 0, 360);            //   o
+      addArcline(color, 26, 0, 0.3f, 0.3f, 0, 360);             //      o
+      addArcline(color, 25, -1.5f, 0.3f, 0.3f, 0, 360);         //    o 
+    }
+  };
   
-  final GralCanvasStorage.FigureDataSet figData_TxSlaveSwitch = new GralCanvasStorage.FigureDataSet(); { 
-    GralColor color = GralColor.getColor("bk");
-    this.figData_TxSlaveSwitch.addPolyline(color, 5).point( 2, 0).point(0, 0).setVariantMask(0x1);  // 
-    this.figData_TxSlaveSwitch.addPolyline(color, 5).point( 2, 0).point(1, -1.5f).setVariantMask(0x2);  // 
-  }
+  final GralCanvasStorage.FigureDataSet figData_TxSlaveSwitch = new GralCanvasStorage.FigureDataSet() {
+    @Override public void init() {
+      setSpread(0,0,2.5f,2.5f);
+      GralColor color = GralColor.getColor("bk");
+      addPolyline(color, 5).point( 1.9f, 1.9f).point(0.1f, 1.9f).setVariantMask(0x1);  // 
+      addPolyline(color, 5).point( 1.9f, 1.9f).point(1.0f, 0.5f).setVariantMask(0x2);  // 
+  } };
   /**Contains only the fillin color.
    * 
    */
-  GralCanvasStorage.Figure[] rxSlave1 = new GralCanvasStorage.Figure[20]; 
-  GralCanvasStorage.Figure[] rxSlave2 = new GralCanvasStorage.Figure[20]; 
-  GralCanvasStorage.Figure[] rxMaster = new GralCanvasStorage.Figure[20]; 
-  GralCanvasStorage.Figure[] txSlave1 = new GralCanvasStorage.Figure[20]; 
-  GralCanvasStorage.Figure[] txSlave2 = new GralCanvasStorage.Figure[20]; 
+  GralCanvasStorage.Figure[] rxDataSlave1 = new GralCanvasStorage.Figure[20]; 
+  GralCanvasStorage.Figure[] rxDataSlave2 = new GralCanvasStorage.Figure[20]; 
+  GralCanvasStorage.Figure[] rxDataMaster = new GralCanvasStorage.Figure[20]; 
+  GralCanvasStorage.Figure[] txDataSlave1 = new GralCanvasStorage.Figure[20]; 
+  GralCanvasStorage.Figure[] txDataSlave2 = new GralCanvasStorage.Figure[20]; 
   
-  
-  float posSerialRef;
   
   /**For the current communication. Related to {@link #colorWordsMaster}.
    * If outside range, use white.
    */
-  int ixColor;
+  int ixTime;
   
   boolean bCont = true;
 
@@ -127,9 +162,16 @@ public class Show_Movie_SpeTelg {
   GralCanvasStorage.Figure txSlaveSwitch1, txSlaveSwitch2;
   
   /**Color field for the TxMaster word. */
-  GralCanvasStorage.Figure serialOut1word;
+  GralCanvasStorage.Figure serialOutMaster1, serialOutSlave1, serialOutSlave2;
   
   GralColor[] colorWordsMaster = new GralColor[20];
+  
+  GralColor[] colorWordsRdSlave1 = new GralColor[20];
+  
+  GralColor[] colorWordsRdSlave2 = new GralColor[20];
+  
+  int[] txSlave1SwitchVariant = { 0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0  ,0,0,0,0,0,0,0,0 };
+  int[] txSlave2SwitchVariant = { 0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1  ,0,0,0,0,0,0,0,0 };
   
   GralColor colorWordUndef = GralColor.getColor("wh");
   
@@ -155,64 +197,78 @@ public class Show_Movie_SpeTelg {
   
   void init() throws ParseException {
     //
+    this.figData_serialRight.init();
+    this.figData_serialRightSwitch.init();
+    this.figData_RefTop.init();
+    this.figData_TxSlaveSwitch.init();
     this.pos.setPosition("10-2,10+1++");
     this.canvas.addFigure("dataWordsMaster", this.pos, this.figData_Words, false);
     this.pos.setPosition("10-2,40+1++");
     this.canvas.addFigure("dataWordsSlave1", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
-      this.rxSlave1[ix] = this.canvas.addFigure("rxSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
+      this.rxDataSlave1[ix] = this.canvas.addFigure("rxDataSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
       this.pos.setPosition(",+1");
     }
     this.pos.setPosition("10-2,70+1++");
-    this.canvas.addFigure("dataWordsSlave1", this.pos, this.figData_Words, false);
+    this.canvas.addFigure("dataWordsSlave2", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
-      this.rxSlave2[ix] = this.canvas.addFigure("rxSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
+      this.rxDataSlave2[ix] = this.canvas.addFigure("rxDataSlave2-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
       this.pos.setPosition(",+1");
     }
     //
     this.pos.setPosition("26-2,10+1++");
-    this.canvas.addFigure("rxWordsMaster", this.pos, this.figData_Words, false);
+    this.canvas.addFigure("txWordsSlave2", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
-      this.txSlave1[ix] = this.canvas.addFigure("rxSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
+      this.rxDataMaster[ix] = this.canvas.addFigure("rxDataMaster-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
       this.pos.setPosition(",+1");
     }
     this.pos.setPosition("26-2,40+1++");
-    this.canvas.addFigure("txWordsSlave1", this.pos, this.figData_Words, false);
+    this.canvas.addFigure("rxWordsMaster", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
-      this.txSlave2[ix] = this.canvas.addFigure("rxSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
+      this.txDataSlave1[ix] = this.canvas.addFigure("txDataSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
       this.pos.setPosition(",+1");
     }
     this.pos.setPosition("26-2,70+1++");
     this.canvas.addFigure("txWordsSlave1", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
-      this.rxMaster[ix] = this.canvas.addFigure("rxSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
+      this.txDataSlave2[ix] = this.canvas.addFigure("txDataSlave2-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
       this.pos.setPosition(",+1");
     }
     //
     //create the figure for the read reference arrow:
     this.pos.setPosition("6-2, 10.5+1");                   // The ====> line for serial out and the ref arrow
     this.canvas.addFigure("serialOutMaster", this.pos, this.figData_serialRight, false);
+    this.pos.setPosition("8-2, 10+1");                     // reference arrow
     this.dmaRd1 = this.canvas.addFigure("refData_Master", this.pos, this.figData_RefTop, true);
-    this.pos.setPosition("4+2, 40.5+1");
-    this.canvas.addFigure("serialOutMaster", this.pos, this.figData_serialRightSw, false);
-    this.dmaRd2 = this.canvas.addFigure("refData_Master", this.pos, this.figData_RefTop, true);
-    this.pos.setPosition("4+2, 60.5+1");
+    this.dmaRd1.bShow = false;
+    this.pos.setPosition("4+2, 36.5+1");
+    this.canvas.addFigure("serialOutSlave1Switch", this.pos, this.figData_serialRightSwitch, false);
+    this.pos.setPosition("8-2, 40+1");                     // reference arrow
+    this.dmaRd2 = this.canvas.addFigure("refData_Slave1", this.pos, this.figData_RefTop, true);
+    this.dmaRd2.bShow = false;
+    this.pos.setPosition("6+2, 60.5+1");
     this.txSlaveSwitch1 = this.canvas.addFigure("txSlave1Switch", this.pos, this.figData_TxSlaveSwitch, true);
-    this.pos.setPosition("4+2, 70.5+1");
-    this.canvas.addFigure("serialOutMaster", this.pos, this.figData_serialRightSw, false);
-    this.dmaRd3 = this.canvas.addFigure("refData_Master", this.pos, this.figData_RefTop, true);
-    this.pos.setPosition("4+2, 90.5+1");
+    this.pos.setPosition("4+2, 66.5+1");
+    this.canvas.addFigure("serialOutSlave2Switch", this.pos, this.figData_serialRightSwitch, false);
+    this.pos.setPosition("8-2, 70+1");                     // reference arrow
+    this.dmaRd3 = this.canvas.addFigure("refData_Slave2", this.pos, this.figData_RefTop, true);
+    this.pos.setPosition("8-2, 90.5+1");
     this.txSlaveSwitch2 = this.canvas.addFigure("txSlave2Switch", this.pos, this.figData_TxSlaveSwitch, true);
     //
-    this.pos.setPosition("30-2, 10.5+1");                   // The ====> line for serial out and the ref arrow
-    this.canvas.addFigure("serialOutMaster", this.pos, this.figData_serialRight, false);
-    this.dmaWr1 = this.canvas.addFigure("refData_Master", this.pos, this.figData_RefTop, true);
+    this.pos.setPosition("6+0, 0+100");
+    GralCanvasStorage.FigureDataSet lines_rxSlaveBackMaster = new GralCanvasStorage.FigureDataSet();
+    lines_rxSlaveBackMaster.addPolyline(this.colorBlack, 1).point(96.5f, -0.2f).dx(1.6f).dy(4.4f)
+    .point(3.8f, 4.2f).dy(-4.4f).dx(4.0f).dy(-22.2f).dx(22.2f);    
+    lines_rxSlaveBackMaster.addPolyline(this.colorBlack, 1).point(96.5f, 0.2f).dx(1.2f).dy(3.6f)
+    .point(4.2f, 3.8f).dy(-3.6f).dx(4.0f).dy(-22.2f).dx(21.8f);    
+    this.canvas.addFigure("rxSlaveBackMaster", this.pos, lines_rxSlaveBackMaster, false);
+    
+    this.pos.setPosition("28-2, 10+1");                     // reference arrow
+    this.dmaWr1 = this.canvas.addFigure("refData_RdMaster", this.pos, this.figData_RefTop, true);
     this.pos.setPosition("30-2, 40.5+1");
-    this.canvas.addFigure("serialOutMaster", this.pos, this.figData_serialRight, false);
-    this.dmaWr2 = this.canvas.addFigure("refData_Master", this.pos, this.figData_RefTop, true);
-    this.pos.setPosition("30-2, 70.5+1");
-    this.canvas.addFigure("serialOutMaster", this.pos, this.figData_serialRight, false);
-    this.dmaWr3 = this.canvas.addFigure("refData_Master", this.pos, this.figData_RefTop, true);
+    this.dmaWr2 = this.canvas.addFigure("refData_RdSlave1", this.pos, this.figData_RefTop, true);
+    this.pos.setPosition("28-2, 70+1");                     // reference arrow
+    this.dmaWr3 = this.canvas.addFigure("refData_RdSlave2", this.pos, this.figData_RefTop, true);
     //
 
     
@@ -225,24 +281,34 @@ public class Show_Movie_SpeTelg {
       GralColor colorFill = GralColor.getColor(red, (19-ix)*10 + 65, ix*10 + 65);
       this.colorWordsMaster[ix] = colorFill;
     }
+    this.colorWordsRdSlave1[4] = GralColor.getColor("lrd");
+    this.colorWordsRdSlave1[5] = GralColor.getColor("rd");
+    this.colorWordsRdSlave1[6] = GralColor.getColor("or");
     //---------------------------------------------------- //Fillin of the master tx words 
     this.pos.setPosition("10-2, 10+1++");
     for(int ix = 0; ix <20; ++ix) {                       
-      this.canvas.addFigure("wordTxMaster", this.pos, new GralCanvasStorage.Fillin("X", this.colorWordsMaster[ix]), false);
+      this.canvas.addFigure("wordsTxMaster-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWordsMaster[ix]), false);
       //this.plot.drawFillin(this.pos, this.colorWordsMaster[ix]);
       this.pos.setNextPosition();
     }
     //GralPlotArea.UserUnits units = this.plot.userUnitsPerGrid(0.0f,  0.0f,  1.0f,  1.0f);
     //
-    this.pos.setPosition("13-2, 35+1");                    // value on the serial plug
-    GralColor colorFillin = this.colorWordsMaster[8];
-    this.serialOut1word = this.canvas.addFigure("wordTxMaster", this.pos, new GralCanvasStorage.Fillin("X", colorFillin), true);
+    this.pos.setPosition("7-2, 35+1");                    // value on the serial plug
+    this.canvas.addFigure("serialOutMasterRect", this.pos, this.figData_Word, false);
+    GralColor colorFillin = this.colorWhite;
+    this.serialOutMaster1 = this.canvas.addFigure("serialOutMaster1", this.pos, new GralCanvasStorage.Fillin("X", colorFillin), true);
+    //
+    this.pos.setPosition("7-2, 65+1");                    // value on the serial plug
+    this.canvas.addFigure("serialOutSlave1Rect", this.pos, this.figData_Word, false);
+    this.serialOutSlave1 = this.canvas.addFigure("serialOutSlave1", this.pos, new GralCanvasStorage.Fillin("X", colorFillin), true);
+    //
+    this.pos.setPosition("7-2, 95+1");                    // value on the serial plug
+    this.canvas.addFigure("serialOutSlave2Rect", this.pos, this.figData_Word, false);
+    this.serialOutSlave2 = this.canvas.addFigure("serialOutSlave2", this.pos, new GralCanvasStorage.Fillin("X", colorFillin), true);
     //
     }
     LogMessage log = new LogMessageStream(System.out);
     this.gralMng.createGraphic("SWT", 'E', log);
-    
-    this.posSerialRef = 24.0f;
     
     this.plotArea.redraw(100, 100);
   }
@@ -254,44 +320,68 @@ public class Show_Movie_SpeTelg {
    */
   void step() throws ParseException {
     //this.ref1.move(5, 0);                                  // move 0.5 grid to right
+    boolean stepBack = this.btnStepBack.wasPressed();
     if(  this.btnRunStop.getState() == GralButton.State.On
-      || this.btnStep.wasPressed()) {
-      if((this.posSerialRef +=1.0) >=23) { 
-        if(this.posSerialRef >=25) {                         // waits a while without paint 
-          this.posSerialRef = 0;                             // then starts from 0 again
-          this.ixColor = 0;
-          this.dmaRd1.setNewPosition("6-2, 10.5+1");         // start position, first increment is done before usage
-          for(GralCanvasStorage.Figure rx1 : this.rxSlave1 ) {
+      || this.btnStep.wasPressed() || stepBack) {
+      if(stepBack) { if(--this.ixTime <0) { ixTime = 25;} }
+      else { this.ixTime +=1; }
+      if(ixTime >=25) { 
+        if(ixTime >=27) {                         // waits a while without paint 
+          this.ixTime = 0;
+          this.dmaRd1.setNewPosition("8-2, 10+1");         // start position, first increment is done before usage
+          for(GralCanvasStorage.Figure rx1 : this.txDataSlave1 ) {
             rx1.data.color = this.colorWhite;
           }
-          this.plotArea.repaint();
-          Debugutil.stop();
+          for(GralCanvasStorage.Figure rx1 : this.txDataSlave2 ) {
+            rx1.data.color = this.colorWhite;
+          }
+          for(GralCanvasStorage.Figure rx1 : this.rxDataSlave1 ) {
+            rx1.data.color = this.colorWhite;
+          }
+          for(GralCanvasStorage.Figure rx1 : this.rxDataSlave2 ) {
+            rx1.data.color = this.colorWhite;
+          }
+          for(GralCanvasStorage.Figure rx1 : this.rxDataMaster ) {
+            rx1.data.color = this.colorWhite;
+          }
         }
       }
       else {                                               // shows the output.
-        if(ixColor >=1 && ixColor < 21) {
-          this.rxSlave1[ixColor-1].data.color = this.serialOut1word.data.color;  // move content from rx Port to rx data
+        if(this.ixTime >=2 && this.ixTime < 20 && this.colorWordsRdSlave1[this.ixTime-2] !=null) {
+          this.txDataSlave1[ixTime].data.color = this.colorWordsRdSlave1[this.ixTime-2];
+        }
+        if(this.ixTime >=3 && this.ixTime < 23) {
+          this.rxDataMaster[this.ixTime-3].data.color = this.serialOutSlave2.data.color;  // move content from rx Port to rx data
+        }
+        if(this.ixTime >=2 && this.ixTime < 22) {
+          GralColor colorRx = this.rxDataSlave2[this.ixTime-2].data.color = this.serialOutSlave1.data.color;  // move content from rx Port to rx data
+          this.serialOutSlave2.data.color = colorRx;
+        }
+        if(this.ixTime >=1 && this.ixTime < 21) {
+          GralColor colorRx = this.rxDataSlave1[this.ixTime-1].data.color = this.serialOutMaster1.data.color;  // move content from rx Port to rx data
+          this.serialOutSlave1.data.color = colorRx;
         }
         GralColor colorWord;
-        if(this.ixColor >=0 && ixColor <20) {
-          colorWord = this.colorWordsMaster[this.ixColor];
-        } else if(this.ixColor >=21) {
+        if(this.ixTime >=0 && this.ixTime <20) {
+          colorWord = this.colorWordsMaster[this.ixTime];
+        } else if(this.ixTime >=21) {
           colorWord = this.colorWhite;
         } else {
-          colorWord = this.serialOut1word.data.color;      // last step remain the color.
+          colorWord = this.serialOutMaster1.data.color;      // last step remain the color.
         }
-        this.serialOut1word.data.color = colorWord; 
+        this.serialOutMaster1.data.color = colorWord; 
         //this.dmaRd1.setNewPosition(GralPos.refer, GralPos.samesize, GralPos.refer + 1.0f, GralPos.samesize);
-        this.dmaRd1.bShow = this.ixColor>=0 && this.ixColor <20;
-        this.dmaRd1.setNewPosition(4, 6, 10.5f+ this.ixColor, GralPos.size +1);
-        this.dmaRd2.bShow = this.ixColor>=1 && this.ixColor <21;
-        this.dmaRd2.setNewPosition(4, 6, 40.5f+ this.ixColor-1.0f, GralPos.size +1);
-        this.txSlaveSwitch1.setVariant(0);
-        this.txSlaveSwitch2.setVariant(1);
-        this.ixColor +=1;
-        this.plotArea.redraw(20, 100, true);
-        Debugutil.stop();
+        this.dmaRd1.bShow = this.ixTime>=0 && this.ixTime <20;
+        this.dmaRd1.setNewPosition(6, 8, 10.0f+ this.ixTime, GralPos.size +1);
+        this.dmaRd2.bShow = this.ixTime>=1 && this.ixTime <21;
+        this.dmaRd2.setNewPosition(6, 8, 40.0f+ this.ixTime-1.0f, GralPos.size +1);
+        this.dmaRd3.bShow = this.ixTime>=2 && this.ixTime <22;
+        this.dmaRd3.setNewPosition(6, 8, 70.0f+ this.ixTime-2.0f, GralPos.size +1);
+        this.txSlaveSwitch1.setVariant(this.txSlave1SwitchVariant[ixTime]);
+        this.txSlaveSwitch2.setVariant(this.txSlave2SwitchVariant[ixTime]);
       }
+      this.plotArea.redraw(20, 100, true);
+      Debugutil.stop();
     }
   }
   
