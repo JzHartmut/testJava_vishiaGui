@@ -19,12 +19,12 @@ public class Show_Movie_SpeTelg {
 
   final GralMng gralMng = new GralMng(null);
   
-  final GralPos pos = new GralPos(this.gralMng, "@screen,10..80,10..120");
+  final GralPos pos = new GralPos(this.gralMng, "@screen,10+60,20+102");
   
   final GralWindow wind = new GralWindow(this.pos, "MainWindow", "SPE data transfer"
                         , GralWindow_ifc.windResizeable , this.gralMng);
   
-  final GralCanvasArea plotArea = new GralCanvasArea(this.pos, "@Main,0..-10,0..0=canvas");
+  final GralCanvasArea plotArea = new GralCanvasArea(this.pos, "@Main,0..40,0..100=canvas");
   
   final GralButton btnRunStop = new GralButton(this.pos, "@-8+3,-15..-2=runStop");
   { this.btnRunStop.setSwitchMode("run / stop?", "stop / run?");
@@ -144,7 +144,7 @@ public class Show_Movie_SpeTelg {
   final GralCanvasStorage.FigureDataSet figData_prcsetOutput = new GralCanvasStorage.FigureDataSet() {
     @Override public void init() {
       GralColor color = GralColor.getColor("drd");
-      setSpread(-5.5f, 0f, 6, 26);
+      setSpread(-5.5f, 2f, 6, 24);
       GralPoint lastPoint = addPolyline(color, 3).point(-5.5f, 26.0f).dxy(5.5f, -24f).lastPoint();  //                |
       addPolyline(color, 3).point(lastPoint.x - 0.8f, lastPoint.y + 1.0f).dxy(0.8f, -1.0f).dxy(0.3f, +1.0f);  // ^
     }
