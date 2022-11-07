@@ -245,7 +245,7 @@ public class Show_Movie_SpeTelg {
   //int[] txSlave2SwitchVariant = { 0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1  ,0,0,0,0,0,0,0,0 };
   
   /**It is an arrow to show calculation occurrence. */
-  GralCanvasStorage.Figure calcMaster1;
+  GralCanvasStorage.Figure prcCalcMaster1;
 
   GralCanvasStorage.Figure prcgetMeas, prcsetOutput;
   
@@ -406,14 +406,17 @@ public class Show_Movie_SpeTelg {
     this.serialOutSlave2 = this.canvas.addFigure("serialOutSlave2", this.pos, new GralCanvasStorage.Fillin("X", colorFillin), true);
     //
     this.pos.setPosition("6..30, 9..32");
-    this.canvas.addFigure("boxMaster1", this.pos, this.figData_stationBox, false);
-    this.calcMaster1 = this.canvas.addFigure("calcMaster1", this.pos, this.figData_calc, true);
+    this.canvas.addFigure("boxMaster", this.pos, false).data().addData(this.figData_stationBox)
+    .addText(5, 12, "Ring-Master", org.vishia.gral.ifc.GralFont.getFont('i', 24), GralColor.getColor("lgr"));;
+    this.prcCalcMaster1 = this.canvas.addFigure("calcMaster1", this.pos, this.figData_calc, true).show(false);
     //
     this.pos.setPosition("6..30, 39..72");
-    this.canvas.addFigure("boxMaster2", this.pos, this.figData_stationBox, false);
+    this.canvas.addFigure("boxSlave1", this.pos, false).data().addData(this.figData_stationBox)
+    .addText(5, 12, "Slave 1", org.vishia.gral.ifc.GralFont.getFont('i', 24), GralColor.getColor("lgr"));;
     //
     this.pos.setPosition("6..30, 69..102");
-    this.canvas.addFigure("boxMaster3", this.pos, this.figData_stationBox, false);
+    this.canvas.addFigure("boxSlave2", this.pos, false).data().addData(this.figData_stationBox)
+    .addText(5, 12, "Slave 2", org.vishia.gral.ifc.GralFont.getFont('i', 24), GralColor.getColor("lgr"));;
     //
     this.pos.setPosition("36-2, 8+30");
     this.dataEnvMeas = this.canvas.addFigure("dataEnvMeas", this.pos, new GralCanvasStorage.Fillin("X", this.colorValueCtrl[0]) , true);
@@ -497,7 +500,7 @@ public class Show_Movie_SpeTelg {
           if(color !=null) {
             this.txDataSlave1[ixColor].set().data.color = color;
         } }
-        this.calcMaster1.set().bShow = true;
+        this.prcCalcMaster1.set().bShow = true;
         break;
       case 8: 
         this.txDataMaster[12].set().data.color = this.rxDataMaster[1].data.color;
@@ -508,7 +511,7 @@ public class Show_Movie_SpeTelg {
           if(color !=null) {
             this.txDataSlave2[ixColor].set().data.color = color;
         } }
-        this.calcMaster1.set().bShow = false;
+        this.prcCalcMaster1.set().bShow = false;
         break;
       case 16: 
         this.dataEnvOutput.set().data.color = this.rxDataSlave1[12].data.color;
