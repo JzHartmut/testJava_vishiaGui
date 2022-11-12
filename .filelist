@@ -139,9 +139,11 @@
 2022-10-11 11:51:52  x     Test_GuiCfg.java                         ::           .911 -0749244122 
 
 ============================== java/test_vishiaGral/org/vishia/gral/test/basics/ ===================
+2022-11-12 14:07:27  x     Test_GralArea9.java                      ::          1.716  0225808806 
 2022-10-09 01:04:12  x     Test_GralPos.java                        ::          4.079 -1245231673 
 2022-10-22 14:44:25  x     Test_GralTableAppl.java                  ::          4.183 -0049476989 
-2022-10-13 00:06:11  x     Test_SimpleTextButton.java               ::          3.409  0872447510 
+2022-11-11 22:22:15  x     Test_SimpleTextButton.java               ::          3.469  0955402989 
+2022-11-12 21:40:36  x     Test_WindMenu.java                       ::          3.251 -1238695089 
 
 ============================== java/test_vishiaGral/org/vishia/gral/test/swt/ ======================
 2022-10-12 12:45:27  x     SwtTestTabFolder.java                    ::          4.158 -1976054208 

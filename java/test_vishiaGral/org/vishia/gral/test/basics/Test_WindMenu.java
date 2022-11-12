@@ -6,61 +6,56 @@ import org.vishia.gral.base.GralMng;
 import org.vishia.gral.base.GralPos;
 import org.vishia.gral.base.GralTextField;
 import org.vishia.gral.base.GralWindow;
-import org.vishia.gral.ifc.GralFactory;
 import org.vishia.gral.ifc.GralUserAction;
 import org.vishia.gral.ifc.GralWidget_ifc;
-import org.vishia.gral.swt.SwtFactory;
 import org.vishia.msgDispatch.LogMessage;
 import org.vishia.msgDispatch.LogMessageStream;
 
-/**This is a simple example for the Gral concept
- * showing an input field, a button and a output field.
- * @author Hartmut Schorrig, LPGL License
- *
- */
-//tag::classAndActions[]
-public class Test_SimpleTextButton {
+public class Test_WindMenu {
+
   
   GralUserAction actionClean = new GralUserAction("actionClean") {
     @Override public boolean exec ( int actionCode, GralWidget_ifc widgd, Object... params ) {
-      Test_SimpleTextButton.this.wdgInputText.setText("");
+      Test_WindMenu.this.wdgInputText.setText("");
       return true;
     }
   };
   
   GralUserAction actionButton = new GralUserAction("actionButton") {
     @Override public boolean exec ( int actionCode, GralWidget_ifc widgd, Object... params ) {
-      Test_SimpleTextButton.this.actionButton();
+      Test_WindMenu.this.actionButton();
       return true;
     }
   };
   //end::classAndActions[]
   
   //tag::elements[]
-  final LogMessage log;
-  
-  final GralMng gralMng = new GralMng(null);
+  final GralMng gralMng = new GralMng(new LogMessageStream(System.out));
 
-  GralPos currPos = new GralPos(this.gralMng);
+  //GralPos currPos = new GralPos(this.gralMng);
   
-  final GralWindow window = new GralWindow(this.currPos, "@screen,10+30,20+80=panelWin"
-                          , "Test_SimpleTextButton"
-                          , GralWindow.windRemoveOnClose | GralWindow.windResizeable);
+  final GralWindow window = gralMng.addWindow("@screen,10+30,20+80=panelWin"
+                          , "Test_WindMenu");
   
-  final GralTextField wdgInputText = new GralTextField(this.currPos, "@panel, 2+2, 2+20=input"
-                                   , GralTextField.Type.editable);
+  final GralMenu menuWind = this.window.getMenuBar();
   
-  final GralButton wdgButton = new GralButton(this.currPos, "@8-3, 2+10=button"
-                             , "press me", this.actionButton);
+  
+  
+  final GralTextField wdgInputText = gralMng.addTextField("@panel, 2+2, 2+20=input"
+                                   , true, null, null);
+  
+  final GralButton wdgButton = this.gralMng.addButton("@8-3, 2+10=button"
+                             , this.actionButton, "press me");
   //end::elements[]
   
   //tag::ctor[]
-  Test_SimpleTextButton ( ) {
-    this.log = new LogMessageStream(System.out);
-    this.gralMng.setLog(this.log);
+  Test_WindMenu ( ) {
     try {
-      this.window.reportAllContent(this.log);
       addContextMenuToTextField();
+      this.menuWind.addMenuItem("revert", "&test/&revers", this.actionButton);
+      this.menuWind.addMenuItem("clean", "&test/&clean", this.actionButton);
+      this.menuWind.addMenuItem("clean2", "&clean/&clean", this.actionButton);
+      this.window.reportAllContent(this.gralMng.log);
     } catch (Exception e) { 
       throw new RuntimeException("Unexpected" , e);
     }
@@ -88,7 +83,7 @@ public class Test_SimpleTextButton {
 
   //tag::main[]
   public static void main(String[] args) {
-    Test_SimpleTextButton thiz = new Test_SimpleTextButton();
+    Test_WindMenu thiz = new Test_WindMenu();
     String sAwtOrSwt = args.length >0 && args[0].length() >0 ? args[0] : "SWT";
     thiz.initGraphic(sAwtOrSwt);
     while(!thiz.window.isGraphicDisposed()) {
@@ -100,8 +95,8 @@ public class Test_SimpleTextButton {
   //tag::initImplGraphic[]
   void initGraphic(String awtOrSwt) {
     this.wdgInputText.setText("revers");
-    this.gralMng.createGraphic(awtOrSwt, 'E', this.log);
+    this.gralMng.createGraphic(awtOrSwt, 'E', null);
   }
   //end::initImplGraphic[]
-  
+
 }
