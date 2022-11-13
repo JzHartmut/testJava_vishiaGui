@@ -5,6 +5,8 @@ import org.vishia.util.Debugutil;
 
 public class Test_GuiCfg {
 
+  String sDir = "";
+  
   String[] tests = 
   { "Tabtest1.cfg"
   , "TestLabel.cfg"
@@ -14,7 +16,7 @@ public class Test_GuiCfg {
   };
   
   String[] callArgs = 
-  { "--@guiCfg/gui.args"
+  { null
   , "-SWT"
   , "-size:C"
   , null
@@ -22,10 +24,14 @@ public class Test_GuiCfg {
   };
   
   
-  public void smain() {
+  /**Executes in a loop all configs in #testArg
+   * 
+   */
+  public void executeLoop() {
+    callArgs[0] = "--@" + this.sDir + "guiCfg/gui.args";
     this.callArgs[2] = "-size:C";
     for(String testArg: this.tests) {
-      this.callArgs[3] = "-gui=guiCfg/gui" + testArg;
+      this.callArgs[3] = "-gui=" + this.sDir + "guiCfg/gui" + testArg;
       this.callArgs[4] = "-logcfg=$(TMP)/TestGuiCfg/" + testArg + "cfglog.txt";
       ViewCfg.smain(callArgs);
       Debugutil.stop();
@@ -39,7 +45,8 @@ public class Test_GuiCfg {
   
   public static void main(String[] args) {
     Test_GuiCfg thiz = new Test_GuiCfg();
-    thiz.smain();
+    if(args.length >0) { thiz.sDir = args[0]; }
+    thiz.executeLoop();
   }
   
 }
