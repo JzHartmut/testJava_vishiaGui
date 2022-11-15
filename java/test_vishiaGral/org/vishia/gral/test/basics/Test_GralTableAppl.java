@@ -54,18 +54,18 @@ public class Test_GralTableAppl {
       this.gralMng = new GralMng(this.log);
       //this.gralMng.setPos("@screen,10,20,80,120");
       int windProps = GralWindow_ifc.windRemoveOnClose | GralWindow_ifc.windResizeable;
-      this.window = new GralWindow(this.gralMng.currPos(), "@screen,10+30,20+80=tableTestWin", "Test_GralTableAppl", windProps);
+      this.window = new GralWindow(this.gralMng.refPos(), "@screen,10+30,20+80=tableTestWin", "Test_GralTableAppl", windProps);
       //
-      this.inputText = new GralTextField(this.gralMng.currPos(), "@2+2, 2+20=input", GralTextField.Type.editable);
+      this.inputText = new GralTextField(this.gralMng.refPos(), "@2+2, 2+20=input", GralTextField.Type.editable);
       GralMenu inputFieldMenu = this.inputText.getContextMenu();
       inputFieldMenu.addMenuItem("&test1", null);
       inputFieldMenu.addMenuItem("&test2", null);
       //
-      GralButton wdgBtn = new GralButton(this.gralMng.currPos(), "@,24+10=btnFillTable", "fillTable",  this.actionBtn);
+      GralButton wdgBtn = new GralButton(this.gralMng.refPos(), "@,24+10=btnFillTable", "fillTable",  this.actionBtn);
       wdgBtn.setSwitchMode(GralColor.getColor("lgn"), GralColor.getColor("ye"));
       //
       int[] columns = {20,10,-20};
-      this.myTable = new GralTable<TableData>(this.gralMng.currPos(), "@4+20,2..-20=myTable", 20, columns );
+      this.myTable = new GralTable<TableData>(this.gralMng.refPos(), "@4+20,2..-20=myTable", 20, columns );
       
     } catch (Exception e) { 
       throw new RuntimeException("Unexpected" , e);

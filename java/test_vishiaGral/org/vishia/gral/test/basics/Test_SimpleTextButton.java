@@ -6,10 +6,8 @@ import org.vishia.gral.base.GralMng;
 import org.vishia.gral.base.GralPos;
 import org.vishia.gral.base.GralTextField;
 import org.vishia.gral.base.GralWindow;
-import org.vishia.gral.ifc.GralFactory;
 import org.vishia.gral.ifc.GralUserAction;
 import org.vishia.gral.ifc.GralWidget_ifc;
-import org.vishia.gral.swt.SwtFactory;
 import org.vishia.msgDispatch.LogMessage;
 import org.vishia.msgDispatch.LogMessageStream;
 
@@ -41,16 +39,16 @@ public class Test_SimpleTextButton {
   
   final GralMng gralMng = new GralMng(null);
 
-  GralPos currPos = new GralPos(this.gralMng);
+  GralPos refPos = new GralPos(this.gralMng);
   
-  final GralWindow window = new GralWindow(this.currPos, "@screen,10+30,20+80=panelWin"
+  final GralWindow window = new GralWindow(this.refPos, "@10+30,20+80=panelWin"
                           , "Test_SimpleTextButton"
                           , GralWindow.windRemoveOnClose | GralWindow.windResizeable);
   
-  final GralTextField wdgInputText = new GralTextField(this.currPos, "@panel, 2+2, 2+20=input"
+  final GralTextField wdgInputText = new GralTextField(this.refPos, "@panel, 2+2, 2+20=input"
                                    , GralTextField.Type.editable);
   
-  final GralButton wdgButton = new GralButton(this.currPos, "@8-3, 2+10=button"
+  final GralButton wdgButton = new GralButton(this.refPos, "@8-3, 2+10=button"
                              , "press me", this.actionButton);
   //end::elements[]
   
