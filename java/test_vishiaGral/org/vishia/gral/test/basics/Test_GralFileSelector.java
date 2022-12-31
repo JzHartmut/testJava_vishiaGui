@@ -77,7 +77,7 @@ public class Test_GralFileSelector {
         , "press me", Test_GralFileSelector.this.actionButton); //Position string: next to right with 2 units space
 
 
-    GralFileSelector wdgFileSelect = new GralFileSelector(this.refPos, "@2..-10, 2..-10=selectFile", 50, new int[]{2,0,-6,-12}, null);
+    GralFileSelector wdgFileSelect = new GralFileSelector(this.refPos, "@0..-10, 0..-10=selectFile", 50, new int[]{2,0,-6,-12}, true);
     
     
     GralTextBox widgOutput = new GralTextBox(this.refPos, "@-10..0,0..0=output");
@@ -112,6 +112,14 @@ public class Test_GralFileSelector {
   void init(String awtOrSwt) {
     this.gui.gralMng.createGraphic(awtOrSwt, 'E', this.log);
 
+    this.gui.wdgFileSelect.add("vishia", "D:/vishia");
+    this.gui.wdgFileSelect.add("programs", "C:/Program Files");
+    this.gui.wdgFileSelect.add("windows", "C:/Windows");
+    this.gui.wdgFileSelect.add("Doc", "D:/docu");
+    this.gui.wdgFileSelect.add("Doc1", "D:/docu");
+    this.gui.wdgFileSelect.add("Doc2", "D:/docu");
+    this.gui.wdgFileSelect.add("Doc3", "D:/docu");
+    
     FileRemote fileIn = FileRemote.fromFile(new File("D:/vishia"));
     this.gui.wdgFileSelect.fillIn(fileIn, false);
   }

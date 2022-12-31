@@ -300,26 +300,26 @@ public class Show_Movie_SpeTelg {
     this.canvas.addFigure("dataWordsSlave2", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
       this.rxDataSlave2[ix] = this.canvas.addFigure("rxDataSlave2-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
-      this.pos.setPosition(",+1");
+      this.pos.setPosition("+");
     }
     //
     this.pos.setPosition("26-2,12+1++");
     this.canvas.addFigure("rxDataMaster", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
       this.rxDataMaster[ix] = this.canvas.addFigure("rxDataMaster-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
-      this.pos.setPosition(",+1");
+      this.pos.setPosition("+");
     }
     this.pos.setPosition("26-2,40+1++");
     this.canvas.addFigure("txDataSlave1", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
       this.txDataSlave1[ix] = this.canvas.addFigure("txDataSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
-      this.pos.setPosition(",+1");
+      this.pos.setPosition("+");
     }
     this.pos.setPosition("26-2,70+1++");
     this.canvas.addFigure("txDataSlave2", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
       this.txDataSlave2[ix] = this.canvas.addFigure("txDataSlave2-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
-      this.pos.setPosition(",+1");
+      this.pos.setPosition("+");
     }
     //
     //create the figure for the read reference arrow:
@@ -388,7 +388,7 @@ public class Show_Movie_SpeTelg {
       boolean bDynamic = (ix==12);                         // color changed from calculation
       this.txDataMaster[ix] = this.canvas.addFigure("txDataMaster-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWordsMaster[ix]), bDynamic);
       //this.plot.drawFillin(this.pos, this.colorWordsMaster[ix]);
-      this.pos.setNextPosition();
+      this.pos.setPosition(this.pos, GralPos.same, GralPos.samesize, GralPos.next, GralPos.samesize, 0, '.', 0 );
     }
     //GralPlotArea.UserUnits units = this.plot.userUnitsPerGrid(0.0f,  0.0f,  1.0f,  1.0f);
     //
@@ -434,7 +434,7 @@ public class Show_Movie_SpeTelg {
     LogMessage log = new LogMessageStream(System.out);
     this.gralMng.createGraphic("SWT", 'E', log);
     
-    this.plotArea.redraw(100, 100);
+    this.plotArea.redraw1(100, 100);
   }
   
   
