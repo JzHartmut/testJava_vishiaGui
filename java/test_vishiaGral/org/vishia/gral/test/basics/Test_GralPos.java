@@ -26,17 +26,17 @@ public class Test_GralPos {
     { { "2..4, 0..12"          , "@panel, 2..4, 0..12"            , "(0 + 119, 20 + 19)", "absolute positions from top and left, simplest case"}
     , { "2.5..4.7, 0.4..12"    , "@panel, 2.5..4.7, 0.4..12"      , "(4 + 115, 25 + 21)", "absolute positions from top and left but with fractional parts"}
     , { "@panel, 10+2,12+10"   , "@panel, 10..12, 12..22"         , "(120 + 99, 100 + 19)", "absolute position with size, given with existing panel"}
-    , { "+2.3-2.1, +1.4+7.5"   , "@panel, 12.2..14.3, 23.4..30.9" , "(234 + 74, 122 + 20)", "relative position  with size for both"}
+    , { "+2.3-2.1, +11.4+7.5"   , "@panel, 12.2..14.3, 23.4..30.9" , "(234 + 74, 122 + 20)", "relative position  with size for both"}
     , { "10-2,12+10"           , "@panel, 8..10, 12..22"          , "(120 + 99, 80 + 19)",  "absolute position with negative height for bottom line orientation of the position"}
     //5
-    , { "+-1.5-1.9, +0+8"      , "@panel, 4.6..6.5, 22..30"       , "(220 + 79, 46 + 18)",  "relative position for line negative ->above, with negative heigth, column relative to right"}
+    , { "+-1.5-1.9, +10+8"      , "@panel, 4.6..6.5, 22..30"       , "(220 + 79, 46 + 18)",  "relative position for line negative ->above, with negative heigth, column relative to right"}
     , { "-10+2,-12+10"         , "@panel, -10..-8, -12..-2"       , "(880 + 99, 900 + 19)", "absolute position from bottom and rigth with size"}
     , { "10..12,-12..-0.5"     , "@panel, 10..12, -12..-0.5"      , "(880 + 114, 100 + 19)", "absolute positions from top, absolute positions from right, very less"}
     , { "10..12,-12..-1.9"     , "@panel, 10..12, -12..-1.9"      , "(880 + 100, 100 + 19)", "absolute positions from top, absolute positions from right"}
     , { "10..12,-12..0"        , "@panel, 10..12, -12..0"         , "(880 + 119, 100 + 19)", "absolute position from top, absolute positons from right till end "}
     //10
     , { "@10++,24+6"           , "@panel, 10..12, 24..30"         , "(240 + 59, 100 + 19)", "next line for the maybe next position. height not given, use height previous"}
-    , { "@,+2+4"               , "@panel, 10..12, 32..36"         , "(320 + 39, 100 + 19)", "line not given, use same line as previous, not next line because position is given, use relative column"}
+    , { "@,+8+4"               , "@panel, 10..12, 32..36"         , "(320 + 39, 100 + 19)", "line not given, use same line as previous, not next line because position is given, use relative column"}
     , { ""                     , "@panel, 10..12, 32..36"         , "(320 + 39, 100 + 19)", "nothing given, use same position"}
     , { "@+"                   , "@panel, 12..14, 32..36"         , "(320 + 39, 120 + 19)", "nothing given, use same position"}
     , { null                   , "@panel, 14..16, 32..36"         , "(320 + 39, 140 + 19)", "null given, use same size in next position"}

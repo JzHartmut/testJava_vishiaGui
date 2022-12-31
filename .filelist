@@ -138,13 +138,13 @@
 ============================== java/test_vishiaGral/org/vishia/gral/test/ ==========================
 
 ============================== java/test_vishiaGral/org/vishia/gral/test/appl/ =====================
-2022-12-31 10:49:01  x     Show_Movie_SpeTelg.java                  ::         28.173 -1528668983 
+2022-12-31 20:42:58  x     Show_Movie_SpeTelg.java                  ::         28.171  1653142963 
 2022-11-13 21:57:50  x     Test_GuiCfg.java                         ::          1.112  0055465292 
 
 ============================== java/test_vishiaGral/org/vishia/gral/test/basics/ ===================
 2022-11-12 14:07:27  x     Test_GralArea9.java                      ::          1.716  0225808806 
 2022-12-21 19:14:45  x     Test_GralFileSelector.java               ::          7.382  2048809877 
-2022-12-31 10:21:27  x     Test_GralPos.java                        ::          9.696 -1604381633 
+2022-12-31 20:29:30  x     Test_GralPos.java                        ::          9.698  0476506766 
 2022-11-19 17:16:53  x     Test_GralTabbedPanel.java                ::          7.219 -0841247119 
 2022-11-15 10:14:48  x     Test_GralTableAppl.java                  ::          4.179  0175843493 
 2022-12-18 20:57:20  x     Test_GridSizes_cfg.java                  ::           .757  0296007408 

@@ -294,7 +294,7 @@ public class Show_Movie_SpeTelg {
     this.canvas.addFigure("dataWordsSlave1", this.pos, this.figData_Words, false);
     for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
       this.rxDataSlave1[ix] = this.canvas.addFigure("rxDataSlave1-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWhite), true);
-      this.pos.setPosition(",+1");
+      this.pos.setPosition("+");
     }
     this.pos.setPosition("10-2,70+1++");
     this.canvas.addFigure("dataWordsSlave2", this.pos, this.figData_Words, false);
@@ -422,7 +422,7 @@ public class Show_Movie_SpeTelg {
     this.dataEnvMeas = this.canvas.addFigure("dataEnvMeas", this.pos, new GralCanvasStorage.Fillin("X", this.colorValueCtrl[0]) , true);
     this.prcgetMeas = this.canvas.addFigure("prcgetMeas", this.pos, this.figData_getMeas , true);
     this.prcgetMeas.bShow = false; 
-    this.pos.setPosition(",+50");
+    this.pos.setPosition(",+20");
     this.prcsetOutput = this.canvas.addFigure("prcsetOutput", this.pos, this.figData_prcsetOutput , true).show(false);
     this.dataEnvOutput = this.canvas.addFigure("dataEnvOutput", this.pos, new GralCanvasStorage.Fillin("X", this.colorValueCtrl[6]) , true);
     for(int ix = 0; ix < this.timeRef.length; ++ix) {
