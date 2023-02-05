@@ -388,7 +388,7 @@ public class Show_Movie_SpeTelg {
       boolean bDynamic = (ix==12);                         // color changed from calculation
       this.txDataMaster[ix] = this.canvas.addFigure("txDataMaster-" + ix, this.pos, new GralCanvasStorage.Fillin("X", this.colorWordsMaster[ix]), bDynamic);
       //this.plot.drawFillin(this.pos, this.colorWordsMaster[ix]);
-      this.pos.setPosition(this.pos, GralPos.same, GralPos.samesize, GralPos.next, GralPos.samesize, 0, '.', 0 );
+      this.pos.setPosition(this.pos, GralPos.same, GralPos.samesize, GralPos.next, GralPos.samesize, '.', 0 );
     }
     //GralPlotArea.UserUnits units = this.plot.userUnitsPerGrid(0.0f,  0.0f,  1.0f,  1.0f);
     //

@@ -37,9 +37,10 @@ public class Test_GralPos {
     //10
     , { "@10++,24+6"           , "@panel, 10..12, 24..30"         , "(240 + 59, 100 + 19)", "next line for the maybe next position. height not given, use height previous"}
     , { "@,+8+4"               , "@panel, 10..12, 32..36"         , "(320 + 39, 100 + 19)", "line not given, use same line as previous, not next line because position is given, use relative column"}
-    , { ""                     , "@panel, 10..12, 32..36"         , "(320 + 39, 100 + 19)", "nothing given, use same position"}
-    , { "@+"                   , "@panel, 12..14, 32..36"         , "(320 + 39, 120 + 19)", "nothing given, use same position"}
-    , { null                   , "@panel, 14..16, 32..36"         , "(320 + 39, 140 + 19)", "null given, use same size in next position"}
+    , { "@+,+0+8"              , "@panel, 12..14, 32..40"         , "(320 + 79, 120 + 19)", "line not given, use same line as previous, not next line because position is given, use relative column"}
+    , { ""                     , "@panel, 12..14, 32..40"         , "(320 + 79, 120 + 19)", "nothing given, use same position"}
+    , { "@+"                   , "@panel, 14..16, 32..40"         , "(320 + 79, 140 + 19)", "nothing given, use same position"}
+    , { null                   , "@panel, 16..18, 32..40"         , "(320 + 79, 160 + 19)", "null given, use same size in next position"}
       
     };
   
@@ -130,7 +131,7 @@ public class Test_GralPos {
     refPos.setPosition(refPos, 10, GralPos.size - 2, 0, 0);
     checkPosition(test, refPos, 3, "", "@panel, 8..10, 0..0", "(0 + 999, 80 + 19)", "sets a basic position with size");
     //
-    refPos.setPosition(refPos, GralPos.refer + 2, GralPos.size - 2, 50, GralPos.size-2.4f, 0, 'd', 0);
+    refPos.setPosition(refPos, GralPos.refer + 2, GralPos.size - 2, 50, GralPos.size-2.4f, 'd', 0);
     checkPosition(test, refPos, 4, "", "@panel, 10..12, 47.6..50", "(476 + 23, 100 + 19)", "sets a position with refer to line and size, with direction down");
     //
     refPos.setPosition(refPos, GralPos.next, GralPos.samesize, GralPos.same, GralPos.samesize);
@@ -141,7 +142,7 @@ public class Test_GralPos {
     checkPosition(test, refPos, 6, "", "@panel, 14..16, 47.6..50", "(476 + 23, 140 + 19)", "sets a next position automatically (not with setPosition(...)");
     //
     //The next operation is not recommended, use the float version. 
-    refPos.setFinePosition(0, 5, GralPos.samesize, 0, 20, 3, -10, 7, 0, 'r', 0, 5, refPos);
+    refPos.setFinePosition(0, 5, GralPos.samesize, 0, 20, 3, -10, 7, 'r', 0, 5, refPos);
     checkPosition(test, refPos, 6, "", "@panel, 0.5..2.5, 20.3..-9.3", "(203 + 703, 5 + 19)", "sets using setFinePosition(...) with integer grid and fine grid");
     window.remove();
   }

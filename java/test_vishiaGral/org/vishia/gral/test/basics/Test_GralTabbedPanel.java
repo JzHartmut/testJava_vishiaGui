@@ -67,8 +67,8 @@ public class Test_GralTabbedPanel {
                             , "ExampleSimpleTextButton"
                             , GralWindow.windRemoveOnClose | GralWindow.windResizeable);
     
-    final GralPanelContent tab1 = this.window.mainPanel.addTabPanel("tab1", "1");
-    final GralPanelContent tab2 = this.window.mainPanel.addTabPanel("tab2", "2");
+    final GralPanelContent tab1 = this.window.mainPanel.addTabPanel("tab1", "1", false);
+    final GralPanelContent tab2 = this.window.mainPanel.addTabPanel("tab2", "2", true);
     
     final GralTextField wdgInputText = new GralTextField(this.refPos, "@tab2, 2+2, 2+20=input"
                                      , GralTextField.Type.editable);

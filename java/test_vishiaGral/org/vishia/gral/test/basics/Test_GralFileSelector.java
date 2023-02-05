@@ -12,9 +12,13 @@ import org.vishia.gral.base.GralTextField;
 import org.vishia.gral.base.GralWidget;
 import org.vishia.gral.base.GralWindow;
 import org.vishia.gral.ifc.GralUserAction;
+import org.vishia.gral.ifc.GralWidget_ifc;
+import org.vishia.gral.widget.GralFileProperties;
 import org.vishia.gral.widget.GralFileSelector;
+import org.vishia.gral.widget.GralViewFileContent;
 import org.vishia.msgDispatch.LogMessage;
 import org.vishia.msgDispatch.LogMessageStream;
+import org.vishia.util.ExcUtil;
 import org.vishia.util.KeyCode;
 
 /**This class contains a simple example with a switching button, an input text field and a output
@@ -68,16 +72,22 @@ public class Test_GralFileSelector {
     final GralMng gralMng = new GralMng(new LogMessageStream(System.out));             // on Gral widget structuring no log necessary. 
   
     GralPos refPos = new GralPos(this.gralMng);            // use an own reference position to build
-    
+
+    GralViewFileContent fileViewer = new GralViewFileContent(refPos, "@50..100, 50..100=fileViewer" + ".view");
+
     final GralWindow window = new GralWindow(this.refPos, "@10+30,20+80=mainWin"
-                            , "ExampleSimpleTextButton"
+                            , "Test GralFileSelector"
                             , GralWindow.windRemoveOnClose | GralWindow.windResizeable);
     
     final GralButton wdgButton1 = new GralButton(this.refPos, "@8-3, -8..-1 =button1"
         , "press me", Test_GralFileSelector.this.actionButton); //Position string: next to right with 2 units space
 
-
-    GralFileSelector wdgFileSelect = new GralFileSelector(this.refPos, "@0..-10, 0..-10=selectFile", 50, new int[]{2,0,-6,-12}, true);
+    
+    final GralFileProperties wdgFileProps = GralFileProperties.createWindow(this.refPos, "@8+30, 30+52=fileProps", "file properties");
+    
+    final GralFileSelector wdgFileSelect = new GralFileSelector(this.refPos, "@0..-10, 0..-10=selectFile", null
+        , 50, new int[]{2,0,-6,-12}, Test_GralFileSelector.this.cfg.bWithFavor, Test_GralFileSelector.this.cfg.sExecBtn
+        , this.fileViewer, this.wdgFileProps);
     
     
     GralTextBox widgOutput = new GralTextBox(this.refPos, "@-10..0,0..0=output");
@@ -92,10 +102,22 @@ public class Test_GralFileSelector {
   /**Instance of inner class contains the graphical elements.*/
   protected final GuiElements gui;
   
+  private static class Cfg {
+    boolean bWithFavor;
+    
+    String sExecBtn;
+  }
+  
+  protected Cfg cfg = new Cfg();
+  
+  char sizeGui = 'G';
+  
   int ctKeyStroke1 = 0, ctKeyStroke2 = 0;
   
   Test_GralFileSelector ( String[] args)
   {
+    this.cfg.bWithFavor = args[0] !=null && args[0].contains("f") ? true : false;
+    this.cfg.sExecBtn   = args[0] !=null && args[0].contains("s") ? "Save as" : null;
     this.log = new LogMessageStream(System.out);  // may also write to a file, use calling arguments
     this.gui = new GuiElements();                 // initialize the graphic Gral Widgets (not the implementig graphic).
   }
@@ -111,15 +133,16 @@ public class Test_GralFileSelector {
   //tag::initImplGraphic[]
   void init(String awtOrSwt) {
     this.gui.gralMng.createGraphic(awtOrSwt, 'E', this.log);
-
-    this.gui.wdgFileSelect.add("vishia", "D:/vishia");
-    this.gui.wdgFileSelect.add("programs", "C:/Program Files");
-    this.gui.wdgFileSelect.add("windows", "C:/Windows");
-    this.gui.wdgFileSelect.add("Doc", "D:/docu");
-    this.gui.wdgFileSelect.add("Doc1", "D:/docu");
-    this.gui.wdgFileSelect.add("Doc2", "D:/docu");
-    this.gui.wdgFileSelect.add("Doc3", "D:/docu");
-    
+    if(this.cfg.bWithFavor) {
+      this.gui.wdgFileSelect.add("vishia", "D:/vishia");
+      this.gui.wdgFileSelect.add("programs", "C:/Program Files");
+      this.gui.wdgFileSelect.add("windows", "C:/Windows");
+      this.gui.wdgFileSelect.add("Doc", "D:/docu");
+      this.gui.wdgFileSelect.add("Doc1", "Q:/VIDEOS");
+      this.gui.wdgFileSelect.add("tmp", "T:/tmp");
+      this.gui.wdgFileSelect.add("Doc3", "D:/docu");
+      this.gui.wdgFileSelect.setActionOnSaveButton(this.actionSave, "save as");
+    }
     FileRemote fileIn = FileRemote.fromFile(new File("D:/vishia"));
     this.gui.wdgFileSelect.fillIn(fileIn, false);
   }
@@ -135,19 +158,58 @@ public class Test_GralFileSelector {
     //Now do nothing because all actions are done in the graphic thread.
     //A more complex application can handle some actions in its main thread simultaneously and independent of the graphic thread.
     //
-    while(this.gui.gralMng.isRunning()) {
+    while(this.sizeGui >= 'A') {
       if(gui.wdgButton1.wasReleased()) {
         this.gui.widgOutput.append("Button2 " + (++this.ctKeyStroke2)  + "\n");
+        this.gui.gralMng.closeImplGraphic();
       }
       try{ Thread.sleep(100); } catch(InterruptedException exc){}
-      
+      if(this.gui.gralMng.isImplementationGraphicTerminated()) {
+        this.sizeGui -= 1;
+        if(this.sizeGui >= 'A') {
+          this.gui.gralMng.createGraphic("SWT", sizeGui, this.log);
+        }
+      }
     }
   }
   //end::execute[]
 
 
 
+  public static String testMain = "currdir = <:>C:/<.>;\n"
+      + "\n"
+      + "main(){\n"
+      + "  call testGralFileSelector();"
+      + "}\n";
+  
+  public static String testScript = 
+        "sub testGralFileSelector() {"
+      + "<+out>test<.+n>;"
+      + "Obj gralMng = new org.vishia.gral.base.GralMng(jztc.log());"
+      + "Obj widg = java org.vishia.gral.widget.GralFileSelector.createGralFileSelectorWindow(\"@20+80,20+30=wind\", \"Test GralFileSelector Window\", gralMng);"
+      + "gralMng.createGraphic(\"SWT\", \"C\", null);"
+      + "Obj startDir = java org.vishia.fileRemote.FileRemote(File: \"C:/D\"); "
+      + "widg.openDialog(startDir, \"Test GralFileSelector Window - open\", \"execute\", null);"
+      + "while(gralMng.isRunning()){ sleep(10); }"
+      + "}\n";
+  
+  private static void testWindow() {
+    GralMng gralMng = new GralMng(new LogMessageStream(System.out));
+    GralFileSelector widg = GralFileSelector.createGralFileSelectorWindow(gralMng, "@30+70,20+40=wind", "Test GralFileSelector Window", null); 
+    gralMng.createGraphic("SWT", 'C', null);
+    FileRemote startDir = FileRemote.fromFile(new File("C:/D"));
+    widg.openDialog(startDir, "Test GralFileSelector Window - open", "execute", null, null);
+    while(gralMng.isRunning()) { try { Thread.sleep(10);} catch(Exception exc) {}}
+  }
+  
 
+  
+  static void testGui ( String[] args){
+    Test_GralFileSelector thiz = new Test_GralFileSelector(args); // constructs the main class
+    thiz.init("SWT");
+    thiz.execute();
+  }
+  
 
   /**The main routine. It creates the factory of this class
    * and then calls {@link #main(String[], Factory)}.
@@ -158,17 +220,30 @@ public class Test_GralFileSelector {
   public static void main(String[] args)
   {
     try {
-      Test_GralFileSelector thiz = new Test_GralFileSelector(args); // constructs the main class
-      thiz.init("SWT");
-      thiz.execute();
+      //testWindow();
+      //org.vishia.jztxtcmd.JZtxtcmd.execute(testMain + testScript);
+      testGui(args);
     } catch (Exception exc) {
-      System.err.println("Exception: " + exc.getMessage());
-      exc.printStackTrace(System.err);
+      System.out.println(ExcUtil.exceptionInfo("unexpected", exc, 1, 10));
+//      System.err.println("Exception: " + exc.getMessage());
+//      exc.printStackTrace(System.err);
     }
   }
   //end::main[]
 
 
+  
+  
+  /**Operation on button pressed, on the application level.
+   * It uses the known references to the GralWidget. 
+   * Immediately access to implementation widgets is not necessary.  
+   * This operation is executed in the Graphic thread. 
+   * Be carefully, do not program longer or hanging stuff such as synchronized or sleep.
+   */
+  void actionSave(File file) throws IOException {
+    this.gui.widgOutput.append("Save >>" + file.getAbsolutePath() + "<<\n");
+  }
+  
 
   //tag::action[]
   /**Operation on button pressed, on the application level.
@@ -199,4 +274,23 @@ public class Test_GralFileSelector {
   };  
   //end::action[]
 
+  
+  /**Action operation is called in the event handler of the appropriate widget. */
+  private final GralUserAction actionSave = new GralUserAction("actionSave")
+  { 
+    @Override
+    public boolean exec(int actionCode, GralWidget_ifc widgd, Object... params)
+    { if(KeyCode.isControlFunctionMouseUpOrMenu(actionCode)){
+        try{ 
+          FileRemote file = (FileRemote)params[0];
+          Test_GralFileSelector.this.actionSave(file);         // defined of class level of the main (environment) class.
+        } catch(Exception exc){                            // Exceptions should catch anyway. but not expected.
+          Test_GralFileSelector.this.log.writeError("Unexpected", exc);
+        }                           
+      }
+      return true;  
+    } 
+  };  
+
+  
 }
