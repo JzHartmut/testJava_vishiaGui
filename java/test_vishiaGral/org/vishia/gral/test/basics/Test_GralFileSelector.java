@@ -143,8 +143,8 @@ public class Test_GralFileSelector {
       this.gui.wdgFileSelect.add("Doc3", "D:/docu");
       this.gui.wdgFileSelect.setActionOnSaveButton(this.actionSave, "save as");
     }
-    FileRemote fileIn = FileRemote.fromFile(new File("D:/vishia"));
-    this.gui.wdgFileSelect.fillIn(fileIn, false);
+    //FileRemote fileIn = FileRemote.fromFile(new File("D:/vishia"));
+    //this.gui.wdgFileSelect.fillIn(fileIn, false);
   }
   //end::initImplGraphic[]
 

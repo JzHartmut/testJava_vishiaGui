@@ -97,7 +97,8 @@ public class Test_GralPos {
   
   
   void checkPosition(TestOrg test, GralPos refPos, int ix, String posString, String sExpectPos, String sExpectPix, String sTestDescr) {
-    GralRectangle pix = this.gralMng.calcWidgetPosAndSize(refPos, 1000, 1000, 0,0);
+    GralRectangle parentPix = new GralRectangle(0,0,1000,1000);
+    GralRectangle pix = this.gralMng.calcWidgetPosAndSize(refPos, parentPix, 0,0);
     String sPos = refPos.toString();
     //int eq = test.expect(sPos, sExpectPos, 5, posString + ": " + sPos + " != " + sExpectPos + ": "+ this.tests[ix][3]);
     int eq = StringFunctions.comparePos(sPos, sExpectPos);
