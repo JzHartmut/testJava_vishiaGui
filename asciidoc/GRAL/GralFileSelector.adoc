@@ -1,0 +1,115 @@
+= GralFileSelector - Widget for working with files (Graphical Adaption Layer - the vishia Gui) 
+:toc:
+:toclevels: 5
+:sectnums:
+:sectlinks:
+:max-width: 52em
+:prewrap!:
+:cpp: C++
+:cp: C/++
+:stylesheet: ../my.css
+
+
+
+== Motivation
+
+This is the approach and using description of the classes
+
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/widget/GralViewFileContent.html[org.vishia.gral.widget.GralViewFileContent]
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/widget/GralFileSelector.html[org.vishia.gral.widget.GralFileSelector]
+
+File selection is one of most used actions in a GUI. 
+The operation systems offers some standard solutions, but there are sometimes more requirements for that.
+
+== Appearance
+
+The GralFileSelector have the capability to select files, but can manage some favor path to support different locations in the file system. 
+Look on the appearance.
+
+image:../../img/Gral/GralFileSelectWindow_in_CurveViewAppl.png["GralFileSelectWindow in Appllication", float="right"]
+
+'''
+
+This image shows a GralFileSelector window used to open a data file for this curve view application. 
+
+You see several tabs, because files can be stored on different positions on the file system.
+Selecting the "+sel" tab opens a complete list of all file directory locations with the given short identifier.
+ 
+The line below contains a file name which is valid on pressing the [read data] button. 
+The file name can be touched and changed, especially for writing a file with a new file name. 
+But here it is also possible to double click or [enter] a line in the file list, to select exact this file.
+The yellow line above the list is the current directory. 
+Any proper path, also using backslashes can be pasted there, to simple and fast selecting a directory
+given via clipboard from any other application. With a new given directory the "__favors__", the possible tabs
+can be enhanced by own entries. And also of course facors and tabs can be removed.  
+
+image:../../img/Gral/GralFileSelector_in_Fcmdl.png["GralFileSelector in Fcmd", float="right"]
+
+'''
+
+This is another application for the same class, here not presented as window but as panel content. 
+You see three instances of the 
+link:../../docuSrcJava_vishiaGral/org/vishia/gral/widget/GralFileSelector.html[GralFileSelector.java]
+
+Left side the favor table is selected, here containing all drives. You see two drives are selected as file table,
+the other drives are only mentioned in the table yet.
+In the mid there is an active file panel, beside some more as tabs. Here the [Execute] button is not present,
+not necessary in this application, but then also the line with the file name is not present. 
+It is the simple form for selecting files. 
+The work do with files is organized in specific dialog windows.
+Right side is another GralFileSelector. The advanatage for the file commander is, work with two or three panels
+to compare files and file trees.
+
+ 
+== Storing current file in each used directory
+
+Sometimes one walk to the file tree, select one file, but then go to the parent and in another directory to view in several files.
+If one goes back to the directory before, it will be nice **to select exact the same file which was selected on leaving the directory**.
+Because this file was the point of interest.
+
+Exact this is supported by the GralFileSelector. 
+On leaving a directory it stores the path to the last selected file in this directory path.
+to restore it on entry again. It is the link:../../docuSrcJava_vishiaGui/org/vishia/gral/widgets/GralFileSelector.html#idxSelectFileInDir[].
+Because it is inside the `GralFileSelector` instance, this is of course separated if you have more instances,
+but it is only stored so long the instance is active, also over closing and reopen a not removed window,
+but not outside of the running application. But it is possible to store and restore this list in the application
+accessing this container. 
+
+== Select some favor paths
+
+On start of the GralFileSelector the favor table is shown (if given). 
+Here some paths are listed, with a short label (left column). 
+You can also edit this table manually, be carefully to copy a correct path (usual via clipboard). But you can copy with slash or with backslash. 
+It is converted to a unified slash presentation also for MS-Windows.
+
+If you select one line of the favor table, then press [Enter] or double klick, 
+then the file table will be selected with the given path. 
+But if this favor was already used before, it is a difference which field is selected in the favor table. 
+If it is in the left column, where the label is given, then the last selected directory is restored, 
+independent of the favor's directory.
+This is sensible if you switch between favors, but you have your current selection on the files.
+
+But if you have selected the right column with the directory path, this path is set newly for the file table. It is the favor's directory itself.
+Of course if you have not selected this favor before, always the favor's path is used firstly. 
+This is true so long the GralFileSelector is instantiated, also on temporary closing (set invisible) and reopen, so long as the session is used. 
+It means if you want to deal with some files, you have every time your last selected favor directories and files.
+
+== edit the favors
+
+Of course some favors can be given by the application, but it is your choice.
+You can anytime change the favor directory by typing, or more recommended paste from clipboard a new path. 
+You can paste a path with backslashes also, but internally always slashes are used.
+You can also delete, move, add new favors with the context menu in the favor table (right mouse usual).
+
+== Show and change file properties, rename and copy files
+
+The `GralFileSelector` can be combined with the dialog window which
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/widgets/GralFileProperties.html[GralFileProperties].
+It should be instantiated before and aggregated. 
+This makes it possible to use only one instance for all three panels of 'The.file.Commander',
+usual only one `GralFileSelector` instance works with it:
+
+
+
+
+

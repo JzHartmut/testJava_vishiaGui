@@ -195,7 +195,7 @@ public class Test_GralFileSelector {
   
   private static void testWindow() {
     GralMng gralMng = new GralMng(new LogMessageStream(System.out));
-    GralFileSelector widg = GralFileSelector.createGralFileSelectorWindow(gralMng, "@30+70,20+40=wind", "Test GralFileSelector Window", null); 
+    GralFileSelector widg = GralFileSelector.createGralFileSelectorWindow(gralMng, true, "@30+70,20+40=wind", "Test GralFileSelector Window", null); 
     gralMng.createGraphic("SWT", 'C', null);
     FileRemote startDir = FileRemote.fromFile(new File("C:/D"));
     widg.openDialog(startDir, "Test GralFileSelector Window - open", "execute", null, null);

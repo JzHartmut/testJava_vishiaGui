@@ -1,0 +1,1475 @@
+= Gral - Graphical Adaption Layer - the vishia Gui 
+:toc:
+:toclevels: 5
+:sectnums:
+:sectlinks:
+:max-width: 52em
+:prewrap!:
+:cpp: C++
+:cp: C/++
+:stylesheet: ../my.css
+
+Comprehensive widgets:
+
+link:GralFileSelector.html[]
+
+
+== Motivation
+
+In Java some different Graphical User Interfaces (GUI) exists, beginning with the basically AWT 
+(Advanced Widget Toolkit) from the 1990th, which was enhanced with the Swing classes.
+Swing was powerful, but also designated as "__overengineered__". But is is currently in use.
+
+With the development of the known and familiar Eclipse GUI (link:www.eclipse.org[]) a new approach comes: "SWT",
+named as "__Standard Widget Toolkit__". Intermediate __Java FX__ comes, but it is not really substantiated.
+
+Currently SWT seems to be the favor.
+
+All Graphical User Interface approaches in all operation systems in all languages are similar.
+The differences are in the details. This fact is accepted by SWT: SWT uses the graphical properties 
+of the underlying operation system and adapts it only to Java. 
+Because the approaches of the operation system's graphical capabilities are similar, this adaption is possible and successfully.
+
+But nevertheless, the problem is:
+
+* You may need to decide which Graphical System in Java should be used: Simple AWT only, The old Swing, SWT, Java-FX, or ...
+* Beside knowledge of the graphic system's capabilities you need detailed knowledge about Thread usage, specifics for event handler, etc. It is not simple.
+
+An often occurring phenomenon in graphical applications is: Since the handling of events must be prior in the graphic thread, a lot of processing is put into the graphic thread. The PC processor is fast, all runs. But sometimes some waiting conditions occur, for example for file reading in a network connection. Then - unexpected - the graphic thread hangs, the mouse pointer shows a sandglass in the older Windows or a rotating wheel since a few years, all we know that. Hence, the handling of events should be better supported by a proper multi threading. See chapter <<#Threads>>
+
+The here presented vishia-Gral was developed by me in a time approximately in 2010 with some knowledge of Swing, new knowledge of SWT and the goal to use both, in a better way. The primary idea of Gral was: Select the used Graphical system only in implemenation level, 
+not for user programming. The user programming should be independent of the used implementation Graphic. SWT or AWT or Swing or Java-FX - a not user-related decision. Because all systems are similar, it is possible.
+
+The second approach of Gral is, solve the problems with the thread, simplify the handling. 
+
+And a last but not least approach was: Support textual (scripting) definition of the graphic. 
+
+In the years from 2010 some developing steps are done, the graphic was elaborately used by some small also industry projects. 
+The system was improved, and this documentation should be  for the really proper usable version written in the year 2022.
+
+This GRAL graphic user interface solution is for technical GUI graphics, not for best and smart solutions. It is a simple 2D graphic, not 3D and not too much in nice not need appearance.
+
+
+== Approaches
+
+[#apprGralPos]
+=== Position of widgets
+
+See also <<#GralPos>>
+
+Often a so named "__float layout__" is favored. This simplifies the positioning of widgets. But the __float layout__ is simple as also quick and - dirty. The position of widgets in an application should be a little bit substantiated. The __float layout__ is not supported by Gral.
+
+Usual graphic positions are pixel oriented, the pixel of the screen. But from user's eyes, the pixel are subordinated. It is a high effort to calculate the pixel position, height and width, the numbers are not related to user's thinking. 
+
+That's why another system is used: **Grid positions**.
+
+The basic grid is oriented to the normal text size.
+A normal text with a font in the standard proper read-able size is presented by 2 units of the Gral-position
+in vertical direction (line) and approximately 1 unit per character in horizontal direction.
+Of course the horizontal character size depends on the font properties.
+A text can be presented in a smaller or larger font.  
+The text height depends on the height given in the position of the text. A very small font is presented by 1 vertical gral-unit.
+Such a text can be used as short title for text input fields (prompt) or adequate.
+
+A button is able to proper present with 3 or 2 vertical gral units. A small check box may be presented 
+with 1 x 1 gral unit.
+The size of a window in Grid units is approximately 80 x 120 (height x width), this is 720 x 480 pixel on small solution till 1200 x 1800 pixel in a fine solution. It means it fills the screen of a raw solution monitor (640 x 480 is 80 x 106 grid units, 6 pixel/grid) as also on a standard monitor (1920 x 1080 with 12 pixel/grid).  
+
+A gral unit should be have the same distance in vertical as in horizontal direction. It depends on the 
+graphical implementation. One gral unit can have 6 to 18 pixel, 
+depending on the requested size of appearance in comparison with the given display pixel size. 
+Any graphic can be shown in several sizes of appearance, given with a start parameter of the application
+(see {@link org.vishia.gral.area9.GuiCallingArgs#sSize}) respectively the parameter size of {@link GralGridProperties#GralGridProperties(char size)} as character 'A' till 'H'.
+
+**Fine positions**
+
+Either the positions are given with 2 integer values as 'fundamental positions'. 
+That are the position described above.
+Or they can be given with a float value or a second int named 'fractional part'. From the float value
+only the first digit after point is used, a fractional part can be given
+with a value from 0 to 9. 
+
+The fine position divides one gral position into 5 or into 6 fine positions. 
+The odd numbers divide into 6 positions. In this kind a gral position is able to divide by 2, 3 and 6:
+
+* 1: 1/6 = 0.1333
+* 3: 1/3 = 0.3333
+* 5: 1/2 = 0.5
+* 7: 2/3 = 0.6667
+* 9: 5/6 = 0.8667
+
+The even numbers divide into 5 positions: 
+
+* 2: 1/5 = 0.2
+* 4: 2/5 = 0.4
+* 6: 3/5 = 0.6
+* 8: 4/5 = 0.8
+
+The fine positioning enables a fine positioning of widgets in respect to the fundamental positions.
+
+With a grid size of 10 (represented by letter 'E', see link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralGridProperties.html[])
+a fine unit is exact one pixel. On a more raw solution (lesser pixel per grid unit) not any fine unit can be really represented. 
+But the division in 1/6 ...5/6 is proper (odd number), and also the division in 1/5..4/5 (even number), but not any combination.
+ 
+Look on the appearance of texts in the Graphic (GralLabel) with different sizes and screen resolutions:
+
+image:../../img/Gral/TextFont-A.png[float="right"]
+This are texts with different size for the real raw solution, -size=A, for a small monitor for example Standard VGA. 
+The image has original 157 x 101 pixel, it is ~ 1/4 in both directions of the area of a standard VGA monitor with 640x480 pixel.
+The font size of 1.0 is borderline, but able to guess what is meant. It is only for example known promps for fields.
+The font size of 2.0 is proper readable also in this solution, it is the standard text font.
+If you have a monitor with a fine pixel size, you may increase your zoom to read it. 
+
+'''
+
+image:../../img/Gral/TextFont-C.png[float="right"]
+This is -size=C, i guess readable on a monitor with raw solution (greater pixel size).
+ 
+image:../../img/Gral/TextFont-E.png[float="left"]
+This is -size=E, one fine grid unit is one pixel.
+ 
+'''
+
+image:../../img/Gral/TextFont-H.png[float="right"]
+And this -size=H, is only sensible on a large monitor with fine pixel.
+The programm is anywhere the same, only the size character as argument on start of the GUI is different.
+
+'''
+
+The script to produce this output is the following, no programming is necessary, using 
+link:
+
+----
+@30+1.0, 2+20: Text("abg^AZ size 1.0");
+@31.2+1.2, 2+20: Text("abg^AZ size 1.2");
+@32.4+1.5, 2+20: Text("abg^AZ size 1.5");
+@34+2.0, 2+20: Text("abg^AZ size 2.0");
+@36+2.5, 2+20: Text("abg^AZ size 2.5");
+@38.5+3.0, 2+25: Text("abg^AZ size 3.0");
+@41.5+4.0, 2+30: Text("abg^AZ size 4.0");
+----
+
+
+**String or numeric given positions**
+
+The positions can be specified numerically, absolute or relative. 
+For scripting it is necessary to process position specifications in textual form.
+This textual form is also usable for normal Java programming. 
+Parsing of the position String is not an high effort, it is better write- and readable.
+
+Usual the name of a widget and the position is joined in one String, for example given as
+
+ "@panel,10+2,12..-15=myWidget"
+ 
+For this example the panel where to place is given. 
+The widget, for example a text input field, should be placed in the 10^th^ line (y) with 2 lines height,
+and 12 grid units in horizontal direction from left, 15 grid units from right. 
+It means the widget has a width depending from the panel or windows size, 
+and of course, the widget is only visible if the window/panel has at least a width of 28 grid units.
+
+For more capabilities see <<#GralPos-String>>
+
+**Relative positions**
+
+A position of the next widget to define can be derived from the position before, with a relative number. 
+Also the next position in the desired direction can be used automatically without manual given position. 
+This is similar such approaches as float layout.
+
+**Resizing**
+
+Of course if a window or panel is resized, the pixel positions of the widget are calculated newly 
+from the given grid positions with all relative relations. 
+To get a proper layout on different windows sizes it is possible to define some widgets
+as distance from left and right, or in percents from the size. Hence the windows can be shifted lesser,
+only the important widgets are visible to get an overview on the screen, 
+and on demand the window can be increased to the necessary size. 
+
+
+
+=== Definition of the GUI appearance and implementation of the Graphic
+
+In vishiaGui - Gral the definition of the Graphical appearance is separated and independent of the Graphic implementation.
+All Widgets are simple Java classes first unrelated to graphic implementation. 
+
+They contain in its super class (link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[])
+
+* The position and the size of the widget
+* The type, some properties used for appearance
+* Static and Dynamic data to show (text, values, link to variables, data paths).
+Especially dynamic data can be read and write independent of the graphic thread. 
+The actualizing is done by standard event handler without user programming effort.
+To show new given data only link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html#redraw-int-int-[] should be called from the users thread which is automatically done by the set operations. See chapter <<#Threads>>.
+It creates an entry in the link:/docuSrcJava_vishiaGui/org/vishia/gral/base/GralGraphicThread.html[] 
+timer event queue which does the work in a standard way without user effort.
+
+* Some operations (implementation of link:../../docuSrcJava_vishiaGui/org/vishia/gral/ifc/GralUserAction.html[])
+which should be executed in some situations. 
+This user actions are executed in the graphic thread, but they can/should deal with other threads. 
+
+It means, all appearance and data exists without the implementation graphic. 
+One advantage is: the implementation graphic can be removed, unloaded and built newly, for example if any crash or trouble situation occurs. The implementation can also be existing in a separated device, only connected by communication lines.
+
+This concept was not present in the beginning in 2010. 
+In 2010 the implementation graphic was created in the same moment as the GUI was defined.
+The interface link:../../docuSrcJava_vishiaGui/org/vishia/gral/ifc/GralMngBuild_ifc.html[] was responsible to
+creating both, the implementation parts of the GUI and the Gral independent wrapping classes of the gral.
+Hence the implementing functions should regard already the implementation graphic.
+
+This interface [J]`GralMngBuild_ifc` is still existing, but now only the Gral classes are created with.
+
+The other new possibility, firstly developed ~2015..16 is: Creating the Gral classes 
+by their constructor immediately, not using the [J]`GralMngBuild_ifc`. 
+This seems to be more obviously in programming.
+Both approaches are usable, see <<#createGraphic>>
+
+The implementation of the Graphic with the specific graphic classes is done 
+after the definition of the appearance with the Gral Graphic classes . 
+It can be repeated on trouble situations as mentioned above:
+See <<#startImplGraphic>>
+
+
+=== Independence of Gral Widgets from the operation system's capabilities
+
+In Java-Swing only basic capabilities of the operation system are used from Java level.
+Hence the appearance and the features are full defined on Java level.
+
+The SWT has chosen a different way, just because of bad experience with Swing in calculation time
+(the computers in the 1990^^th^^ were a little bit slower) 
+and the better approach: Subordinate under appearance rules of the operation system with other non Java applications.
+
+Both ways have advantages and disadvantages.
+
+Often an Operation system offers appearances of the Graphic which are really not necessary, but nice or smart. 
+This may be interested for users which likes nice and smart, but not for technician. 
+For example rounded corners, smart (but bad distinguishable) colors of title bars and such. 
+That are (partial specific) capabilities of one operation system - with lesser relevance. 
+The advantage of a operation system-related graphic is: You can use it.
+ 
+On the other hand the basic capabilities to draw proper widgets are given for all operation systems 
+in a relative standardized form. If simple forms are used in an well-thought-out kind,
+you get a proper appearance which does not need too much calculation time and runs also on simple systems.
+
+Hence drawing some widgets by simple basic solutions are reasonable. 
+
+For example, the representations of buttons in Gral are programmed with very simple lines,
+showing a pressed or not pressed button, also with some colors for checked or not checked buttons.
+The problem was, that the original MS-Windows button was very nice and smart, but  can't deal with color on the button
+(in ~2010, XP). Hence the button was replaced by this simple solution, which is still present and proper.
+
+Another problem was operate with tables. Windows has only support selecting a full line,
+not selecting a cell with a color. That's why, also in 2010, a table was **not** built with the SWT access
+to the Windows OS-API table, but with some simple text fields. 
+The additional advantage was also, the data are completely separated from the graphical table content. 
+The data are stored in ordinary Java container, independent from the Graphic.
+Only for showing (and also input) data in table cells, the data are transprorted to the graphic widgets
+and updated from there. This is a very fast operation (for the computers after the 2000^th^),
+and it is better for handling. See chapter <<#GralTable>> 
+
+=== What is a widget and a panel
+
+The term "__widget__" should be known, it is one part of the GUI in a window or a panel. 
+A panel is either the whole window area, or some sub areas, or "__tabbed panels__" with selection tab. 
+A panel is a container of widgets.
+
+A widget is:
+
+* a) either an immediately existing widget of the underlying operation system, whereas all operation systems have similar capabilities.
+This is for example an input field, a simple text (in Swt a Label) or also a button. 
+* b) or it is a composition of a few associated widgets of the underlying operation system. 
+This is given for example by a text input field with a prompt. 
+The input field and the prompt builds one GralWidget, but two implementation widgets. 
+For the variant b) the association between the GralWidget and the implementing widgets are done in the implementation level.
+Hence the implementation can decide how to implement. This is done for example for the GralTable, which has a counterpart, the SwtTable.
+
+* c) Some Gral Widgets are comprehensive and have not an full programmed counterpart in the implementation.
+Instead this widgets have a "construction plan" in the GralWidget to access existing implementation widgets
+in a defined appearance (the position) or specific callback handler at Gral level (for example mouse events). 
+For that the implementing level does not need specific implementation. An example for that is the GralFileSelector.
+
+* d) or the widget is anything that is drawn on the graphical screen by basic operations.
+Typical for the last choice is the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCurveView.html[].
+The curves have to be drawn anyway, the grid is drawn specially, and also the cursors and some texts.
+
+For b) only a few widgets from the implementation level are necessary. 
+Some implementation level widget possibilities are not used, instead the Gral widgets are implemented by other standard widgets.
+This is especially for a table, which is usual supported from the operation system, but not in a sufficient form.
+Hence it is implemented by a set of simple text fields, which are visible or not (changing the size of the table). 
+This is a proven solution also since 2010, see chapter <<#GralTable>>
+
+
+
+For d) the operation system should offer a minimal set of graphic capabilities:
+
+* Background color definition, fill the background with a color.
+* Draw lines in different colors ans sizes
+* Text, selecting fonts, write texts in different directions.
+* A text field with or without frame and background color. Should be editable or non editable.
+* A text drawn without background.
+
+All others can be built by proper draw operations of the implementation widgets.
+
+It is possible to use more capabilities of the operation system and the implementation graphic, if that is proper.
+
+
+
+[#threading]
+=== The Graphic Thread and processing in other threads
+
+See also chapter <<#Threads>>
+
+In Swing it is sometimes possible to access values from a Widget in another thread. 
+In SWT this is consequently: All access or set operations can only be executed
+in the graphic thread. Elsewhere an Exception is thrown: `org.eclipse.swt.SWT.ERROR_THREAD_INVALID_ACCESS` 
+With that decision some possible non obvious thread problems are prevented.
+
+What are the usual approaches for GUI operations:
+
+* The so named event listeners, in SWT based on `org.eclipse.swt.internal.SWTEventListener`
+are called by the execution thread of the graphic. 
+This is a specific Graphic thread, or in SWT the user thread which calls [J]`swt.widgets.Display#readAndDispatch()`
+This thread should be always able to run, to accept inputs from the user to the GUI (mouse, selecting, etc.). 
+
+* The implementation operations of the different event listener are programmed by the application. 
+This operations are executed primary in the graphic thread.
+
+* Of course the access to all Widgets is possible in this graphic thread. 
+It means the application can do all necessary things in this graphic thread.
+It can be interact with other threads with known Java thread mechanism outside of the graphic,
+for example using the `java.util.ConcurrentLinkedQueue` for information interchanging.
+That seems to be a good decision. 
+
+* But: If the tasks to do in the event handling is too complex, 
+** It may be need a too long calculation time, or more concise, 
+the "calculation" do accesses to some operation system resources, which are normally fast,
+but sometimes needs synchronization and access time. 
+An example is: Access to files on the own hard disk, access to files in a network,
+access to files which may be locked a small time by other processes. 
+Maybe some people knows the rotating hour glass
+from Windows 3.11 which is later replaced by a rotating circle, because the users
+hate the hour glass. The application is blocked in that time.
+** In that time of waiting for execution of one listener operation, another operation is not possible.
+For example a long algorithm works, it is realized by the user that it is wrong,
+but the user cannot act. Should wait for finishing, instead abort the wrong stuff.
+
+Often, the first small things are programmed immediately in the event handler, 
+than the algorithm are growing, some file accesses are done, the files are in network,
+the network hangs sometimes, and then you have the rotating wheel in the graphic
+and you cannot abort your operation which accesses the file in the network. 
+You know, the network is not available. But the computer does not know it (too long timeouts). 
+You cannot react. You are not the master of the disaster, the system is determining you. It's stupid.
+
+For the Gral graphic, all accesses to the data of the widgets are possible in any thread 
+without access the implementation widgets (which is not possible or complicated). 
+That is done with two mechanism:
+
+* A changed content of widgets via graphical handling (for example doing any text input to a text field
+or pressing a button) is transported to the Gral level (outside of the implementation widget) 
+via programmed event handler in the implementation. 
+Sometimes only the complete inputed text is transferred only on leaving the focus from the input field,
+because only then it may be attempt to use. Sometimes any key stroke transfers the content. 
+That is not a too high calculation effort for the processor, if a real human types. 
+The application can access this data anytime in any thread.
+
+* A changed content of widgets at Gral level, set another text, or such is transported to the implementation widget
+via a [J]`redraw()` request. To save calculation time for high frequently changes, which are anyway not visible,
+a time order is used between to do this. For example a refreshing rate of 100 ms is adequate.
+
+Hence, the user can program evaluating and influencing the graphic operations in any thread,
+without own effort for thread synchronization and event handling. 
+All is done in the ready coded implementation level of Gral.
+
+Read more in chapter <<#Threads>> 
+
+=== Simple example Window with text field and button programmed in Java code
+
+First programming in Java is shown and explained. 
+You find the example in the sources of `testJava_vishiaGui` on link:https://github.com/JzHartmut[] in the file
+
+ `java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java`: 
+
+**class Header** 
+
+.Java: Test_SimpleTextButton_GuiCfg class Head
+[source,Java]
+----
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=import-class]
+----
+
+**Specific class for Gui stuff** (possible and recommended)
+
+The gui elements are assembled in a specific inner class, (may be also another class of the package) to have more overview:
+
+.Java: ExampleSimpleButton Gui class
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=guiClass]
+----
+
+image:../../img/Gral/ExampleSimpleTextButton.png[float="right"]
+Firstly the [J]`GralMng` is defined here, with log output.
+
+An own [J]`GralPos` is used, it presumes that all widgets are defined by constructors as following. 
+The other possibility is using [J]`gralMng.add....()` operations which uses the internal [J]`gralMng.refPos()` position.
+
+Then all GralWidget instances are defined here all at class level as final. They are initialized immediately at class level.
+The elements can be initialized of course also in the constructor of the [J]`GuiElements` class, 
+it is more simple for flexibility.
+But the here shown variant, initializing on class level, may be more obviously. 
+
+For the [J]`wdgButton1` an action is used which is defined in the environment class, see below, but not for the Button2..
+
+**Construction**
+
+The constructor of the application class can use command line arguments for example for a log file, 
+but here only a log to the console is used. The log is used then also for the Graphic
+though the initialization is done on class level. This is one of the reason of the own [J]`class GuiElements`:
+
+.Java: ExampleSimpleButton fields and ctor
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=fieldsCtor]
+----
+
+The constructor of the application class is not rich on content for this example.
+But in the constructor of [J]`new GuiElements()` the whole graphic on Gral level is built.
+
+**Initialization of the implementation Graphic**
+
+.Java: ExampleSimpleButton fields init implementation
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=initImplGraphic]
+----
+
+First, the content of the [J]`wdgInputText` is set with any text, before initializing the graphic implementation. 
+This can also be done after the initialization of the implementation graphic, both with same effect. 
+
+The initialization routine, called in main, builds the implementation parts of the graphic.
+The initialization of the implementation graphic does not need any additional user effort.
+Only the decision to use the SWT graphic and the graphic size 'E' is done, as shown in the right above image.
+
+
+**The main thread - example for execution**
+
+.Java: ExampleSimpleButton execution in main thread
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=execute]
+----
+
+This is the execution in the main thread. Substantial this thread should wait till the graphical window is closed.
+In the thread any actions also outside of the graphic can be done. The thread is thought for polling.
+That is, it waits for a reasonable time (releases the CPU), then goes into action and queries some conditions. 
+Based on the query of the conditions, some actions are performed, independently for the graphic and outside the graphic. 
+In this example the thread ask whether the [J]`wdgButton2` was pressed and then released, then the text is output.
+The query of [J]`wdgButton2.wasReleased()` can be performed any time after pressing and release. But of course it should be usual near the time of the user action. This is fulfilled by the cycle time of 100 ms. 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralButton.html#wasReleased--[GralButton.wasReleased()] 
+returns only one time [J]`true` after release. The query is repeated of course and then returns [J]`false`.
+
+**Exception handling recommended:** 
+Any operation in the while loop may cause an - unexpected - exception. This is forced here in this example. 
+That's why inside the while loop a try-catch is inserted. With help of the logging system 
+and a sophisticated preparation of the exception text the exception message is written for this example
+running under Eclipse to the Eclipse console output, with a time stamp, whereby the exception files and lines are shown and can be clicked as link to open the line in the editor:
+
+image:../../img/Gral/ExampleSimpleTextButton-ExceptionOutput.png[]
+
+
+**main() recommended also with Exception handling**
+
+.Java: ExampleSimpleButton main()
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=main]
+----
+
+The main() calls the ctor, and also the initialization of the implementation graphic.
+After initialization the main thread can do anything. It runs so long the main window is active.
+The exception handling is a good style, not necessary but recommended here.
+Any unexpected situation does not only abort the program, it writes a short report with stack trace for back tracking.
+
+**A callback routine executed in the graphic thread, defined on Gral level**
+
+At last the code for a callback action is shown, on pressing the button:
+
+.Java: ExampleSimpleButton action operation
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=action]
+----
+
+This action is written independently from the implementation graphic, but is is called of course from an event handler from the widget.
+
+**The system to work with the graphic**
+
+That's all. The text field has a context menu. Its initialization is not shown here, but explained in the chapter below. 
+
+As you see in the examples, the following order to build a graphic should be done:
+
+* First instantiate the [J]`GralMng`, the manager of all Gral stuff. It can be have a log or not.
+
+* You can use your own [J]`GralPos` or use [J]`gralMng.refPos()`, see other examples. 
+This [J]`GralPos` is used each as reference position, for relative positioning. 
+The current [J]`GralPos` given as reference is changed with the position string in each of the constructors.
+The widgets itself gets a clone of the current [J]`GralPos` on construction.
+ 
+* If you create a new Panel, or just a new Window, the [j]`refPos` is set to this panel. 
+It means following widgets are associated to it. But you can also select any other panel instead, for the first (or also all) widgets.
+Here [J]`"@panel, 2+2, 2+20=...` is written to select the panel of the window with the name [J]`panelWin`.
+But you can also write here only [J]`"@2+2, 2+20=...`, then panel is set already.
+The determination of a panel is necessary if you want to change it, go to another panel, for more comprehensive graphics.
+
+* The windows, widgets and panels can be created on class level (as part of all constructors) of you application as also in some operations, using the constructor of the widget with a given position, or via [J]`gralMng.add...()` using the internal positon of the [J]`GralMng`. In both cases the reference to the [J]`GralMng` is stored in the widgets.
+
+* After all Gral widgets are established, calling of link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.html#createGraphic-java.lang.String-char-LogMessage-[GralMng.createGraphic(...)] creates all implementation widgets and shows the main window on the screen, you can work. 
+
+* Changing positions from already established widgets is possible, the next call of [J]`redraw(...)` of the panel shows the changes.
+* Add or remove widgets is possible. Removed widgets are no more visible after [J]`redraw(...)`. 
+For new widgets the either operation
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[GralWidget.createWidget()] (TODO) should be called, 
+or just the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.html#createGraphic-java.lang.String-char-LogMessage-[GralMng.createGraphic(...)]  should be called repeatedly. 
+   
+
+=== Determine the graphic via script
+
+The java coded graphic is not too expensive, and it is able to understand (debug) what is done. 
+Using a script is very more similar, most of the necessities are also possible. In the script the access to Java code parts is possible. 
+
+Look for the same example as above but with script.
+The class can be found as `srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleScriptSimpleButton.java`: 
+
+**class Header and Gui script** 
+
+.Java: ExampleScriptSimpleButton class and script
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleScriptSimpleButton.java[tag=classAndScript]
+----
+
+Here you see the class head and the script in String given form. The script can also come from a file,
+or it can be prepared by any other Java program, for example with configuration data what should be shown. 
+Only for this simple example it is a simple text. 
+
+**Specific class for Gui stuff** (possible and recommended)
+
+.Java: ExampleScriptSimpleButton gui class
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleScriptSimpleButton.java[tag=GuiElements]
+----
+
+As also in the example of the chapter before, the Gui stuff is written in an inner class.
+One of substantial differences is: The constructor may throw an [J]`ParseException`,
+because of course the script is not checked on compile time, but on run time. 
+With the exception a elaborately error message is written, so that the user can fix it. 
+The application is here terminated, the catch is in [J]`main`, because with the error it cannot be run. 
+Adequate is done if the script does not contain the expected widgets.  
+
+The advantage is, this code is independent from the design of the gui appearance. 
+
+**More fields and ctor of the application class builds the Gral graphic part**
+
+.Java: ExampleScriptSimpleButton fields and ctor
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleScriptSimpleButton.java[tag=fieldsCtor]
+----
+
+Now some fields of the user class are defined, especially the Gui class, and the constructor of the application.
+Because the Constructor calls the [J]`new GuiElements`, this constructor can also throw, it means the application throws.
+It is consequently for this case, in other cases somewhat can be further executed. 
+
+**Initialization of the implementation Graphic**
+
+.Java: ExampleScriptSimpleButton initialization
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleScriptSimpleButton.java[tag=initImplGraphic]
+----
+
+This is the init() operation after construction. Because the content of the gui script may be syntactically correct
+but may not contain all necessary widgets, firstly a report is written to console. 
+Then the necessary widgets are checked whether they are existing. 
+Because they are mandatory, also an Exception is thrown. 
+It is also possible, depending from the content of the gui script, to determine which functionality are used.
+If widgets are not contained in the script, its functionality may be conditional in the application. 
+It means, the script, maybe given by a file, can determine some behavior of the application. 
+
+The rest of the example application is identically to the non script version above.
+Also the steps of the life cycle are similar as described above. 
+
+
+
+=== Menu and context menu
+
+Any widget can have a context menu. A context menu can be defined by
+
+
+
+=== Info and Help in a GUI application
+
+Content sensitive help is expectable in a well formed GUI application. 
+The GRAL offers a 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/widget/GralInfoBox.html[GralInfoBox]
+which is represented by a sub window or only by a special panel content inside the given window.
+It uses a browser (in SWT available) to show also content from the internet,
+or local html sides. 
+
+For a context sensitive help all widgets have a reference able to set:
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[Gralwidget.setHtmlHelp]
+
+
+[#GralPos]
+== Positions, syntax, possibilities
+
+see also Approaches: <<#apprGralPos>>
+
+=== Positions as user arguments in Java programs
+
+Generally they are two systems to define positions:
+
+* textual, per String, especially in scripts, but also in programs.
+* per numbers, either as float number or as integer for fundamental position.
+
+The string form from 2010 was basically only used in the scripts, translate to numbers.
+But later the parsing of the textual given positions is integrated in the basic capability of Gral, 
+so it can be used for programming too. It is a simple understandable form.
+The next idea was, combination of name of the widget with the position on creation,
+with the writing style:
+
+ "@panel,12+2, 20+16 =textxyz"
+
+A position as reference for a widget can be set immediately, either with string or numerical:
+
+----
+GralPos refPos = new GralPos(gralMng);    // should know the gralMng
+refPos.setPosition("@myPanel,12+2, 20+16");
+refPos.setParent(myPanel);
+refPos.setPosition(null, 12, GralPos.size + 2, 20, 36, 'r', 0);
+----
+
+Both sets the given position. But the other variant is:
+Set the position with using for a new Widget:
+
+----
+GralPos refPos = new GralPos(gralMng);    // should know the gralMng
+GralTextField wdg1 = new GralTextField(refPos, "@myPanel,12+2++, 20+16=textfield");
+GralTextField wdg2 = new GralTextField(refPos, "textfield2");
+----
+
+In this construction the [J]`refPos` is changed while the Widget is created,
+regarding the position String on creating the Widget. 
+The next TextField have the proper position below the `wdg1` because of the increment in line
+and the not specified new position. The position will be incremented on next usage.
+This approach comes firstly from the script programming, 
+but it is also usable and recommended for Java programming.  
+
+Sometimes the [J]`refPos` should not just changed by usage. This is especially
+if the [J]`refPos` is a really static reference for a comprehensive widget
+and all positions should follow exact this reference. 
+Then it should be written:
+
+.Java: unchanged refPos
+[source,Java]
+----
+// refPos given as Parameter
+refPos.setAsFrame();
+GralTextField wdg1 = new GralTextField(refPos, "@+2+2, +20+16=textfield");
+GralTextField wdg2 = new GralTextField(refPos, "@+4+2, +20+16=textfield2");
+----
+
+The [J]`refPos` remains its value though usage for the widget construction. 
+All positions are referred to the original given [J]`refPos`.
+But of course then the capability to increment the position for the next widget cannot be used.
+Any widget should have an absolute position regarding to the unchanged `refPos`. 
+See link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralPos.html#setAsFrame--[org.vishia.gral.base.GralPos#setAsFrame()] 
+
+
+[#GralPos-String]
+=== Position writing style in a gral script
+The appearance of a graphic can be given with a script using 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/cfg/GralCfgZbnf.html[org.vishia.gral.cfg.GralCfgZbnf].
+The writing style of positions in the script regards a stinting short style to give positions,
+because a hand written script should not cause a lot of calculations for positions by the writer.
+It should be simple. The syntax of a position in the gral script is given in the variable {@link #syntaxZbnf}.
+The method {@link #setPosition(CharSequence, GralPos)} uses that syntax.
+
+Generally a widget is defined in the script with the following example (see also chapter <<#gralScript>>)
+
+
+----
+@tab1, 2+2++, 2+20=input:   InputField();
+input2: InputField();
+----
+
+It means on the tabbed panel in `tab1` an input field with the given symbolic name should be placed
+on the given position. The next input field is below, because the `++` as line increment is given 
+on the widget before. 
+This is simple and obviously. Note that the script is only for one panel in one window, which may be tabbed.
+
+But see in next chapter, also relative positions can be used (regarding to the position before),
+and positions from right and sizable and proportional to the panel size, as also in Java programmed given positions.
+
+
+
+
+* `@myPanel, 5..7, 8..-1`: This is a full given absolute position. The end column is given with a negative value.
+  It means that the end column is related to the right border of the panel.
+* `@myPanel, 5+2, 8+10`: This is a full given position using the size. The element should be placed from line 5 
+  to line 7 and from column 8 to 18. The range is given as size. 
+* `@7-2, 18-10`: The panel isn't given, so the panel of the last position, in the script in order of text,
+  is used. The positions are exactly the same, from 5 to 7 and from 10 to 18. But because the size is given
+  as negative value, the position value is the bottom line and the right column. A user may place elements
+  with a common bottom line. The this form can be used.
+* `@7-2, 10+18++1`: This is the same position too. The '++' operator after size means, that the next element
+  is positioning right side after the current in distance of 1 unit (distance feature TODO).
+* `@-3,+4`: The position isn't given yet. It means, the position of the last element is used. Because
+  the size is negative, the bottom position of the last element is used. Because the last position is
+  designated with '++' for column, the column value of position is the right value and the current element 
+  is placed right hand from the last one. This is an example of a button right from a text. The button is
+  some times greater (3 units) in relation to the text (2 units), but they have the same button line.
+* `@,+5`: Here the line isn't specified. It is taken from the last position: bottom line 7
+  and height 3. The column isn't given, it is taken form the last: Because the column position is cumulated,
+  it is the 22 yet.
+* If no position is given, the position is the next position. In this example @7-3,27+5.
+* `@,&2+10`: The ampersand determines a relative position related to the last one. In this example
+  the new column is 24 to 34. There is 2 units space.
+* `@ $2-2,$+20`: The dollar determines a relative position related to the last absolute given position. 
+  In this example it is line 7 and column 10. The new position is calculated with that values to line 9. 
+  The column 10 is the same column related to the last given absolute.
+  This kind of specification allows determining some positions in lines and columns, 
+  whereby the absolute position is given only one time. (feature TODO)
+* `@ %50-2,%10..%90`: The positions are calculated from the size of the panel in percent. (feature TODO)  
+
+=== Position definition forms
+
+Positions may be given with absolute values of grid units regarded to the actual panel, 
+or also relative to the position before or a related position, and also (not full ready yet) as 
+The position is given in form 'from..to' for the line and column or in form 'from' and 'size'. 
+The size may be given positive or negative. A positive size is counted from top or left to bottom or right.
+It means that the 'from' position is top or left. But a negative size is counted from right or bottom
+and the 'from' position is the right or bottom column and line.
+
+==== Absolute position from left top
+
+* [J]`@myPanel, 5..7, 8..18`: 
+* [J]`refPos.setPosition(5,7,8,18);`
+
+This is a full given absolute position. 
+The element should be placed from line 5 to line 7, it is a height of 2 grid units, 
+and from column 8 to 18. The vertical position 7 is the bottom line, the column 18 is the right column exclusive. 
+The horizontal size is 10.
+
+The same can be done also with fractional values:
+
+* [J]`5.2..7.2, 8.5..18`: 
+* [J]`refPos.setPosition(5.2f, 7.2f, 8.5f, 18);`
+
+The Positive numbers are in range 0...about 100..200 up to 1000: Grid Unit from left or top.
+
+==== Absolute positions from right or bottom
+
+Negative numbers or the 0 as right position defines positions from right or bottom
+
+* [J]`2..4, -10..-0.5`: 
+* [J]`refPos.setPosition(2, 5,-10.0f, -0.5f);`
+
+In this case a widget is positioned right oriented, but from top. If the panel is resized,
+the widget remains related to the right border.
+
+==== Absolute positions between left and right or between top and bottom, resized widgets
+
+* [J]`2..4, 2..-0.5`: 
+* [J]`refPos.setPosition(2, 5, 2, -0.5f);`
+
+This widget is positioned in horizontal direction over the full panel, 
+with 2 grid units distance from left (positive value) and only a half grid unit to the right border.
+On resizing the panel this widget is also resized in horizontal spread. Proper for long text fields.
+
+* [J]`4..0, 2..-0.5`: 
+* [J]`refPos.setPosition(4, 0, 2, -0.5f);`
+ 
+This may be proper for a table which fills the whole panel, only 4 grid units distance from top
+(where a text field may be placed for example).
+The value `0` for the right and bottom position means the right and bottom border.
+
+==== fractional positions
+
+This is interesting and todo yet. Also resized with the size of the widget.
+
+==== Given size instead spread for position
+
+Often not the spread is in focus, but more the size. 
+Because the size in vertical direction influences immediately the font size. 
+For example for the same text field as above:
+
+* [J]`2+2, 2+10`: 
+* [J]`refPos.setPosition(2, GralPos.size+2, 2, GralPos.size + 10);`
+
+The definition of the size instead the end position [J]`4` is more obviously.
+Of course also float values can be used for fine positioning. 
+
+* [J]`4-2, 2+10`: 
+* [J]`refPos.setPosition(4, GralPos.size-2, 2, GralPos.size + 10);`
+
+A negative size value determines the field to the bottom line, here [J]`4`.
+The advantage is given if more widgets should have the same bottom line. 
+
+==== Reference positions (referenced to the last one)
+
+It is important for some positioning not calculated (manually) the absolute positions,
+instead given relative ones. This is especially helpfully for scripting
+but also programming. 
+
+The first position should be usual absolute, then relative to the position before:
+
+* [J]`+2+2, +0+10`: 
+* [J]`refPos.setPosition(GralPos.refer+2, GralPos.size+2, GralPos.same, GralPos.size +10);`
+
+This position is related to the given before, in the next line (vertical distance 2) with given size
+and in the same column (x position).
+
+* [J]`+-2+2, +0+10`: 
+* [J]`refPos.setPosition(GralPos.refer-2, GralPos.size+2, GralPos.same, GralPos.size +10);`
+
+A negative value for the distance should be written as [J]`+-2` because the [J]`+` is necessary
+for the semantic 'refer'. 
+ 
+==== Autoincrement positions
+
+This is usual interesting for scripting to reduce writing and calculation effort, but also for programming:
+
+* [J]`2+2++, 2+10`: 
+* [J]`refPos.setPosition(2, GralPos.size+2, 2, GralPos.size +10, 'd', 0);`
+
+This means the same as above, given with size (also with absolute position possible),
+but the next widget is placed automatically to an auto incremented position, it does not need a position. 
+Look for a script:
+
+ 
+
+
+
+* Negative number in range 0, -1...about -200..-200 up to 1000: Gral Unit from right or bottom.
+  0 for lineEnd or columnEnd means the right or bottom.
+* {@link #same} or {@link #refer} added with a number in range of -1000..1000: This given position 
+  refers to the parent position with the given distance. same and refer is equate, the difference 
+  is in semantic only. Use {@link #same} without distance, use {@link #refer} +/- distance.
+  If {@link #same} or {@link #refer} is used for the line or column, and the second position is given
+  with '{@link #size} - size' then the bottom or right value of the parent is referred.
+ 
+* {@link #size} + number applied at lineEnd or columnEnd: 
+  The size is given instead from..to. Because the size value is positive, the line and column value is left or top. 
+* {@link #size} - number applied at lineEnd or columnEnd: The size is given negative.  
+  The absolute value is the size. Because the size is negative it is measured from right to left
+  respectively bottom to top. It means the given line and column is the right or the bottom line. 
+  If the position is given using {@link #same} or {@link #refer}, the related end position
+  is used. 
+* {@link GralPos#next} and {@link GralPos#nextBlock}   
+* as width or height or as percent value from the panel size.
+
+Fine positions are given always from left or top of the fundamental positions. 
+For example a value -1.3 means, the widget is placed 1 unit from right, and then 1/3 inside this unit.
+This is 2/3 unit from right. A value for example -0.3 is not admissible, because -0 is not defined. 
+
+
+==== Absolute positions from right or bottom
+
+ or in related to the 
+last or parent position. In that cases the constant values are added to the number, see the following list.
+
+
+=== Resize organization of widgets
+
+The resize starts any time from a Window resize listener. 
+This listener (link:../../docuSrcJava_vishiaGui/org/vishia/gral/swt/SwtSubWindow.html#resizeListener[org.vishia.gral.swt.SwtSubWindow#resizeListener] for SWT implementation)
+calls firstly
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWindow.WindowImplAccess.html#resizeWidgets-org.vishia.gral.ifc.GralRectangle-[...base/GralWindow.WindowImplAccess#resizeWidgets(clientArea)].
+For the associated mainPanel of the window and all children then
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgetBase.GralWidgComposite.html#resizeWidgets-org.vishia.gral.ifc.GralRectangle-int-[org.vishia.gral.base.GralWidgBase.GralWidgComposite#resizeWidgets(parentPixelRectangle, recursion)] is called.
+
+This operation organizes recursively resizing for all widgets, 
+which can be also panels or also composite widgets (consist of more as one member widgets).
+The size in pixel is calculated controlled by its position values in 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralPos.html[GralPos]. 
+That can contain proportional positions or positions from the right side, 
+and also composite widgets consist of more as one GralWidget but without a panel in the implementation level
+(uses a part of a implementation panel).
+
+For specific resize approaches the override able operation 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgetBase.html#resizePostPreparation--[org.vishia.gral.base.GralWidgetBase#resizePostPreparation()]
+can be do widget-specific preparations after resizing the implementation widget and before redraw. 
+For instance on a table this controls the number of visible lines. 
+
+
+
+
+
+[#Threads]
+== Threads and callback operations in user threads
+
+=== SWT 
+
+The threading is most consequently on SWT graphic. A simple program using SWT needs only one thread, 
+the given main-thread:
+
+
+====
+  shell.open ();
+  while (!shell.isDisposed()) {
+    while( display.readAndDispatch() );  // dispatch so long as events found 
+    boolean bSleep = true;
+    while( (order = queueOrdersToExecute.poll()) !=null) {
+      order.doExecute();                 // the order may send an event to the graphic
+      bSleep = false;
+    }    
+    if(bSleep) { display.sleep (); }
+  }
+  display.dispose ();
+====
+
+This code snippet shows the activity in the graphic thread, maybe the only one thread in the life time of a displayed window.
+The [J]`queueOrdersToExecute` is an additional element of the __Gral__, it executes changing of the graphic appearance 
+which is forced in other threads using this Gral specific event queue. 
+The other source of graphic events are the callback operations of the graphic itself, not shown here but attached to the widgets.
+
+For the SWT __Gral__ implementation three threads are present:
+
+* The main() thread, which can do any things independent of the graphic, but should wait for [J]`shell.isDisposed()`
+* A timer thread, see following sub chapter.
+* The Swt graphic thread which executes the above shown loop for dispatching events.
+
+SWT throws an exception if widgets are used in a faulty thread. The widgets can only touched in the SWT graphic thread.
+
+=== AWT, Swing(?)
+
+AWT was the first graphic implementation in Java from 1995. In that time the idea of {J]`synchronized` was present 
+as helper overall. The problem with longer waiting times for the operation system scheduler on the synchronization points
+were not recognized at that time.
+
+* The AWT graphic thread is a specific thread which cannot used for user programming. 
+This is the first thread. This thread also executes the callbacks, of course.
++
+In comparison to SWT, in SWT the graphic thread is programmed by the user. The user must only call the SWT-specific [J]`display.readAndDispatch()`. 
+
+* The main thread, not used for graphic is the second one. 
+* The 3^th^ thread is the timer thread.
+* And now because of an unchanged timer thread the Gral graphic thread is also present. It does the same as in SWT,
+only does not call [j]`readAndDispatch()` because this is done by the AWT specific graphic thread.
+Both threads works concurrently, because it is not possible to change a widget outside of a callback operation
+in the intrinsic AWT graphic thread. But for AWT it is okay, it works with [J]`synchronized` (which needs more calculation time). 
+
+[#GraphicTimeOrder]
+=== Events to the graphic thread
+
+The events from the application to the graphic thread (as well as also from the timer thread) are all organized
+by ordinary GralWidget operations, such as [J]`setText(...)`, [J]`changeColor(...)` or adequate. 
+The queue to store this event is a [J]`java.util.concurrent.ConcurrentLinkedQueue`, 
+it means it is thread safe by the atomic access approach which is faster than [J]`synchronized`.
+The type of events are stored are type of link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GraphicTimeOrder.html[GraphicTimeOrder] which are derived from link:../../docuSrcJava_vishiaBase/org/vishia/event/TimeOrder.html[org.vishia.event.TimeOrder]. An instance of that refers to an virtual given parameterless void operation
+[J]`executeOrder()`.
+
+Instances of such events are created statically on instantiation of the appropriate widget.
+They are not created on demand on the heap, as often usual. For example inside the [J]`GralWidget`:
+
+.Java: GralWidget redraw request
+[source,Java]
+----
+// in org.vishia.gral.base.GralWidget:
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/base/GralWidget.java[tag=redrawRequ]
+----
+
+The event is used for redraw, the instance of the event is given, it is not necessary to use it twice. 
+If the event is not necessary in the moment, it remains as instance but it is not in a queue. 
+This is also the concept of the link:../../docuSrcJava_vishiaBase/org/vishia/event/TimeOrder.html[org.vishia.event.TimeOrder].
+
+ 
+
+=== The timer thread
+
+This is a graphic independent thread, but helpfully. See link:../../docuSrcJava_vishiaBase/org/vishia/event/EventTimerThread.html[]
+
+Actions to change the graphic appearance are either forced in callback operations of the widgets in the graphic thread, 
+or they are forced in other threads. 
+In both case the question should be able to ask: "__Should the reaction be executed immediately, so fast as possible?"
+For simple actions, change a text in a text field or such, "__yes, should be done, why not__".
+But if the actions are more complicated, for example pressing a button, then some calculations are started, and the results shoud be present in tables or in a curve view, it is not necessary that any action forces change of the graphic.
+Because the eyes of a human are not so fast. A time of 100 ms may be often possible and not disturbing.
+If a value of a text field comes from a communication with a frequency of 1/10 ms, then not only any value should be shown. 
+It is possible to suppress fast values (or maybe build a middle value, but it's a question of the application requirements).
+If a new value comes,
+
+.Java: GralWidget redraw 
+[source,Java]
+----
+  redraw()
+----
+
+need to be call, to present the value in the graphic appearance. 
+But [J]`redraw` in a time cycle of 10 ms or 1 ms needs unnecessary CPU and graphic calculation time. 
+
+Hence it is better to write
+
+.Java: GralWidget redraw delayed
+[source,Java]
+----
+  redraw(100, 100);
+----
+
+The first value is the delay = 100 ms, the second value is the last action. 
+Supposed, a new [J]`redraw(100, 100)` comes in a lesser time, the redrawing should not be deferred in the future,
+again after 100 ms, it should be done from the first redraw in just 100 ms from it. 
+Both values are typically the same. 
+On repeated value setting and [J]`redraw(100)` calls last not least any 100 ms the last given value is shown. 
+It needs graphical calculation time only in a 100 ms step, independent of the [J]`setValue(...)` and [J]`redraw` calls 
+in the other threads.   
+
+That is managed by the timer thread.
+The timer thread works outside of the graphic. In the event executing operations Events for the graphic thread are sent. 
+
+The timer thread and the event system is documented in 
+
+link:../../docuSrcJava_vishiaBase/org/vishia/event/EventTimerThread.html[]
+ 
+
+=== GralUserAction, unified callback
+
+The callback operation types from the implementing graphic widgets are equalized to a virtual operation
+[J]`exec(...)` in an instance of type link:../../docuSrcJava_vishiaGui/org/vishia/gral/ifc/GralUserAction.html[GralUserAction].
+The original callback operations invokes that ones. 
+It can be well programmed on user level without knowledge of the graphic specifics. 
+For example look on a button callback:
+
+----
+//see test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton.java
+include::../../../testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton.java[tag=classAndActions]
+----
+
+It is recommended to call an operation outside of this anonymous class as shown. This operation is called in the graphical thread.
+If the operation may need a longer time, it should send an event to or weak up a user operation in any other user thread. 
+This is recommended to prevent longer times in the graphic, where the graphic looks like frozen. 
+
+
+=== Actions on widgets in any user thread
+
+The operations for the [J]`GralWidget` and all derived widgets can be usual done in any user thread.
+With that operations firstly only data in the [J]`GralWidget` instance are changed. 
+In specific fields of [J]`GralWidget` it is remarked what is changed (color, text etc). 
+Then a [J]`redraw(...)` is invoked. This activates the event described in the chapter above <<#GraphicTimeOrder>>
+and hence the event operation which calls the correct [J]`_wdgImpl.redrawGthread()` for the implementation level.
+In this redraw operation it is tested which is changed, to transport the information
+from the GralWidget instance to the implementation graphic widget. This occurs in the graphic thread,
+hence is is proper.  
+
+It seems to be that all actions are done twice, firstly change data in the GralWidget, then in the implementation widget.
+That is true. But it is efficient, because setting data in ordinary Java instances are not an calculation effort.
+The possibility to separate actions from the graphic thread, which may hang (needs waiting times etc), this is the advantage.
+
+
+
+=== redraw()
+
+The redraw of the implementation widget is anytime executed in the implementation of any widget defined as as link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgImplAccess_ifc.html#redrawGthread--[gral.base.GralWidgImplAccess_ifc#redrawGthread()].
+This execution is done in the graphic thread.
+
+The link:../../docuSrcJava_vishiaGui/org/vishia/gral/ifc/GralWidget_ifc.html[gral.base.GralWidgImplAccess_ifc#redraw()] and also 
+[J]`redraw(delay, latest)` can be called in any thread.
+It should be called for one widget usual if any data of a widget are changed.
+
+How both works together?
+
+If you are in the graphic thread and [J]`redraw(0,0)` is called, means immediate, without delay,
+then the [J]`redrawGthread()` for the appropriate implementation widgets are called immediately.
+This is a special case.
+
+If you call [J]`redraw()` then this redrawing is delayed with the constant time of 50 ms, max after 100 ms. 
+This is because some other changes may also be done in the same thread in a less time after (less milli seconds).
+Then only one [J]`redrawGthread()` is called for the implementation graphic, which saves calculation time. 
+
+For example you change a text for a widget, and also a color. Then both changes invokes [J]`redraw()`. 
+But only one [J]`redrawGthread()` is necessary for the widget with the given text and color. 
+The 50 ms delay are enough to receive both changes, and less enough to visible it fastly. 
+
+The delay is organized by the [J]'GralGraphicTimeOrder' 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html#redrawRequ[GralWidget#redrawRequ],
+see also chapter <<#GraphicTimeOrder>>.
+
+
+==== DynamicData and whatIsChanged in a GralWidget
+
+The link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.DynamicData.html[GralWidget.DynamicData] contains 
+all dynamic data of a widget (which are usual changed for the appearance. 
+If this data are changed for example by calling [J]`myWidget.setTextColor(colorGreen)`
+then only the new reference to the color instance is entered in the dynamic data.
+For the time being nothing is changed in the graphic appearance.
+
+But one bit is set in the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.DynamicData.html#whatIsChanged[GralWidget.DynamicData#whatIsChanged] field. This field is an atomic integer field. The atomic access ensures,
+that multiple threads can change the bits. So one thread can change the text, and another thread can change to color, or position, or what else concurrently. 
+The values are not thread safe. It means if one thread changes the text, and after them another thread changes also the text, what about. Of course the last text wins. 
+
+
+==== Organization of redrawGthread with DynamicData
+
+The [J]`redrawGthread` operation need be implemented in the different widget types in a special kind. 
+Look for example in the [J]`SwtTextFieldWrapper`:
+
+
+.Java: redrawGthread SwtTextFieldWrapper
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/swt/SwtTextFieldWrapper.java[tag=redrawGthread]
+        }
+        .....
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/swt/SwtTextFieldWrapper.java[tag=redrawGthreadEnd]
+----
+
+The [J]`getChanged()` returns the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.DynamicData.html#whatIsChanged[GralWidget.DynamicData#whatIsChanged] which's bits are set on change the data. 
+Here it is tested.
+The test repeats in a [J]`while` loop because during execution on this operation some new changes may come in.
+The accident of that is less, but possible. The [J]`catastrophicalCount` is only a general check used for all while loops.
+All relevant bits are checked here (not all is shown).
+At last exact the checked bits are acknowledged.
+
+
+Another implementation, [J]`SwtValueBar` is very more simple, but:
+
+.Java: redrawGthread SwtTextFieldWrapper
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/swt/SwtValueBar.java[tag=redrawGthread]
+----
+
+It calls only the original necessary [J]`redraw()` of the SWT Control. No more. But how the data are dealt?
+The Swt widget is not a standard, but a 
+
+.Java: redrawGthread SwtTextFieldWrapper
+[source,Java]
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/swt/SwtValueBar.java[tag=SwtBarCanvas]
+----
+
+It has a specific [J]`redrawRoutine(...)` routine (see in sources), which regards the given DynamicData 
+of the [J]`GralValueBar` immediately itself. 
+
+
+
+=== setFocus()
+
+Any user thread can call [J]`setFocus()` to any widget on Gral level to get it in focus of usage.
+For the implementation level it means, that not only the appropriate widget should get the focus
+(in Swt: Control#setFocus or Control.#forceFocus), but all parent widgets should be visible 
+if they are not, and also a primary widget of a focused panel should be focused. 
+If the focused widget is in a yet hidden tab of a tabbed panel the tab should be activated,
+and also a hidden window should be get visible. That is all done in the Gral adaption. 
+
+If the focus was set with user action (usually the mouse selects a field) 
+then a focus event in the implementation graphic should catch this action
+and should call 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgetBase.html#setFocus-boolean-[gral.base.GralWidgetBase.setFocus(gained)].
+This operation marks in the Gral widget the property 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgetBase.html#hasFocus--[gral.base.GralWidgetBase.hasFocus()]
+which can be used to decide some actions on handling with this widget, for example copy to clipboard by selecting a field
+or evaluate the content of a field while selecting not only with the mouse.
+Any forced action can quest [J]`hssFocus()` and with this information decide about reaction.
+
+If one widget has gained the focus, also all parents (comprehensive widgets, panel, window) are set in the state
+[J]`hssFocus()` because just its actions should decide also. For example if a cell in a table was focused, 
+an algorithm of the widget containing the table can evaluate the table's content.
+
+See also 
+link:https://help.eclipse.org/latest/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Control.html#forceFocus()[].
+
+
+=== getting the focus
+
+If an user handling activates the focus of another widget (by mouse click, by selection keys etc.), 
+then the implementation graphic invokes an event __focusGained__ or also __focusLost__ for the other widget which losses the focus.
+ 
+
+
+
+[#createGraphic]
+== Templates / examples for creating the graphic appearance
+
+
+[#startImplGraphic]
+== Template / example to start the graphic implementation
+
+
+== Overview about the basically classes for Gral
+
+[#GralMng]
+=== The GralMng
+
+A graphic needs one instance of the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.html[gral.base.GralMng]
+It contains
+
+* all widgets and panels sorted by name to find out all widgets.
+* a reference position to build the graphic
+* some common operations. 
+* The timing thread, see chapter <<#Threads>>
+
+
+
+[#GralWidget]
+=== GralWidget base classes
+
+**GralWidgetBase**
+
+The class link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgetBase.html[gral.base.GralWidgetBase]
+is the base class for all widgets, also for comprehensive ones. It contains
+
+* The [J]`final String name` field of the widget.
+* a position, [J]`final String _wdgPos`, accessible via [J]`final String pos()`, see chapter <<#GralPos>>. For comprehensive widgets the parts have sub positions related to this position. 
+* the reference to the <<#GralMng>> [J]`final String gralMng`
+* some abstract operations, should be implemented also for comprehensive widgets.
+* the final operation [J]`checkImplWidgetCreation(...)` and the abstract operation [J]`createImplWidget_Gthread()`.
+The last one is implemented in a standard form for [J]'GralWidget',
+which calls the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.ImplAccess.html#createImplWidget_Gthread-org.vishia.gral.base.GralWidget-[gral.base.GralMng.ImplAccess.createImplWidget_Gthread(GralWidget wdg)].
+This is the operation, implemented in the implementation manager, to create the implementation widget
+with the given properties of the Gral widget.
+
+The operation [J]`createImplWidget_Gthread()` is or should be overridden by comprehensive widgets,
+calling the appropriate [J]`gral.base.GralMng.ImplAccess.createImplWidget_Gthread(GralWidget wdg)`
+for all contained widgets on Gral level. Hence no specific implementation code is necessary.
+
+The operation [J]`createImplWidget_Gthread()` is overridden by the [J]`GralPanelContent` and [J]`GralWindow`
+to build the contained widgets. 
+
+
+**GralWidget**
+
+This class link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[gral.base.GralWidget]
+is the base class for that all widgets, which have an counterpart in the implementation level.
+
+Additionally that basic class contains common properties of the widget such as
+
+* [J]`DynamicData`: All data of the widget accessible thread independent.
+* Some more properties such as [J]`contextMenu`, [J]`sDataPath`, [J]`variable` in a common kind, 
+which are necessary for most widgets for most applications. The fields are [J]`null` if unused. 
+* the adequate operations. 
+* The implementation of [J]`createImplWidget_Gthread()` which creates the implementation widget.
+
+
+
+== Overview over Widgets, simple and comprehensive
+
+
+[#gralWindow]
+=== GralWindow
+
+A GralWindow is a window of the application. An application can have not only the __main window__
+but also some sub windows. All of the are type of 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWindow.html[gral.base.GralWindow]
+
+The first window which is created in a Gral initialization is automatically the main window.
+Only the main window is unconditionally set to visible, all other windows are set to invisible per default.
+This is organized by the   
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.html#runGraphicThread[gral.base.GralMng#runGraphicThread()]:
+
+----
+include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/base/GralMng.java[tag=runGraphicThread-start]
+----
+
+
+
+[#textField]
+=== GralTextField, GralTextBox Text show and input fields
+
+A field to show a text (values) or input a text has a frame with a specific background color 
+and with a dedicated size, also for a show-field. 
+In opposite a simple text output (usual named as __Label__) has not a frame and not a background color. 
+Secondly a text field can have a label to explain what is it. 
+
+image:../../img/todo
+
+Such text fields as __show__ fields can be used especially to show process values as numerics with units etc.
+as for example used in the Inspector GUI or a __operation and monitoring__ GUI.
+
+
+[#GralTable]
+=== The GralTable
+
+The link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralTable.html[gral.base.GralTable] is a basic widget
+(which has its specific implementation, see link:../../docuSrcJava_vishiaGui/org/vishia/gral/swt/SwtTable.html[gral.swt.SwtTable])
+But this implementation does not follow the offer of a table widget of the operation system.
+
+Why not? Some operation system's table widgets have a too less capability. 
+The additonal capabilities of a GralTable are:
+
+* Not only the whole line is marked with a color, but also only the selected field.
+* Any column (all fields in the column) can have a specific context menu.
+* Lines of the table can be folded and unfolded, if they are marked as children of a parent's line.
+This is similar of the capability of a tree (with sub nodes or just children). 
+It means the table can be also used as tree view, but with not only the tree, with more columns. 
+
+The basically decision to build a table was also in 2010:
+
+* A table consist of some simple text fields from the implementation graphic.
+
+Depending of the visible size of the table not all text fields are visible. 
+The maximal visible length of a table can be determined by construction. 
+Usual no more than 100 fields should be used (for a long table), or for example only 10 fields per column
+if the table should anytime be shown only by a simple section. 
+But the data length of the table (number of existing lines) can be any size.
+The table lines are not selected by such as a panel with vertical selection slider, which contains a lot of lines.
+The selected visible range of the table is always presented in the few text fields.
+There content is changed by selection. 
+It means the content of the table is not persistent present in the implementation fields,
+it is present in the data of the GralTable (in the [J]`rootline` and all of its nodes
+of type link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralTable.TableLineData.html[gral.base.GralTable.TableLineData].
+The nodes are a structure of link:../../docuSrcJava_vishiaBase/org/vishia/util/TreeNodeBase.html[vishia.util.TreeNodeBase]
+which is a basically node structure.
+
+On showing a part of the table content the appropriate 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralTable.TableLineData.html#cellTexts[gral.base.GralTable.TableLineData.cellTexts] are copied in the appropriate text fields of the implementing graphic,
+as also the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralTable.TableLineData.html#cellColorBack[gral.base.GralTable.TableLineData.cellColorBack] or the general [J]`colorBackMarked` etc. depending of the state of the line. 
+If the table content is shifted, the [J]`cellTexts` etc. are copied just newly.
+This copy process from internal Java data to the implementation widgets needs not too much time. 
+
+
+
+[#canvas]
+=== A canvas
+
+To show any what, lines, curves, polygons, also text, a canvas can be used. It's for "__free drawing__".
+
+Commonly, the canvas has its draw-background operation which can be specifically programmed 
+to draw all what is possible with the implementing graphic.
+In Eclipse SWT it is link:https://help.eclipse.org/latest/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Canvas.html#drawBackground(org.eclipse.swt.graphics.GC,int,int,int,int)[].
+You can  use the capabilities of the GC (Graphic Control) class link:https://help.eclipse.org/latest/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/graphics/GC.html[]
+to draw lines, figures and text.
+
+But programming in eclipse SWT immediately is specific. 
+If you do the same in AWT, you have the capability of `java.awt.Graphics` with similar functionality,
+but a little bit (or more) different: link:https://cr.openjdk.java.net/~iris/se/17/latestSpec/api/java.desktop/java/awt/Graphics.html[].
+
+If you use instead Python, or the old pearl, or whatever, similar the same but a little bit other and specific.
+
+And if you have dynamic data outside of the graphic, you have problems to write proper thread safe stuff.
+
+The Gral concept gives another answer:
+
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage.html[] is a graphic independent storage
+for the appearance of the graphic. 
+It consists of `Figure` and each figure has any lines, areas, text etc.
+This data are independent of all implementing graphics, only coordinates and `GralPos` and `GralColor`.
+You can modify them in any thread. To apply to a graphic you have two possibilities:
+
+The canvas is represented either with a specifc 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/widget/GralCanvasArea.html[] 
+or it can be a part of a 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralPanelContent.html[].
+
+The `GralCanvasArea` as widget can be placed beside other widgets to show specific forms as vector graphic
+instead using a image. Also animated content is possible.
+
+A normal `GralPanelContent` contains standard widgets, but can also contain free lines and figures.
+
+
+==== Figures and FigureData
+
+Sometimes a figure should be drawn more as on time in a canvas area. The figure is the same, 
+but the position and maybe also a back color may be different. 
+To optimize and prevent too much data (which should be programmed) a class 
+
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$FigureDataSet.html[]
+
+contains the primary appearance of a figure. It can contain any amount of 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$FigureData.html[FigureData] 
+deviating instances, which are 
+
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$SimpleLine.html[SimpleLine]
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$PolyLine.html[PolyLine]
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$Polygone.html[Polygone]
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$Fillin.html[Fillin]
+* link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$Text.html[Text]
+
+You can create firstly (example)
+
+.Java: GralCanvasStorage FigureDataSet
+[source,Java]
+----
+final GralCanvasStorage.FigureDataSet fgdMyFigureX = new GralCanvasStorage.FigureDataSet();
+----
+
+then fill the figure with appearance:
+
+.Java: GralCanvasStorage
+[source,Java]
+----
+    GralColor color = GralColor.getColor("bk");
+    this.fgdMyFigureX.addPolyline(color).point(0, 0).point(0,2);  // |
+    for(int ix = 0; ix <20; ++ix) {
+      this.fgdMyFigureX.addPolyline(color)
+      .point(ix,2)
+      .point(ix+1,2)  // --+    20 times gives rectangles for each word.
+      .point(ix+1,0)  //   |
+      .point(ix,0);   // --+
+    }
+----
+
+Then you have defined the appearance of a figure, but not yet the figure itself.
+
+You can use this `FigureData` for more as one figure:
+
+.Java: GralCanvasStorage
+[source,Java]
+----
+    this.pos.setPosition("10-2,10+1++");
+    this.canvas.addFigure("dataWordsMaster", this.pos, this.figData_Words, false);
+    
+    this.pos.setPosition("10-2,40+1++");
+    this.canvas.addFigure("dataWordsSlave1", this.pos, this.figData_Words, false);
+---- 
+
+Now you have two figures with same appearance on different positions, which looks like as:
+
+image:../../img/Gui/Canvas_FigureWord2.png[]
+
+This are two figures as symbols for a memory area to present data words (after them filled with colors).
+
+To add a color to any box, for this example firstly an array of colors was created.
+Then figures are created to show the inner color:
+
+.Java: GralCanvasStorage
+[source,Java]
+----
+for(int ix = 0; ix < 20; ++ix) {                       // color (content) of the data words slave
+  this.rxSlave1[ix] = this.canvas.addFigure("rxSlave1-" + ix, this.pos
+    , new GralCanvasStorage.Fillin("X", this.colorWhite), true);
+  this.pos.setPosition(",+1");
+}
+----
+
+Here the FigureData are created with one instance per figure, because the colors are different. 
+To set a specific color it is called (for one figure):
+
+.Java: GralCanvasStorage
+[source,Java]
+----
+  this.rxSlave1[ixColor-1].data.color = this.serialOut1word.data.color;  // move content from rx Port to rx data
+----
+
+Because the figure has only one data element it is addressed immediately with `myFigure.data`.
+Its color is accessed immediately public (without setter, maybe changed in future).
+
+The appearance all in all is then (snapshot from the running graphic):
+
+image:../../img/Gui/Canvas_SpeDataTransfer_WordsColor.png[]
+
+
+==== static and dynamic figures
+
+A `GralCanvasStorage` contains figures. On creation they can be remarked as dynamic or not
+with the 4^th^ argument of the both constructors of  
+
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralCanvasStorage$Figure.html[]
+
+
+
+* One for the static figures, redrawn after clean,
+* one for dynamic figures, redrawn whenever an update occurs maybe only for one of the figure.
+
+The `GralCanvasStorage` contains a list of `Figure`. 
+Some of them can be marked as __dynamic__ by
