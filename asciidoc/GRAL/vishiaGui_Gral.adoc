@@ -1,9 +1,9 @@
 = Gral - Graphical Adaption Layer - the vishia Gui 
-:toc:
+:toc: left
 :toclevels: 5
 :sectnums:
 :sectlinks:
-:max-width: 52em
+:max-width: 60em
 :prewrap!:
 :cpp: C++
 :cp: C/++
@@ -53,7 +53,7 @@ This GRAL graphic user interface solution is for technical GUI graphics, not for
 == Approaches
 
 [#apprGralPos]
-=== Position of widgets
+=== Position and size of widgets
 
 See also <<#GralPos>>
 
@@ -189,9 +189,11 @@ and on demand the window can be increased to the necessary size.
 === Definition of the GUI appearance and implementation of the Graphic
 
 In vishiaGui - Gral the definition of the Graphical appearance is separated and independent of the Graphic implementation.
-All Widgets are simple Java classes first unrelated to graphic implementation. 
+All Widgets are simple instances from the Java Gral widget classes, first unrelated to graphic implementation. 
 
-They contain in its super class (link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[])
+All Gral widget classes are derived from link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[org.vishia.gral.base.GralWidget]
+and/or link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidgetBase.html[...gral.base.GralWidgetBase].
+They contains:
 
 * The position and the size of the widget
 * The type, some properties used for appearance
@@ -380,6 +382,7 @@ All is done in the ready coded implementation level of Gral.
 
 Read more in chapter <<#Threads>> 
 
+[#simpleExmpl]
 === Simple example Window with text field and button programmed in Java code
 
 First programming in Java is shown and explained. 
@@ -389,148 +392,96 @@ You find the example in the sources of `testJava_vishiaGui` on link:https://gith
 
 **class Header** 
 
-.Java: Test_SimpleTextButton_GuiCfg class Head
+.Java: Test_SimpleTextButton_GuiCfg import_class
 [source,Java]
 ----
-include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=import-class]
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=import_class]
 ----
 
-**Specific class for Gui stuff** (possible and recommended)
+**Widget references**
 
-The gui elements are assembled in a specific inner class, (may be also another class of the package) to have more overview:
-
-.Java: ExampleSimpleButton Gui class
+.Java: Test_SimpleTextButton_GuiCfg widgets
 [source,Java]
 ----
-include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=guiClass]
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=widgets]
+----
+
+Widget references are only necessary if the processing of data need the access to the widgets. 
+In this example the [Java]`wdgInputText` is necessary to access, but the [Java]`wdgButton` isn't really. 
+But for enhancements, for example change the text of the button, it may be usefully. 
+Only widgets which should be never accessed needs a reference to. 
+The reference is not necessary for the graphic itself, only to reference the widgets for processing data.
+
+The widgets can also be accessed by getting the reference by name from the GralMng. 
+This is shown in the chapter <<#guiScript>>.  
+
+**Specificating the graphic appearance in the constructor**
+
+.Java: Test_SimpleTextButton_GuiCfg ctor
+[source,Java]
+----
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=ctor]
 ----
 
 image:../../img/Gral/ExampleSimpleTextButton.png[float="right"]
-Firstly the [J]`GralMng` is defined here, with log output.
+Firstly the ctor of the super class [Java]`GuiCfg` is called, 
+That ctor creates the Window instance at Gral Level with the first panel. 
+The window's panel is the current one. Hence the [Java]`refPos` refer it and can be used immediately.
 
-An own [J]`GralPos` is used, it presumes that all widgets are defined by constructors as following. 
-The other possibility is using [J]`gralMng.add....()` operations which uses the internal [J]`gralMng.refPos()` position.
+The GralWidget instances are defined here all with construction and assignment to the final references if necessary.
+If a widget don't need to be referenced, only [java]`new Gral...`widget should be written without assignment. 
+The widget is references in its panel and in the [Java]`super.gralMng` instance mediated by the [java]`refPos`.
 
-Then all GralWidget instances are defined here all at class level as final. They are initialized immediately at class level.
-The elements can be initialized of course also in the constructor of the [J]`GuiElements` class, 
-it is more simple for flexibility.
-But the here shown variant, initializing on class level, may be more obviously. 
+For the [J]`wdgButton` an action is used which is defined below.
 
-For the [J]`wdgButton1` an action is used which is defined in the environment class, see below, but not for the Button2..
+**Example operation for the button**
 
-**Construction**
-
-The constructor of the application class can use command line arguments for example for a log file, 
-but here only a log to the console is used. The log is used then also for the Graphic
-though the initialization is done on class level. This is one of the reason of the own [J]`class GuiElements`:
-
-.Java: ExampleSimpleButton fields and ctor
+.Java: Test_SimpleTextButton_GuiCfg process_actionButton
 [source,Java]
 ----
-include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=fieldsCtor]
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=process_actionButton]
 ----
 
-The constructor of the application class is not rich on content for this example.
-But in the constructor of [J]`new GuiElements()` the whole graphic on Gral level is built.
+This operation is called by the button and accesses the text field, only as example. 
 
-**Initialization of the implementation Graphic**
+**Main command line start**
 
-.Java: ExampleSimpleButton fields init implementation
+.Java: Test_SimpleTextButton_GuiCfg main
 [source,Java]
 ----
-include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=initImplGraphic]
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=main]
 ----
 
-First, the content of the [J]`wdgInputText` is set with any text, before initializing the graphic implementation. 
-This can also be done after the initialization of the implementation graphic, both with same effect. 
+The [J]`main` creates an instance of link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GuiCallingArgs.html[GuiCallingArgs]
+which are necessary for the constructor of 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/cfg/GuiCfg.html[GuiCfg] (the super class). 
+Normally this instance can be used to gather command line arguments. But for this example it is not necessary.
+If the [J]`sTitle` is set (by command line argument, or direct), it is used as title for the window. 
 
-The initialization routine, called in main, builds the implementation parts of the graphic.
-The initialization of the implementation graphic does not need any additional user effort.
-Only the decision to use the SWT graphic and the graphic size 'E' is done, as shown in the right above image.
+**Style to define actions**
 
-
-**The main thread - example for execution**
-
-.Java: ExampleSimpleButton execution in main thread
+.Java: Test_SimpleTextButton_GuiCfg Actions_class
 [source,Java]
 ----
-include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=execute]
+include::../../..//testAppl_vishiaGui/java/test_vishiaGral/org/vishia/gral/test/basics/Test_SimpleTextButton_GuiCfg.java[tag=Actions_class]
 ----
 
-This is the execution in the main thread. Substantial this thread should wait till the graphical window is closed.
-In the thread any actions also outside of the graphic can be done. The thread is thought for polling.
-That is, it waits for a reasonable time (releases the CPU), then goes into action and queries some conditions. 
-Based on the query of the conditions, some actions are performed, independently for the graphic and outside the graphic. 
-In this example the thread ask whether the [J]`wdgButton2` was pressed and then released, then the text is output.
-The query of [J]`wdgButton2.wasReleased()` can be performed any time after pressing and release. But of course it should be usual near the time of the user action. This is fulfilled by the cycle time of 100 ms. 
-link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralButton.html#wasReleased--[GralButton.wasReleased()] 
-returns only one time [J]`true` after release. The query is repeated of course and then returns [J]`false`.
-
-**Exception handling recommended:** 
-Any operation in the while loop may cause an - unexpected - exception. This is forced here in this example. 
-That's why inside the while loop a try-catch is inserted. With help of the logging system 
-and a sophisticated preparation of the exception text the exception message is written for this example
-running under Eclipse to the Eclipse console output, with a time stamp, whereby the exception files and lines are shown and can be clicked as link to open the line in the editor:
-
-image:../../img/Gral/ExampleSimpleTextButton-ExceptionOutput.png[]
+The actions for buttons are instances of 
+link:../../docuSrcJava_vishiaGui/org/vishia/gral/ifc/GralUserAction.html[GralUserAction].
+Its operation [J]`exec(...)` should be overridden. But it is proper to call an operation in the main class there.
+It is also recommended to wrap all Actions with this here shown [J]`Actions` class.
+Then it is more structured to view and understand the software.
 
 
-**main() recommended also with Exception handling**
+**That's all** 
 
-.Java: ExampleSimpleButton main()
-[source,Java]
-----
-include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=main]
-----
+for a simple application and the pattern of an application. 
 
-The main() calls the ctor, and also the initialization of the implementation graphic.
-After initialization the main thread can do anything. It runs so long the main window is active.
-The exception handling is a good style, not necessary but recommended here.
-Any unexpected situation does not only abort the program, it writes a short report with stack trace for back tracking.
-
-**A callback routine executed in the graphic thread, defined on Gral level**
-
-At last the code for a callback action is shown, on pressing the button:
-
-.Java: ExampleSimpleButton action operation
-[source,Java]
-----
-include::../../../srcJava_vishiaGui/java/vishiaGui/org/vishia/gral/example/ExampleSimpleButton.java[tag=action]
-----
-
-This action is written independently from the implementation graphic, but is is called of course from an event handler from the widget.
-
-**The system to work with the graphic**
-
-That's all. The text field has a context menu. Its initialization is not shown here, but explained in the chapter below. 
-
-As you see in the examples, the following order to build a graphic should be done:
-
-* First instantiate the [J]`GralMng`, the manager of all Gral stuff. It can be have a log or not.
-
-* You can use your own [J]`GralPos` or use [J]`gralMng.refPos()`, see other examples. 
-This [J]`GralPos` is used each as reference position, for relative positioning. 
-The current [J]`GralPos` given as reference is changed with the position string in each of the constructors.
-The widgets itself gets a clone of the current [J]`GralPos` on construction.
  
-* If you create a new Panel, or just a new Window, the [j]`refPos` is set to this panel. 
-It means following widgets are associated to it. But you can also select any other panel instead, for the first (or also all) widgets.
-Here [J]`"@panel, 2+2, 2+20=...` is written to select the panel of the window with the name [J]`panelWin`.
-But you can also write here only [J]`"@2+2, 2+20=...`, then panel is set already.
-The determination of a panel is necessary if you want to change it, go to another panel, for more comprehensive graphics.
-
-* The windows, widgets and panels can be created on class level (as part of all constructors) of you application as also in some operations, using the constructor of the widget with a given position, or via [J]`gralMng.add...()` using the internal positon of the [J]`GralMng`. In both cases the reference to the [J]`GralMng` is stored in the widgets.
-
-* After all Gral widgets are established, calling of link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.html#createGraphic-java.lang.String-char-LogMessage-[GralMng.createGraphic(...)] creates all implementation widgets and shows the main window on the screen, you can work. 
-
-* Changing positions from already established widgets is possible, the next call of [J]`redraw(...)` of the panel shows the changes.
-* Add or remove widgets is possible. Removed widgets are no more visible after [J]`redraw(...)`. 
-For new widgets the either operation
-link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralWidget.html[GralWidget.createWidget()] (TODO) should be called, 
-or just the link:../../docuSrcJava_vishiaGui/org/vishia/gral/base/GralMng.html#createGraphic-java.lang.String-char-LogMessage-[GralMng.createGraphic(...)]  should be called repeatedly. 
-   
-
+[#guiScript]
 === Determine the graphic via script
+
+this is old.
 
 The java coded graphic is not too expensive, and it is able to understand (debug) what is done. 
 Using a script is very more similar, most of the necessities are also possible. In the script the access to Java code parts is possible. 
@@ -902,7 +853,14 @@ can be do widget-specific preparations after resizing the implementation widget 
 For instance on a table this controls the number of visible lines. 
 
 
+[#gralScript]
+== Possibilities to determine the graphic appearance and functions via a script
 
+=== Small example
+
+This is the same example shown in chapter <<#simpleExmpl>> with a script 
+
+...TODO
 
 
 [#Threads]

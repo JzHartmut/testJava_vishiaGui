@@ -1,4 +1,5 @@
 :loop
+cls
 call C:\Programs\Asciidoc\genAsciidoc2Html.bat GRAL/vishiaGui_Gral.adoc ../../../../html/Gral
 ::call C:\Programs\Asciidoc\genAsciidoc2Html.bat GRAL/GralFileSelector.adoc ../../../../html/Gral
 ::call C:\Programs\Asciidoc\genAsciidoc2Html.bat doc_emC/OSHAL/Serial_HAL.adoc ../../../../html/OSHAL

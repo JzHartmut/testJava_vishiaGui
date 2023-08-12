@@ -1,4 +1,4 @@
-//tag::import-class
+//tag::import_class[]
 package org.vishia.gral.test.basics;
 
 import org.vishia.gral.base.GralButton;
@@ -18,7 +18,7 @@ import org.vishia.gral.ifc.GralWidget_ifc;
  * @since 2023-08
  */
 public class Test_SimpleTextButton_GuiCfg extends GuiCfg {
-//end::import-class[]
+//end::import_class[]
 
 //tag::widgets[]
   /**An application widget which should be accessed in the process of working with the GUI. 
@@ -31,6 +31,25 @@ public class Test_SimpleTextButton_GuiCfg extends GuiCfg {
   final GralButton wdgButton;
 //end::widgets[]
 
+  
+//tag::ctor[]
+  /**The constructor of the application class organizes some more widgets
+   * in a programmed way.
+   * @param cargs Arguments, only {@link GuiCallingArgs#sTitle} is used.
+   */
+  Test_SimpleTextButton_GuiCfg (GuiCallingArgs cargs) {
+    super(cargs, null, null, null);              // It creates the main window
+    //                                           //  with the given title and properties.
+    this.wdgInputText = new GralTextField(super.refPos, "@2+2, 2+20=input"
+        , GralTextField.Type.editable);          // add a widget to the main panel.
+    this.wdgInputText.setText("abcd");           // set initial a text.
+    //                                           // add the button widget
+    this.wdgButton = new GralButton(this.refPos, "@8-3, 2+10=button"
+        , "press me", this.actions.actionButton);// with this given action on pressing
+  }
+//end::ctor[]
+  
+  
   
 //#tag::overriddenOps[]
   /**This operation is called to create the graphic appearance. 
@@ -57,26 +76,7 @@ public class Test_SimpleTextButton_GuiCfg extends GuiCfg {
   
 //#end::overriddenOps[]
   
-//tag::ctor[]
-  /**The constructor of the application class organizes some more widgets
-   * in a programmed way.
-   * @param cargs Arguments, only {@link GuiCallingArgs#sTitle} is used.
-   */
-  Test_SimpleTextButton_GuiCfg (GuiCallingArgs cargs) {
-    super(cargs, null, null, null);              // It creates the main window
-    //                                           //  with the given title and properties.
-    this.wdgInputText = new GralTextField(super.refPos, "@2+2, 2+20=input"
-        , GralTextField.Type.editable);          // add a widget to the main panel.
-    this.wdgInputText.setText("abcd");           // set initial a text.
-    //                                           // add the button widget
-    this.wdgButton = new GralButton(this.refPos, "@8-3, 2+10=button"
-        , "press me", this.actions.actionButton);// with this given action on pressing
-  }
-//end::ctor[]
-  
-  
-  
-//tag::process-actionButton[]
+//tag::process_actionButton[]
   /**Action for the button, called from {@link Actions#actionButton},
    * associated to the #wdgButton.
    * It reads the text, change the order and writes back.  */
@@ -88,21 +88,24 @@ public class Test_SimpleTextButton_GuiCfg extends GuiCfg {
     }                                            // and writes back in revers order
     this.wdgInputText.setText(newText);          // only as example
   }
-//end::process-actionButton[]
+//end::process_actionButton[]
   
   
 
   //tag::main[]
   public static void main(String[] cmdArgs) {
-    GuiCallingArgs cargs = new GuiCallingArgs();      // The cargs instance is necessary for:           
-    cargs.sTitle = "Test_SimpleTextButton_GuiCfg";    // set a title for the main window
-    Test_SimpleTextButton_GuiCfg thiz = new Test_SimpleTextButton_GuiCfg(cargs); //ctor
-    thiz.execute();                                   // wait for closing graphic, does nothing more.
+    GuiCallingArgs cargs = new GuiCallingArgs();           // The cargs instance is necessary           
+    boolean bOk = cargs.parseArgs(cmdArgs, System.err);    // parse command line args if given, not necessary for this example
+    if(bOk) {                                              // set a title for the main window if not given
+      if(cargs.sTitle == null) { cargs.sTitle = "Test_SimpleTextButton_GuiCfg"; }  
+      Test_SimpleTextButton_GuiCfg thiz = new Test_SimpleTextButton_GuiCfg(cargs); //ctor
+      thiz.execute();   // calls initMain(), stemMain() and waits for closing graphic, then finishMain().
+    }
   }
   //end::main[]
 
   
-  //tag::Actions-class
+  //tag::Actions_class[]
   /**Actions may be organized in an extra class, more overview in Outline of the class and debug variables.
    */
   private class Actions {
@@ -118,6 +121,6 @@ public class Test_SimpleTextButton_GuiCfg extends GuiCfg {
     
   } // class Actions
   private Actions actions = new Actions();       // instance of actions
-  //end::Actions-class
+  //end::Actions_class[]
   
 }
